@@ -8,3 +8,13 @@ C:\Users\Administrador\Desktop\piii C#\Autopecas\Autopecas\obj\Debug\Autopecas.c
 C:\Users\Administrador\Desktop\piii C#\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Desktop\piii C#\Autopecas\Autopecas\obj\Debug\Autopecas.exe
 C:\Users\Administrador\Desktop\piii C#\Autopecas\Autopecas\obj\Debug\Autopecas.pdb
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\bin\Debug\Autopecas.exe.config
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\bin\Debug\Autopecas.exe
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\bin\Debug\Autopecas.pdb
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.csprojAssemblyReference.cache
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.Home.resources
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.Properties.Resources.resources
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.GenerateResource.cache
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.exe
+C:\Users\Administrador\Desktop\piii C#\aaaa\Autopecas\Autopecas\obj\Debug\Autopecas.pdb
