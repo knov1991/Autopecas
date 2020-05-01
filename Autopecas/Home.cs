@@ -45,7 +45,6 @@ namespace Autopecas
         // ESCONDE MENU LATERAL
         private void escondeMenu()
         {
-            painelEstoque.Visible = false;
             painelFornecedor.Visible = false;
         }
 
@@ -67,29 +66,25 @@ namespace Autopecas
         {
             mostraMenu(painelFornecedor);
         }
-        private void btnEstoque_Click(object sender, EventArgs e)
-        {
-            mostraMenu(painelEstoque);
-        }
-        private void btnRequisicao_Click(object sender, EventArgs e)
-        {
-            //abrirModal(new nomeModulo());
-        }
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            //abrirModal(new nomeModulo());
+            abrirModal(new Vendas());
         }
         private void btnFornecedorCadastrar_Click(object sender, EventArgs e)
         {
-            //abrirModal(new nomeModulo());
+            abrirModal(new FornecedorCadastrar());
         }
         private void btnFornecedorListar_Click(object sender, EventArgs e)
         {
-            //abrirModal(new nomeModulo());
+            abrirModal(new FornecedorListar());
         }
-        private void btnEstoqueAdicionar_Click(object sender, EventArgs e)
+        private void btnEstoque_Click(object sender, EventArgs e)
         {
-            //abrirModal(new nomeModulo());
+            abrirModal(new Estoque());
+        }
+        private void btnControleFinanceiro_Click(object sender, EventArgs e)
+        {
+            abrirModal(new ControleFinanceiro());
         }
 
         // FECHAR SOFTWARE

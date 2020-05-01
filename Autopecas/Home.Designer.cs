@@ -28,21 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.painelPrincipal = new System.Windows.Forms.Panel();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
             this.btnControleFinanceiro = new System.Windows.Forms.Button();
-            this.btnRequisicao = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.painelFornecedor = new System.Windows.Forms.Panel();
             this.btnFornecedorListar = new System.Windows.Forms.Button();
             this.btnFornecedorCadastrar = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
-            this.painelEstoque = new System.Windows.Forms.Panel();
-            this.btnEstoqueAdicionar = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -51,7 +47,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
             this.painelFornecedor.SuspendLayout();
-            this.painelEstoque.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -102,11 +97,9 @@
             this.painelLateral.AutoScroll = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
-            this.painelLateral.Controls.Add(this.btnRequisicao);
             this.painelLateral.Controls.Add(this.btnVendas);
             this.painelLateral.Controls.Add(this.painelFornecedor);
             this.painelLateral.Controls.Add(this.btnFornecedor);
-            this.painelLateral.Controls.Add(this.painelEstoque);
             this.painelLateral.Controls.Add(this.btnEstoque);
             this.painelLateral.Controls.Add(this.btnSair);
             this.painelLateral.Controls.Add(this.pictureBox1);
@@ -126,30 +119,13 @@
             this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
             this.btnControleFinanceiro.Image = global::Autopecas.Properties.Resources.Financeiro;
             this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 594);
+            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 444);
             this.btnControleFinanceiro.Name = "btnControleFinanceiro";
             this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
             this.btnControleFinanceiro.TabIndex = 8;
             this.btnControleFinanceiro.Text = "       Controle Financeiro";
             this.btnControleFinanceiro.UseVisualStyleBackColor = true;
-            // 
-            // btnRequisicao
-            // 
-            this.btnRequisicao.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRequisicao.FlatAppearance.BorderSize = 0;
-            this.btnRequisicao.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnRequisicao.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRequisicao.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRequisicao.ForeColor = System.Drawing.Color.White;
-            this.btnRequisicao.Image = global::Autopecas.Properties.Resources.Requisicao;
-            this.btnRequisicao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRequisicao.Location = new System.Drawing.Point(0, 544);
-            this.btnRequisicao.Name = "btnRequisicao";
-            this.btnRequisicao.Size = new System.Drawing.Size(250, 50);
-            this.btnRequisicao.TabIndex = 7;
-            this.btnRequisicao.Text = "Requisicao";
-            this.btnRequisicao.UseVisualStyleBackColor = true;
-            this.btnRequisicao.Click += new System.EventHandler(this.btnRequisicao_Click);
+            this.btnControleFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
             // 
             // btnVendas
             // 
@@ -161,7 +137,7 @@
             this.btnVendas.ForeColor = System.Drawing.Color.White;
             this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 494);
+            this.btnVendas.Location = new System.Drawing.Point(0, 394);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(250, 50);
             this.btnVendas.TabIndex = 6;
@@ -175,7 +151,7 @@
             this.painelFornecedor.Controls.Add(this.btnFornecedorListar);
             this.painelFornecedor.Controls.Add(this.btnFornecedorCadastrar);
             this.painelFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelFornecedor.Location = new System.Drawing.Point(0, 394);
+            this.painelFornecedor.Location = new System.Drawing.Point(0, 294);
             this.painelFornecedor.Name = "painelFornecedor";
             this.painelFornecedor.Size = new System.Drawing.Size(250, 100);
             this.painelFornecedor.TabIndex = 5;
@@ -224,40 +200,13 @@
             this.btnFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnFornecedor.Image = global::Autopecas.Properties.Resources.Fornecedor;
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.Location = new System.Drawing.Point(0, 344);
+            this.btnFornecedor.Location = new System.Drawing.Point(0, 244);
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(250, 50);
             this.btnFornecedor.TabIndex = 4;
             this.btnFornecedor.Text = "Fornecedor";
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
-            // 
-            // painelEstoque
-            // 
-            this.painelEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(150)))));
-            this.painelEstoque.Controls.Add(this.btnEstoqueAdicionar);
-            this.painelEstoque.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelEstoque.Location = new System.Drawing.Point(0, 244);
-            this.painelEstoque.Name = "painelEstoque";
-            this.painelEstoque.Size = new System.Drawing.Size(250, 100);
-            this.painelEstoque.TabIndex = 3;
-            // 
-            // btnEstoqueAdicionar
-            // 
-            this.btnEstoqueAdicionar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEstoqueAdicionar.FlatAppearance.BorderSize = 0;
-            this.btnEstoqueAdicionar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnEstoqueAdicionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoqueAdicionar.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEstoqueAdicionar.ForeColor = System.Drawing.Color.White;
-            this.btnEstoqueAdicionar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoqueAdicionar.Location = new System.Drawing.Point(0, 0);
-            this.btnEstoqueAdicionar.Name = "btnEstoqueAdicionar";
-            this.btnEstoqueAdicionar.Size = new System.Drawing.Size(250, 50);
-            this.btnEstoqueAdicionar.TabIndex = 3;
-            this.btnEstoqueAdicionar.Text = "Adicionar";
-            this.btnEstoqueAdicionar.UseVisualStyleBackColor = true;
-            this.btnEstoqueAdicionar.Click += new System.EventHandler(this.btnEstoqueAdicionar_Click);
             // 
             // btnEstoque
             // 
@@ -313,7 +262,6 @@
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.painelLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -324,7 +272,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
             this.painelFornecedor.ResumeLayout(false);
-            this.painelEstoque.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -343,11 +290,8 @@
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Panel painelFornecedor;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Panel painelEstoque;
-        private System.Windows.Forms.Button btnEstoqueAdicionar;
         private System.Windows.Forms.Button btnFornecedorListar;
         private System.Windows.Forms.Button btnFornecedorCadastrar;
         private System.Windows.Forms.Button btnControleFinanceiro;
-        private System.Windows.Forms.Button btnRequisicao;
     }
 }

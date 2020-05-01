@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ControleFinanceiro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ControleFinanceiro.Designer.cs">
+      <DependentUpon>ControleFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FornecedorCadastrar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FornecedorCadastrar.Designer.cs">
+      <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FornecedorListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FornecedorListar.Designer.cs">
+      <DependentUpon>FornecedorListar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +78,24 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Vendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vendas.Designer.cs">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ControleFinanceiro.resx">
+      <DependentUpon>ControleFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FornecedorCadastrar.resx">
+      <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FornecedorListar.resx">
+      <DependentUpon>FornecedorListar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -67,6 +109,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Vendas.resx">
+      <DependentUpon>Vendas.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
