@@ -16,7 +16,7 @@ namespace Autopecas
         public Home()
         {
             InitializeComponent();
-            escondeMenu();
+            EsconderMenu();
         }
 
         // MOVER JANELA SEM BARRA DE TITULO PADRÃO
@@ -32,59 +32,59 @@ namespace Autopecas
         }
 
         // MOSTRAR MENU LATERAL
-        private void mostraMenu(Panel subMenu)
+        private void MostrarMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                escondeMenu();
+                EsconderMenu();
                 subMenu.Visible = true;
             }
             else
                 subMenu.Visible = false;
         }
         // ESCONDE MENU LATERAL
-        private void escondeMenu()
+        private void EsconderMenu()
         {
             painelFornecedor.Visible = false;
         }
 
 
         // ABRIR MODULO NA TELA PRINCIPAL
-        public void abrirModal(object Modulo)
+        public static void AbrirModal(object Modulo)
         {
-            if (this.painelPrincipal.Controls.Count > 0)
-                this.painelPrincipal.Controls.RemoveAt(0);
+            if (Home.painelPrincipal.Controls.Count > 0)
+                Home.painelPrincipal.Controls.RemoveAt(0);
             Form mod = Modulo as Form;
             mod.TopLevel = false;
             mod.Dock = DockStyle.Fill;
-            this.painelPrincipal.Controls.Add(mod);
-            this.painelPrincipal.Tag = mod;
+            Home.painelPrincipal.Controls.Add(mod);
+            Home.painelPrincipal.Tag = mod;
             mod.Show();
         }
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-            mostraMenu(painelFornecedor);
+            MostrarMenu(painelFornecedor);
         }
         private void btnVendas_Click(object sender, EventArgs e)
         {
-            abrirModal(new Vendas());
+            AbrirModal(new Vendas());
         }
         private void btnFornecedorCadastrar_Click(object sender, EventArgs e)
         {
-            abrirModal(new FornecedorCadastrar());
+            AbrirModal(new FornecedorCadastrar());
         }
         private void btnFornecedorListar_Click(object sender, EventArgs e)
         {
-            abrirModal(new FornecedorListar());
+            AbrirModal(new FornecedorListar());
         }
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            abrirModal(new Estoque());
+            AbrirModal(new Estoque());
         }
         private void btnControleFinanceiro_Click(object sender, EventArgs e)
         {
-            abrirModal(new ControleFinanceiro());
+            AbrirModal(new ControleFinanceiro());
         }
 
         // FECHAR SOFTWARE

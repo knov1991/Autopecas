@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.panelChildForm = new System.Windows.Forms.Panel();
-            this.painelPrincipal = new System.Windows.Forms.Panel();
+            Home.painelPrincipal = new System.Windows.Forms.Panel();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
@@ -53,7 +53,7 @@
             // panelChildForm
             // 
             this.panelChildForm.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panelChildForm.Controls.Add(this.painelPrincipal);
+            this.panelChildForm.Controls.Add(Home.painelPrincipal);
             this.panelChildForm.Controls.Add(this.barraTitulo);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(250, 0);
@@ -63,13 +63,13 @@
             // 
             // painelPrincipal
             // 
-            this.painelPrincipal.BackgroundImage = global::Autopecas.Properties.Resources.Autopecas;
-            this.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelPrincipal.Location = new System.Drawing.Point(0, 50);
-            this.painelPrincipal.Name = "painelPrincipal";
-            this.painelPrincipal.Size = new System.Drawing.Size(774, 718);
-            this.painelPrincipal.TabIndex = 1;
+            Home.painelPrincipal.BackgroundImage = global::Autopecas.Properties.Resources.Autopecas;
+            Home.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            Home.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            Home.painelPrincipal.Location = new System.Drawing.Point(0, 50);
+            Home.painelPrincipal.Name = "painelPrincipal";
+            Home.painelPrincipal.Size = new System.Drawing.Size(774, 718);
+            Home.painelPrincipal.TabIndex = 1;
             // 
             // barraTitulo
             // 
@@ -280,7 +280,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panelChildForm;
-        private System.Windows.Forms.Panel painelPrincipal;
+        private static System.Windows.Forms.Panel painelPrincipal;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Panel painelLateral;
         private System.Windows.Forms.PictureBox pictureBox1;
