@@ -49,3 +49,19 @@ C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.
 C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.exe
 C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.pdb
 C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.ListaProdutos.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\bin\Debug\Autopecas.exe.config
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\bin\Debug\Autopecas.exe
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\bin\Debug\Autopecas.pdb
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.csprojAssemblyReference.cache
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.ControleFinanceiro.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.Estoque.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.FornecedorCadastrar.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.FornecedorListar.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.Home.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.ListaProdutos.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.Properties.Resources.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.Vendas.resources
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.GenerateResource.cache
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.CoreCompileInputs.cache
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.exe
+C:\Users\wiljr\OneDrive\Área de Trabalho\AutoPecas\Autopecas\Autopecas\obj\Debug\Autopecas.pdb
