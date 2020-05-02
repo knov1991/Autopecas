@@ -50,15 +50,15 @@ namespace Autopecas
 
 
         // ABRIR MODULO NA TELA PRINCIPAL
-        public static void AbrirModal(object Modulo)
+        private void AbrirModal(object Modulo)
         {
-            if (Home.painelPrincipal.Controls.Count > 0)
-                Home.painelPrincipal.Controls.RemoveAt(0);
+            if (this.painelPrincipal.Controls.Count > 0)
+                this.painelPrincipal.Controls.RemoveAt(0);
             Form mod = Modulo as Form;
             mod.TopLevel = false;
             mod.Dock = DockStyle.Fill;
-            Home.painelPrincipal.Controls.Add(mod);
-            Home.painelPrincipal.Tag = mod;
+            this.painelPrincipal.Controls.Add(mod);
+            this.painelPrincipal.Tag = mod;
             mod.Show();
         }
 

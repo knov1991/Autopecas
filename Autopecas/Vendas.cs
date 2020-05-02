@@ -24,7 +24,7 @@ namespace Autopecas
 
         private void btn_listar_Click(object sender, EventArgs e)
         {
-            Home.AbrirModal(new ListaProdutos());
+            // metodo de abrir janela
         }
     }
 }
