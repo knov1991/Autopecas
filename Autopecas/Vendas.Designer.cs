@@ -28,29 +28,392 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_NovaVenda = new System.Windows.Forms.Label();
+            this.textBox_CodigoProduto = new System.Windows.Forms.TextBox();
+            this.textBox_NomeProduto = new System.Windows.Forms.TextBox();
+            this.textBox_Quantidade = new System.Windows.Forms.TextBox();
+            this.textBox_ValorProduto = new System.Windows.Forms.TextBox();
+            this.label_NomeProduto = new System.Windows.Forms.Label();
+            this.label_Quantidade = new System.Windows.Forms.Label();
+            this.label_Valor = new System.Windows.Forms.Label();
+            this.label_CodigoProduto = new System.Windows.Forms.Label();
+            this.btn_listar = new System.Windows.Forms.Button();
+            this.btn_addProduto = new System.Windows.Forms.Button();
+            this.dataGridView_Carrinho = new System.Windows.Forms.DataGridView();
+            this.codProduto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantidade = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.valorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label_Carrinho = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label_formaPagamento = new System.Windows.Forms.Label();
+            this.textBox_subTotal = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox_desconto = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox_totalPedido = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label_pagamento = new System.Windows.Forms.Label();
+            this.label_subtotal = new System.Windows.Forms.Label();
+            this.label_desconto = new System.Windows.Forms.Label();
+            this.label_total = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Carrinho)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_NovaVenda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(253, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 82);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "VENDAS";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_NovaVenda.AutoSize = true;
+            this.txt_NovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NovaVenda.Location = new System.Drawing.Point(41, 55);
+            this.txt_NovaVenda.Name = "txt_NovaVenda";
+            this.txt_NovaVenda.Size = new System.Drawing.Size(206, 39);
+            this.txt_NovaVenda.TabIndex = 1;
+            this.txt_NovaVenda.Text = "Nova Venda";
+            // 
+            // textBox_CodigoProduto
+            // 
+            this.textBox_CodigoProduto.Location = new System.Drawing.Point(48, 123);
+            this.textBox_CodigoProduto.Multiline = true;
+            this.textBox_CodigoProduto.Name = "textBox_CodigoProduto";
+            this.textBox_CodigoProduto.Size = new System.Drawing.Size(112, 23);
+            this.textBox_CodigoProduto.TabIndex = 2;
+            // 
+            // textBox_NomeProduto
+            // 
+            this.textBox_NomeProduto.Location = new System.Drawing.Point(49, 171);
+            this.textBox_NomeProduto.Multiline = true;
+            this.textBox_NomeProduto.Name = "textBox_NomeProduto";
+            this.textBox_NomeProduto.Size = new System.Drawing.Size(284, 23);
+            this.textBox_NomeProduto.TabIndex = 3;
+            // 
+            // textBox_Quantidade
+            // 
+            this.textBox_Quantidade.Location = new System.Drawing.Point(339, 171);
+            this.textBox_Quantidade.Multiline = true;
+            this.textBox_Quantidade.Name = "textBox_Quantidade";
+            this.textBox_Quantidade.Size = new System.Drawing.Size(107, 23);
+            this.textBox_Quantidade.TabIndex = 4;
+            // 
+            // textBox_ValorProduto
+            // 
+            this.textBox_ValorProduto.Location = new System.Drawing.Point(452, 171);
+            this.textBox_ValorProduto.Multiline = true;
+            this.textBox_ValorProduto.Name = "textBox_ValorProduto";
+            this.textBox_ValorProduto.Size = new System.Drawing.Size(125, 23);
+            this.textBox_ValorProduto.TabIndex = 5;
+            // 
+            // label_NomeProduto
+            // 
+            this.label_NomeProduto.AutoSize = true;
+            this.label_NomeProduto.Location = new System.Drawing.Point(45, 155);
+            this.label_NomeProduto.Name = "label_NomeProduto";
+            this.label_NomeProduto.Size = new System.Drawing.Size(90, 13);
+            this.label_NomeProduto.TabIndex = 6;
+            this.label_NomeProduto.Text = "Nome do Produto";
+            // 
+            // label_Quantidade
+            // 
+            this.label_Quantidade.AutoSize = true;
+            this.label_Quantidade.Location = new System.Drawing.Point(336, 155);
+            this.label_Quantidade.Name = "label_Quantidade";
+            this.label_Quantidade.Size = new System.Drawing.Size(62, 13);
+            this.label_Quantidade.TabIndex = 7;
+            this.label_Quantidade.Text = "Quantidade";
+            // 
+            // label_Valor
+            // 
+            this.label_Valor.AutoSize = true;
+            this.label_Valor.Location = new System.Drawing.Point(449, 155);
+            this.label_Valor.Name = "label_Valor";
+            this.label_Valor.Size = new System.Drawing.Size(31, 13);
+            this.label_Valor.TabIndex = 8;
+            this.label_Valor.Text = "Valor";
+            // 
+            // label_CodigoProduto
+            // 
+            this.label_CodigoProduto.AutoSize = true;
+            this.label_CodigoProduto.Location = new System.Drawing.Point(46, 107);
+            this.label_CodigoProduto.Name = "label_CodigoProduto";
+            this.label_CodigoProduto.Size = new System.Drawing.Size(95, 13);
+            this.label_CodigoProduto.TabIndex = 9;
+            this.label_CodigoProduto.Text = "Código do Produto";
+            // 
+            // btn_listar
+            // 
+            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_listar.Location = new System.Drawing.Point(166, 123);
+            this.btn_listar.Name = "btn_listar";
+            this.btn_listar.Size = new System.Drawing.Size(81, 23);
+            this.btn_listar.TabIndex = 10;
+            this.btn_listar.Text = "Listar";
+            this.btn_listar.UseVisualStyleBackColor = true;
+            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
+            // 
+            // btn_addProduto
+            // 
+            this.btn_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_addProduto.Location = new System.Drawing.Point(583, 171);
+            this.btn_addProduto.Name = "btn_addProduto";
+            this.btn_addProduto.Size = new System.Drawing.Size(138, 23);
+            this.btn_addProduto.TabIndex = 11;
+            this.btn_addProduto.Text = "Adicionar Produto";
+            this.btn_addProduto.UseVisualStyleBackColor = true;
+            this.btn_addProduto.Click += new System.EventHandler(this.btn_addProduto_Click);
+            // 
+            // dataGridView_Carrinho
+            // 
+            this.dataGridView_Carrinho.AllowUserToAddRows = false;
+            this.dataGridView_Carrinho.AllowUserToDeleteRows = false;
+            this.dataGridView_Carrinho.AllowUserToResizeColumns = false;
+            this.dataGridView_Carrinho.AllowUserToResizeRows = false;
+            this.dataGridView_Carrinho.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_Carrinho.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_Carrinho.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.Disable;
+            this.dataGridView_Carrinho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_Carrinho.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codProduto,
+            this.nome,
+            this.quantidade,
+            this.valorUnitario,
+            this.valorTotal});
+            this.dataGridView_Carrinho.Location = new System.Drawing.Point(48, 269);
+            this.dataGridView_Carrinho.MultiSelect = false;
+            this.dataGridView_Carrinho.Name = "dataGridView_Carrinho";
+            this.dataGridView_Carrinho.ReadOnly = true;
+            this.dataGridView_Carrinho.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dataGridView_Carrinho.RowHeadersVisible = false;
+            this.dataGridView_Carrinho.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
+            this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 179);
+            this.dataGridView_Carrinho.TabIndex = 12;
+            // 
+            // codProduto
+            // 
+            this.codProduto.HeaderText = "Código do Produto";
+            this.codProduto.Name = "codProduto";
+            this.codProduto.ReadOnly = true;
+            // 
+            // nome
+            // 
+            this.nome.HeaderText = "Nome do Produto";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            // 
+            // quantidade
+            // 
+            this.quantidade.HeaderText = "Quantidade";
+            this.quantidade.Name = "quantidade";
+            this.quantidade.ReadOnly = true;
+            // 
+            // valorUnitario
+            // 
+            this.valorUnitario.HeaderText = "Valor Unitário";
+            this.valorUnitario.Name = "valorUnitario";
+            this.valorUnitario.ReadOnly = true;
+            // 
+            // valorTotal
+            // 
+            this.valorTotal.HeaderText = "Valor Total";
+            this.valorTotal.Name = "valorTotal";
+            this.valorTotal.ReadOnly = true;
+            // 
+            // label_Carrinho
+            // 
+            this.label_Carrinho.AutoSize = true;
+            this.label_Carrinho.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_Carrinho.Location = new System.Drawing.Point(42, 217);
+            this.label_Carrinho.Name = "label_Carrinho";
+            this.label_Carrinho.Size = new System.Drawing.Size(150, 39);
+            this.label_Carrinho.TabIndex = 1;
+            this.label_Carrinho.Text = "Carrinho";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Dinheiro (à vista)",
+            "Cartão de Crédito",
+            "Cartão de Débito"});
+            this.comboBox1.Location = new System.Drawing.Point(48, 536);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(199, 21);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // label_formaPagamento
+            // 
+            this.label_formaPagamento.AutoSize = true;
+            this.label_formaPagamento.Location = new System.Drawing.Point(45, 520);
+            this.label_formaPagamento.Name = "label_formaPagamento";
+            this.label_formaPagamento.Size = new System.Drawing.Size(108, 13);
+            this.label_formaPagamento.TabIndex = 6;
+            this.label_formaPagamento.Text = "Forma de Pagamento";
+            // 
+            // textBox_subTotal
+            // 
+            this.textBox_subTotal.Location = new System.Drawing.Point(253, 534);
+            this.textBox_subTotal.Multiline = true;
+            this.textBox_subTotal.Name = "textBox_subTotal";
+            this.textBox_subTotal.Size = new System.Drawing.Size(107, 23);
+            this.textBox_subTotal.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(-108, 854);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(108, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Forma de Pagamento";
+            // 
+            // textBox_desconto
+            // 
+            this.textBox_desconto.Location = new System.Drawing.Point(479, 534);
+            this.textBox_desconto.Multiline = true;
+            this.textBox_desconto.Name = "textBox_desconto";
+            this.textBox_desconto.Size = new System.Drawing.Size(107, 23);
+            this.textBox_desconto.TabIndex = 4;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(146, 882);
+            this.textBox3.Multiline = true;
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(107, 23);
+            this.textBox3.TabIndex = 4;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(-147, 1216);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 13);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Forma de Pagamento";
+            // 
+            // textBox_totalPedido
+            // 
+            this.textBox_totalPedido.Location = new System.Drawing.Point(366, 534);
+            this.textBox_totalPedido.Multiline = true;
+            this.textBox_totalPedido.Name = "textBox_totalPedido";
+            this.textBox_totalPedido.Size = new System.Drawing.Size(107, 23);
+            this.textBox_totalPedido.TabIndex = 4;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(383, 894);
+            this.textBox5.Multiline = true;
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(107, 23);
+            this.textBox5.TabIndex = 4;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(229, 1243);
+            this.textBox6.Multiline = true;
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(107, 23);
+            this.textBox6.TabIndex = 4;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(-64, 1577);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Forma de Pagamento";
+            // 
+            // button1
+            // 
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.button1.Location = new System.Drawing.Point(592, 534);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(129, 23);
+            this.button1.TabIndex = 11;
+            this.button1.Text = "Finalizar Venda";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.btn_addProduto_Click);
+            // 
+            // label_pagamento
+            // 
+            this.label_pagamento.AutoSize = true;
+            this.label_pagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_pagamento.Location = new System.Drawing.Point(41, 470);
+            this.label_pagamento.Name = "label_pagamento";
+            this.label_pagamento.Size = new System.Drawing.Size(194, 39);
+            this.label_pagamento.TabIndex = 1;
+            this.label_pagamento.Text = "Pagamento";
+            // 
+            // label_subtotal
+            // 
+            this.label_subtotal.AutoSize = true;
+            this.label_subtotal.Location = new System.Drawing.Point(250, 520);
+            this.label_subtotal.Name = "label_subtotal";
+            this.label_subtotal.Size = new System.Drawing.Size(46, 13);
+            this.label_subtotal.TabIndex = 7;
+            this.label_subtotal.Text = "Subtotal";
+            // 
+            // label_desconto
+            // 
+            this.label_desconto.AutoSize = true;
+            this.label_desconto.Location = new System.Drawing.Point(363, 520);
+            this.label_desconto.Name = "label_desconto";
+            this.label_desconto.Size = new System.Drawing.Size(53, 13);
+            this.label_desconto.TabIndex = 7;
+            this.label_desconto.Text = "Desconto";
+            // 
+            // label_total
+            // 
+            this.label_total.AutoSize = true;
+            this.label_total.Location = new System.Drawing.Point(476, 520);
+            this.label_total.Name = "label_total";
+            this.label_total.Size = new System.Drawing.Size(31, 13);
+            this.label_total.TabIndex = 7;
+            this.label_total.Text = "Total";
             // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.dataGridView_Carrinho);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_addProduto);
+            this.Controls.Add(this.btn_listar);
+            this.Controls.Add(this.label_CodigoProduto);
+            this.Controls.Add(this.label_Valor);
+            this.Controls.Add(this.label_desconto);
+            this.Controls.Add(this.label_total);
+            this.Controls.Add(this.label_subtotal);
+            this.Controls.Add(this.label_Quantidade);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.label_formaPagamento);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.label_NomeProduto);
+            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.textBox_subTotal);
+            this.Controls.Add(this.textBox_desconto);
+            this.Controls.Add(this.textBox_totalPedido);
+            this.Controls.Add(this.textBox_ValorProduto);
+            this.Controls.Add(this.textBox_Quantidade);
+            this.Controls.Add(this.textBox_NomeProduto);
+            this.Controls.Add(this.textBox_CodigoProduto);
+            this.Controls.Add(this.label_pagamento);
+            this.Controls.Add(this.label_Carrinho);
+            this.Controls.Add(this.txt_NovaVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Vendas";
             this.Text = "Vendas";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Carrinho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -58,6 +421,39 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label txt_NovaVenda;
+        private System.Windows.Forms.TextBox textBox_CodigoProduto;
+        private System.Windows.Forms.TextBox textBox_NomeProduto;
+        private System.Windows.Forms.TextBox textBox_Quantidade;
+        private System.Windows.Forms.TextBox textBox_ValorProduto;
+        private System.Windows.Forms.Label label_NomeProduto;
+        private System.Windows.Forms.Label label_Quantidade;
+        private System.Windows.Forms.Label label_Valor;
+        private System.Windows.Forms.Label label_CodigoProduto;
+        private System.Windows.Forms.Button btn_listar;
+        private System.Windows.Forms.Button btn_addProduto;
+        private System.Windows.Forms.DataGridView dataGridView_Carrinho;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codProduto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nome;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitario;
+        private System.Windows.Forms.DataGridViewTextBoxColumn valorTotal;
+        private System.Windows.Forms.Label label_Carrinho;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label_formaPagamento;
+        private System.Windows.Forms.TextBox textBox_subTotal;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox_desconto;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox_totalPedido;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label_pagamento;
+        private System.Windows.Forms.Label label_subtotal;
+        private System.Windows.Forms.Label label_desconto;
+        private System.Windows.Forms.Label label_total;
     }
 }

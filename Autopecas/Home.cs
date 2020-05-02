@@ -50,7 +50,7 @@ namespace Autopecas
 
 
         // ABRIR MODULO NA TELA PRINCIPAL
-        private void abrirModal(object Modulo)
+        public void abrirModal(object Modulo)
         {
             if (this.painelPrincipal.Controls.Count > 0)
                 this.painelPrincipal.Controls.RemoveAt(0);

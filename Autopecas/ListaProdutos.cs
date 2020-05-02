@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace Autopecas
 {
-    public partial class Vendas : Form
+    public partial class ListaProdutos : Form
     {
-        public Vendas()
+        public ListaProdutos()
         {
             InitializeComponent();
-        }
-
-        private void btn_addProduto_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_listar_Click(object sender, EventArgs e)
-        {
-            //Home.abrirModal(new ListaProdutos());
         }
     }
 }

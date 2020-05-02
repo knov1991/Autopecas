@@ -33,3 +33,19 @@ C:\Users\Administrador\Desktop\piii C#\aaaaa\Autopecas\Autopecas\obj\Debug\Autop
 C:\Users\Administrador\Desktop\piii C#\aaaaa\Autopecas\Autopecas\obj\Debug\Autopecas.FornecedorListar.resources
 C:\Users\Administrador\Desktop\piii C#\aaaaa\Autopecas\Autopecas\obj\Debug\Autopecas.Estoque.resources
 C:\Users\Administrador\Desktop\piii C#\aaaaa\Autopecas\Autopecas\obj\Debug\Autopecas.ControleFinanceiro.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\bin\Debug\Autopecas.exe.config
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\bin\Debug\Autopecas.exe
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\bin\Debug\Autopecas.pdb
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.csprojAssemblyReference.cache
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.ControleFinanceiro.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.Estoque.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.FornecedorCadastrar.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.FornecedorListar.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.Home.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.Properties.Resources.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.Vendas.resources
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.GenerateResource.cache
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.csproj.CoreCompileInputs.cache
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.exe
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.pdb
+C:\Users\zluiz\Documents\Sistema\Autopecas\Autopecas\obj\Debug\Autopecas.ListaProdutos.resources
