@@ -38,9 +38,13 @@
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btn_listarTodos = new System.Windows.Forms.Button();
             this.btn_selecionar = new System.Windows.Forms.Button();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.barraTitulo = new System.Windows.Forms.Panel();
             this.groupBox_filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox_listaProdutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
+            this.barraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // label_listaProdutos
@@ -145,23 +149,48 @@
             this.btn_selecionar.Text = "Selecionar";
             this.btn_selecionar.UseVisualStyleBackColor = true;
             // 
+            // btnFechar
+            // 
+            this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
+            this.btnFechar.Location = new System.Drawing.Point(710, 10);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(32, 32);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // barraTitulo
+            // 
+            this.barraTitulo.Controls.Add(this.btnFechar);
+            this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.barraTitulo.Name = "barraTitulo";
+            this.barraTitulo.Size = new System.Drawing.Size(758, 50);
+            this.barraTitulo.TabIndex = 7;
+            // 
             // ListaProdutos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(758, 541);
+            this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.btn_selecionar);
             this.Controls.Add(this.groupBox_listaProdutos);
             this.Controls.Add(this.groupBox_filtro);
             this.Controls.Add(this.label_listaProdutos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaProdutos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lista de Produtos";
+            this.TopMost = true;
             this.groupBox_filtro.ResumeLayout(false);
             this.groupBox_filtro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox_listaProdutos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
+            this.barraTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -179,5 +208,7 @@
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.Button btn_listarTodos;
         private System.Windows.Forms.Button btn_selecionar;
+        private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.Panel barraTitulo;
     }
 }

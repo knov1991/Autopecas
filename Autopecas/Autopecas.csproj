@@ -136,22 +136,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Alterar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Autopecas.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Avancar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cancelar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Estoque.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Excluir.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fechar.png" />
@@ -163,12 +154,6 @@
     <None Include="Resources\Fornecedor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Localizar.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Novo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Primeiro.png" />
   </ItemGroup>
   <ItemGroup>
@@ -176,9 +161,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Sair.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Salvar.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Ultimo.png" />
@@ -191,6 +173,24 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Autopecas.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Novo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Localizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alterar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Excluir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Salvar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cancelar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
