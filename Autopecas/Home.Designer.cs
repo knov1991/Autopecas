@@ -115,7 +115,7 @@
             this.btnControleFinanceiro.FlatAppearance.BorderSize = 0;
             this.btnControleFinanceiro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnControleFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControleFinanceiro.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnControleFinanceiro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
             this.btnControleFinanceiro.Image = global::Autopecas.Properties.Resources.Financeiro;
             this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             this.btnVendas.FlatAppearance.BorderSize = 0;
             this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendas.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendas.ForeColor = System.Drawing.Color.White;
             this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -162,7 +162,7 @@
             this.btnFornecedorListar.FlatAppearance.BorderSize = 0;
             this.btnFornecedorListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnFornecedorListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedorListar.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedorListar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedorListar.ForeColor = System.Drawing.Color.White;
             this.btnFornecedorListar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFornecedorListar.Location = new System.Drawing.Point(0, 50);
@@ -179,7 +179,7 @@
             this.btnFornecedorCadastrar.FlatAppearance.BorderSize = 0;
             this.btnFornecedorCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnFornecedorCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedorCadastrar.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedorCadastrar.Font = new System.Drawing.Font("Arial", 14.75F);
             this.btnFornecedorCadastrar.ForeColor = System.Drawing.Color.White;
             this.btnFornecedorCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFornecedorCadastrar.Location = new System.Drawing.Point(0, 0);
@@ -196,7 +196,7 @@
             this.btnFornecedor.FlatAppearance.BorderSize = 0;
             this.btnFornecedor.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedor.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFornecedor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnFornecedor.Image = global::Autopecas.Properties.Resources.Fornecedor;
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -214,7 +214,7 @@
             this.btnEstoque.FlatAppearance.BorderSize = 0;
             this.btnEstoque.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEstoque.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEstoque.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
             this.btnEstoque.Image = global::Autopecas.Properties.Resources.Estoque;
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -231,7 +231,7 @@
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSair.Font = new System.Drawing.Font("Constantia", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = global::Autopecas.Properties.Resources.Sair;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
