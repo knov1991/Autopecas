@@ -266,7 +266,6 @@
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autopeças - ERP";
-            this.TopMost = true;
             this.panelChildForm.ResumeLayout(false);
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();

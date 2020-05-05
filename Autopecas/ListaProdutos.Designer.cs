@@ -182,9 +182,8 @@
             this.Controls.Add(this.label_listaProdutos);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ListaProdutos";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Lista de Produtos";
-            this.TopMost = true;
             this.groupBox_filtro.ResumeLayout(false);
             this.groupBox_filtro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
