@@ -126,6 +126,14 @@ namespace Autopecas
             this.txtNome.Focus();
         }
 
+        //Método do Botão Localizar Para o Formulário de Listar Fornecedores
+        private void btnLocalizar_Click(object sender, EventArgs e)
+        {
+            FornecedorListar f = new FornecedorListar();
+            f.ShowDialog();
+            f.Dispose();
+        }
+
         //NÚMERO MÁXIMO DE CARACTERES PARA O CNPJ
         private void txtCnpj_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -192,6 +200,22 @@ namespace Autopecas
             }
         }
 
-        
+        private void txtCep_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string xml = "http://cep.republicavirtual.com.br/web_cep.php?cep=@cep&formato=xml".Replace("@cep", txtCep.Text);
+                ds.ReadXml(xml);
+
+                txtEstado.Text = ds.Tables[0].Rows[0]["uf"].ToString();
+                txtCidade.Text = ds.Tables[0].Rows[0]["cidade"].ToString();
+                txtBairro.Text = ds.Tables[0].Rows[0]["bairro"].ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Foi dectado um erro!");
+            }
+        }
     }
 }

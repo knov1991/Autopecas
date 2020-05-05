@@ -163,6 +163,7 @@
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(211, 22);
             this.txtCep.TabIndex = 11;
+            this.txtCep.TextChanged += new System.EventHandler(this.txtCep_TextChanged);
             this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
             // lbCep
@@ -324,6 +325,7 @@
             this.btnLocalizar.Text = "  Localizar";
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnAlterar
             // 
