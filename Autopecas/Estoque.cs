@@ -93,12 +93,13 @@ namespace Autopecas
             try
             {
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "UPDATE ESTOQUE SET PRODUTO = @PRODUTO, CATEGORIA = @CATEGORIA, QUANTIDADE = @QUANTIDADE, FORNECEDOR = @FORNECEDOR, DATA_ENTRADA = @DATA_ENTRADA WHERE ID = @ID ";
+                strSQL = "UPDATE ESTOQUE SET PRODUTO = @PRODUTO, CATEGORIA = @CATEGORIA, QUANTIDADE = @QUANTIDADE, VALORPRODUTO = @VALORPRODUTO, FORNECEDOR = @FORNECEDOR, DATA_ENTRADA = @DATA_ENTRADA WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@ID", txtId.Text);
                 comando.Parameters.AddWithValue("@PRODUTO", txtProduto.Text);
                 comando.Parameters.AddWithValue("@CATEGORIA", txtCategoria.Text);
                 comando.Parameters.AddWithValue("@QUANTIDADE", txtQuantidade.Text);
+                comando.Parameters.AddWithValue("@VALORPRODUTO", txtvalorProduto.Text);
                 comando.Parameters.AddWithValue("@FORNECEDOR", txtFornecedor.Text);
                 comando.Parameters.AddWithValue("@DATA_ENTRADA", txtDataEntrada.Text);
 
@@ -165,6 +166,7 @@ namespace Autopecas
                     txtProduto.Text = Convert.ToString(dr["produto"]);
                     txtCategoria.Text = Convert.ToString(dr["categoria"]);
                     txtQuantidade.Text = Convert.ToString(dr["quantidade"]);
+                    txtQuantidade.Text = Convert.ToString(dr["valorProduto"]);
                     txtFornecedor.Text = Convert.ToString(dr["Fornecedor"]);
                     txtDataEntrada.Text = Convert.ToString(dr["data_entrada"]);
 
@@ -183,6 +185,11 @@ namespace Autopecas
                 comando = null;
 
             }
+        }
+
+        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     
