@@ -30,25 +30,21 @@
         {
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.painelPrincipal = new System.Windows.Forms.Panel();
+            Home.labelConectar = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
             this.btnControleFinanceiro = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
-            this.painelFornecedor = new System.Windows.Forms.Panel();
-            this.btnFornecedorListar = new System.Windows.Forms.Button();
-            this.btnFornecedorCadastrar = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            Home.labelConectar = new System.Windows.Forms.Label();
             this.panelChildForm.SuspendLayout();
             this.painelPrincipal.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
-            this.painelFornecedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,6 +69,17 @@
             this.painelPrincipal.Name = "painelPrincipal";
             this.painelPrincipal.Size = new System.Drawing.Size(774, 718);
             this.painelPrincipal.TabIndex = 1;
+            // 
+            // labelConectar
+            // 
+            Home.labelConectar.AutoSize = true;
+            Home.labelConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Home.labelConectar.ForeColor = System.Drawing.Color.Red;
+            Home.labelConectar.Location = new System.Drawing.Point(213, 89);
+            Home.labelConectar.Name = "labelConectar";
+            Home.labelConectar.Size = new System.Drawing.Size(359, 55);
+            Home.labelConectar.TabIndex = 0;
+            Home.labelConectar.Text = "Desconectado!";
             // 
             // barraTitulo
             // 
@@ -101,7 +108,6 @@
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
             this.painelLateral.Controls.Add(this.btnVendas);
-            this.painelLateral.Controls.Add(this.painelFornecedor);
             this.painelLateral.Controls.Add(this.btnFornecedor);
             this.painelLateral.Controls.Add(this.btnEstoque);
             this.painelLateral.Controls.Add(this.btnSair);
@@ -122,7 +128,7 @@
             this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
             this.btnControleFinanceiro.Image = global::Autopecas.Properties.Resources.Financeiro;
             this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 444);
+            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 344);
             this.btnControleFinanceiro.Name = "btnControleFinanceiro";
             this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
             this.btnControleFinanceiro.TabIndex = 8;
@@ -140,58 +146,13 @@
             this.btnVendas.ForeColor = System.Drawing.Color.White;
             this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 394);
+            this.btnVendas.Location = new System.Drawing.Point(0, 294);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(250, 50);
             this.btnVendas.TabIndex = 6;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
-            // 
-            // painelFornecedor
-            // 
-            this.painelFornecedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(80)))), ((int)(((byte)(150)))));
-            this.painelFornecedor.Controls.Add(this.btnFornecedorListar);
-            this.painelFornecedor.Controls.Add(this.btnFornecedorCadastrar);
-            this.painelFornecedor.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelFornecedor.Location = new System.Drawing.Point(0, 294);
-            this.painelFornecedor.Name = "painelFornecedor";
-            this.painelFornecedor.Size = new System.Drawing.Size(250, 100);
-            this.painelFornecedor.TabIndex = 5;
-            // 
-            // btnFornecedorListar
-            // 
-            this.btnFornecedorListar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFornecedorListar.FlatAppearance.BorderSize = 0;
-            this.btnFornecedorListar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnFornecedorListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedorListar.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFornecedorListar.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedorListar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedorListar.Location = new System.Drawing.Point(0, 50);
-            this.btnFornecedorListar.Name = "btnFornecedorListar";
-            this.btnFornecedorListar.Size = new System.Drawing.Size(250, 50);
-            this.btnFornecedorListar.TabIndex = 5;
-            this.btnFornecedorListar.Text = "Lista";
-            this.btnFornecedorListar.UseVisualStyleBackColor = true;
-            this.btnFornecedorListar.Click += new System.EventHandler(this.btnFornecedorListar_Click);
-            // 
-            // btnFornecedorCadastrar
-            // 
-            this.btnFornecedorCadastrar.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnFornecedorCadastrar.FlatAppearance.BorderSize = 0;
-            this.btnFornecedorCadastrar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnFornecedorCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFornecedorCadastrar.Font = new System.Drawing.Font("Arial", 14.75F);
-            this.btnFornecedorCadastrar.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedorCadastrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedorCadastrar.Location = new System.Drawing.Point(0, 0);
-            this.btnFornecedorCadastrar.Name = "btnFornecedorCadastrar";
-            this.btnFornecedorCadastrar.Size = new System.Drawing.Size(250, 50);
-            this.btnFornecedorCadastrar.TabIndex = 4;
-            this.btnFornecedorCadastrar.Text = "Cadastrar";
-            this.btnFornecedorCadastrar.UseVisualStyleBackColor = true;
-            this.btnFornecedorCadastrar.Click += new System.EventHandler(this.btnFornecedorCadastrar_Click);
             // 
             // btnFornecedor
             // 
@@ -257,16 +218,6 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // labelConectar
-            // 
-            Home.labelConectar.AutoSize = true;
-            Home.labelConectar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            Home.labelConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Home.labelConectar.Location = new System.Drawing.Point(261, 87);
-            Home.labelConectar.Name = "labelConectar";
-            Home.labelConectar.Size = new System.Drawing.Size(2, 57);
-            Home.labelConectar.TabIndex = 0;
-            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -285,7 +236,6 @@
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
-            this.painelFornecedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -302,10 +252,7 @@
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
-        private System.Windows.Forms.Panel painelFornecedor;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Button btnFornecedorListar;
-        private System.Windows.Forms.Button btnFornecedorCadastrar;
         private System.Windows.Forms.Button btnControleFinanceiro;
         public static System.Windows.Forms.Label labelConectar;
     }
