@@ -42,7 +42,9 @@
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            Home.labelConectar = new System.Windows.Forms.Label();
             this.panelChildForm.SuspendLayout();
+            this.painelPrincipal.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
@@ -65,6 +67,7 @@
             // 
             this.painelPrincipal.BackgroundImage = global::Autopecas.Properties.Resources.Autopecas;
             this.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.painelPrincipal.Controls.Add(Home.labelConectar);
             this.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelPrincipal.Location = new System.Drawing.Point(0, 50);
             this.painelPrincipal.Name = "painelPrincipal";
@@ -254,6 +257,16 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // labelConectar
+            // 
+            Home.labelConectar.AutoSize = true;
+            Home.labelConectar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            Home.labelConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            Home.labelConectar.Location = new System.Drawing.Point(261, 87);
+            Home.labelConectar.Name = "labelConectar";
+            Home.labelConectar.Size = new System.Drawing.Size(2, 57);
+            Home.labelConectar.TabIndex = 0;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +280,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autopeças - ERP";
             this.panelChildForm.ResumeLayout(false);
+            this.painelPrincipal.ResumeLayout(false);
+            this.painelPrincipal.PerformLayout();
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
@@ -292,5 +307,6 @@
         private System.Windows.Forms.Button btnFornecedorListar;
         private System.Windows.Forms.Button btnFornecedorCadastrar;
         private System.Windows.Forms.Button btnControleFinanceiro;
+        public static System.Windows.Forms.Label labelConectar;
     }
 }

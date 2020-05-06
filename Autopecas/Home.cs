@@ -17,6 +17,7 @@ namespace Autopecas
         {
             InitializeComponent();
             EsconderMenu();
+            Conectar.ConectarMysql();
         }
 
         // MOVER JANELA SEM BARRA DE TITULO PADRÃO
