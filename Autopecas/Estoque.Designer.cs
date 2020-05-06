@@ -43,12 +43,12 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.txt_CadastroFornecedor = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtvalorProduto = new System.Windows.Forms.TextBox();
             this.btnSalvar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
             this.btnAlterar = new System.Windows.Forms.Button();
             this.btnLocalizar = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.txtvalorProduto = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -198,25 +198,6 @@
             this.txt_CadastroFornecedor.TabIndex = 74;
             this.txt_CadastroFornecedor.Text = "Controle de Estoque";
             // 
-            // label6
-            // 
-            this.label6.BackColor = System.Drawing.Color.Transparent;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label6.Location = new System.Drawing.Point(556, 166);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 23);
-            this.label6.TabIndex = 60;
-            this.label6.Text = "Valor do Produto";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // txtvalorProduto
-            // 
-            this.txtvalorProduto.Location = new System.Drawing.Point(560, 188);
-            this.txtvalorProduto.Name = "txtvalorProduto";
-            this.txtvalorProduto.Size = new System.Drawing.Size(161, 20);
-            this.txtvalorProduto.TabIndex = 61;
-            // 
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -278,6 +259,25 @@
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
+            // label6
+            // 
+            this.label6.BackColor = System.Drawing.Color.Transparent;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label6.Location = new System.Drawing.Point(556, 166);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(91, 23);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "Valor do Produto";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtvalorProduto
+            // 
+            this.txtvalorProduto.Location = new System.Drawing.Point(560, 188);
+            this.txtvalorProduto.Name = "txtvalorProduto";
+            this.txtvalorProduto.Size = new System.Drawing.Size(161, 20);
+            this.txtvalorProduto.TabIndex = 61;
+            // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -330,11 +330,11 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txt_CadastroFornecedor;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtvalorProduto;
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnExcluir;
         private System.Windows.Forms.Button btnAlterar;
         private System.Windows.Forms.Button btnLocalizar;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtvalorProduto;
     }
 }

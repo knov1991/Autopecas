@@ -31,10 +31,11 @@ namespace Autopecas
             try
             {
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "INSERT INTO ESTOQUE (PRODUTO, CATEGORIA, QUANTIDADE, FORNECEDOR, DATA_ENTRADA) VALUES(@PRODUTO, @CATEGORIA, @QUANTIDADE, @FORNECEDOR, @DATA_ENTRADA)";
+                strSQL = "INSERT INTO ESTOQUE (PRODUTO, CATEGORIA, QUANTIDADE, VALORPRODUTO, FORNECEDOR, DATA_ENTRADA) VALUES(@PRODUTO, @CATEGORIA, @QUANTIDADE, @VALORPRODUTO, @FORNECEDOR, @DATA_ENTRADA)";
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@PRODUTO", txtProduto.Text);
                 comando.Parameters.AddWithValue("@CATEGORIA", txtCategoria.Text);
+                comando.Parameters.AddWithValue("@VALORPRODUTO", txtvalorProduto.Text);
                 comando.Parameters.AddWithValue("@QUANTIDADE", txtQuantidade.Text);
                 comando.Parameters.AddWithValue("@FORNECEDOR", txtFornecedor.Text);
                 comando.Parameters.AddWithValue("@DATA_ENTRADA", txtDataEntrada.Text);
