@@ -63,6 +63,7 @@
             this.txtConsultar.TabIndex = 73;
             this.txtConsultar.Text = "Consultar";
             this.txtConsultar.UseVisualStyleBackColor = false;
+            this.txtConsultar.Click += new System.EventHandler(this.txtConsultar_Click_1);
             // 
             // txtDataEntrada
             // 
@@ -229,6 +230,7 @@
             this.btnSalvar.Text = "  Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnExcluir
             // 
@@ -243,6 +245,7 @@
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click_1);
             // 
             // btnAlterar
             // 
@@ -257,6 +260,7 @@
             this.btnAlterar.Text = "  Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click_1);
             // 
             // btnLocalizar
             // 
@@ -272,6 +276,7 @@
             this.btnLocalizar.Text = "  Exibir";
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // Estoque
             // 
