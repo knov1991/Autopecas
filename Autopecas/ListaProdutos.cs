@@ -14,10 +14,8 @@ namespace Autopecas
     public partial class ListaProdutos : Form
     {
 
-        MySqlConnection conexao;
-        MySqlCommand comando;
+        MySqlConnection conexao;   
         MySqlDataAdapter da;
-        MySqlDataReader dr;
         string strSQL;
 
         public ListaProdutos()
@@ -62,7 +60,6 @@ namespace Autopecas
             {
                 conexao.Close();
                 conexao = null;
-                comando = null;
 
             }
         }
