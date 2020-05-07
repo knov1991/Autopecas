@@ -32,11 +32,11 @@
             this.radioButton_filtroNome = new System.Windows.Forms.RadioButton();
             this.radioButton_filtroFornecedor = new System.Windows.Forms.RadioButton();
             this.groupBox_filtro = new System.Windows.Forms.GroupBox();
+            this.btn_listarTodos = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.textBox_filtroBusca = new System.Windows.Forms.TextBox();
             this.dataGridView_buscaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
-            this.btn_listarTodos = new System.Windows.Forms.Button();
             this.btn_selecionar = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
@@ -93,6 +93,17 @@
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
             // 
+            // btn_listarTodos
+            // 
+            this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_listarTodos.Location = new System.Drawing.Point(377, 42);
+            this.btn_listarTodos.Name = "btn_listarTodos";
+            this.btn_listarTodos.Size = new System.Drawing.Size(130, 23);
+            this.btn_listarTodos.TabIndex = 6;
+            this.btn_listarTodos.Text = "Listar todos";
+            this.btn_listarTodos.UseVisualStyleBackColor = true;
+            this.btn_listarTodos.Click += new System.EventHandler(this.btn_listarTodos_Click);
+            // 
             // btn_buscar
             // 
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -138,17 +149,6 @@
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Produtos";
             // 
-            // btn_listarTodos
-            // 
-            this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btn_listarTodos.Location = new System.Drawing.Point(377, 42);
-            this.btn_listarTodos.Name = "btn_listarTodos";
-            this.btn_listarTodos.Size = new System.Drawing.Size(130, 23);
-            this.btn_listarTodos.TabIndex = 6;
-            this.btn_listarTodos.Text = "Listar todos";
-            this.btn_listarTodos.UseVisualStyleBackColor = true;
-            this.btn_listarTodos.Click += new System.EventHandler(this.btn_listarTodos_Click);
-            // 
             // btn_selecionar
             // 
             this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
@@ -158,6 +158,7 @@
             this.btn_selecionar.TabIndex = 6;
             this.btn_selecionar.Text = "Selecionar";
             this.btn_selecionar.UseVisualStyleBackColor = true;
+            this.btn_selecionar.Click += new System.EventHandler(this.btn_selecionar_Click);
             // 
             // btnFechar
             // 

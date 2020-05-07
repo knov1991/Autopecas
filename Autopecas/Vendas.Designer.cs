@@ -85,6 +85,7 @@
             // 
             // textBox_NomeProduto
             // 
+            this.textBox_NomeProduto.Enabled = false;
             this.textBox_NomeProduto.Location = new System.Drawing.Point(49, 171);
             this.textBox_NomeProduto.Multiline = true;
             this.textBox_NomeProduto.Name = "textBox_NomeProduto";
@@ -101,6 +102,7 @@
             // 
             // textBox_ValorProduto
             // 
+            this.textBox_ValorProduto.Enabled = false;
             this.textBox_ValorProduto.Location = new System.Drawing.Point(452, 171);
             this.textBox_ValorProduto.Multiline = true;
             this.textBox_ValorProduto.Name = "textBox_ValorProduto";
@@ -422,10 +424,6 @@
         #endregion
 
         private System.Windows.Forms.Label txt_NovaVenda;
-        private System.Windows.Forms.TextBox textBox_CodigoProduto;
-        private System.Windows.Forms.TextBox textBox_NomeProduto;
-        private System.Windows.Forms.TextBox textBox_Quantidade;
-        private System.Windows.Forms.TextBox textBox_ValorProduto;
         private System.Windows.Forms.Label label_NomeProduto;
         private System.Windows.Forms.Label label_Quantidade;
         private System.Windows.Forms.Label label_Valor;
@@ -455,5 +453,9 @@
         private System.Windows.Forms.Label label_subtotal;
         private System.Windows.Forms.Label label_desconto;
         private System.Windows.Forms.Label label_total;
+        public System.Windows.Forms.TextBox textBox_CodigoProduto;
+        public System.Windows.Forms.TextBox textBox_NomeProduto;
+        public System.Windows.Forms.TextBox textBox_Quantidade;
+        public System.Windows.Forms.TextBox textBox_ValorProduto;
     }
 }

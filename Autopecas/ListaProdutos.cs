@@ -13,14 +13,18 @@ namespace Autopecas
 {
     public partial class ListaProdutos : Form
     {
-
-        MySqlConnection conexao;   
+        Vendas instanciaVendas;
+        MySqlConnection conexao;
+        MySqlCommand comando;
         MySqlDataAdapter da;
+        MySqlDataReader dr;
         string strSQL;
 
-        public ListaProdutos()
+        public ListaProdutos(Vendas vendas)
         {
             InitializeComponent();
+            dataGridView_buscaProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            instanciaVendas = vendas;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -30,7 +34,7 @@ namespace Autopecas
 
         private void dataGridView_buscaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-       
+
         }
 
         private void btn_listarTodos_Click(object sender, EventArgs e)
@@ -60,8 +64,18 @@ namespace Autopecas
             {
                 conexao.Close();
                 conexao = null;
+                comando = null;
 
             }
+        }
+
+        private void btn_selecionar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dr = dataGridView_buscaProdutos.SelectedRows[0];
+            instanciaVendas.textBox_CodigoProduto.Text = dr.Cells[0].Value.ToString();
+            instanciaVendas.textBox_NomeProduto.Text = dr.Cells[1].Value.ToString();
+            instanciaVendas.textBox_ValorProduto.Text = dr.Cells[2].Value.ToString();
+            Close();
         }
     }
 }
