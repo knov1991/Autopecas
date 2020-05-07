@@ -16,7 +16,7 @@ namespace Autopecas
         public Home()
         {
             InitializeComponent();
-            EsconderMenu();
+            //EsconderMenu();
             Conectar.ConectarMysql();
         }
 
@@ -46,7 +46,7 @@ namespace Autopecas
         // ESCONDE MENU LATERAL
         private void EsconderMenu()
         {
-            painelFornecedor.Visible = false;
+            //painelFornecedor.Visible = false;
         }
 
 
@@ -65,19 +65,11 @@ namespace Autopecas
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-            MostrarMenu(painelFornecedor);
+            AbrirModal(new FornecedorCadastrar());
         }
         private void btnVendas_Click(object sender, EventArgs e)
         {
             AbrirModal(new Vendas());
-        }
-        private void btnFornecedorCadastrar_Click(object sender, EventArgs e)
-        {
-            AbrirModal(new FornecedorCadastrar());
-        }
-        private void btnFornecedorListar_Click(object sender, EventArgs e)
-        {
-            AbrirModal(new FornecedorListar());
         }
         private void btnEstoque_Click(object sender, EventArgs e)
         {
