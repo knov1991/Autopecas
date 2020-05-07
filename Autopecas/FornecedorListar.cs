@@ -28,6 +28,8 @@ namespace Autopecas
             Close();
         }
 
+
+
         //Listar os Fornecedores na Tela de Listar
         private void Listar()
         {
