@@ -54,6 +54,7 @@
     <Compile Include="ControleFinanceiro.Designer.cs">
       <DependentUpon>ControleFinanceiro.cs</DependentUpon>
     </Compile>
+    <Compile Include="ControlesGerais.cs" />
     <Compile Include="DAO\Conectar.cs" />
     <Compile Include="Estoque.cs">
       <SubType>Form</SubType>

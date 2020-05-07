@@ -7,45 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
     public partial class FornecedorCadastrar : Form
     {
+        public string operacao;
+
+
+        MySqlConnection conexao;
+        MySqlCommand comando;
+        string strSQL;
         public FornecedorCadastrar()
         {
             InitializeComponent();
-        }
-
-        public void AlteraBotao(int op)
-        {
-            btnInserir.Enabled = false;
-            btnLocalizar.Enabled = false;
-            btnAlterar.Enabled = false;
-            btnExcluir.Enabled = false;
-            btnSalvar.Enabled = false;
-            btnCancelar.Enabled = false;
-
-            if(op == 1)
-            {
-                btnInserir.Enabled = true;
-                btnLocalizar.Enabled = true;
-                btnCancelar.Enabled = true;
-            }
-
-            if(op == 2)
-            {
-                btnSalvar.Enabled = true;
-                btnCancelar.Enabled = true;
-            }
-
-            if(op == 3)
-            {
-                btnExcluir.Enabled = true;
-                btnAlterar.Enabled = true;
-                btnCancelar.Enabled = true;
-            }
-
         }
 
         //Função Habilita Campos do Formulário de Fornecedor
@@ -87,6 +63,7 @@ namespace Autopecas
         //Método Limpa Campos do Formulário de Fornecedor
         public void LimpaCampos()
         {
+            txtId.Clear();
             txtNome.Clear();
             txtRSocial.Clear();
             txtCnpj.Clear();
@@ -107,7 +84,6 @@ namespace Autopecas
         private void FornecedorCadastrar_Load(object sender, EventArgs e)
         {
             this.DesabilitaCampos();
-            this.AlteraBotao(1);
         }
 
         //Método Botão Inserir
@@ -115,15 +91,6 @@ namespace Autopecas
         {
             this.txtNome.Focus();
             this.HabilitaCampos();
-            this.AlteraBotao(2);
-        }
-
-        //Método Botão Cancelar
-        private void btnCancelar_Click(object sender, EventArgs e)
-        {
-            this.LimpaCampos();
-            this.AlteraBotao(1);
-            this.txtNome.Focus();
         }
 
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
@@ -132,6 +99,155 @@ namespace Autopecas
             FornecedorListar f = new FornecedorListar();
             f.ShowDialog();
             f.Dispose();
+        }
+
+       //Botão Para Alterar Os Dados
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+
+                strSQL = "UPDATE FORNECEDORES SET NOME=@NOME, RSOCIAL=@RSOCIAL, CNPJ=@CNPJ, IE=@IE, CEP=@CEP, ESTADO=@ESTADO, CIDADE=@CIDADE," +
+                    "RUA=@RUA, NUMERO=@NUMERO, BAIRRO=@BAIRRO, EMAIL=@EMAIL, CELULAR=@CELULAR, TELEFONE=@TELEFONE WHERE ID=@ID";
+
+                comando = new MySqlCommand(strSQL, conexao);
+
+                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                comando.Parameters.AddWithValue("@CNPJ", txtCnpj.Text);
+                comando.Parameters.AddWithValue("@IE", txtIe.Text);
+                comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                conexao.Open();
+
+                comando.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                MessageBox.Show("Alterado com sucesso!");
+                conexao = null;
+                comando = null;
+
+            }
+        }
+
+        //Botão Para Salvar Os Dados
+        private void btnSalvar_Click(object sender, EventArgs e)
+        {
+            //Verificação se tem algum campo vazio
+            ControlesGerais c = new ControlesGerais();
+            if (c.campoVazio(txtNome, "Nome"))
+                return;
+            if (c.campoVazio(txtRSocial, "Razão Social"))
+                return;
+            if (c.campoVazio(txtCnpj, "CNPJ"))
+                return;
+            if (c.campoVazio(txtIe, "IE"))
+                return;
+            if (c.campoVazio(txtCep, "CEP"))
+                return;
+            if (c.campoVazio(txtBairro, "Bairro"))
+                return;
+            if (c.campoVazio(txtRua, "Rua"))
+                return;
+            if (c.campoVazio(txtNumero, "Número"))
+                return;
+            if (c.campoVazio(txtEmail, "Email"))
+                return;
+            if (c.campoVazio(txtCelular, "Celular"))
+                return;
+            if (c.campoVazio(txtTelefone, "Telefone"))
+                return;
+
+            try
+            {
+                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                strSQL = "INSERT INTO FORNECEDORES (NOME, RSOCIAL, CNPJ, IE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
+                    " @RSOCIAL, @CNPJ, @IE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
+
+               
+                    comando = new MySqlCommand(strSQL, conexao);
+                    comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                    comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                    comando.Parameters.AddWithValue("@CNPJ", txtCnpj.Text);
+                    comando.Parameters.AddWithValue("@IE", txtIe.Text);
+                    comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                    comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                    comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                    comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                    comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                    comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                    comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                    comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                    comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                    conexao.Open();
+
+                    comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                MessageBox.Show("Cadastro feito com sucesso.");
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        //Método Para Excluir Os Dados
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+
+                strSQL = "DELETE FROM FORNECEDORES WHERE ID=@ID";
+
+                comando = new MySqlCommand(strSQL, conexao);
+
+                comando.Parameters.AddWithValue("@ID", txtId.Text);
+
+                conexao.Open();
+                comando.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                MessageBox.Show("Fornecedor excluído");
+                conexao = null;
+                comando = null;
+            }
+        }
+
+        //Método Botão Cancelar
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.LimpaCampos();
+            this.txtNome.Focus();
         }
 
         //NÚMERO MÁXIMO DE CARACTERES PARA O CNPJ
@@ -217,5 +333,11 @@ namespace Autopecas
                 MessageBox.Show(ex.Message, "Foi dectado um erro!");
             }
         }
+
+       
+
+        
+
+        
     }
 }

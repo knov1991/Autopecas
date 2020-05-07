@@ -186,11 +186,6 @@ namespace Autopecas
 
             }
         }
-
-        private void dataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
     
 }

@@ -98,7 +98,6 @@
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.Size = new System.Drawing.Size(673, 226);
             this.dataGrid.TabIndex = 66;
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
             // txtFornecedor
             // 
