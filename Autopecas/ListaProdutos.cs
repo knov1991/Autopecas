@@ -77,5 +77,10 @@ namespace Autopecas
             instanciaVendas.textBox_ValorProduto.Text = dr.Cells[2].Value.ToString();
             Close();
         }
+
+        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

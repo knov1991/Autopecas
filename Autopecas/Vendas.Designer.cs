@@ -45,23 +45,17 @@
             this.valorUnitario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.valorTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label_Carrinho = new System.Windows.Forms.Label();
-            this.comboBox_FormaPagamento = new System.Windows.Forms.ComboBox();
-            this.label_formaPagamento = new System.Windows.Forms.Label();
             this.textBox_subTotal = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox_desconto = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox_totalPedido = new System.Windows.Forms.TextBox();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label_pagamento = new System.Windows.Forms.Label();
             this.label_subtotal = new System.Windows.Forms.Label();
-            this.label_desconto = new System.Windows.Forms.Label();
-            this.label_total = new System.Windows.Forms.Label();
             this.btn_finalizaVenda = new System.Windows.Forms.Button();
             this.textBox_Quantidade = new System.Windows.Forms.TextBox();
+            this.btn_remove = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Carrinho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -140,7 +134,7 @@
             // 
             // btn_listar
             // 
-            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listar.Location = new System.Drawing.Point(166, 123);
             this.btn_listar.Name = "btn_listar";
             this.btn_listar.Size = new System.Drawing.Size(81, 23);
@@ -151,7 +145,7 @@
             // 
             // btn_addProduto
             // 
-            this.btn_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_addProduto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_addProduto.Location = new System.Drawing.Point(583, 171);
             this.btn_addProduto.Name = "btn_addProduto";
             this.btn_addProduto.Size = new System.Drawing.Size(138, 23);
@@ -183,7 +177,7 @@
             this.dataGridView_Carrinho.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView_Carrinho.RowHeadersVisible = false;
             this.dataGridView_Carrinho.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 179);
+            this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 268);
             this.dataGridView_Carrinho.TabIndex = 12;
             // 
             // codProduto
@@ -226,34 +220,12 @@
             this.label_Carrinho.TabIndex = 1;
             this.label_Carrinho.Text = "Carrinho";
             // 
-            // comboBox_FormaPagamento
-            // 
-            this.comboBox_FormaPagamento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox_FormaPagamento.FormattingEnabled = true;
-            this.comboBox_FormaPagamento.Items.AddRange(new object[] {
-            "Dinheiro (à vista)",
-            "Cartão de Crédito",
-            "Cartão de Débito"});
-            this.comboBox_FormaPagamento.Location = new System.Drawing.Point(48, 536);
-            this.comboBox_FormaPagamento.Name = "comboBox_FormaPagamento";
-            this.comboBox_FormaPagamento.Size = new System.Drawing.Size(199, 21);
-            this.comboBox_FormaPagamento.TabIndex = 13;
-            // 
-            // label_formaPagamento
-            // 
-            this.label_formaPagamento.AutoSize = true;
-            this.label_formaPagamento.Location = new System.Drawing.Point(45, 520);
-            this.label_formaPagamento.Name = "label_formaPagamento";
-            this.label_formaPagamento.Size = new System.Drawing.Size(108, 13);
-            this.label_formaPagamento.TabIndex = 6;
-            this.label_formaPagamento.Text = "Forma de Pagamento";
-            // 
             // textBox_subTotal
             // 
-            this.textBox_subTotal.Location = new System.Drawing.Point(253, 534);
+            this.textBox_subTotal.Location = new System.Drawing.Point(443, 623);
             this.textBox_subTotal.Multiline = true;
             this.textBox_subTotal.Name = "textBox_subTotal";
-            this.textBox_subTotal.Size = new System.Drawing.Size(107, 23);
+            this.textBox_subTotal.Size = new System.Drawing.Size(134, 23);
             this.textBox_subTotal.TabIndex = 4;
             // 
             // label1
@@ -264,14 +236,6 @@
             this.label1.Size = new System.Drawing.Size(108, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Forma de Pagamento";
-            // 
-            // textBox_desconto
-            // 
-            this.textBox_desconto.Location = new System.Drawing.Point(479, 534);
-            this.textBox_desconto.Multiline = true;
-            this.textBox_desconto.Name = "textBox_desconto";
-            this.textBox_desconto.Size = new System.Drawing.Size(107, 23);
-            this.textBox_desconto.TabIndex = 4;
             // 
             // textBox3
             // 
@@ -289,14 +253,6 @@
             this.label2.Size = new System.Drawing.Size(108, 13);
             this.label2.TabIndex = 6;
             this.label2.Text = "Forma de Pagamento";
-            // 
-            // textBox_totalPedido
-            // 
-            this.textBox_totalPedido.Location = new System.Drawing.Point(366, 534);
-            this.textBox_totalPedido.Multiline = true;
-            this.textBox_totalPedido.Name = "textBox_totalPedido";
-            this.textBox_totalPedido.Size = new System.Drawing.Size(107, 23);
-            this.textBox_totalPedido.TabIndex = 4;
             // 
             // textBox5
             // 
@@ -323,48 +279,21 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Forma de Pagamento";
             // 
-            // label_pagamento
-            // 
-            this.label_pagamento.AutoSize = true;
-            this.label_pagamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_pagamento.Location = new System.Drawing.Point(41, 470);
-            this.label_pagamento.Name = "label_pagamento";
-            this.label_pagamento.Size = new System.Drawing.Size(194, 39);
-            this.label_pagamento.TabIndex = 1;
-            this.label_pagamento.Text = "Pagamento";
-            // 
             // label_subtotal
             // 
             this.label_subtotal.AutoSize = true;
-            this.label_subtotal.Location = new System.Drawing.Point(250, 520);
+            this.label_subtotal.Location = new System.Drawing.Point(440, 607);
             this.label_subtotal.Name = "label_subtotal";
             this.label_subtotal.Size = new System.Drawing.Size(46, 13);
             this.label_subtotal.TabIndex = 7;
             this.label_subtotal.Text = "Subtotal";
             // 
-            // label_desconto
-            // 
-            this.label_desconto.AutoSize = true;
-            this.label_desconto.Location = new System.Drawing.Point(363, 520);
-            this.label_desconto.Name = "label_desconto";
-            this.label_desconto.Size = new System.Drawing.Size(53, 13);
-            this.label_desconto.TabIndex = 7;
-            this.label_desconto.Text = "Desconto";
-            // 
-            // label_total
-            // 
-            this.label_total.AutoSize = true;
-            this.label_total.Location = new System.Drawing.Point(476, 520);
-            this.label_total.Name = "label_total";
-            this.label_total.Size = new System.Drawing.Size(31, 13);
-            this.label_total.TabIndex = 7;
-            this.label_total.Text = "Total";
-            // 
             // btn_finalizaVenda
             // 
-            this.btn_finalizaVenda.Location = new System.Drawing.Point(592, 533);
+            this.btn_finalizaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_finalizaVenda.Location = new System.Drawing.Point(583, 623);
             this.btn_finalizaVenda.Name = "btn_finalizaVenda";
-            this.btn_finalizaVenda.Size = new System.Drawing.Size(129, 25);
+            this.btn_finalizaVenda.Size = new System.Drawing.Size(138, 23);
             this.btn_finalizaVenda.TabIndex = 14;
             this.btn_finalizaVenda.Text = "Finalizar Venda";
             this.btn_finalizaVenda.UseVisualStyleBackColor = true;
@@ -379,38 +308,43 @@
             this.textBox_Quantidade.TabIndex = 15;
             this.textBox_Quantidade.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox_Quantidade_KeyPress);
             // 
+            // btn_remove
+            // 
+            this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_remove.Location = new System.Drawing.Point(583, 543);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(138, 23);
+            this.btn_remove.TabIndex = 16;
+            this.btn_remove.Text = "Remover Item";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
+            // 
             // Vendas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.textBox_Quantidade);
             this.Controls.Add(this.btn_finalizaVenda);
-            this.Controls.Add(this.comboBox_FormaPagamento);
             this.Controls.Add(this.dataGridView_Carrinho);
             this.Controls.Add(this.btn_addProduto);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.label_CodigoProduto);
             this.Controls.Add(this.label_Valor);
-            this.Controls.Add(this.label_desconto);
-            this.Controls.Add(this.label_total);
             this.Controls.Add(this.label_subtotal);
             this.Controls.Add(this.label_Quantidade);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label_formaPagamento);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label_NomeProduto);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.textBox_subTotal);
-            this.Controls.Add(this.textBox_desconto);
-            this.Controls.Add(this.textBox_totalPedido);
             this.Controls.Add(this.textBox_ValorProduto);
             this.Controls.Add(this.textBox_NomeProduto);
             this.Controls.Add(this.textBox_CodigoProduto);
-            this.Controls.Add(this.label_pagamento);
             this.Controls.Add(this.label_Carrinho);
             this.Controls.Add(this.txt_NovaVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -438,25 +372,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorTotal;
         private System.Windows.Forms.Label label_Carrinho;
-        private System.Windows.Forms.ComboBox comboBox_FormaPagamento;
-        private System.Windows.Forms.Label label_formaPagamento;
         private System.Windows.Forms.TextBox textBox_subTotal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox_desconto;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox_totalPedido;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label_pagamento;
         private System.Windows.Forms.Label label_subtotal;
-        private System.Windows.Forms.Label label_desconto;
-        private System.Windows.Forms.Label label_total;
         public System.Windows.Forms.TextBox textBox_CodigoProduto;
         public System.Windows.Forms.TextBox textBox_NomeProduto;
         public System.Windows.Forms.TextBox textBox_ValorProduto;
         private System.Windows.Forms.Button btn_finalizaVenda;
         public System.Windows.Forms.TextBox textBox_Quantidade;
+        private System.Windows.Forms.Button btn_remove;
     }
 }

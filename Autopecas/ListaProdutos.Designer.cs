@@ -35,6 +35,7 @@
             this.btn_listarTodos = new System.Windows.Forms.Button();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.textBox_filtroBusca = new System.Windows.Forms.TextBox();
+            this.radioButton_Categoria = new System.Windows.Forms.RadioButton();
             this.dataGridView_buscaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btn_selecionar = new System.Windows.Forms.Button();
@@ -84,6 +85,7 @@
             this.groupBox_filtro.Controls.Add(this.btn_listarTodos);
             this.groupBox_filtro.Controls.Add(this.btn_buscar);
             this.groupBox_filtro.Controls.Add(this.textBox_filtroBusca);
+            this.groupBox_filtro.Controls.Add(this.radioButton_Categoria);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroFornecedor);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
             this.groupBox_filtro.Location = new System.Drawing.Point(48, 112);
@@ -95,10 +97,10 @@
             // 
             // btn_listarTodos
             // 
-            this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listarTodos.Location = new System.Drawing.Point(377, 42);
             this.btn_listarTodos.Name = "btn_listarTodos";
-            this.btn_listarTodos.Size = new System.Drawing.Size(130, 23);
+            this.btn_listarTodos.Size = new System.Drawing.Size(129, 23);
             this.btn_listarTodos.TabIndex = 6;
             this.btn_listarTodos.Text = "Listar todos";
             this.btn_listarTodos.UseVisualStyleBackColor = true;
@@ -106,7 +108,7 @@
             // 
             // btn_buscar
             // 
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_buscar.Location = new System.Drawing.Point(296, 42);
             this.btn_buscar.Name = "btn_buscar";
             this.btn_buscar.Size = new System.Drawing.Size(75, 23);
@@ -121,6 +123,17 @@
             this.textBox_filtroBusca.Name = "textBox_filtroBusca";
             this.textBox_filtroBusca.Size = new System.Drawing.Size(273, 23);
             this.textBox_filtroBusca.TabIndex = 4;
+            // 
+            // radioButton_Categoria
+            // 
+            this.radioButton_Categoria.AutoSize = true;
+            this.radioButton_Categoria.Location = new System.Drawing.Point(161, 19);
+            this.radioButton_Categoria.Name = "radioButton_Categoria";
+            this.radioButton_Categoria.Size = new System.Drawing.Size(70, 17);
+            this.radioButton_Categoria.TabIndex = 3;
+            this.radioButton_Categoria.TabStop = true;
+            this.radioButton_Categoria.Text = "Categoria";
+            this.radioButton_Categoria.UseVisualStyleBackColor = true;
             // 
             // dataGridView_buscaProdutos
             // 
@@ -151,7 +164,7 @@
             // 
             // btn_selecionar
             // 
-            this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_selecionar.Location = new System.Drawing.Point(563, 467);
             this.btn_selecionar.Name = "btn_selecionar";
             this.btn_selecionar.Size = new System.Drawing.Size(138, 23);
@@ -163,9 +176,9 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(710, 10);
+            this.btnFechar.Location = new System.Drawing.Point(723, 7);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(32, 32);
+            this.btnFechar.Size = new System.Drawing.Size(23, 23);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
@@ -173,12 +186,14 @@
             // 
             // barraTitulo
             // 
+            this.barraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
             this.barraTitulo.Controls.Add(this.btnFechar);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(758, 50);
+            this.barraTitulo.Size = new System.Drawing.Size(758, 37);
             this.barraTitulo.TabIndex = 7;
+            this.barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barraTitulo_Paint);
             // 
             // ListaProdutos
             // 
@@ -220,5 +235,6 @@
         private System.Windows.Forms.Button btn_selecionar;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
+        private System.Windows.Forms.RadioButton radioButton_Categoria;
     }
 }

@@ -20,10 +20,7 @@ namespace Autopecas
         string strSQL;
         public Vendas()
         {
-
             InitializeComponent();
-
-
         }
         private void textBox_Quantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -44,16 +41,28 @@ namespace Autopecas
 
         private void btn_addProduto_Click(object sender, EventArgs e)
         {
+            dataGridView_Carrinho.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             ValidacaoCampos();
             calculaSubTotal();
         }
 
+        private void btn_remove_Click(object sender, EventArgs e)
+        {
+            // verificar se existe alguma linha selecionada
+            if (dataGridView_Carrinho.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum item selecionado", "Atenção");
+                return;
+            }
+            else
+                dataGridView_Carrinho.Rows.RemoveAt(dataGridView_Carrinho.CurrentRow.Index);
+        }
+
         private void btn_finalizaVenda_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Você deseja concluir essa venda?", "Atenção", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                concluirVenda();
-            }
+            Pagamento Pagamento = new Pagamento();
+            Pagamento.Show();
+
         }
 
         private void validacaoCaracteres(KeyPressEventArgs e)
@@ -75,10 +84,18 @@ namespace Autopecas
             else
             {
                 dataGridView_Carrinho.Rows.Add(textBox_CodigoProduto.Text, textBox_NomeProduto.Text, textBox_Quantidade.Text, textBox_ValorProduto.Text, (Convert.ToDecimal(textBox_Quantidade.Text) * Convert.ToDecimal(textBox_ValorProduto.Text)));
+                limpaCampos();
             }
 
         }
+        private void limpaCampos()
+        {
+            textBox_CodigoProduto.Text = string.Empty;
+            textBox_NomeProduto.Text = string.Empty;
+            textBox_Quantidade.Text = string.Empty;
+            textBox_ValorProduto.Text = string.Empty;
 
+        }
         private decimal SubTotal()
         {
             decimal subTotal = 0;
@@ -93,37 +110,46 @@ namespace Autopecas
         private void calculaSubTotal()
         {
             if (dataGridView_Carrinho.Rows.Count > 0)
-                textBox_subTotal.Text = SubTotal().ToString("0.00");
+                textBox_subTotal.Text = SubTotal().ToString("C2");
         }
-        
+
         private void concluirVenda()
         {
-            int i = 0;
-            for (i = 0; i < dataGridView_Carrinho.Rows.Count; i++)
+            try
             {
-                string constring = "SERVER=localhost; DATABASE=piii; UID=root; PWD=root";
-                string query = "insert into vendas (idVendas, nomeProduto, quantidade, valorProduto, valorTotal, formaPagamento) values (?, ?, ?, ?, ?, ?);";
-                MySqlConnection conDataBase = new MySqlConnection(constring);
-                MySqlCommand cmdDataBase = new MySqlCommand(query, conDataBase);
-                MySqlDataReader myReader;
-
-                cmdDataBase.Parameters.AddWithValue("@nomeProduto", dataGridView_Carrinho.Rows[i].Cells["nome"].Value);
-                cmdDataBase.Parameters.AddWithValue("@quantidade", dataGridView_Carrinho.Rows[i].Cells["quantidade"].Value);
-                cmdDataBase.Parameters.AddWithValue("@valorProduto", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorUnitario"].Value));
-                cmdDataBase.Parameters.AddWithValue("@valorTotal", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorTotal"].Value));
-                cmdDataBase.Parameters.AddWithValue("@formaPagamento", comboBox_FormaPagamento.Text);
-                //cmdDataBase.Parameters.Clear();
-
-                conDataBase.Open();
-                myReader = cmdDataBase.ExecuteReader();
-
-                while (myReader.Read())
+                int i = 0;
+                for (i = 0; i < dataGridView_Carrinho.Rows.Count; i++)
                 {
+                    conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                    strSQL = "insert into vendas (nomeProduto, quantidade, valorProduto, valorTotal, formaPagamento) values (@nomeProduto, @quantidade, @valorProduto, @valorTotal, @formaPagamento);";
+                    comando = new MySqlCommand(strSQL, conexao);
 
+                    comando.Parameters.AddWithValue("@nomeProduto", dataGridView_Carrinho.Rows[i].Cells["nome"].Value);
+                    comando.Parameters.AddWithValue("@quantidade", dataGridView_Carrinho.Rows[i].Cells["quantidade"].Value);
+                    comando.Parameters.AddWithValue("@valorProduto", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorUnitario"].Value));
+                    comando.Parameters.AddWithValue("@valorTotal", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorTotal"].Value));
+                    //comando.Parameters.AddWithValue("@formaPagamento", comboBox_FormaPagamento.Text);
+                    //cmdDataBase.Parameters.Clear();
+
+                    conexao.Open();
+                    comando.ExecuteNonQuery();
                 }
-                conDataBase.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                conexao = null;
+                comando = null;
             }
         }
 
+        private void textBox_ValorProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
