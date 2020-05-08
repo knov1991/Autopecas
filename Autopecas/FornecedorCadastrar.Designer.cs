@@ -52,7 +52,6 @@
             this.lbNumero = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.txtCelular = new System.Windows.Forms.TextBox();
             this.lbCelular = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
@@ -63,6 +62,7 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnInserir = new System.Windows.Forms.Button();
             this.txt_CadastroFornecedor = new System.Windows.Forms.Label();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lbId
@@ -88,7 +88,7 @@
             this.txtNome.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(888, 22);
-            this.txtNome.TabIndex = 3;
+            this.txtNome.TabIndex = 2;
             // 
             // lbNome
             // 
@@ -105,7 +105,7 @@
             this.txtRSocial.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRSocial.Name = "txtRSocial";
             this.txtRSocial.Size = new System.Drawing.Size(888, 22);
-            this.txtRSocial.TabIndex = 5;
+            this.txtRSocial.TabIndex = 3;
             // 
             // lbRSocial
             // 
@@ -123,7 +123,7 @@
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(437, 22);
-            this.txtCnpj.TabIndex = 7;
+            this.txtCnpj.TabIndex = 4;
             this.txtCnpj.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCnpj_KeyPress);
             // 
             // lbCnpj
@@ -142,7 +142,7 @@
             this.txtIe.MaxLength = 11;
             this.txtIe.Name = "txtIe";
             this.txtIe.Size = new System.Drawing.Size(440, 22);
-            this.txtIe.TabIndex = 9;
+            this.txtIe.TabIndex = 5;
             this.txtIe.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIe_KeyPress);
             // 
             // lbIe
@@ -161,7 +161,7 @@
             this.txtCep.MaxLength = 9;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(211, 22);
-            this.txtCep.TabIndex = 11;
+            this.txtCep.TabIndex = 6;
             this.txtCep.TextChanged += new System.EventHandler(this.txtCep_TextChanged);
             this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
@@ -180,7 +180,7 @@
             this.txtEstado.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(48, 22);
-            this.txtEstado.TabIndex = 13;
+            this.txtEstado.TabIndex = 7;
             // 
             // lbEstado
             // 
@@ -197,7 +197,7 @@
             this.txtCidade.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(232, 22);
-            this.txtCidade.TabIndex = 15;
+            this.txtCidade.TabIndex = 8;
             // 
             // lbCidade
             // 
@@ -214,7 +214,7 @@
             this.txtBairro.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(377, 22);
-            this.txtBairro.TabIndex = 17;
+            this.txtBairro.TabIndex = 9;
             // 
             // lbBairro
             // 
@@ -231,7 +231,7 @@
             this.txtRua.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(744, 22);
-            this.txtRua.TabIndex = 19;
+            this.txtRua.TabIndex = 10;
             // 
             // lbRua
             // 
@@ -248,7 +248,7 @@
             this.txtNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(137, 22);
-            this.txtNumero.TabIndex = 21;
+            this.txtNumero.TabIndex = 11;
             // 
             // lbNumero
             // 
@@ -265,7 +265,7 @@
             this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(888, 22);
-            this.txtEmail.TabIndex = 23;
+            this.txtEmail.TabIndex = 12;
             // 
             // lbEmail
             // 
@@ -275,14 +275,6 @@
             this.lbEmail.Size = new System.Drawing.Size(42, 17);
             this.lbEmail.TabIndex = 22;
             this.lbEmail.Text = "Email";
-            // 
-            // txtCelular
-            // 
-            this.txtCelular.Location = new System.Drawing.Point(64, 538);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtCelular.Name = "txtCelular";
-            this.txtCelular.Size = new System.Drawing.Size(437, 22);
-            this.txtCelular.TabIndex = 25;
             // 
             // lbCelular
             // 
@@ -299,7 +291,7 @@
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(444, 22);
-            this.txtTelefone.TabIndex = 27;
+            this.txtTelefone.TabIndex = 14;
             // 
             // lbTelefone
             // 
@@ -320,7 +312,7 @@
             this.btnLocalizar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(141, 54);
-            this.btnLocalizar.TabIndex = 29;
+            this.btnLocalizar.TabIndex = 16;
             this.btnLocalizar.Text = "  Localizar";
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = true;
@@ -335,7 +327,7 @@
             this.btnAlterar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(141, 54);
-            this.btnAlterar.TabIndex = 30;
+            this.btnAlterar.TabIndex = 17;
             this.btnAlterar.Text = "  Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
@@ -350,7 +342,7 @@
             this.btnExcluir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(143, 54);
-            this.btnExcluir.TabIndex = 31;
+            this.btnExcluir.TabIndex = 19;
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
@@ -365,7 +357,7 @@
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(143, 54);
-            this.btnSalvar.TabIndex = 32;
+            this.btnSalvar.TabIndex = 18;
             this.btnSalvar.Text = "  Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
@@ -381,7 +373,7 @@
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(141, 54);
-            this.btnCancelar.TabIndex = 33;
+            this.btnCancelar.TabIndex = 20;
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -396,7 +388,7 @@
             this.btnInserir.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(141, 54);
-            this.btnInserir.TabIndex = 28;
+            this.btnInserir.TabIndex = 15;
             this.btnInserir.Text = "  Inserir";
             this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnInserir.UseVisualStyleBackColor = true;
@@ -413,11 +405,20 @@
             this.txt_CadastroFornecedor.TabIndex = 34;
             this.txt_CadastroFornecedor.Text = "Cadastro de Fornecedor";
             // 
+            // txtCelular
+            // 
+            this.txtCelular.Location = new System.Drawing.Point(64, 538);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(437, 22);
+            this.txtCelular.TabIndex = 13;
+            // 
             // FornecedorCadastrar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1032, 884);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.txt_CadastroFornecedor);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnSalvar);
@@ -427,7 +428,6 @@
             this.Controls.Add(this.btnInserir);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lbTelefone);
-            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.lbCelular);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lbEmail);
@@ -489,7 +489,6 @@
         private System.Windows.Forms.Label lbNumero;
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label lbCelular;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lbTelefone;
@@ -500,5 +499,6 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnInserir;
         private System.Windows.Forms.Label txt_CadastroFornecedor;
+        private System.Windows.Forms.TextBox txtCelular;
     }
 }
