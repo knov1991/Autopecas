@@ -246,6 +246,7 @@
             // 
             this.txtNumero.Location = new System.Drawing.Point(813, 431);
             this.txtNumero.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(137, 22);
             this.txtNumero.TabIndex = 11;
@@ -289,9 +290,11 @@
             // 
             this.txtTelefone.Location = new System.Drawing.Point(508, 538);
             this.txtTelefone.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtTelefone.MaxLength = 14;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(444, 22);
             this.txtTelefone.TabIndex = 14;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // lbTelefone
             // 
@@ -409,9 +412,11 @@
             // 
             this.txtCelular.Location = new System.Drawing.Point(64, 538);
             this.txtCelular.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtCelular.MaxLength = 14;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(437, 22);
             this.txtCelular.TabIndex = 13;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // FornecedorCadastrar
             // 

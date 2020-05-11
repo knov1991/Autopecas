@@ -222,6 +222,7 @@ namespace Autopecas
             {
                 conexao.Close();
                 MessageBox.Show("Cadastro feito com sucesso.");
+                this.LimpaCampos();
                 conexao = null;
                 comando = null;
             }
@@ -329,6 +330,7 @@ namespace Autopecas
             }
         }
 
+        //Validaão do CEP
         private void txtCep_TextChanged(object sender, EventArgs e)
         {
             try
@@ -347,7 +349,53 @@ namespace Autopecas
             }
         }
 
-       public bool ValidaCNPJ() 
+        //Número Máximo de Caracteres do Celular
+        private void txtCelular_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+            if (char.IsNumber(e.KeyChar) == true)
+            {
+                switch (txtCelular.TextLength)
+                {
+                    case 0:
+                        txtCelular.Text = txtCelular.Text + "(";
+                        txtCelular.SelectionStart = txtCelular.Text.Length + 1;
+                        break;
+                    case 3:
+                        txtCelular.Text = txtCelular.Text + ")";
+                        txtCelular.SelectionStart = txtCelular.Text.Length + 1;
+                        break;
+                    case 9:
+                        txtCelular.Text = txtCelular.Text + "-";
+                        txtCelular.SelectionStart = txtCelular.Text.Length + 1;
+                        break;
+                }
+            }
+        }
+        //Número Máximo de Caracteres do Telefone
+        private void txtTelefone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsNumber(e.KeyChar) == true)
+            {
+                switch (txtTelefone.TextLength)
+                {
+                    case 0:
+                        txtTelefone.Text = txtTelefone.Text + "(";
+                        txtTelefone.SelectionStart = txtTelefone.Text.Length + 1;
+                        break;
+                    case 3:
+                        txtTelefone.Text = txtTelefone.Text + ")";
+                        txtTelefone.SelectionStart = txtTelefone.Text.Length + 1;
+                        break;
+                    case 9:
+                        txtTelefone.Text = txtTelefone.Text + "-";
+                        txtTelefone.SelectionStart = txtTelefone.Text.Length + 1;
+                        break;
+                }
+            }
+        }
+
+        public bool ValidaCNPJ() 
        {
             try
             {
