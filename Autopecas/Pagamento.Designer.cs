@@ -60,6 +60,7 @@
             // 
             // textBox_subTotal
             // 
+            this.textBox_subTotal.Enabled = false;
             this.textBox_subTotal.Location = new System.Drawing.Point(48, 142);
             this.textBox_subTotal.Multiline = true;
             this.textBox_subTotal.Name = "textBox_subTotal";

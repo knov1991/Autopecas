@@ -21,6 +21,7 @@ namespace Autopecas
         public Vendas()
         {
             InitializeComponent();
+            formataTextBox();
         }
         private void textBox_Quantidade_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -54,15 +55,23 @@ namespace Autopecas
                 MessageBox.Show("Nenhum item selecionado", "Atenção");
                 return;
             }
-            else
+            else{ 
                 dataGridView_Carrinho.Rows.RemoveAt(dataGridView_Carrinho.CurrentRow.Index);
+            }
         }
 
         private void btn_finalizaVenda_Click(object sender, EventArgs e)
         {
-            Pagamento Pagamento = new Pagamento();
+         
+            Pagamento Pagamento = new Pagamento(this);
             Pagamento.Show();
 
+        }
+
+        private void formataTextBox()
+        {
+            textBox_subTotal.Text = "R$ 0.00";
+            textBox_ValorProduto.Text = "R$ 0.00";
         }
 
         private void validacaoCaracteres(KeyPressEventArgs e)
@@ -147,9 +156,16 @@ namespace Autopecas
             }
         }
 
-        private void textBox_ValorProduto_TextChanged(object sender, EventArgs e)
+        private void dataGridView_Carrinho_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)
         {
-
+            if (dataGridView_Carrinho.Rows.Count == 0)
+            {
+                textBox_subTotal.Text = "R$ 0.00";
+            }
+            else
+            {
+                calculaSubTotal();
+            }
         }
     }
 }

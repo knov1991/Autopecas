@@ -12,14 +12,22 @@ namespace Autopecas
 {
     public partial class Pagamento : Form
     {
-        public Pagamento()
+        Vendas instanciaVendas;
+        public Pagamento(Vendas vendas)
         {
             InitializeComponent();
+            instanciaVendas = vendas;
+            atualizaValores();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        public void atualizaValores()
+        {
+            textBox_subTotal.Text = instanciaVendas.textBox_subTotal.Text;
         }
     }
 }

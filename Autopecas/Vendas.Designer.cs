@@ -179,6 +179,7 @@
             this.dataGridView_Carrinho.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 268);
             this.dataGridView_Carrinho.TabIndex = 12;
+            this.dataGridView_Carrinho.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_Carrinho_RowsRemoved);
             // 
             // codProduto
             // 
@@ -222,6 +223,7 @@
             // 
             // textBox_subTotal
             // 
+            this.textBox_subTotal.Enabled = false;
             this.textBox_subTotal.Location = new System.Drawing.Point(443, 623);
             this.textBox_subTotal.Multiline = true;
             this.textBox_subTotal.Name = "textBox_subTotal";
@@ -372,7 +374,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn valorUnitario;
         private System.Windows.Forms.DataGridViewTextBoxColumn valorTotal;
         private System.Windows.Forms.Label label_Carrinho;
-        private System.Windows.Forms.TextBox textBox_subTotal;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label2;
@@ -386,5 +387,6 @@
         private System.Windows.Forms.Button btn_finalizaVenda;
         public System.Windows.Forms.TextBox textBox_Quantidade;
         private System.Windows.Forms.Button btn_remove;
+        public System.Windows.Forms.TextBox textBox_subTotal;
     }
 }
