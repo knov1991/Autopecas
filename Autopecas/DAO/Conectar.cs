@@ -22,8 +22,8 @@ namespace Autopecas
                 connection.Open();
                 if (connection.State == ConnectionState.Open)
                 {
-                    Home.labelConectar.Text = "Conectado!";
-                    Home.labelConectar.ForeColor = Color.Green;
+                    //Home.labelConectar.Text = "Conectado!";
+                    //Home.labelConectar.ForeColor = Color.Green;
                 }
             }
             catch (Exception ex)
