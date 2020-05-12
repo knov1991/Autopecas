@@ -30,7 +30,6 @@
         {
             this.panelChildForm = new System.Windows.Forms.Panel();
             this.painelPrincipal = new System.Windows.Forms.Panel();
-            Home.labelConectar = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
@@ -40,8 +39,8 @@
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnCliente = new System.Windows.Forms.Button();
             this.panelChildForm.SuspendLayout();
-            this.painelPrincipal.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
@@ -63,23 +62,11 @@
             // 
             this.painelPrincipal.BackgroundImage = global::Autopecas.Properties.Resources.Autopecas;
             this.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.painelPrincipal.Controls.Add(Home.labelConectar);
             this.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
             this.painelPrincipal.Location = new System.Drawing.Point(0, 50);
             this.painelPrincipal.Name = "painelPrincipal";
             this.painelPrincipal.Size = new System.Drawing.Size(774, 718);
             this.painelPrincipal.TabIndex = 1;
-            // 
-            // labelConectar
-            // 
-            Home.labelConectar.AutoSize = true;
-            Home.labelConectar.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            Home.labelConectar.ForeColor = System.Drawing.Color.Red;
-            Home.labelConectar.Location = new System.Drawing.Point(213, 89);
-            Home.labelConectar.Name = "labelConectar";
-            Home.labelConectar.Size = new System.Drawing.Size(359, 55);
-            Home.labelConectar.TabIndex = 0;
-            Home.labelConectar.Text = "Desconectado!";
             // 
             // barraTitulo
             // 
@@ -106,6 +93,7 @@
             // 
             this.painelLateral.AutoScroll = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.painelLateral.Controls.Add(this.btnCliente);
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
             this.painelLateral.Controls.Add(this.btnVendas);
             this.painelLateral.Controls.Add(this.btnFornecedor);
@@ -218,6 +206,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // btnCliente
+            // 
+            this.btnCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCliente.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(0, 394);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(250, 50);
+            this.btnCliente.TabIndex = 9;
+            this.btnCliente.Text = "Cliente";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -231,8 +236,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autopeças - ERP";
             this.panelChildForm.ResumeLayout(false);
-            this.painelPrincipal.ResumeLayout(false);
-            this.painelPrincipal.PerformLayout();
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
@@ -255,5 +258,6 @@
         private System.Windows.Forms.Button btnFornecedor;
         private System.Windows.Forms.Button btnControleFinanceiro;
         public static System.Windows.Forms.Label labelConectar;
+        private System.Windows.Forms.Button btnCliente;
     }
 }
