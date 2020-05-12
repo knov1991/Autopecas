@@ -89,5 +89,15 @@ namespace Autopecas
         {
             Application.Exit();
         }
+
+        private void btnCliente_Click(object sender, EventArgs e)
+        {
+            AbrirModal(new Clientes());
+        }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            AbrirModal(new Compras());
+        }
     }
 }

@@ -33,6 +33,7 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnControleFinanceiro = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
@@ -40,7 +41,6 @@
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnCompras = new System.Windows.Forms.Button();
             this.panelChildForm.SuspendLayout();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -108,6 +108,24 @@
             this.painelLateral.Size = new System.Drawing.Size(250, 768);
             this.painelLateral.TabIndex = 3;
             // 
+            // btnCompras
+            // 
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.White;
+            this.btnCompras.Image = global::Autopecas.Properties.Resources.Vendas;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 444);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(250, 50);
+            this.btnCompras.TabIndex = 10;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
+            // 
             // btnCliente
             // 
             this.btnCliente.Dock = System.Windows.Forms.DockStyle.Top;
@@ -124,6 +142,7 @@
             this.btnCliente.TabIndex = 9;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
             // btnControleFinanceiro
             // 
@@ -224,23 +243,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // btnCompras
-            // 
-            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Image = global::Autopecas.Properties.Resources.Vendas;
-            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 444);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(250, 50);
-            this.btnCompras.TabIndex = 10;
-            this.btnCompras.Text = "Compras";
-            this.btnCompras.UseVisualStyleBackColor = true;
             // 
             // Home
             // 
