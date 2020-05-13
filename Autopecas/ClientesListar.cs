@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace Autopecas
 {
-    public partial class Clientes : Form
+    public partial class ClientesListar : Form
     {
-        public Clientes()
+        public ClientesListar()
         {
             InitializeComponent();
-        }
-
-        private void btnInserir_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
