@@ -23,12 +23,12 @@ namespace Autopecas
             Listar();
         }
 
+        //Fechar a Tela Listar
+
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
-
 
         //Listar os Fornecedores na Tela de Listar
         private void Listar()

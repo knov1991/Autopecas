@@ -404,9 +404,9 @@
             this.txt_CadastroFornecedor.Location = new System.Drawing.Point(55, 68);
             this.txt_CadastroFornecedor.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.txt_CadastroFornecedor.Name = "txt_CadastroFornecedor";
-            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(495, 52);
+            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(541, 52);
             this.txt_CadastroFornecedor.TabIndex = 34;
-            this.txt_CadastroFornecedor.Text = "Cadastro de Fornecedor";
+            this.txt_CadastroFornecedor.Text = "Cadastro de Fornecedores";
             // 
             // txtCelular
             // 

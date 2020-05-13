@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.rbTipo = new System.Windows.Forms.GroupBox();
             this.rbJuridico = new System.Windows.Forms.RadioButton();
             this.rbFisico = new System.Windows.Forms.RadioButton();
             this.lbId = new System.Windows.Forms.Label();
@@ -41,7 +41,7 @@
             this.lbCPFCNPJ = new System.Windows.Forms.Label();
             this.txtRGIE = new System.Windows.Forms.TextBox();
             this.lbRGIE = new System.Windows.Forms.Label();
-            this.txtCEP = new System.Windows.Forms.TextBox();
+            this.txtCep = new System.Windows.Forms.TextBox();
             this.lbCEP = new System.Windows.Forms.Label();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.lbEstado = new System.Windows.Forms.Label();
@@ -53,9 +53,9 @@
             this.lbRua = new System.Windows.Forms.Label();
             this.txtNumero = new System.Windows.Forms.TextBox();
             this.lbNumero = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
             this.lbEmail = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
             this.lbCelular = new System.Windows.Forms.Label();
             this.txtTelefone = new System.Windows.Forms.TextBox();
             this.lbTelefone = new System.Windows.Forms.Label();
@@ -66,19 +66,19 @@
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnExcluir = new System.Windows.Forms.Button();
-            this.groupBox1.SuspendLayout();
+            this.rbTipo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // rbTipo
             // 
-            this.groupBox1.Controls.Add(this.rbJuridico);
-            this.groupBox1.Controls.Add(this.rbFisico);
-            this.groupBox1.Location = new System.Drawing.Point(244, 139);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(373, 63);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Tipo de Cliente";
+            this.rbTipo.Controls.Add(this.rbJuridico);
+            this.rbTipo.Controls.Add(this.rbFisico);
+            this.rbTipo.Location = new System.Drawing.Point(244, 139);
+            this.rbTipo.Name = "rbTipo";
+            this.rbTipo.Size = new System.Drawing.Size(373, 63);
+            this.rbTipo.TabIndex = 0;
+            this.rbTipo.TabStop = false;
+            this.rbTipo.Text = "Tipo de Cliente";
             // 
             // rbJuridico
             // 
@@ -101,6 +101,7 @@
             this.rbFisico.TabStop = true;
             this.rbFisico.Text = "Físico";
             this.rbFisico.UseVisualStyleBackColor = true;
+            this.rbFisico.CheckedChanged += new System.EventHandler(this.rbFisico_CheckedChanged);
             // 
             // lbId
             // 
@@ -140,6 +141,7 @@
             this.txtRSocial.Name = "txtRSocial";
             this.txtRSocial.Size = new System.Drawing.Size(888, 22);
             this.txtRSocial.TabIndex = 6;
+            this.txtRSocial.Visible = false;
             // 
             // lbRSocial
             // 
@@ -149,13 +151,16 @@
             this.lbRSocial.Size = new System.Drawing.Size(91, 17);
             this.lbRSocial.TabIndex = 5;
             this.lbRSocial.Text = "Razão Social";
+            this.lbRSocial.Visible = false;
             // 
             // txtCPFCNPJ
             // 
             this.txtCPFCNPJ.Location = new System.Drawing.Point(64, 321);
+            this.txtCPFCNPJ.MaxLength = 18;
             this.txtCPFCNPJ.Name = "txtCPFCNPJ";
             this.txtCPFCNPJ.Size = new System.Drawing.Size(437, 22);
             this.txtCPFCNPJ.TabIndex = 8;
+            this.txtCPFCNPJ.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCPFCNPJ_KeyPress);
             // 
             // lbCPFCNPJ
             // 
@@ -182,12 +187,15 @@
             this.lbRGIE.TabIndex = 9;
             this.lbRGIE.Text = "RG";
             // 
-            // txtCEP
+            // txtCep
             // 
-            this.txtCEP.Location = new System.Drawing.Point(64, 379);
-            this.txtCEP.Name = "txtCEP";
-            this.txtCEP.Size = new System.Drawing.Size(211, 22);
-            this.txtCEP.TabIndex = 12;
+            this.txtCep.Location = new System.Drawing.Point(64, 379);
+            this.txtCep.MaxLength = 9;
+            this.txtCep.Name = "txtCep";
+            this.txtCep.Size = new System.Drawing.Size(211, 22);
+            this.txtCep.TabIndex = 12;
+            this.txtCep.TextChanged += new System.EventHandler(this.txtCep_TextChanged);
+            this.txtCep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCep_KeyPress);
             // 
             // lbCEP
             // 
@@ -278,12 +286,12 @@
             this.lbNumero.TabIndex = 21;
             this.lbNumero.Text = "Número";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(64, 484);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(888, 22);
-            this.textBox1.TabIndex = 24;
+            this.txtEmail.Location = new System.Drawing.Point(64, 484);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(888, 22);
+            this.txtEmail.TabIndex = 24;
             // 
             // lbEmail
             // 
@@ -294,12 +302,14 @@
             this.lbEmail.TabIndex = 23;
             this.lbEmail.Text = "Email";
             // 
-            // textBox2
+            // txtCelular
             // 
-            this.textBox2.Location = new System.Drawing.Point(64, 538);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(437, 22);
-            this.textBox2.TabIndex = 26;
+            this.txtCelular.Location = new System.Drawing.Point(64, 538);
+            this.txtCelular.MaxLength = 14;
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(437, 22);
+            this.txtCelular.TabIndex = 26;
+            this.txtCelular.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCelular_KeyPress);
             // 
             // lbCelular
             // 
@@ -313,9 +323,11 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(508, 538);
+            this.txtTelefone.MaxLength = 14;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(444, 22);
             this.txtTelefone.TabIndex = 28;
+            this.txtTelefone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTelefone_KeyPress);
             // 
             // lbTelefone
             // 
@@ -365,6 +377,7 @@
             this.btnSalvar.Text = "  Salvar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // btnAlterar
             // 
@@ -379,6 +392,7 @@
             this.btnAlterar.Text = "  Alterar";
             this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnLocalizar
             // 
@@ -394,6 +408,7 @@
             this.btnLocalizar.Text = "  Localizar";
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = true;
+            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
             // 
             // btnCancelar
             // 
@@ -409,6 +424,7 @@
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnExcluir
             // 
@@ -423,6 +439,7 @@
             this.btnExcluir.Text = "  Excluir";
             this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
             // Clientes
             // 
@@ -438,9 +455,9 @@
             this.Controls.Add(this.txt_CadastroFornecedor);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.lbTelefone);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtCelular);
             this.Controls.Add(this.lbCelular);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.txtNumero);
             this.Controls.Add(this.lbNumero);
@@ -452,7 +469,7 @@
             this.Controls.Add(this.lbCidade);
             this.Controls.Add(this.txtEstado);
             this.Controls.Add(this.lbEstado);
-            this.Controls.Add(this.txtCEP);
+            this.Controls.Add(this.txtCep);
             this.Controls.Add(this.lbCEP);
             this.Controls.Add(this.txtRGIE);
             this.Controls.Add(this.lbRGIE);
@@ -464,14 +481,15 @@
             this.Controls.Add(this.lbNome);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lbId);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.rbTipo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.Load += new System.EventHandler(this.Clientes_Load);
+            this.rbTipo.ResumeLayout(false);
+            this.rbTipo.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -479,7 +497,7 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox rbTipo;
         private System.Windows.Forms.RadioButton rbJuridico;
         private System.Windows.Forms.RadioButton rbFisico;
         private System.Windows.Forms.Label lbId;
@@ -492,7 +510,7 @@
         private System.Windows.Forms.Label lbCPFCNPJ;
         private System.Windows.Forms.TextBox txtRGIE;
         private System.Windows.Forms.Label lbRGIE;
-        private System.Windows.Forms.TextBox txtCEP;
+        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label lbCEP;
         private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lbEstado;
@@ -504,9 +522,9 @@
         private System.Windows.Forms.Label lbRua;
         private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lbNumero;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label lbCelular;
         private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lbTelefone;

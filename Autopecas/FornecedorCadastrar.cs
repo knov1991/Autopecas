@@ -91,8 +91,8 @@ namespace Autopecas
         //Método Botão Inserir
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            this.txtNome.Focus();
             this.HabilitaCampos();
+            this.txtNome.Focus();
         }
 
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
@@ -143,6 +143,8 @@ namespace Autopecas
             {
                 conexao.Close();
                 MessageBox.Show("Alterado com sucesso!");
+                this.LimpaCampos();
+                this.txtNome.Focus();
                 conexao = null;
                 comando = null;
 
@@ -156,26 +158,12 @@ namespace Autopecas
             ControlesGerais c = new ControlesGerais();
             if (c.campoVazio(txtNome, "Nome"))
                 return;
-            /*/if (c.campoVazio(txtRSocial, "Razão Social"))
-                return;
-            if (c.campoVazio(txtCnpj, "CNPJ"))
-                return;
-            if (c.campoVazio(txtIe, "IE"))
-                return;
             if (c.campoVazio(txtCep, "CEP"))
-                return;
-            if (c.campoVazio(txtBairro, "Bairro"))
-                return;
-            if (c.campoVazio(txtRua, "Rua"))
-                return;
-            if (c.campoVazio(txtNumero, "Número"))
-                return;
-            if (c.campoVazio(txtEmail, "Email"))
                 return;
             if (c.campoVazio(txtCelular, "Celular"))
                 return;
             if (c.campoVazio(txtTelefone, "Telefone"))
-                return;*/
+                return;
 
 
             /*if (ValidaCNPJ() == true)
@@ -223,6 +211,7 @@ namespace Autopecas
                 conexao.Close();
                 MessageBox.Show("Cadastro feito com sucesso.");
                 this.LimpaCampos();
+                this.txtNome.Focus();
                 conexao = null;
                 comando = null;
             }
@@ -252,6 +241,8 @@ namespace Autopecas
             {
                 conexao.Close();
                 MessageBox.Show("Fornecedor excluído");
+                this.LimpaCampos();
+                this.txtNome.Focus();
                 conexao = null;
                 comando = null;
             }

@@ -56,6 +56,7 @@
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 3;
             this.btnFechar.TabStop = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click_1);
             // 
             // txt_CadastroCliente
             // 
@@ -88,6 +89,7 @@
             this.Controls.Add(this.dgvDados);
             this.Controls.Add(this.txt_CadastroCliente);
             this.Controls.Add(this.barraTitulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ClientesListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientesListar";
