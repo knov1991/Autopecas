@@ -13,6 +13,7 @@ namespace Autopecas
 {
     public partial class Home : Form
     {
+        DateTime dataHora;
         public Home()
         {
             InitializeComponent();
@@ -98,6 +99,13 @@ namespace Autopecas
         private void btnCompras_Click(object sender, EventArgs e)
         {
             AbrirModal(new Compras());
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            dataHora = DateTime.Now;
+            lbHora.Text = DateTime.Now.ToString("HH:mm:ss");
+            lbData.Text = DateTime.Now.ToString("dd/MM/yyyy");
         }
     }
 }

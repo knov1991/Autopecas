@@ -89,6 +89,7 @@
             this.rbJuridico.TabIndex = 1;
             this.rbJuridico.Text = "Jurídico";
             this.rbJuridico.UseVisualStyleBackColor = true;
+            this.rbJuridico.CheckedChanged += new System.EventHandler(this.rbJuridico_CheckedChanged);
             // 
             // rbFisico
             // 

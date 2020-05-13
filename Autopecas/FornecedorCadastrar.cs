@@ -155,7 +155,7 @@ namespace Autopecas
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             //Verificação se tem algum campo vazio
-            ControlesGerais c = new ControlesGerais();
+            /*ControlesGerais c = new ControlesGerais();
             if (c.campoVazio(txtNome, "Nome"))
                 return;
             if (c.campoVazio(txtCep, "CEP"))
@@ -163,7 +163,7 @@ namespace Autopecas
             if (c.campoVazio(txtCelular, "Celular"))
                 return;
             if (c.campoVazio(txtTelefone, "Telefone"))
-                return;
+                return;*/
 
 
             /*if (ValidaCNPJ() == true)

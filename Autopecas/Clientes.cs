@@ -29,6 +29,7 @@ namespace Autopecas
         //Função Habilita Campos do Formulário de Fornecedor
         public void HabilitaCampos()
         {
+            rbTipo.Enabled = true;
             txtId.Enabled = true;
             txtNome.Enabled = true;
             txtRSocial.Enabled = true;
@@ -48,6 +49,7 @@ namespace Autopecas
         //Função Desabilita Campos do Formulário de Fornecedor
         public void DesabilitaCampos()
         {
+            rbTipo.Enabled = false;
             txtId.Enabled = false;
             txtNome.Enabled = false;
             txtRSocial.Enabled = false;
@@ -93,8 +95,8 @@ namespace Autopecas
         //Método Botão Inserir
         private void btnInserir_Click(object sender, EventArgs e)
         {
-            this.txtNome.Focus();
             this.HabilitaCampos();
+            this.txtNome.Focus();
         }
 
         //Método do Botão Localizar Para o Formulário de Listar Clientes
@@ -384,6 +386,12 @@ namespace Autopecas
                 lbCPFCNPJ.Text = "CNPJ";
                 lbRGIE.Text = "IE";
             }
+        }
+
+        //Evento de Foco Para o Nome ao Selecionar Cliente Jurídico
+        private void rbJuridico_CheckedChanged(object sender, EventArgs e)
+        {
+            txtNome.Focus();
         }
     }
 }

@@ -231,5 +231,14 @@
   <ItemGroup>
     <None Include="Resources\Cancelar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-calendário-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-relógio-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relogio.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
