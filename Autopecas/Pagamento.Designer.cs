@@ -74,9 +74,11 @@
             this.textBox_desconto.Name = "textBox_desconto";
             this.textBox_desconto.Size = new System.Drawing.Size(134, 21);
             this.textBox_desconto.TabIndex = 11;
+            this.textBox_desconto.TextChanged += new System.EventHandler(this.textBox_desconto_TextChanged);
             // 
             // textBox_total
             // 
+            this.textBox_total.Enabled = false;
             this.textBox_total.Location = new System.Drawing.Point(326, 142);
             this.textBox_total.Multiline = true;
             this.textBox_total.Name = "textBox_total";
@@ -170,7 +172,7 @@
             // btn_concluirVenda
             // 
             this.btn_concluirVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_concluirVenda.Location = new System.Drawing.Point(297, 329);
+            this.btn_concluirVenda.Location = new System.Drawing.Point(297, 259);
             this.btn_concluirVenda.Name = "btn_concluirVenda";
             this.btn_concluirVenda.Size = new System.Drawing.Size(163, 23);
             this.btn_concluirVenda.TabIndex = 23;
@@ -180,7 +182,7 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(478, 6);
+            this.btnFechar.Location = new System.Drawing.Point(480, 7);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(18, 18);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -211,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 391);
+            this.ClientSize = new System.Drawing.Size(507, 315);
             this.Controls.Add(this.dateTimePicke_Pagamentor);
             this.Controls.Add(this.btn_concluirVenda);
             this.Controls.Add(this.label_vencimentoBoleto);
@@ -231,6 +233,7 @@
             this.Name = "Pagamento";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pagamento";
+            this.Load += new System.EventHandler(this.Pagamento_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
