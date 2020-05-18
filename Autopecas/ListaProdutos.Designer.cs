@@ -115,6 +115,7 @@
             this.btn_buscar.TabIndex = 5;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
+            this.btn_buscar.Click += new System.EventHandler(this.btn_buscar_Click);
             // 
             // textBox_filtroBusca
             // 
@@ -193,7 +194,6 @@
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(758, 37);
             this.barraTitulo.TabIndex = 7;
-            this.barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barraTitulo_Paint);
             // 
             // ListaProdutos
             // 

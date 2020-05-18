@@ -78,9 +78,38 @@ namespace Autopecas
             Close();
         }
 
-        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        public void procurarItem(string valorBusca)
         {
+            conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
 
+            if (radioButton_filtroNome.Checked)
+            {
+                strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%'";
+            }
+            if (radioButton_filtroFornecedor.Checked)
+            {
+                strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%'";
+            }
+            if (radioButton_Categoria.Checked)
+            {
+                strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%'";
+            }
+            if (radioButton_filtroNome.Checked || radioButton_filtroFornecedor.Checked || radioButton_Categoria.Checked)
+            {
+                da = new MySqlDataAdapter(strSQL, conexao);
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dataGridView_buscaProdutos.DataSource = dt;
+            }
+
+        }
+
+        private void btn_buscar_Click(object sender, EventArgs e)
+        {
+            string valorBusca = textBox_filtroBusca.Text.ToString();
+            procurarItem(valorBusca);
         }
     }
 }

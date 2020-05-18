@@ -167,5 +167,10 @@ namespace Autopecas
                 calculaSubTotal();
             }
         }
+
+        private void textBox_CodigoProduto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
