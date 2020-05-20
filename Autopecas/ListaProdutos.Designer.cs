@@ -177,7 +177,8 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(723, 7);
+            this.btnFechar.Location = new System.Drawing.Point(721, 7);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(23, 23);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -187,7 +188,7 @@
             // 
             // barraTitulo
             // 
-            this.barraTitulo.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.barraTitulo.BackColor = System.Drawing.Color.White;
             this.barraTitulo.Controls.Add(this.btnFechar);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);

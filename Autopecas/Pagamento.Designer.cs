@@ -172,9 +172,9 @@
             // btn_concluirVenda
             // 
             this.btn_concluirVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_concluirVenda.Location = new System.Drawing.Point(297, 259);
+            this.btn_concluirVenda.Location = new System.Drawing.Point(326, 249);
             this.btn_concluirVenda.Name = "btn_concluirVenda";
-            this.btn_concluirVenda.Size = new System.Drawing.Size(163, 23);
+            this.btn_concluirVenda.Size = new System.Drawing.Size(134, 23);
             this.btn_concluirVenda.TabIndex = 23;
             this.btn_concluirVenda.Text = "Concluir Venda";
             this.btn_concluirVenda.UseVisualStyleBackColor = true;
@@ -182,9 +182,9 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(480, 7);
+            this.btnFechar.Location = new System.Drawing.Point(470, 8);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(23, 23);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
@@ -197,7 +197,7 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(507, 31);
+            this.barraTitulo.Size = new System.Drawing.Size(507, 37);
             this.barraTitulo.TabIndex = 8;
             // 
             // dateTimePicke_Pagamentor
@@ -213,7 +213,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 315);
+            this.ClientSize = new System.Drawing.Size(507, 304);
             this.Controls.Add(this.dateTimePicke_Pagamentor);
             this.Controls.Add(this.btn_concluirVenda);
             this.Controls.Add(this.label_vencimentoBoleto);
