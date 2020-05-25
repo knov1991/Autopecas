@@ -37,13 +37,13 @@
             this.label_desconto = new System.Windows.Forms.Label();
             this.label_total = new System.Windows.Forms.Label();
             this.label_formaPagamento = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox_parcelas = new System.Windows.Forms.ComboBox();
             this.label_parcelado = new System.Windows.Forms.Label();
             this.label_vencimentoBoleto = new System.Windows.Forms.Label();
             this.btn_concluirVenda = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
-            this.dateTimePicke_Pagamentor = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicke_Pagamentos = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.barraTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -79,10 +79,10 @@
             // textBox_total
             // 
             this.textBox_total.Enabled = false;
-            this.textBox_total.Location = new System.Drawing.Point(326, 142);
+            this.textBox_total.Location = new System.Drawing.Point(48, 183);
             this.textBox_total.Multiline = true;
             this.textBox_total.Name = "textBox_total";
-            this.textBox_total.Size = new System.Drawing.Size(134, 21);
+            this.textBox_total.Size = new System.Drawing.Size(132, 21);
             this.textBox_total.TabIndex = 12;
             // 
             // comboBox_formaPagamento
@@ -94,10 +94,11 @@
             "Cartão de Crédito",
             "Cartão de Débito",
             "Boleto"});
-            this.comboBox_formaPagamento.Location = new System.Drawing.Point(48, 188);
+            this.comboBox_formaPagamento.Location = new System.Drawing.Point(48, 223);
             this.comboBox_formaPagamento.Name = "comboBox_formaPagamento";
             this.comboBox_formaPagamento.Size = new System.Drawing.Size(132, 21);
             this.comboBox_formaPagamento.TabIndex = 13;
+            this.comboBox_formaPagamento.SelectedIndexChanged += new System.EventHandler(this.comboBox_formaPagamento_SelectedIndexChanged);
             // 
             // label_subTotal
             // 
@@ -120,7 +121,7 @@
             // label_total
             // 
             this.label_total.AutoSize = true;
-            this.label_total.Location = new System.Drawing.Point(323, 126);
+            this.label_total.Location = new System.Drawing.Point(45, 167);
             this.label_total.Name = "label_total";
             this.label_total.Size = new System.Drawing.Size(31, 13);
             this.label_total.TabIndex = 16;
@@ -129,32 +130,32 @@
             // label_formaPagamento
             // 
             this.label_formaPagamento.AutoSize = true;
-            this.label_formaPagamento.Location = new System.Drawing.Point(45, 172);
+            this.label_formaPagamento.Location = new System.Drawing.Point(45, 207);
             this.label_formaPagamento.Name = "label_formaPagamento";
             this.label_formaPagamento.Size = new System.Drawing.Size(108, 13);
             this.label_formaPagamento.TabIndex = 17;
             this.label_formaPagamento.Text = "Forma de Pagamento";
             // 
-            // comboBox1
+            // comboBox_parcelas
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.comboBox_parcelas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox_parcelas.FormattingEnabled = true;
+            this.comboBox_parcelas.Items.AddRange(new object[] {
             "1",
             "2",
             "3",
             "4",
             "5",
             "6"});
-            this.comboBox1.Location = new System.Drawing.Point(186, 188);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(105, 21);
-            this.comboBox1.TabIndex = 20;
+            this.comboBox_parcelas.Location = new System.Drawing.Point(186, 223);
+            this.comboBox_parcelas.Name = "comboBox_parcelas";
+            this.comboBox_parcelas.Size = new System.Drawing.Size(105, 21);
+            this.comboBox_parcelas.TabIndex = 20;
             // 
             // label_parcelado
             // 
             this.label_parcelado.AutoSize = true;
-            this.label_parcelado.Location = new System.Drawing.Point(183, 172);
+            this.label_parcelado.Location = new System.Drawing.Point(183, 207);
             this.label_parcelado.Name = "label_parcelado";
             this.label_parcelado.Size = new System.Drawing.Size(55, 13);
             this.label_parcelado.TabIndex = 21;
@@ -163,7 +164,7 @@
             // label_vencimentoBoleto
             // 
             this.label_vencimentoBoleto.AutoSize = true;
-            this.label_vencimentoBoleto.Location = new System.Drawing.Point(294, 172);
+            this.label_vencimentoBoleto.Location = new System.Drawing.Point(294, 207);
             this.label_vencimentoBoleto.Name = "label_vencimentoBoleto";
             this.label_vencimentoBoleto.Size = new System.Drawing.Size(143, 13);
             this.label_vencimentoBoleto.TabIndex = 22;
@@ -172,7 +173,7 @@
             // btn_concluirVenda
             // 
             this.btn_concluirVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_concluirVenda.Location = new System.Drawing.Point(326, 249);
+            this.btn_concluirVenda.Location = new System.Drawing.Point(397, 273);
             this.btn_concluirVenda.Name = "btn_concluirVenda";
             this.btn_concluirVenda.Size = new System.Drawing.Size(134, 23);
             this.btn_concluirVenda.TabIndex = 23;
@@ -182,7 +183,7 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(470, 8);
+            this.btnFechar.Location = new System.Drawing.Point(527, 7);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(23, 23);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -197,28 +198,28 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(507, 37);
+            this.barraTitulo.Size = new System.Drawing.Size(563, 37);
             this.barraTitulo.TabIndex = 8;
             // 
-            // dateTimePicke_Pagamentor
+            // dateTimePicke_Pagamentos
             // 
-            this.dateTimePicke_Pagamentor.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicke_Pagamentor.Location = new System.Drawing.Point(297, 189);
-            this.dateTimePicke_Pagamentor.Name = "dateTimePicke_Pagamentor";
-            this.dateTimePicke_Pagamentor.Size = new System.Drawing.Size(163, 20);
-            this.dateTimePicke_Pagamentor.TabIndex = 24;
-            this.dateTimePicke_Pagamentor.Value = new System.DateTime(2020, 5, 8, 14, 28, 0, 0);
+            this.dateTimePicke_Pagamentos.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicke_Pagamentos.Location = new System.Drawing.Point(297, 224);
+            this.dateTimePicke_Pagamentos.Name = "dateTimePicke_Pagamentos";
+            this.dateTimePicke_Pagamentos.Size = new System.Drawing.Size(163, 20);
+            this.dateTimePicke_Pagamentos.TabIndex = 24;
+            this.dateTimePicke_Pagamentos.Value = new System.DateTime(2020, 5, 8, 14, 28, 0, 0);
             // 
             // Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(507, 304);
-            this.Controls.Add(this.dateTimePicke_Pagamentor);
+            this.ClientSize = new System.Drawing.Size(563, 317);
+            this.Controls.Add(this.dateTimePicke_Pagamentos);
             this.Controls.Add(this.btn_concluirVenda);
             this.Controls.Add(this.label_vencimentoBoleto);
             this.Controls.Add(this.label_parcelado);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.comboBox_parcelas);
             this.Controls.Add(this.label_formaPagamento);
             this.Controls.Add(this.label_total);
             this.Controls.Add(this.label_desconto);
@@ -251,12 +252,12 @@
         private System.Windows.Forms.Label label_desconto;
         private System.Windows.Forms.Label label_total;
         private System.Windows.Forms.Label label_formaPagamento;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox_parcelas;
         private System.Windows.Forms.Label label_parcelado;
         private System.Windows.Forms.Label label_vencimentoBoleto;
         private System.Windows.Forms.Button btn_concluirVenda;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
-        private System.Windows.Forms.DateTimePicker dateTimePicke_Pagamentor;
+        private System.Windows.Forms.DateTimePicker dateTimePicke_Pagamentos;
     }
 }

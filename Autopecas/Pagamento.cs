@@ -22,7 +22,7 @@ namespace Autopecas
         }
         private void Pagamento_Load(object sender, EventArgs e)
         {
-            atualizaValores();
+            inicializaValores();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -30,10 +30,12 @@ namespace Autopecas
             Close();
         }
 
-        public void atualizaValores()
+        public void inicializaValores()
         {
             textBox_subTotal.Text = instanciaVendas.textBox_subTotal.Text;
             textBox_total.Text = textBox_subTotal.Text;
+            comboBox_formaPagamento.SelectedIndex = 0;
+            comboBox_parcelas.SelectedIndex = 0;
         }
 
         private void textBox_desconto_TextChanged(object sender, EventArgs e)
@@ -54,6 +56,34 @@ namespace Autopecas
 
    
             textBox_total.Text = Pedido.ToString("C2");
+
+        }
+
+        private void comboBox_formaPagamento_SelectedIndexChanged(object sender, EventArgs e)
+        {
+          if(comboBox_formaPagamento.SelectedIndex == 0 || comboBox_formaPagamento.SelectedIndex == 2)
+            {
+                label_vencimentoBoleto.Visible = false;
+                label_parcelado.Visible = false;
+                dateTimePicke_Pagamentos.Visible = false;
+                comboBox_parcelas.Visible= false;
+            }
+
+            if (comboBox_formaPagamento.SelectedIndex == 1)
+            {
+                label_vencimentoBoleto.Visible = false;
+                label_parcelado.Visible = true;
+                dateTimePicke_Pagamentos.Visible = false;
+                comboBox_parcelas.Visible = true;
+            }
+
+            if (comboBox_formaPagamento.SelectedIndex == 3)
+            {
+                label_vencimentoBoleto.Visible = true;
+                label_parcelado.Visible = true;
+                dateTimePicke_Pagamentos.Visible = true;
+                comboBox_parcelas.Visible = true;
+            }
 
         }
     }

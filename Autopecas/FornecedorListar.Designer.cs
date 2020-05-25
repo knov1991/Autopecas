@@ -42,7 +42,7 @@
             this.dgvDados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Location = new System.Drawing.Point(48, 154);
-            this.dgvDados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDados.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;

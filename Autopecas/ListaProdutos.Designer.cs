@@ -32,10 +32,12 @@
             this.radioButton_filtroNome = new System.Windows.Forms.RadioButton();
             this.radioButton_filtroFornecedor = new System.Windows.Forms.RadioButton();
             this.groupBox_filtro = new System.Windows.Forms.GroupBox();
+            this.checkBox_foraEstoque = new System.Windows.Forms.CheckBox();
+            this.checkBox_estoque = new System.Windows.Forms.CheckBox();
             this.btn_listarTodos = new System.Windows.Forms.Button();
+            this.radioButton_Categoria = new System.Windows.Forms.RadioButton();
             this.btn_buscar = new System.Windows.Forms.Button();
             this.textBox_filtroBusca = new System.Windows.Forms.TextBox();
-            this.radioButton_Categoria = new System.Windows.Forms.RadioButton();
             this.dataGridView_buscaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btn_selecionar = new System.Windows.Forms.Button();
@@ -61,6 +63,7 @@
             // radioButton_filtroNome
             // 
             this.radioButton_filtroNome.AutoSize = true;
+            this.radioButton_filtroNome.Checked = true;
             this.radioButton_filtroNome.Location = new System.Drawing.Point(17, 19);
             this.radioButton_filtroNome.Name = "radioButton_filtroNome";
             this.radioButton_filtroNome.Size = new System.Drawing.Size(53, 17);
@@ -76,24 +79,47 @@
             this.radioButton_filtroFornecedor.Name = "radioButton_filtroFornecedor";
             this.radioButton_filtroFornecedor.Size = new System.Drawing.Size(79, 17);
             this.radioButton_filtroFornecedor.TabIndex = 3;
-            this.radioButton_filtroFornecedor.TabStop = true;
             this.radioButton_filtroFornecedor.Text = "Fornecedor";
             this.radioButton_filtroFornecedor.UseVisualStyleBackColor = true;
             // 
             // groupBox_filtro
             // 
+            this.groupBox_filtro.Controls.Add(this.checkBox_foraEstoque);
+            this.groupBox_filtro.Controls.Add(this.checkBox_estoque);
             this.groupBox_filtro.Controls.Add(this.btn_listarTodos);
-            this.groupBox_filtro.Controls.Add(this.btn_buscar);
-            this.groupBox_filtro.Controls.Add(this.textBox_filtroBusca);
             this.groupBox_filtro.Controls.Add(this.radioButton_Categoria);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroFornecedor);
+            this.groupBox_filtro.Controls.Add(this.btn_buscar);
+            this.groupBox_filtro.Controls.Add(this.textBox_filtroBusca);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
             this.groupBox_filtro.Location = new System.Drawing.Point(48, 112);
             this.groupBox_filtro.Name = "groupBox_filtro";
-            this.groupBox_filtro.Size = new System.Drawing.Size(653, 85);
+            this.groupBox_filtro.Size = new System.Drawing.Size(653, 90);
             this.groupBox_filtro.TabIndex = 4;
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
+            // 
+            // checkBox_foraEstoque
+            // 
+            this.checkBox_foraEstoque.AutoSize = true;
+            this.checkBox_foraEstoque.Location = new System.Drawing.Point(530, 53);
+            this.checkBox_foraEstoque.Name = "checkBox_foraEstoque";
+            this.checkBox_foraEstoque.Size = new System.Drawing.Size(103, 17);
+            this.checkBox_foraEstoque.TabIndex = 8;
+            this.checkBox_foraEstoque.Text = "Fora de estoque";
+            this.checkBox_foraEstoque.UseVisualStyleBackColor = true;
+            // 
+            // checkBox_estoque
+            // 
+            this.checkBox_estoque.AutoSize = true;
+            this.checkBox_estoque.Checked = true;
+            this.checkBox_estoque.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox_estoque.Location = new System.Drawing.Point(530, 29);
+            this.checkBox_estoque.Name = "checkBox_estoque";
+            this.checkBox_estoque.Size = new System.Drawing.Size(82, 17);
+            this.checkBox_estoque.TabIndex = 7;
+            this.checkBox_estoque.Text = "Em estoque";
+            this.checkBox_estoque.UseVisualStyleBackColor = true;
             // 
             // btn_listarTodos
             // 
@@ -105,6 +131,16 @@
             this.btn_listarTodos.Text = "Listar todos";
             this.btn_listarTodos.UseVisualStyleBackColor = true;
             this.btn_listarTodos.Click += new System.EventHandler(this.btn_listarTodos_Click);
+            // 
+            // radioButton_Categoria
+            // 
+            this.radioButton_Categoria.AutoSize = true;
+            this.radioButton_Categoria.Location = new System.Drawing.Point(161, 19);
+            this.radioButton_Categoria.Name = "radioButton_Categoria";
+            this.radioButton_Categoria.Size = new System.Drawing.Size(70, 17);
+            this.radioButton_Categoria.TabIndex = 3;
+            this.radioButton_Categoria.Text = "Categoria";
+            this.radioButton_Categoria.UseVisualStyleBackColor = true;
             // 
             // btn_buscar
             // 
@@ -125,17 +161,6 @@
             this.textBox_filtroBusca.Size = new System.Drawing.Size(273, 23);
             this.textBox_filtroBusca.TabIndex = 4;
             // 
-            // radioButton_Categoria
-            // 
-            this.radioButton_Categoria.AutoSize = true;
-            this.radioButton_Categoria.Location = new System.Drawing.Point(161, 19);
-            this.radioButton_Categoria.Name = "radioButton_Categoria";
-            this.radioButton_Categoria.Size = new System.Drawing.Size(70, 17);
-            this.radioButton_Categoria.TabIndex = 3;
-            this.radioButton_Categoria.TabStop = true;
-            this.radioButton_Categoria.Text = "Categoria";
-            this.radioButton_Categoria.UseVisualStyleBackColor = true;
-            // 
             // dataGridView_buscaProdutos
             // 
             this.dataGridView_buscaProdutos.AllowUserToAddRows = false;
@@ -149,14 +174,13 @@
             this.dataGridView_buscaProdutos.Name = "dataGridView_buscaProdutos";
             this.dataGridView_buscaProdutos.ReadOnly = true;
             this.dataGridView_buscaProdutos.RowHeadersVisible = false;
-            this.dataGridView_buscaProdutos.Size = new System.Drawing.Size(619, 203);
+            this.dataGridView_buscaProdutos.Size = new System.Drawing.Size(619, 200);
             this.dataGridView_buscaProdutos.TabIndex = 5;
-            this.dataGridView_buscaProdutos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_buscaProdutos_CellContentClick);
             // 
             // groupBox_listaProdutos
             // 
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaProdutos);
-            this.groupBox_listaProdutos.Location = new System.Drawing.Point(48, 203);
+            this.groupBox_listaProdutos.Location = new System.Drawing.Point(48, 208);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
             this.groupBox_listaProdutos.Size = new System.Drawing.Size(653, 248);
             this.groupBox_listaProdutos.TabIndex = 6;
@@ -237,5 +261,7 @@
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.RadioButton radioButton_Categoria;
+        private System.Windows.Forms.CheckBox checkBox_estoque;
+        private System.Windows.Forms.CheckBox checkBox_foraEstoque;
     }
 }

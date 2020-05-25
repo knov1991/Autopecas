@@ -32,11 +32,6 @@ namespace Autopecas
             Close();
         }
 
-        private void dataGridView_buscaProdutos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void btn_listarTodos_Click(object sender, EventArgs e)
         {
             carregaGrid();
@@ -47,7 +42,7 @@ namespace Autopecas
             try
             {
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM ESTOQUE";
+                strSQL = "SELECT * FROM ESTOQUE WHERE quantidade > 0";
                 da = new MySqlDataAdapter(strSQL, conexao);
 
                 DataTable dt = new DataTable();
@@ -82,26 +77,73 @@ namespace Autopecas
         {
             conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
 
-            if (radioButton_filtroNome.Checked)
+            if (String.IsNullOrEmpty(valorBusca) == false)
             {
-                strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%'";
-            }
-            if (radioButton_filtroFornecedor.Checked)
-            {
-                strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%'";
-            }
-            if (radioButton_Categoria.Checked)
-            {
-                strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%'";
-            }
-            if (radioButton_filtroNome.Checked || radioButton_filtroFornecedor.Checked || radioButton_Categoria.Checked)
-            {
-                da = new MySqlDataAdapter(strSQL, conexao);
-                DataTable dt = new DataTable();
+                if (checkBox_estoque.Checked && checkBox_foraEstoque.Checked)
+                {
+                    if (radioButton_filtroNome.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%'";
+                    }
+                    if (radioButton_filtroFornecedor.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%'";
+                    }
+                    if (radioButton_Categoria.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%'";
+                    }
+                }
 
-                da.Fill(dt);
+                else if (checkBox_estoque.Checked)
+                {
+                    if (radioButton_filtroNome.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%' AND quantidade > 0";
+                    }
+                    if (radioButton_filtroFornecedor.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%' AND quantidade > 0";
+                    }
+                    if (radioButton_Categoria.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%' AND quantidade > 0";
+                    }
+                }
 
-                dataGridView_buscaProdutos.DataSource = dt;
+                else if (checkBox_foraEstoque.Checked)
+                {
+                    if (radioButton_filtroNome.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%' AND quantidade = 0";
+                    }
+                    if (radioButton_filtroFornecedor.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%' AND quantidade = 0";
+                    }
+                    if (radioButton_Categoria.Checked)
+                    {
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%' AND quantidade = 0";
+                    }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("Selecione um filtro de busca.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                    da = new MySqlDataAdapter(strSQL, conexao);
+                    DataTable dt = new DataTable();
+
+                    da.Fill(dt);
+
+                    dataGridView_buscaProdutos.DataSource = dt;
+            }
+
+            else
+            {
+                MessageBox.Show("O campo de busca está vazio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
         }
