@@ -7,17 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
     public partial class Vendas : Form
     {
-        MySqlConnection conexao;
-        MySqlCommand comando;
-        MySqlDataAdapter da;
-        MySqlDataReader dr;
-        string strSQL;
         public Vendas()
         {
             InitializeComponent();
@@ -62,9 +56,8 @@ namespace Autopecas
 
         private void btn_finalizaVenda_Click(object sender, EventArgs e)
         {
-         
-            Pagamento Pagamento = new Pagamento(this);
-            Pagamento.Show();
+
+            finalizarValidacao();
 
         }
 
@@ -97,6 +90,20 @@ namespace Autopecas
             }
 
         }
+
+        private void finalizarValidacao() 
+        {
+            if(dataGridView_Carrinho.Rows.Count == 0)
+            {
+                MessageBox.Show("O carrinho de compras está vazio!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                Pagamento Pagamento = new Pagamento(this);
+                Pagamento.Show();
+            }
+        }
+
         private void limpaCampos()
         {
             textBox_CodigoProduto.Text = string.Empty;
@@ -120,40 +127,6 @@ namespace Autopecas
         {
             if (dataGridView_Carrinho.Rows.Count > 0)
                 textBox_subTotal.Text = SubTotal().ToString("C2");
-        }
-
-        private void concluirVenda()
-        {
-            try
-            {
-                int i = 0;
-                for (i = 0; i < dataGridView_Carrinho.Rows.Count; i++)
-                {
-                    conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                    strSQL = "insert into vendas (nomeProduto, quantidade, valorProduto, valorTotal, formaPagamento) values (@nomeProduto, @quantidade, @valorProduto, @valorTotal, @formaPagamento);";
-                    comando = new MySqlCommand(strSQL, conexao);
-
-                    comando.Parameters.AddWithValue("@nomeProduto", dataGridView_Carrinho.Rows[i].Cells["nome"].Value);
-                    comando.Parameters.AddWithValue("@quantidade", dataGridView_Carrinho.Rows[i].Cells["quantidade"].Value);
-                    comando.Parameters.AddWithValue("@valorProduto", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorUnitario"].Value));
-                    comando.Parameters.AddWithValue("@valorTotal", Convert.ToDecimal(dataGridView_Carrinho.Rows[i].Cells["valorTotal"].Value));
-                    //comando.Parameters.AddWithValue("@formaPagamento", comboBox_FormaPagamento.Text);
-                    //cmdDataBase.Parameters.Clear();
-
-                    conexao.Open();
-                    comando.ExecuteNonQuery();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-                comando = null;
-            }
         }
 
         private void dataGridView_Carrinho_RowsRemoved(object sender, DataGridViewRowsRemovedEventArgs e)

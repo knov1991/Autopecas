@@ -66,11 +66,12 @@ namespace Autopecas
 
         private void btn_selecionar_Click(object sender, EventArgs e)
         {
-            DataGridViewRow dr = dataGridView_buscaProdutos.SelectedRows[0];
+
             instanciaVendas.textBox_CodigoProduto.Text = dr.Cells[0].Value.ToString();
             instanciaVendas.textBox_NomeProduto.Text = dr.Cells[1].Value.ToString();
             instanciaVendas.textBox_ValorProduto.Text = dr.Cells[2].Value.ToString();
             Close();
+
         }
 
         public void procurarItem(string valorBusca)

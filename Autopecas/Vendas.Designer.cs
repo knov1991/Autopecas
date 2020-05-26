@@ -367,7 +367,6 @@
         private System.Windows.Forms.Label label_CodigoProduto;
         private System.Windows.Forms.Button btn_listar;
         private System.Windows.Forms.Button btn_addProduto;
-        private System.Windows.Forms.DataGridView dataGridView_Carrinho;
         private System.Windows.Forms.DataGridViewTextBoxColumn codProduto;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn quantidade;
@@ -388,5 +387,6 @@
         public System.Windows.Forms.TextBox textBox_Quantidade;
         private System.Windows.Forms.Button btn_remove;
         public System.Windows.Forms.TextBox textBox_subTotal;
+        public System.Windows.Forms.DataGridView dataGridView_Carrinho;
     }
 }

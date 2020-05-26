@@ -179,6 +179,7 @@
             this.btn_concluirVenda.TabIndex = 23;
             this.btn_concluirVenda.Text = "Concluir Venda";
             this.btn_concluirVenda.UseVisualStyleBackColor = true;
+            this.btn_concluirVenda.Click += new System.EventHandler(this.btn_concluirVenda_Click);
             // 
             // btnFechar
             // 

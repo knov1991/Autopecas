@@ -28,26 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_NovaVenda = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // txt_NovaVenda
             // 
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(246, 12);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(238, 82);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "CONTROLE FINANCEIRO";
-            this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_NovaVenda.AutoSize = true;
+            this.txt_NovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_NovaVenda.Location = new System.Drawing.Point(41, 55);
+            this.txt_NovaVenda.Name = "txt_NovaVenda";
+            this.txt_NovaVenda.Size = new System.Drawing.Size(319, 39);
+            this.txt_NovaVenda.TabIndex = 2;
+            this.txt_NovaVenda.Text = "Controle Financeiro";
             // 
             // ControleFinanceiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txt_NovaVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ControleFinanceiro";
             this.Text = "ControleFinanceiro";
@@ -58,6 +57,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label txt_NovaVenda;
     }
 }
