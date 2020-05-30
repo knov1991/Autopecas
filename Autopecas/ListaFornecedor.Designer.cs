@@ -147,6 +147,7 @@
             this.btn_selecionar.TabIndex = 10;
             this.btn_selecionar.Text = "Selecionar";
             this.btn_selecionar.UseVisualStyleBackColor = true;
+            this.btn_selecionar.Click += new System.EventHandler(this.btn_selecionar_Click);
             // 
             // groupBox_listaProdutos
             // 

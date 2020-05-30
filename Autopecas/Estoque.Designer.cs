@@ -346,7 +346,6 @@
         private System.Windows.Forms.TextBox txtDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dataGrid;
-        private System.Windows.Forms.TextBox txtFornecedor;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label3;
@@ -364,5 +363,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtvalorProduto;
         private System.Windows.Forms.Button btn_listar;
+        public System.Windows.Forms.TextBox txtFornecedor;
     }
 }

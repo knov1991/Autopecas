@@ -63,5 +63,11 @@ namespace Autopecas
             }
         }
 
+        private void btn_selecionar_Click(object sender, EventArgs e)
+        {
+            DataGridViewRow dr = dataGridView_buscaFornecedor.SelectedRows[0];
+            instanciaEstoque.txtFornecedor.Text= dr.Cells[1].Value.ToString();
+            Close();
+        }
     }
 }
