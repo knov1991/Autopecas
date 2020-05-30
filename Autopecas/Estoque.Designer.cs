@@ -49,6 +49,7 @@
             this.btnLocalizar = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtvalorProduto = new System.Windows.Forms.TextBox();
+            this.btn_listar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -67,9 +68,10 @@
             // 
             // txtDataEntrada
             // 
-            this.txtDataEntrada.Location = new System.Drawing.Point(50, 188);
+            this.txtDataEntrada.Location = new System.Drawing.Point(51, 188);
+            this.txtDataEntrada.Multiline = true;
             this.txtDataEntrada.Name = "txtDataEntrada";
-            this.txtDataEntrada.Size = new System.Drawing.Size(266, 20);
+            this.txtDataEntrada.Size = new System.Drawing.Size(266, 23);
             this.txtDataEntrada.TabIndex = 60;
             // 
             // label5
@@ -101,9 +103,11 @@
             // 
             // txtFornecedor
             // 
-            this.txtFornecedor.Location = new System.Drawing.Point(50, 237);
+            this.txtFornecedor.Enabled = false;
+            this.txtFornecedor.Location = new System.Drawing.Point(50, 235);
+            this.txtFornecedor.Multiline = true;
             this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(671, 20);
+            this.txtFornecedor.Size = new System.Drawing.Size(532, 23);
             this.txtFornecedor.TabIndex = 63;
             // 
             // label4
@@ -111,7 +115,7 @@
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(45, 215);
+            this.label4.Location = new System.Drawing.Point(45, 214);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 23);
             this.label4.TabIndex = 64;
@@ -121,8 +125,9 @@
             // txtQuantidade
             // 
             this.txtQuantidade.Location = new System.Drawing.Point(489, 135);
+            this.txtQuantidade.Multiline = true;
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(232, 20);
+            this.txtQuantidade.Size = new System.Drawing.Size(232, 23);
             this.txtQuantidade.TabIndex = 59;
             // 
             // label3
@@ -140,8 +145,9 @@
             // txtCategoria
             // 
             this.txtCategoria.Location = new System.Drawing.Point(322, 188);
+            this.txtCategoria.Multiline = true;
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(232, 20);
+            this.txtCategoria.Size = new System.Drawing.Size(232, 23);
             this.txtCategoria.TabIndex = 61;
             // 
             // label2
@@ -159,8 +165,9 @@
             // txtProduto
             // 
             this.txtProduto.Location = new System.Drawing.Point(215, 135);
+            this.txtProduto.Multiline = true;
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(268, 20);
+            this.txtProduto.Size = new System.Drawing.Size(268, 23);
             this.txtProduto.TabIndex = 58;
             // 
             // PRODUTO
@@ -177,9 +184,10 @@
             // 
             // txtId
             // 
-            this.txtId.Location = new System.Drawing.Point(50, 135);
+            this.txtId.Location = new System.Drawing.Point(51, 135);
+            this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(159, 20);
+            this.txtId.Size = new System.Drawing.Size(159, 23);
             this.txtId.TabIndex = 57;
             // 
             // label1
@@ -280,15 +288,28 @@
             // txtvalorProduto
             // 
             this.txtvalorProduto.Location = new System.Drawing.Point(560, 188);
+            this.txtvalorProduto.Multiline = true;
             this.txtvalorProduto.Name = "txtvalorProduto";
-            this.txtvalorProduto.Size = new System.Drawing.Size(161, 20);
+            this.txtvalorProduto.Size = new System.Drawing.Size(161, 23);
             this.txtvalorProduto.TabIndex = 62;
+            // 
+            // btn_listar
+            // 
+            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_listar.Location = new System.Drawing.Point(588, 235);
+            this.btn_listar.Name = "btn_listar";
+            this.btn_listar.Size = new System.Drawing.Size(133, 23);
+            this.btn_listar.TabIndex = 75;
+            this.btn_listar.Text = "Listar";
+            this.btn_listar.UseVisualStyleBackColor = true;
+            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.btnAlterar);
@@ -342,5 +363,6 @@
         private System.Windows.Forms.Button btnLocalizar;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtvalorProduto;
+        private System.Windows.Forms.Button btn_listar;
     }
 }

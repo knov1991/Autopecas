@@ -185,6 +185,13 @@ namespace Autopecas
 
             }
         }
+
+        private void btn_listar_Click(object sender, EventArgs e)
+        {
+            ListaFornecedor Fornecedor = new ListaFornecedor(this);
+            Fornecedor.Show();
+
+        }
     }
     
 }
