@@ -37,9 +37,9 @@
             this.txt_NovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NovaVenda.Location = new System.Drawing.Point(41, 55);
             this.txt_NovaVenda.Name = "txt_NovaVenda";
-            this.txt_NovaVenda.Size = new System.Drawing.Size(319, 39);
+            this.txt_NovaVenda.Size = new System.Drawing.Size(179, 39);
             this.txt_NovaVenda.TabIndex = 2;
-            this.txt_NovaVenda.Text = "Controle Financeiro";
+            this.txt_NovaVenda.Text = "Financeiro";
             // 
             // ControleFinanceiro
             // 
@@ -49,7 +49,7 @@
             this.Controls.Add(this.txt_NovaVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ControleFinanceiro";
-            this.Text = "ControleFinanceiro";
+            this.Text = "Financeiro";
             this.ResumeLayout(false);
             this.PerformLayout();
 

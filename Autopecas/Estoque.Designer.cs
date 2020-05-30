@@ -200,9 +200,9 @@
             this.txt_CadastroFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CadastroFornecedor.Location = new System.Drawing.Point(41, 55);
             this.txt_CadastroFornecedor.Name = "txt_CadastroFornecedor";
-            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(331, 39);
+            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(144, 39);
             this.txt_CadastroFornecedor.TabIndex = 74;
-            this.txt_CadastroFornecedor.Text = "Controle de Estoque";
+            this.txt_CadastroFornecedor.Text = "Estoque";
             // 
             // btnSalvar
             // 
@@ -210,7 +210,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Autopecas.Properties.Resources.Salvar;
             this.btnSalvar.Location = new System.Drawing.Point(50, 277);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(130, 44);
             this.btnSalvar.TabIndex = 64;
@@ -225,7 +225,7 @@
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::Autopecas.Properties.Resources.Excluir;
             this.btnExcluir.Location = new System.Drawing.Point(316, 277);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(128, 44);
             this.btnExcluir.TabIndex = 66;
@@ -240,7 +240,7 @@
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::Autopecas.Properties.Resources.Alterar;
             this.btnAlterar.Location = new System.Drawing.Point(184, 277);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(128, 44);
             this.btnAlterar.TabIndex = 65;
@@ -256,7 +256,7 @@
             this.btnLocalizar.Image = global::Autopecas.Properties.Resources.Localizar;
             this.btnLocalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLocalizar.Location = new System.Drawing.Point(448, 277);
-            this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(128, 44);
             this.btnLocalizar.TabIndex = 67;

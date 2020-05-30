@@ -42,9 +42,9 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btnCliente = new System.Windows.Forms.Button();
             this.btnControleFinanceiro = new System.Windows.Forms.Button();
-            this.btnVendas = new System.Windows.Forms.Button();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnVendas = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
@@ -110,9 +110,9 @@
             this.painelLateral.Controls.Add(this.pictureBox2);
             this.painelLateral.Controls.Add(this.btnCliente);
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
-            this.painelLateral.Controls.Add(this.btnVendas);
             this.painelLateral.Controls.Add(this.btnFornecedor);
             this.painelLateral.Controls.Add(this.btnEstoque);
+            this.painelLateral.Controls.Add(this.btnVendas);
             this.painelLateral.Controls.Add(this.btnSair);
             this.painelLateral.Controls.Add(this.pictureBox1);
             this.painelLateral.Dock = System.Windows.Forms.DockStyle.Left;
@@ -218,27 +218,9 @@
             this.btnControleFinanceiro.Name = "btnControleFinanceiro";
             this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
             this.btnControleFinanceiro.TabIndex = 8;
-            this.btnControleFinanceiro.Text = "       Controle Financeiro";
+            this.btnControleFinanceiro.Text = "Financeiro";
             this.btnControleFinanceiro.UseVisualStyleBackColor = true;
             this.btnControleFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
-            // 
-            // btnVendas
-            // 
-            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnVendas.FlatAppearance.BorderSize = 0;
-            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVendas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnVendas.ForeColor = System.Drawing.Color.White;
-            this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
-            this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 294);
-            this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(250, 50);
-            this.btnVendas.TabIndex = 6;
-            this.btnVendas.Text = "Vendas";
-            this.btnVendas.UseVisualStyleBackColor = true;
-            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnFornecedor
             // 
@@ -250,10 +232,10 @@
             this.btnFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnFornecedor.Image = global::Autopecas.Properties.Resources.Fornecedor;
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.Location = new System.Drawing.Point(0, 244);
+            this.btnFornecedor.Location = new System.Drawing.Point(0, 294);
             this.btnFornecedor.Name = "btnFornecedor";
             this.btnFornecedor.Size = new System.Drawing.Size(250, 50);
-            this.btnFornecedor.TabIndex = 4;
+            this.btnFornecedor.TabIndex = 6;
             this.btnFornecedor.Text = "Fornecedores";
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
@@ -268,13 +250,31 @@
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
             this.btnEstoque.Image = global::Autopecas.Properties.Resources.Estoque;
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 194);
+            this.btnEstoque.Location = new System.Drawing.Point(0, 244);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(250, 50);
-            this.btnEstoque.TabIndex = 2;
+            this.btnEstoque.TabIndex = 4;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
+            // btnVendas
+            // 
+            this.btnVendas.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnVendas.FlatAppearance.BorderSize = 0;
+            this.btnVendas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVendas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVendas.ForeColor = System.Drawing.Color.White;
+            this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
+            this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnVendas.Location = new System.Drawing.Point(0, 194);
+            this.btnVendas.Name = "btnVendas";
+            this.btnVendas.Size = new System.Drawing.Size(250, 50);
+            this.btnVendas.TabIndex = 2;
+            this.btnVendas.Text = "Nova Venda";
+            this.btnVendas.UseVisualStyleBackColor = true;
+            this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnSair
             // 
@@ -344,9 +344,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.PictureBox btnFechar;
-        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnFornecedor;
+        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnControleFinanceiro;
         public static System.Windows.Forms.Label labelConectar;
         private System.Windows.Forms.Button btnCliente;
