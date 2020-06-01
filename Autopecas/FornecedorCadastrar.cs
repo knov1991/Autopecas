@@ -14,11 +14,10 @@ namespace Autopecas
     public partial class FornecedorCadastrar : Form
     {
         public string operacao;
-
-
         MySqlConnection conexao;
         MySqlCommand comando;
         string strSQL;
+        bool cnpjCheck;
         public FornecedorCadastrar()
         {
             InitializeComponent();
@@ -98,9 +97,8 @@ namespace Autopecas
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            FornecedorListar f = new FornecedorListar();
-            f.ShowDialog();
-            f.Dispose();
+            LocalizarFornecedor Fornecedor = new LocalizarFornecedor(this);
+            Fornecedor.Show();
         }
 
        //Botão Para Alterar Os Dados
@@ -166,54 +164,54 @@ namespace Autopecas
                 return;*/
 
 
-            /*if (ValidaCNPJ() == true)
+            if (ValidaCNPJ() == true)
             {
-                MessageBox.Show("", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if(cnpjCheck == true)
+                {
+                    try
+                    {
+                        conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                        strSQL = "INSERT INTO FORNECEDORES (NOME, RSOCIAL, CNPJ, IE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
+                            " @RSOCIAL, @CNPJ, @IE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
 
+
+                        comando = new MySqlCommand(strSQL, conexao);
+                        comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                        comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                        comando.Parameters.AddWithValue("@CNPJ", txtCnpj.Text);
+                        comando.Parameters.AddWithValue("@IE", txtIe.Text);
+                        comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                        comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                        comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                        comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                        comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                        comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                        comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                        comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                        comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                        conexao.Open();
+
+                        comando.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                        MessageBox.Show("Cadastro feito com sucesso.");
+                        this.LimpaCampos();
+                        this.txtNome.Focus();
+                        conexao = null;
+                        comando = null;
+                    }
+                }
             }
             else
             {
-                MessageBox.Show("", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }*/
-
-            try
-            {
-                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "INSERT INTO FORNECEDORES (NOME, RSOCIAL, CNPJ, IE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
-                    " @RSOCIAL, @CNPJ, @IE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
-
-               
-                    comando = new MySqlCommand(strSQL, conexao);
-                    comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                    comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
-                    comando.Parameters.AddWithValue("@CNPJ", txtCnpj.Text);
-                    comando.Parameters.AddWithValue("@IE", txtIe.Text);
-                    comando.Parameters.AddWithValue("@CEP", txtCep.Text);
-                    comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
-                    comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
-                    comando.Parameters.AddWithValue("@RUA", txtRua.Text);
-                    comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
-                    comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
-                    comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
-                    comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
-                    comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
-
-                    conexao.Open();
-
-                    comando.ExecuteNonQuery();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                MessageBox.Show("Cadastro feito com sucesso.");
-                this.LimpaCampos();
-                this.txtNome.Focus();
-                conexao = null;
-                comando = null;
+                MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -387,7 +385,7 @@ namespace Autopecas
         }
 
         public bool ValidaCNPJ() 
-       {
+        {
             try
             {
                 if (!(txtCnpj.Text.Length < 18))
@@ -434,10 +432,12 @@ namespace Autopecas
 
                     if (digito1 == DigitoVerificador1 && digito2 == DigitoVereificador2)
                     {
+                        cnpjCheck = true;
                         return true;
                     }
                     else
                     {
+                        cnpjCheck = false;
                         return false;
                     }
                 }
@@ -450,6 +450,6 @@ namespace Autopecas
             {
                 throw;
             }
-       }
+        }
     }
 }
