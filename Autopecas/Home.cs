@@ -17,7 +17,7 @@ namespace Autopecas
         public Home()
         {
             InitializeComponent();
-            //EsconderMenu();
+            EsconderMenu();
             Conectar.ConectarMysql();
         }
 
@@ -47,7 +47,7 @@ namespace Autopecas
         // ESCONDE MENU LATERAL
         private void EsconderMenu()
         {
-            //painelFornecedor.Visible = false;
+            painelCadastros.Visible = false;
         }
 
 
@@ -106,6 +106,11 @@ namespace Autopecas
             dataHora = DateTime.Now;
             lbHora.Text = DateTime.Now.ToString("HH:mm:ss");
             lbData.Text = DateTime.Now.ToString("dd/MM/yyyy");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MostrarMenu(painelCadastros);
         }
     }
 }

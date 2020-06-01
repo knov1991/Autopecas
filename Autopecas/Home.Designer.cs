@@ -35,15 +35,20 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
-            this.lbData = new System.Windows.Forms.Label();
-            this.lbHora = new System.Windows.Forms.Label();
+            this.painelTempo = new System.Windows.Forms.Panel();
+            this.painelData = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnCompras = new System.Windows.Forms.Button();
+            this.lbData = new System.Windows.Forms.Label();
+            this.painelHora = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnCliente = new System.Windows.Forms.Button();
+            this.lbHora = new System.Windows.Forms.Label();
             this.btnControleFinanceiro = new System.Windows.Forms.Button();
+            this.painelCadastros = new System.Windows.Forms.Panel();
             this.btnFornecedor = new System.Windows.Forms.Button();
+            this.btnCliente = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
+            this.btnCompras = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -52,8 +57,12 @@
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
+            this.painelTempo.SuspendLayout();
+            this.painelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.painelHora.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.painelCadastros.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,15 +112,12 @@
             // 
             this.painelLateral.AutoScroll = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.painelLateral.Controls.Add(this.lbData);
-            this.painelLateral.Controls.Add(this.lbHora);
-            this.painelLateral.Controls.Add(this.pictureBox3);
-            this.painelLateral.Controls.Add(this.btnCompras);
-            this.painelLateral.Controls.Add(this.pictureBox2);
-            this.painelLateral.Controls.Add(this.btnCliente);
+            this.painelLateral.Controls.Add(this.painelTempo);
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
-            this.painelLateral.Controls.Add(this.btnFornecedor);
+            this.painelLateral.Controls.Add(this.painelCadastros);
+            this.painelLateral.Controls.Add(this.button1);
             this.painelLateral.Controls.Add(this.btnEstoque);
+            this.painelLateral.Controls.Add(this.btnCompras);
             this.painelLateral.Controls.Add(this.btnVendas);
             this.painelLateral.Controls.Add(this.btnSair);
             this.painelLateral.Controls.Add(this.pictureBox1);
@@ -121,88 +127,83 @@
             this.painelLateral.Size = new System.Drawing.Size(250, 768);
             this.painelLateral.TabIndex = 3;
             // 
-            // lbData
+            // painelTempo
             // 
-            this.lbData.AutoSize = true;
-            this.lbData.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.lbData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbData.Location = new System.Drawing.Point(82, 619);
-            this.lbData.Margin = new System.Windows.Forms.Padding(3);
-            this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(49, 22);
-            this.lbData.TabIndex = 11;
-            this.lbData.Text = "Data";
+            this.painelTempo.Controls.Add(this.painelData);
+            this.painelTempo.Controls.Add(this.painelHora);
+            this.painelTempo.Location = new System.Drawing.Point(0, 618);
+            this.painelTempo.Name = "painelTempo";
+            this.painelTempo.Size = new System.Drawing.Size(250, 100);
+            this.painelTempo.TabIndex = 0;
             // 
-            // lbHora
+            // painelData
             // 
-            this.lbHora.AutoSize = true;
-            this.lbHora.Font = new System.Drawing.Font("Arial", 14.25F);
-            this.lbHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbHora.Location = new System.Drawing.Point(82, 573);
-            this.lbHora.Margin = new System.Windows.Forms.Padding(3);
-            this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(50, 22);
-            this.lbHora.TabIndex = 0;
-            this.lbHora.Text = "Hora";
+            this.painelData.Controls.Add(this.pictureBox3);
+            this.painelData.Controls.Add(this.lbData);
+            this.painelData.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelData.Location = new System.Drawing.Point(0, 50);
+            this.painelData.Name = "painelData";
+            this.painelData.Size = new System.Drawing.Size(250, 50);
+            this.painelData.TabIndex = 0;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox3.Image = global::Autopecas.Properties.Resources.icons8_calendário_64;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 610);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
-            // btnCompras
+            // lbData
             // 
-            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCompras.FlatAppearance.BorderSize = 0;
-            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCompras.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Image = global::Autopecas.Properties.Resources.Vendas;
-            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 444);
-            this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(250, 50);
-            this.btnCompras.TabIndex = 10;
-            this.btnCompras.Text = "Compras";
-            this.btnCompras.UseVisualStyleBackColor = true;
-            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
+            this.lbData.AutoSize = true;
+            this.lbData.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbData.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbData.Location = new System.Drawing.Point(45, 20);
+            this.lbData.Margin = new System.Windows.Forms.Padding(3);
+            this.lbData.Name = "lbData";
+            this.lbData.Size = new System.Drawing.Size(55, 24);
+            this.lbData.TabIndex = 11;
+            this.lbData.Text = "Data";
+            // 
+            // painelHora
+            // 
+            this.painelHora.Controls.Add(this.pictureBox2);
+            this.painelHora.Controls.Add(this.lbHora);
+            this.painelHora.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelHora.Location = new System.Drawing.Point(0, 0);
+            this.painelHora.Name = "painelHora";
+            this.painelHora.Size = new System.Drawing.Size(250, 50);
+            this.painelHora.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBox2.Image = global::Autopecas.Properties.Resources.icons8_relógio_64;
-            this.pictureBox2.Location = new System.Drawing.Point(2, 565);
+            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 41);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
             // 
-            // btnCliente
+            // lbHora
             // 
-            this.btnCliente.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnCliente.FlatAppearance.BorderSize = 0;
-            this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCliente.Image = global::Autopecas.Properties.Resources.Fornecedor;
-            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCliente.Location = new System.Drawing.Point(0, 394);
-            this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(250, 50);
-            this.btnCliente.TabIndex = 9;
-            this.btnCliente.Text = "Clientes";
-            this.btnCliente.UseVisualStyleBackColor = true;
-            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            this.lbHora.AutoSize = true;
+            this.lbHora.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbHora.Location = new System.Drawing.Point(45, 20);
+            this.lbHora.Margin = new System.Windows.Forms.Padding(3);
+            this.lbHora.Name = "lbHora";
+            this.lbHora.Size = new System.Drawing.Size(55, 24);
+            this.lbHora.TabIndex = 0;
+            this.lbHora.Text = "Hora";
             // 
             // btnControleFinanceiro
             // 
@@ -214,13 +215,24 @@
             this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
             this.btnControleFinanceiro.Image = global::Autopecas.Properties.Resources.Financeiro;
             this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 344);
+            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 494);
             this.btnControleFinanceiro.Name = "btnControleFinanceiro";
             this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
-            this.btnControleFinanceiro.TabIndex = 8;
-            this.btnControleFinanceiro.Text = "Financeiro";
+            this.btnControleFinanceiro.TabIndex = 20;
+            this.btnControleFinanceiro.Text = "       Controle Financeiro";
             this.btnControleFinanceiro.UseVisualStyleBackColor = true;
             this.btnControleFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
+            // 
+            // painelCadastros
+            // 
+            this.painelCadastros.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.painelCadastros.Controls.Add(this.btnFornecedor);
+            this.painelCadastros.Controls.Add(this.btnCliente);
+            this.painelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelCadastros.Location = new System.Drawing.Point(0, 394);
+            this.painelCadastros.Name = "painelCadastros";
+            this.painelCadastros.Size = new System.Drawing.Size(250, 100);
+            this.painelCadastros.TabIndex = 0;
             // 
             // btnFornecedor
             // 
@@ -232,13 +244,49 @@
             this.btnFornecedor.ForeColor = System.Drawing.Color.White;
             this.btnFornecedor.Image = global::Autopecas.Properties.Resources.Fornecedor;
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.Location = new System.Drawing.Point(0, 294);
+            this.btnFornecedor.Location = new System.Drawing.Point(0, 50);
             this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(250, 50);
-            this.btnFornecedor.TabIndex = 6;
+            this.btnFornecedor.Size = new System.Drawing.Size(246, 50);
+            this.btnFornecedor.TabIndex = 7;
             this.btnFornecedor.Text = "Fornecedores";
             this.btnFornecedor.UseVisualStyleBackColor = true;
             this.btnFornecedor.Click += new System.EventHandler(this.btnFornecedor_Click);
+            // 
+            // btnCliente
+            // 
+            this.btnCliente.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCliente.FlatAppearance.BorderSize = 0;
+            this.btnCliente.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCliente.ForeColor = System.Drawing.Color.White;
+            this.btnCliente.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCliente.Location = new System.Drawing.Point(0, 0);
+            this.btnCliente.Name = "btnCliente";
+            this.btnCliente.Size = new System.Drawing.Size(246, 50);
+            this.btnCliente.TabIndex = 6;
+            this.btnCliente.Text = "Clientes";
+            this.btnCliente.UseVisualStyleBackColor = true;
+            this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
+            // 
+            // button1
+            // 
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(0, 344);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(250, 50);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "Cadastros";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEstoque
             // 
@@ -250,13 +298,31 @@
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
             this.btnEstoque.Image = global::Autopecas.Properties.Resources.Estoque;
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 244);
+            this.btnEstoque.Location = new System.Drawing.Point(0, 294);
             this.btnEstoque.Name = "btnEstoque";
             this.btnEstoque.Size = new System.Drawing.Size(250, 50);
-            this.btnEstoque.TabIndex = 4;
+            this.btnEstoque.TabIndex = 2;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
             this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
+            // btnCompras
+            // 
+            this.btnCompras.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCompras.FlatAppearance.BorderSize = 0;
+            this.btnCompras.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCompras.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCompras.ForeColor = System.Drawing.Color.White;
+            this.btnCompras.Image = global::Autopecas.Properties.Resources.Vendas;
+            this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCompras.Location = new System.Drawing.Point(0, 244);
+            this.btnCompras.Name = "btnCompras";
+            this.btnCompras.Size = new System.Drawing.Size(250, 50);
+            this.btnCompras.TabIndex = 14;
+            this.btnCompras.Text = "Compras";
+            this.btnCompras.UseVisualStyleBackColor = true;
+            this.btnCompras.Click += new System.EventHandler(this.btnCompras_Click);
             // 
             // btnVendas
             // 
@@ -271,13 +337,14 @@
             this.btnVendas.Location = new System.Drawing.Point(0, 194);
             this.btnVendas.Name = "btnVendas";
             this.btnVendas.Size = new System.Drawing.Size(250, 50);
-            this.btnVendas.TabIndex = 2;
-            this.btnVendas.Text = "Nova Venda";
+            this.btnVendas.TabIndex = 13;
+            this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
             this.btnVendas.Click += new System.EventHandler(this.btnVendas_Click);
             // 
             // btnSair
             // 
+            this.btnSair.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.btnSair.FlatAppearance.BorderSize = 0;
             this.btnSair.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -285,7 +352,7 @@
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = global::Autopecas.Properties.Resources.Sair;
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(-2, 718);
+            this.btnSair.Location = new System.Drawing.Point(0, 718);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(250, 50);
             this.btnSair.TabIndex = 1;
@@ -327,9 +394,14 @@
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
-            this.painelLateral.PerformLayout();
+            this.painelTempo.ResumeLayout(false);
+            this.painelData.ResumeLayout(false);
+            this.painelData.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.painelHora.ResumeLayout(false);
+            this.painelHora.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.painelCadastros.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -344,9 +416,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.PictureBox btnFechar;
+        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnControleFinanceiro;
         public static System.Windows.Forms.Label labelConectar;
         private System.Windows.Forms.Button btnCliente;
@@ -356,5 +428,10 @@
         private System.Windows.Forms.Label lbHora;
         private System.Windows.Forms.Label lbData;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Panel painelHora;
+        private System.Windows.Forms.Panel painelData;
+        private System.Windows.Forms.Panel painelCadastros;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel painelTempo;
     }
 }
