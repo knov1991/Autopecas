@@ -43,7 +43,7 @@
             this.barraTitulo.Controls.Add(this.btnFechar);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.barraTitulo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.barraTitulo.Margin = new System.Windows.Forms.Padding(2);
             this.barraTitulo.Name = "barraTitulo";
             this.barraTitulo.Size = new System.Drawing.Size(760, 37);
             this.barraTitulo.TabIndex = 0;
@@ -74,12 +74,13 @@
             this.dgvDados.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDados.Location = new System.Drawing.Point(48, 154);
-            this.dgvDados.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDados.Margin = new System.Windows.Forms.Padding(2);
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
             this.dgvDados.Size = new System.Drawing.Size(677, 476);
             this.dgvDados.TabIndex = 37;
+            this.dgvDados.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDados_CellContentClick);
             // 
             // ClientesListar
             // 
@@ -90,7 +91,7 @@
             this.Controls.Add(this.txt_CadastroCliente);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClientesListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientesListar";

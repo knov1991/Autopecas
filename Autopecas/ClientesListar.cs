@@ -55,6 +55,9 @@ namespace Autopecas
             }
         }
 
-        
+        private void dgvDados_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

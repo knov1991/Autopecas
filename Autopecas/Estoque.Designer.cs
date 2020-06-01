@@ -73,6 +73,7 @@
             this.txtDataEntrada.Name = "txtDataEntrada";
             this.txtDataEntrada.Size = new System.Drawing.Size(266, 23);
             this.txtDataEntrada.TabIndex = 60;
+            this.txtDataEntrada.TextChanged += new System.EventHandler(this.txtDataEntrada_TextChanged);
             // 
             // label5
             // 
@@ -85,6 +86,7 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "Data de Entrada";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // dataGrid
             // 
@@ -100,6 +102,7 @@
             this.dataGrid.RowHeadersWidth = 51;
             this.dataGrid.Size = new System.Drawing.Size(673, 226);
             this.dataGrid.TabIndex = 66;
+            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
             // txtFornecedor
             // 
@@ -109,6 +112,7 @@
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(532, 23);
             this.txtFornecedor.TabIndex = 63;
+            this.txtFornecedor.TextChanged += new System.EventHandler(this.txtFornecedor_TextChanged);
             // 
             // label4
             // 
@@ -121,6 +125,7 @@
             this.label4.TabIndex = 64;
             this.label4.Text = "Fornecedor";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtQuantidade
             // 
@@ -129,6 +134,7 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(232, 23);
             this.txtQuantidade.TabIndex = 59;
+            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             // 
             // label3
             // 
@@ -141,6 +147,7 @@
             this.label3.TabIndex = 62;
             this.label3.Text = "Quantidade";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtCategoria
             // 
@@ -149,6 +156,7 @@
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(232, 23);
             this.txtCategoria.TabIndex = 61;
+            this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
             // label2
             // 
@@ -161,6 +169,7 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Categoria";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtProduto
             // 
@@ -169,6 +178,7 @@
             this.txtProduto.Name = "txtProduto";
             this.txtProduto.Size = new System.Drawing.Size(268, 23);
             this.txtProduto.TabIndex = 58;
+            this.txtProduto.TextChanged += new System.EventHandler(this.txtProduto_TextChanged);
             // 
             // PRODUTO
             // 
@@ -181,6 +191,7 @@
             this.PRODUTO.TabIndex = 58;
             this.PRODUTO.Text = "Produto";
             this.PRODUTO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PRODUTO.Click += new System.EventHandler(this.PRODUTO_Click);
             // 
             // txtId
             // 
@@ -189,6 +200,7 @@
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(159, 23);
             this.txtId.TabIndex = 57;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label1
             // 
@@ -201,6 +213,7 @@
             this.label1.TabIndex = 56;
             this.label1.Text = "Codigo";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_CadastroFornecedor
             // 
@@ -211,6 +224,7 @@
             this.txt_CadastroFornecedor.Size = new System.Drawing.Size(144, 39);
             this.txt_CadastroFornecedor.TabIndex = 74;
             this.txt_CadastroFornecedor.Text = "Estoque";
+            this.txt_CadastroFornecedor.Click += new System.EventHandler(this.txt_CadastroFornecedor_Click);
             // 
             // btnSalvar
             // 
@@ -284,6 +298,7 @@
             this.label6.TabIndex = 60;
             this.label6.Text = "Valor do Produto";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtvalorProduto
             // 
@@ -292,6 +307,7 @@
             this.txtvalorProduto.Name = "txtvalorProduto";
             this.txtvalorProduto.Size = new System.Drawing.Size(161, 23);
             this.txtvalorProduto.TabIndex = 62;
+            this.txtvalorProduto.TextChanged += new System.EventHandler(this.txtvalorProduto_TextChanged);
             // 
             // btn_listar
             // 
