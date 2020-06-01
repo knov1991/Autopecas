@@ -26,7 +26,6 @@ namespace Autopecas
         //Função Habilita Campos do Formulário de Fornecedor
         public void HabilitaCampos()
         {
-            txtId.Enabled = true;
             txtNome.Enabled = true;
             txtRSocial.Enabled = true;
             txtCnpj.Enabled = true;
@@ -45,7 +44,6 @@ namespace Autopecas
         //Função Desabilita Campos do Formulário de Fornecedor
         public void DesabilitaCampos()
         {
-            txtId.Enabled = false;
             txtNome.Enabled = false;
             txtRSocial.Enabled = false;
             txtCnpj.Enabled = false;
@@ -64,7 +62,6 @@ namespace Autopecas
         //Método Limpa Campos do Formulário de Fornecedor
         public void LimpaCampos()
         {
-            txtId.Clear();
             txtNome.Clear();
             txtRSocial.Clear();
             txtCnpj.Clear();

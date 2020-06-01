@@ -28,7 +28,6 @@ namespace Autopecas
         public void HabilitaCampos()
         {
             rbTipo.Enabled = true;
-            txtId.Enabled = true;
             txtNome.Enabled = true;
             txtRSocial.Enabled = true;
             txtCPFCNPJ.Enabled = true;
@@ -48,7 +47,6 @@ namespace Autopecas
         public void DesabilitaCampos()
         {
             rbTipo.Enabled = false;
-            txtId.Enabled = false;
             txtNome.Enabled = false;
             txtRSocial.Enabled = false;
             txtCPFCNPJ.Enabled = false;
@@ -67,7 +65,6 @@ namespace Autopecas
         //Método Limpa Campos do Formulário de Fornecedor
         public void LimpaCampos()
         {
-            txtId.Clear();
             txtNome.Clear();
             txtRSocial.Clear();
             txtCPFCNPJ.Clear();
@@ -168,6 +165,8 @@ namespace Autopecas
             if (c.campoVazio(txtTelefone, "Telefone"))
                 return;*/
 
+
+            //CLIENTE JURIDICO
             if(rbJuridico.Checked == true)
             {
                 if (ValidaCNPJ() == true)
@@ -229,12 +228,12 @@ namespace Autopecas
                 }
             }
 
+            //CLIENTE FISICO
             else if(rbFisico.Checked == true)
             {
-                if (ValidaCNPJ() == true)
+                if(validaCPF() == true)
                 {
-                    if (cnpjCheck == true)
-                    {
+                    if(cnpjCheck == true) {
                         try
                         {
                             conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
@@ -286,7 +285,7 @@ namespace Autopecas
                 }
                 else
                 {
-                    MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("CPF Inválido", "Validador de CPF", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             
@@ -566,5 +565,87 @@ namespace Autopecas
                 throw;
             }
         }
+
+        bool validaCPF()
+        {
+            try
+            {
+                if (txtCPFCNPJ.Text.Length == 14)
+                {
+                    int n1 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(0, 1));
+                    int n2 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(1, 1));
+                    int n3 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(2, 1));
+                    int n4 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(4, 1));
+                    int n5 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(5, 1));
+                    int n6 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(6, 1));
+                    int n7 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(8, 1));
+                    int n8 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(9, 1));
+                    int n9 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(10, 1));
+
+                    int n10 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(12, 1));
+                    int n11 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(13, 1));
+
+
+                    //Se todos os números forem iguais, irá burlar o validador, e retornar true
+                    if (n1 == n2 && n2 == n3 && n3 == n4 && n4 == n5 && n5 == n6 && n6 == n7 && n7 == n8 && n8 == n9)
+                    {
+                        return false;
+                    }
+
+                    //Somar todos o números multiplicados
+                    int Soma1 = n1 * 10 + n2 * 9 + n3 * 8 + n4 * 7 + n5 * 6 + n6 * 5 + n7 * 4 + n8 * 3 + n9 * 2;
+
+                    //Dividir por 11 e retornar o resto da divisão
+                    int digitoVerificador1 = Soma1 % 11;
+
+                    //verificar se o valor obtido é menor que 2 ou maior 
+                    if (digitoVerificador1 < 2)
+                    {
+                        digitoVerificador1 = 0;
+                    }
+                    else
+                    {
+                        digitoVerificador1 = 11 - digitoVerificador1;
+                    }
+
+                    //Soma todos os números mutiplicados
+                    int Soma2 = n1 * 11 + n2 * 10 + n3 * 9 + n4 * 8 + n5 * 7 + n6 * 6 + n7 * 5 + n8 * 4 + n9 * 3 + digitoVerificador1 * 2;
+
+                    //Dividir por 11 e retornar o resto da divisão 
+                    int digitoVerificador2 = Soma2 % 11;
+
+                    //verificar se o valor obtido é menor ou maior que 2
+                    if (digitoVerificador2 < 2)
+                    {
+                        digitoVerificador2 = 0;
+                    }
+                    else
+                    {
+                        digitoVerificador2 = 11 - digitoVerificador2;
+                    }
+
+                    //Verifica se os dois digítos são iguais aos do CPF digitando na txt
+                    if (digitoVerificador1 == n10 && digitoVerificador2 == n11)
+                    {
+                        cnpjCheck = true;
+                        return true;
+                    }
+                    else
+                    {
+                        cnpjCheck = false;
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            
+        } 
     }
 }
