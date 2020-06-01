@@ -11,19 +11,19 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class ListaFornecedor : Form
+    public partial class LocalizarFornecedor : Form
     {
-        Estoque instanciaEstoque;
+        FornecedorCadastrar instanciaFornecedores;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-        public ListaFornecedor(Estoque fornecedores)
+        public LocalizarFornecedor(FornecedorCadastrar fornecedor)
         {
             InitializeComponent();
             dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            instanciaEstoque = fornecedores;
+            instanciaFornecedores = fornecedor;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -61,13 +61,6 @@ namespace Autopecas
                 comando = null;
 
             }
-        }
-
-        private void btn_selecionar_Click(object sender, EventArgs e)
-        {
-            DataGridViewRow dr = dataGridView_buscaFornecedor.SelectedRows[0];
-            instanciaEstoque.txtFornecedor.Text= dr.Cells[1].Value.ToString();
-            Close();
         }
 
         public void procurarItem(string valorBusca)
@@ -113,4 +106,5 @@ namespace Autopecas
             procurarItem(valorBusca);
         }
     }
+
 }

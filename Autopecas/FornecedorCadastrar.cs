@@ -98,9 +98,8 @@ namespace Autopecas
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            FornecedorListar f = new FornecedorListar();
-            f.ShowDialog();
-            f.Dispose();
+            LocalizarFornecedor Fornecedor = new LocalizarFornecedor(this);
+            Fornecedor.Show();
         }
 
        //Botão Para Alterar Os Dados
