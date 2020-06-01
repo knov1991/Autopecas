@@ -168,63 +168,128 @@ namespace Autopecas
             if (c.campoVazio(txtTelefone, "Telefone"))
                 return;*/
 
-            if(ValidaCNPJ() == true)
+            if(rbJuridico.Checked == true)
             {
-                if(cnpjCheck == true)
+                if (ValidaCNPJ() == true)
                 {
-                    try
+                    if (cnpjCheck == true)
                     {
-                        conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                        strSQL = "INSERT INTO CLIENTES (NOME, RSOCIAL, TIPO, CPFCNPJ, RGIE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
-                            " @RSOCIAL, @TIPO, @CPFCNPJ, @RGIE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
-
-
-                        comando = new MySqlCommand(strSQL, conexao);
-                        comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                        comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
-                        if (rbFisico.Checked == true)
+                        try
                         {
-                            comando.Parameters.AddWithValue("@TIPO", rbFisico.Text);
+                            conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                            strSQL = "INSERT INTO CLIENTES (NOME, RSOCIAL, TIPO, CPFCNPJ, RGIE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
+                                " @RSOCIAL, @TIPO, @CPFCNPJ, @RGIE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
+
+
+                            comando = new MySqlCommand(strSQL, conexao);
+                            comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                            comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                            if (rbFisico.Checked == true)
+                            {
+                                comando.Parameters.AddWithValue("@TIPO", rbFisico.Text);
+                            }
+                            else
+                            {
+                                comando.Parameters.AddWithValue("@TIPO", rbJuridico.Text);
+                            }
+                            comando.Parameters.AddWithValue("@CPFCNPJ", txtCPFCNPJ.Text);
+                            comando.Parameters.AddWithValue("@RGIE", txtRGIE.Text);
+                            comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                            comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                            comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                            comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                            comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                            comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                            comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                            comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                            comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                            conexao.Open();
+
+                            comando.ExecuteNonQuery();
                         }
-                        else
+                        catch (Exception ex)
                         {
-                            comando.Parameters.AddWithValue("@TIPO", rbJuridico.Text);
+                            MessageBox.Show(ex.Message);
                         }
-                        comando.Parameters.AddWithValue("@CPFCNPJ", txtCPFCNPJ.Text);
-                        comando.Parameters.AddWithValue("@RGIE", txtRGIE.Text);
-                        comando.Parameters.AddWithValue("@CEP", txtCep.Text);
-                        comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
-                        comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
-                        comando.Parameters.AddWithValue("@RUA", txtRua.Text);
-                        comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
-                        comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
-                        comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
-                        comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
-                        comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
-
-                        conexao.Open();
-
-                        comando.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show(ex.Message);
-                    }
-                    finally
-                    {
-                        conexao.Close();
-                        MessageBox.Show("Cadastro feito com sucesso.");
-                        this.LimpaCampos();
-                        this.txtNome.Focus();
-                        conexao = null;
-                        comando = null;
+                        finally
+                        {
+                            conexao.Close();
+                            MessageBox.Show("Cadastro feito com sucesso.");
+                            this.LimpaCampos();
+                            this.txtNome.Focus();
+                            conexao = null;
+                            comando = null;
+                        }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+
+            else if(rbFisico.Checked == true)
             {
-                MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            } 
+                if (ValidaCNPJ() == true)
+                {
+                    if (cnpjCheck == true)
+                    {
+                        try
+                        {
+                            conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                            strSQL = "INSERT INTO CLIENTES (NOME, RSOCIAL, TIPO, CPFCNPJ, RGIE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
+                                " @RSOCIAL, @TIPO, @CPFCNPJ, @RGIE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
+
+
+                            comando = new MySqlCommand(strSQL, conexao);
+                            comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                            comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                            if (rbFisico.Checked == true)
+                            {
+                                comando.Parameters.AddWithValue("@TIPO", rbFisico.Text);
+                            }
+                            else
+                            {
+                                comando.Parameters.AddWithValue("@TIPO", rbJuridico.Text);
+                            }
+                            comando.Parameters.AddWithValue("@CPFCNPJ", txtCPFCNPJ.Text);
+                            comando.Parameters.AddWithValue("@RGIE", txtRGIE.Text);
+                            comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                            comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                            comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                            comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                            comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                            comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                            comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                            comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                            comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                            conexao.Open();
+
+                            comando.ExecuteNonQuery();
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show(ex.Message);
+                        }
+                        finally
+                        {
+                            conexao.Close();
+                            MessageBox.Show("Cadastro feito com sucesso.");
+                            this.LimpaCampos();
+                            this.txtNome.Focus();
+                            conexao = null;
+                            comando = null;
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            
         }
 
         //Método Para Excluir Os Dados
