@@ -385,7 +385,7 @@ namespace Autopecas
         }
 
         public bool ValidaCNPJ() 
-       {
+        {
             try
             {
                 if (!(txtCnpj.Text.Length < 18))
@@ -450,6 +450,6 @@ namespace Autopecas
             {
                 throw;
             }
-       }
+        }
     }
 }

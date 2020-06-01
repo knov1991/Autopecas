@@ -14,12 +14,10 @@ namespace Autopecas
     public partial class Clientes : Form
     {
         public string operacao;
-
-
         MySqlConnection conexao;
         MySqlCommand comando;
         string strSQL;
-
+        bool cnpjCheck = false;
         public Clientes()
         {
             InitializeComponent();
@@ -170,53 +168,63 @@ namespace Autopecas
             if (c.campoVazio(txtTelefone, "Telefone"))
                 return;*/
 
-            try
+            if(ValidaCNPJ() == true)
             {
-                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "INSERT INTO CLIENTES (NOME, RSOCIAL, TIPO, CPFCNPJ, RGIE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
-                    " @RSOCIAL, @TIPO, @CPFCNPJ, @RGIE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
-
-
-                comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@NOME", txtNome.Text);
-                comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
-                if(rbFisico.Checked == true)
+                if(cnpjCheck == true)
                 {
-                    comando.Parameters.AddWithValue("@TIPO", rbFisico.Text);
-                }
-                else
-                {
-                    comando.Parameters.AddWithValue("@TIPO", rbJuridico.Text);
-                }
-                comando.Parameters.AddWithValue("@CPFCNPJ", txtCPFCNPJ.Text);
-                comando.Parameters.AddWithValue("@RGIE", txtRGIE.Text);
-                comando.Parameters.AddWithValue("@CEP", txtCep.Text);
-                comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
-                comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
-                comando.Parameters.AddWithValue("@RUA", txtRua.Text);
-                comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
-                comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
-                comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
-                comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
-                comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+                    try
+                    {
+                        conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                        strSQL = "INSERT INTO CLIENTES (NOME, RSOCIAL, TIPO, CPFCNPJ, RGIE, CEP, ESTADO, CIDADE, RUA, NUMERO, BAIRRO, EMAIL, CELULAR, TELEFONE) VALUES(@NOME," +
+                            " @RSOCIAL, @TIPO, @CPFCNPJ, @RGIE, @CEP, @ESTADO, @CIDADE, @RUA, @NUMERO, @BAIRRO, @EMAIL, @CELULAR, @TELEFONE)";
 
-                conexao.Open();
 
-                comando.ExecuteNonQuery();
+                        comando = new MySqlCommand(strSQL, conexao);
+                        comando.Parameters.AddWithValue("@NOME", txtNome.Text);
+                        comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
+                        if (rbFisico.Checked == true)
+                        {
+                            comando.Parameters.AddWithValue("@TIPO", rbFisico.Text);
+                        }
+                        else
+                        {
+                            comando.Parameters.AddWithValue("@TIPO", rbJuridico.Text);
+                        }
+                        comando.Parameters.AddWithValue("@CPFCNPJ", txtCPFCNPJ.Text);
+                        comando.Parameters.AddWithValue("@RGIE", txtRGIE.Text);
+                        comando.Parameters.AddWithValue("@CEP", txtCep.Text);
+                        comando.Parameters.AddWithValue("@ESTADO", txtEstado.Text);
+                        comando.Parameters.AddWithValue("@CIDADE", txtCidade.Text);
+                        comando.Parameters.AddWithValue("@RUA", txtRua.Text);
+                        comando.Parameters.AddWithValue("@NUMERO", txtNumero.Text);
+                        comando.Parameters.AddWithValue("@BAIRRO", txtBairro.Text);
+                        comando.Parameters.AddWithValue("@EMAIL", txtEmail.Text);
+                        comando.Parameters.AddWithValue("@CELULAR", txtCelular.Text);
+                        comando.Parameters.AddWithValue("@TELEFONE", txtTelefone.Text);
+
+                        conexao.Open();
+
+                        comando.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+                    finally
+                    {
+                        conexao.Close();
+                        MessageBox.Show("Cadastro feito com sucesso.");
+                        this.LimpaCampos();
+                        this.txtNome.Focus();
+                        conexao = null;
+                        comando = null;
+                    }
+                }
             }
-            catch (Exception ex)
+            else
             {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                MessageBox.Show("Cadastro feito com sucesso.");
-                this.LimpaCampos();
-                this.txtNome.Focus();
-                conexao = null;
-                comando = null;
-            }
+                MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            } 
         }
 
         //Método Para Excluir Os Dados
@@ -260,29 +268,61 @@ namespace Autopecas
         //NÚMERO MÁXIMO DE CARACTERES PARA O CPF/CNPJ
         private void txtCPFCNPJ_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (char.IsNumber(e.KeyChar) == true)
+            if(rbFisico.Checked == true)
             {
-                switch (txtCPFCNPJ.TextLength)
+                if (char.IsNumber(e.KeyChar) == true)
                 {
-                    case 0:
-                        txtCPFCNPJ.Text = "";
-                        break;
+                    txtCPFCNPJ.MaxLength = 14;
+                    switch (txtCPFCNPJ.TextLength)
+                    {
+                        case 0:
+                            txtCPFCNPJ.Text = "";
+                            break;
 
-                    case 3:
-                        txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
-                        txtCPFCNPJ.SelectionStart = 4;
-                        break;
+                        case 3:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
+                            txtCPFCNPJ.SelectionStart = 5;
+                            break;
 
-                    case 7:
-                        txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
-                        txtCPFCNPJ.SelectionStart = 9;
-                        break;
+                        case 7:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
+                            txtCPFCNPJ.SelectionStart = 9;
+                            break;
 
-                    case 11:
-                        txtCPFCNPJ.Text = txtCPFCNPJ.Text + "-";
-                        txtCPFCNPJ.SelectionStart = 14;
-                        break;
+                        case 11:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + "-";
+                            txtCPFCNPJ.SelectionStart = 14;
+                            break;
 
+                    }
+                }
+            }
+            else if(rbJuridico.Checked == true){
+                if (char.IsNumber(e.KeyChar) == true)
+                {
+                    txtCPFCNPJ.MaxLength = 19;
+                    switch (txtCPFCNPJ.TextLength)
+                    {
+                        case 0:
+                            txtCPFCNPJ.Text = "";
+                            break;
+
+                        case 3:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
+                            txtCPFCNPJ.SelectionStart = 4;
+                            break;
+
+                        case 7:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + ".";
+                            txtCPFCNPJ.SelectionStart = 9;
+                            break;
+
+                        case 11:
+                            txtCPFCNPJ.Text = txtCPFCNPJ.Text + "-";
+                            txtCPFCNPJ.SelectionStart = 14;
+                            break;
+
+                    }
                 }
             }
         }
@@ -392,6 +432,74 @@ namespace Autopecas
         private void rbJuridico_CheckedChanged(object sender, EventArgs e)
         {
             txtNome.Focus();
+        }
+
+        public bool ValidaCNPJ()
+        {
+            try
+            {
+                if (!(txtCPFCNPJ.Text.Length < 18))
+                {
+                    int n1 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(0, 1));
+                    int n2 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(1, 1));
+                    int n3 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(3, 1));
+                    int n4 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(4, 1));
+                    int n5 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(5, 1));
+                    int n6 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(7, 1));
+                    int n7 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(8, 1));
+                    int n8 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(9, 1));
+                    int n9 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(11, 1));
+                    int n10 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(12, 1));
+                    int n11 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(13, 1));
+                    int n12 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(14, 1));
+
+                    int digito1 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(16, 1));
+                    int digito2 = Convert.ToInt16(txtCPFCNPJ.Text.Substring(17, 1));
+
+                    int Soma1 = n1 * 5 + n2 * 4 + n3 * 3 + n4 * 2 + n5 * 9 + n6 * 8 + n7 * 7 + n8 * 6 + n9 * 5 + n10 * 4 + n11 * 3 + n12 * 2;
+
+                    int DigitoVerificador1 = Soma1 % 11;
+
+                    if (DigitoVerificador1 < 2)
+                    {
+                        DigitoVerificador1 = 0;
+                    }
+                    else
+                    {
+                        DigitoVerificador1 = 11 - DigitoVerificador1;
+                    }
+                    int Soma2 = n1 * 6 + n2 * 5 + n3 * 4 + n4 * 3 + n5 * 2 + n6 * 9 + n7 * 8 + n8 * 7 + n9 * 6 + n10 * 5 + n11 * 4 + n12 * 3 + DigitoVerificador1 * 2;
+
+                    int DigitoVereificador2 = Soma2 % 11;
+                    if (DigitoVereificador2 < 2)
+                    {
+                        DigitoVereificador2 = 0;
+                    }
+                    else
+                    {
+                        DigitoVereificador2 = 11 - DigitoVereificador2;
+                    }
+
+                    if (digito1 == DigitoVerificador1 && digito2 == DigitoVereificador2)
+                    {
+                        cnpjCheck = true;
+                        return true;
+                    }
+                    else
+                    {
+                        cnpjCheck = false;
+                        return false;
+                    }
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
     }
 }
