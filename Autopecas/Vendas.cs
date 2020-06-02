@@ -145,5 +145,11 @@ namespace Autopecas
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ContasReceber receber = new ContasReceber();
+            receber.Show();
+        }
     }
 }
