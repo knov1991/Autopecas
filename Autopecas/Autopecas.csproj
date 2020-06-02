@@ -86,6 +86,12 @@
     <Compile Include="CadastroEstoque.Designer.cs">
       <DependentUpon>CadastroEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciarEstoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciarEstoque.Designer.cs">
+      <DependentUpon>GerenciarEstoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenciarEstoqueBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,11 +122,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="LocalizarFornecedor.cs">
+    <Compile Include="GerenciarFornecedoresBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LocalizarFornecedor.Designer.cs">
-      <DependentUpon>LocalizarFornecedor.cs</DependentUpon>
+    <Compile Include="GerenciarFornecedoresBuscar.Designer.cs">
+      <DependentUpon>GerenciarFornecedoresBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Pagamento.cs">
       <SubType>Form</SubType>
@@ -169,8 +175,8 @@
     <EmbeddedResource Include="ListaProdutos.resx">
       <DependentUpon>ListaProdutos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LocalizarFornecedor.resx">
-      <DependentUpon>LocalizarFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="GerenciarFornecedoresBuscar.resx">
+      <DependentUpon>GerenciarFornecedoresBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagamento.resx">
       <DependentUpon>Pagamento.cs</DependentUpon>

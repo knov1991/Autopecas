@@ -52,18 +52,20 @@
             // 
             this.label_listaFornecedores.AutoSize = true;
             this.label_listaFornecedores.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_listaFornecedores.Location = new System.Drawing.Point(41, 55);
+            this.label_listaFornecedores.Location = new System.Drawing.Point(55, 68);
+            this.label_listaFornecedores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_listaFornecedores.Name = "label_listaFornecedores";
-            this.label_listaFornecedores.Size = new System.Drawing.Size(349, 39);
+            this.label_listaFornecedores.Size = new System.Drawing.Size(440, 52);
             this.label_listaFornecedores.TabIndex = 13;
             this.label_listaFornecedores.Text = "Buscar Fornecedores";
             // 
             // radioButton_filtroDoc
             // 
             this.radioButton_filtroDoc.AutoSize = true;
-            this.radioButton_filtroDoc.Location = new System.Drawing.Point(76, 19);
+            this.radioButton_filtroDoc.Location = new System.Drawing.Point(101, 23);
+            this.radioButton_filtroDoc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton_filtroDoc.Name = "radioButton_filtroDoc";
-            this.radioButton_filtroDoc.Size = new System.Drawing.Size(52, 17);
+            this.radioButton_filtroDoc.Size = new System.Drawing.Size(64, 21);
             this.radioButton_filtroDoc.TabIndex = 3;
             this.radioButton_filtroDoc.Text = "CNPJ";
             this.radioButton_filtroDoc.UseVisualStyleBackColor = true;
@@ -72,9 +74,10 @@
             // 
             this.radioButton_filtroNome.AutoSize = true;
             this.radioButton_filtroNome.Checked = true;
-            this.radioButton_filtroNome.Location = new System.Drawing.Point(17, 19);
+            this.radioButton_filtroNome.Location = new System.Drawing.Point(23, 23);
+            this.radioButton_filtroNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radioButton_filtroNome.Name = "radioButton_filtroNome";
-            this.radioButton_filtroNome.Size = new System.Drawing.Size(53, 17);
+            this.radioButton_filtroNome.Size = new System.Drawing.Size(66, 21);
             this.radioButton_filtroNome.TabIndex = 2;
             this.radioButton_filtroNome.TabStop = true;
             this.radioButton_filtroNome.Text = "Nome";
@@ -87,9 +90,11 @@
             this.groupBox_filtro.Controls.Add(this.btn_buscar);
             this.groupBox_filtro.Controls.Add(this.textBox_filtroBusca);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
-            this.groupBox_filtro.Location = new System.Drawing.Point(47, 112);
+            this.groupBox_filtro.Location = new System.Drawing.Point(63, 138);
+            this.groupBox_filtro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_filtro.Name = "groupBox_filtro";
-            this.groupBox_filtro.Size = new System.Drawing.Size(750, 90);
+            this.groupBox_filtro.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_filtro.Size = new System.Drawing.Size(1000, 111);
             this.groupBox_filtro.TabIndex = 14;
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
@@ -97,9 +102,10 @@
             // btn_listarTodos
             // 
             this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listarTodos.Location = new System.Drawing.Point(377, 42);
+            this.btn_listarTodos.Location = new System.Drawing.Point(503, 52);
+            this.btn_listarTodos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_listarTodos.Name = "btn_listarTodos";
-            this.btn_listarTodos.Size = new System.Drawing.Size(129, 23);
+            this.btn_listarTodos.Size = new System.Drawing.Size(172, 28);
             this.btn_listarTodos.TabIndex = 6;
             this.btn_listarTodos.Text = "Listar todos";
             this.btn_listarTodos.UseVisualStyleBackColor = true;
@@ -108,9 +114,10 @@
             // btn_buscar
             // 
             this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.Location = new System.Drawing.Point(296, 42);
+            this.btn_buscar.Location = new System.Drawing.Point(395, 52);
+            this.btn_buscar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(75, 23);
+            this.btn_buscar.Size = new System.Drawing.Size(100, 28);
             this.btn_buscar.TabIndex = 5;
             this.btn_buscar.Text = "Buscar";
             this.btn_buscar.UseVisualStyleBackColor = true;
@@ -118,10 +125,11 @@
             // 
             // textBox_filtroBusca
             // 
-            this.textBox_filtroBusca.Location = new System.Drawing.Point(17, 42);
+            this.textBox_filtroBusca.Location = new System.Drawing.Point(23, 52);
+            this.textBox_filtroBusca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox_filtroBusca.Multiline = true;
             this.textBox_filtroBusca.Name = "textBox_filtroBusca";
-            this.textBox_filtroBusca.Size = new System.Drawing.Size(273, 23);
+            this.textBox_filtroBusca.Size = new System.Drawing.Size(363, 27);
             this.textBox_filtroBusca.TabIndex = 4;
             // 
             // dataGridView_buscaFornecedor
@@ -132,19 +140,23 @@
             this.dataGridView_buscaFornecedor.AllowUserToResizeRows = false;
             this.dataGridView_buscaFornecedor.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_buscaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_buscaFornecedor.Location = new System.Drawing.Point(17, 28);
+            this.dataGridView_buscaFornecedor.Location = new System.Drawing.Point(23, 34);
+            this.dataGridView_buscaFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView_buscaFornecedor.Name = "dataGridView_buscaFornecedor";
             this.dataGridView_buscaFornecedor.ReadOnly = true;
             this.dataGridView_buscaFornecedor.RowHeadersVisible = false;
-            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(715, 200);
+            this.dataGridView_buscaFornecedor.RowHeadersWidth = 51;
+            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(953, 246);
             this.dataGridView_buscaFornecedor.TabIndex = 5;
             // 
             // groupBox_listaProdutos
             // 
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaFornecedor);
-            this.groupBox_listaProdutos.Location = new System.Drawing.Point(47, 208);
+            this.groupBox_listaProdutos.Location = new System.Drawing.Point(63, 256);
+            this.groupBox_listaProdutos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
-            this.groupBox_listaProdutos.Size = new System.Drawing.Size(750, 248);
+            this.groupBox_listaProdutos.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox_listaProdutos.Size = new System.Drawing.Size(1000, 305);
             this.groupBox_listaProdutos.TabIndex = 16;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Fornecedores";
@@ -152,10 +164,10 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(805, 8);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechar.Location = new System.Drawing.Point(1073, 10);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(23, 23);
+            this.btnFechar.Size = new System.Drawing.Size(31, 28);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
@@ -167,16 +179,18 @@
             this.barraTitulo.Controls.Add(this.btnFechar);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.barraTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(838, 37);
+            this.barraTitulo.Size = new System.Drawing.Size(1117, 46);
             this.barraTitulo.TabIndex = 17;
             // 
             // btn_editar
             // 
             this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_editar.Location = new System.Drawing.Point(678, 472);
+            this.btn_editar.Location = new System.Drawing.Point(904, 581);
+            this.btn_editar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_editar.Name = "btn_editar";
-            this.btn_editar.Size = new System.Drawing.Size(119, 23);
+            this.btn_editar.Size = new System.Drawing.Size(159, 28);
             this.btn_editar.TabIndex = 18;
             this.btn_editar.Text = "Editar";
             this.btn_editar.UseVisualStyleBackColor = true;
@@ -185,18 +199,19 @@
             // btn_voltar
             // 
             this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_voltar.Location = new System.Drawing.Point(553, 472);
+            this.btn_voltar.Location = new System.Drawing.Point(737, 581);
+            this.btn_voltar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(119, 23);
+            this.btn_voltar.Size = new System.Drawing.Size(159, 28);
             this.btn_voltar.TabIndex = 19;
             this.btn_voltar.Text = "Voltar";
             this.btn_voltar.UseVisualStyleBackColor = true;
             // 
             // LocalizarFornecedor
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 512);
+            this.ClientSize = new System.Drawing.Size(1117, 630);
             this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.label_listaFornecedores);
@@ -204,6 +219,7 @@
             this.Controls.Add(this.groupBox_listaProdutos);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LocalizarFornecedor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LocalizarFornecedor";

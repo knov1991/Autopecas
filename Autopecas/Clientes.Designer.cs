@@ -31,8 +31,6 @@
             this.rbTipo = new System.Windows.Forms.GroupBox();
             this.rbJuridico = new System.Windows.Forms.RadioButton();
             this.rbFisico = new System.Windows.Forms.RadioButton();
-            this.lbId = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lbNome = new System.Windows.Forms.Label();
             this.txtRSocial = new System.Windows.Forms.TextBox();
@@ -107,24 +105,6 @@
             this.rbFisico.Text = "Físico";
             this.rbFisico.UseVisualStyleBackColor = true;
             this.rbFisico.CheckedChanged += new System.EventHandler(this.rbFisico_CheckedChanged);
-            // 
-            // lbId
-            // 
-            this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(59, 210);
-            this.lbId.Name = "lbId";
-            this.lbId.Size = new System.Drawing.Size(21, 17);
-            this.lbId.TabIndex = 1;
-            this.lbId.Text = "ID";
-            // 
-            // txtId
-            // 
-            this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(63, 230);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(109, 22);
-            this.txtId.TabIndex = 2;
             // 
             // txtNome
             // 
@@ -425,7 +405,7 @@
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(141, 54);
             this.btnLocalizar.TabIndex = 37;
-            this.btnLocalizar.Text = "  Localizar";
+            this.btnLocalizar.Text = "Pesquisar ou Editar";
             this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnLocalizar.UseVisualStyleBackColor = true;
             this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
@@ -499,11 +479,9 @@
             this.Controls.Add(this.lbRSocial);
             this.Controls.Add(this.txtNome);
             this.Controls.Add(this.lbNome);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.lbId);
             this.Controls.Add(this.rbTipo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Clientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Clientes";
@@ -520,40 +498,38 @@
         private System.Windows.Forms.GroupBox rbTipo;
         private System.Windows.Forms.RadioButton rbJuridico;
         private System.Windows.Forms.RadioButton rbFisico;
-        private System.Windows.Forms.Label lbId;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.Label lbNome;
-        private System.Windows.Forms.TextBox txtRSocial;
         private System.Windows.Forms.Label lbRSocial;
-        private System.Windows.Forms.TextBox txtCPFCNPJ;
         private System.Windows.Forms.Label lbCPFCNPJ;
-        private System.Windows.Forms.TextBox txtRGIE;
         private System.Windows.Forms.Label lbRGIE;
-        private System.Windows.Forms.TextBox txtCep;
         private System.Windows.Forms.Label lbCEP;
-        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label lbEstado;
-        private System.Windows.Forms.TextBox txtCidade;
         private System.Windows.Forms.Label lbCidade;
-        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.Label lbBairro;
-        private System.Windows.Forms.TextBox txtRua;
         private System.Windows.Forms.Label lbRua;
-        private System.Windows.Forms.TextBox txtNumero;
         private System.Windows.Forms.Label lbNumero;
-        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lbEmail;
-        private System.Windows.Forms.TextBox txtCelular;
         private System.Windows.Forms.Label lbCelular;
-        private System.Windows.Forms.TextBox txtTelefone;
         private System.Windows.Forms.Label lbTelefone;
         private System.Windows.Forms.Label txt_CadastroFornecedor;
-        private System.Windows.Forms.Button btnInserir;
-        private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnLocalizar;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnExcluir;
+        public System.Windows.Forms.TextBox txtRSocial;
+        public System.Windows.Forms.TextBox txtCPFCNPJ;
+        public System.Windows.Forms.TextBox txtRGIE;
+        public System.Windows.Forms.TextBox txtCep;
+        public System.Windows.Forms.TextBox txtNome;
+        public System.Windows.Forms.TextBox txtEstado;
+        public System.Windows.Forms.TextBox txtCidade;
+        public System.Windows.Forms.TextBox txtBairro;
+        public System.Windows.Forms.TextBox txtRua;
+        public System.Windows.Forms.TextBox txtNumero;
+        public System.Windows.Forms.TextBox txtEmail;
+        public System.Windows.Forms.TextBox txtCelular;
+        public System.Windows.Forms.TextBox txtTelefone;
+        public System.Windows.Forms.Button btnInserir;
+        public System.Windows.Forms.Button btnSalvar;
+        private System.Windows.Forms.Button btnLocalizar;
     }
 }

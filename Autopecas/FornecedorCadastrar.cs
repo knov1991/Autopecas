@@ -227,7 +227,7 @@ namespace Autopecas
             }
             else
             {
-                MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("CNPJ Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

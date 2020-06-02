@@ -37,9 +37,10 @@
             this.btnListar = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.rbCPF = new System.Windows.Forms.RadioButton();
-            this.rbRSocial = new System.Windows.Forms.RadioButton();
+            this.rbTipo = new System.Windows.Forms.RadioButton();
             this.rbNome = new System.Windows.Forms.RadioButton();
             this.gbListar = new System.Windows.Forms.GroupBox();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -55,7 +56,7 @@
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1013, 46);
+            this.barraTitulo.Size = new System.Drawing.Size(1117, 46);
             this.barraTitulo.TabIndex = 0;
             // 
             // btnFechar
@@ -91,7 +92,7 @@
             this.dgvDados.Name = "dgvDados";
             this.dgvDados.RowHeadersWidth = 51;
             this.dgvDados.RowTemplate.Height = 24;
-            this.dgvDados.Size = new System.Drawing.Size(823, 246);
+            this.dgvDados.Size = new System.Drawing.Size(953, 246);
             this.dgvDados.TabIndex = 37;
             // 
             // gbFiltro
@@ -100,11 +101,11 @@
             this.gbFiltro.Controls.Add(this.btnListar);
             this.gbFiltro.Controls.Add(this.btnBuscar);
             this.gbFiltro.Controls.Add(this.rbCPF);
-            this.gbFiltro.Controls.Add(this.rbRSocial);
+            this.gbFiltro.Controls.Add(this.rbTipo);
             this.gbFiltro.Controls.Add(this.rbNome);
             this.gbFiltro.Location = new System.Drawing.Point(63, 138);
             this.gbFiltro.Name = "gbFiltro";
-            this.gbFiltro.Size = new System.Drawing.Size(871, 111);
+            this.gbFiltro.Size = new System.Drawing.Size(1000, 111);
             this.gbFiltro.TabIndex = 38;
             this.gbFiltro.TabStop = false;
             this.gbFiltro.Text = "Filtro";
@@ -147,26 +148,25 @@
             this.rbCPF.AutoSize = true;
             this.rbCPF.Location = new System.Drawing.Point(101, 23);
             this.rbCPF.Name = "rbCPF";
-            this.rbCPF.Size = new System.Drawing.Size(55, 21);
+            this.rbCPF.Size = new System.Drawing.Size(94, 21);
             this.rbCPF.TabIndex = 2;
-            this.rbCPF.TabStop = true;
-            this.rbCPF.Text = "CPF";
+            this.rbCPF.Text = "CPF/CNPJ";
             this.rbCPF.UseVisualStyleBackColor = true;
             // 
-            // rbRSocial
+            // rbTipo
             // 
-            this.rbRSocial.AutoSize = true;
-            this.rbRSocial.Location = new System.Drawing.Point(170, 23);
-            this.rbRSocial.Name = "rbRSocial";
-            this.rbRSocial.Size = new System.Drawing.Size(112, 21);
-            this.rbRSocial.TabIndex = 1;
-            this.rbRSocial.TabStop = true;
-            this.rbRSocial.Text = "Razão Social";
-            this.rbRSocial.UseVisualStyleBackColor = true;
+            this.rbTipo.AutoSize = true;
+            this.rbTipo.Location = new System.Drawing.Point(208, 23);
+            this.rbTipo.Name = "rbTipo";
+            this.rbTipo.Size = new System.Drawing.Size(57, 21);
+            this.rbTipo.TabIndex = 1;
+            this.rbTipo.Text = "Tipo";
+            this.rbTipo.UseVisualStyleBackColor = true;
             // 
             // rbNome
             // 
             this.rbNome.AutoSize = true;
+            this.rbNome.Checked = true;
             this.rbNome.Location = new System.Drawing.Point(23, 23);
             this.rbNome.Name = "rbNome";
             this.rbNome.Size = new System.Drawing.Size(66, 21);
@@ -181,16 +181,29 @@
             this.gbListar.Location = new System.Drawing.Point(63, 256);
             this.gbListar.Margin = new System.Windows.Forms.Padding(4);
             this.gbListar.Name = "gbListar";
-            this.gbListar.Size = new System.Drawing.Size(871, 305);
+            this.gbListar.Size = new System.Drawing.Size(1000, 305);
             this.gbListar.TabIndex = 39;
             this.gbListar.TabStop = false;
             this.gbListar.Text = "Lista de Clientes";
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Location = new System.Drawing.Point(904, 581);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(159, 28);
+            this.btnEditar.TabIndex = 7;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // ClientesListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1013, 837);
+            this.ClientSize = new System.Drawing.Size(1117, 630);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.gbListar);
             this.Controls.Add(this.gbFiltro);
             this.Controls.Add(this.txt_CadastroCliente);
@@ -219,11 +232,12 @@
         private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.GroupBox gbFiltro;
         private System.Windows.Forms.RadioButton rbCPF;
-        private System.Windows.Forms.RadioButton rbRSocial;
+        private System.Windows.Forms.RadioButton rbTipo;
         private System.Windows.Forms.RadioButton rbNome;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnListar;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.GroupBox gbListar;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
