@@ -60,8 +60,7 @@ namespace Autopecas
 
         private void btnGerenciarEstoque_Click(object sender, EventArgs e)
         {
-            GerenciarEstoqueBuscar Estoque = new GerenciarEstoqueBuscar(this);
-            Estoque.Show();
+            
         }
 
         private void btn_listar_Click(object sender, EventArgs e)
