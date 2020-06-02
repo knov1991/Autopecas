@@ -88,7 +88,7 @@
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
             this.groupBox_filtro.Location = new System.Drawing.Point(47, 112);
             this.groupBox_filtro.Name = "groupBox_filtro";
-            this.groupBox_filtro.Size = new System.Drawing.Size(653, 90);
+            this.groupBox_filtro.Size = new System.Drawing.Size(745, 90);
             this.groupBox_filtro.TabIndex = 9;
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
@@ -136,13 +136,13 @@
             this.dataGridView_buscaFornecedor.Name = "dataGridView_buscaFornecedor";
             this.dataGridView_buscaFornecedor.ReadOnly = true;
             this.dataGridView_buscaFornecedor.RowHeadersVisible = false;
-            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(617, 200);
+            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(710, 200);
             this.dataGridView_buscaFornecedor.TabIndex = 5;
             // 
             // btn_selecionar
             // 
             this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_selecionar.Location = new System.Drawing.Point(562, 467);
+            this.btn_selecionar.Location = new System.Drawing.Point(660, 472);
             this.btn_selecionar.Name = "btn_selecionar";
             this.btn_selecionar.Size = new System.Drawing.Size(138, 23);
             this.btn_selecionar.TabIndex = 10;
@@ -155,7 +155,7 @@
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaFornecedor);
             this.groupBox_listaProdutos.Location = new System.Drawing.Point(47, 208);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
-            this.groupBox_listaProdutos.Size = new System.Drawing.Size(653, 248);
+            this.groupBox_listaProdutos.Size = new System.Drawing.Size(746, 248);
             this.groupBox_listaProdutos.TabIndex = 11;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Fornecedores";
@@ -163,7 +163,7 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(721, 7);
+            this.btnFechar.Location = new System.Drawing.Point(805, 7);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(23, 23);
@@ -179,14 +179,14 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(758, 37);
+            this.barraTitulo.Size = new System.Drawing.Size(838, 37);
             this.barraTitulo.TabIndex = 12;
             // 
             // ListaFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 512);
+            this.ClientSize = new System.Drawing.Size(838, 512);
             this.ControlBox = false;
             this.Controls.Add(this.label_listaFornecedores);
             this.Controls.Add(this.groupBox_filtro);

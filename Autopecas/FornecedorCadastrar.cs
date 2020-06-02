@@ -17,6 +17,7 @@ namespace Autopecas
         MySqlConnection conexao;
         MySqlCommand comando;
         string strSQL;
+        public int idFornecedor;
         bool cnpjCheck;
         public FornecedorCadastrar()
         {
@@ -59,9 +60,20 @@ namespace Autopecas
             txtTelefone.Enabled = false;
         }
 
+        //Habilita Botões do Formulário
+        public void HabilitaBotoes()
+        {
+            btnAlterar.Enabled = true;
+            btnLocalizar.Enabled = true;
+            btnSalvar.Enabled = true;
+            btnInserir.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
         //Método Limpa Campos do Formulário de Fornecedor
         public void LimpaCampos()
         {
+            idFornecedor = 0;
             txtNome.Clear();
             txtRSocial.Clear();
             txtCnpj.Clear();
@@ -89,6 +101,11 @@ namespace Autopecas
         {
             this.HabilitaCampos();
             this.txtNome.Focus();
+            this.btnInserir.Enabled = false;
+            this.btnLocalizar.Enabled = false;
+            this.btnAlterar.Enabled = false;
+            this.btnExcluir.Enabled = false;
+
         }
 
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
@@ -110,7 +127,7 @@ namespace Autopecas
 
                 comando = new MySqlCommand(strSQL, conexao);
 
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idFornecedor);
                 comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                 comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
                 comando.Parameters.AddWithValue("@CNPJ", txtCnpj.Text);
@@ -139,6 +156,7 @@ namespace Autopecas
                 conexao.Close();
                 MessageBox.Show("Alterado com sucesso!");
                 this.LimpaCampos();
+                this.HabilitaBotoes();
                 this.txtNome.Focus();
                 conexao = null;
                 comando = null;
@@ -200,6 +218,7 @@ namespace Autopecas
                         conexao.Close();
                         MessageBox.Show("Cadastro feito com sucesso.");
                         this.LimpaCampos();
+                        this.HabilitaBotoes();
                         this.txtNome.Focus();
                         conexao = null;
                         comando = null;
@@ -223,7 +242,7 @@ namespace Autopecas
 
                 comando = new MySqlCommand(strSQL, conexao);
 
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idFornecedor);
 
                 conexao.Open();
                 comando.ExecuteNonQuery();
@@ -248,6 +267,7 @@ namespace Autopecas
         {
             this.LimpaCampos();
             this.DesabilitaCampos();
+            this.HabilitaBotoes();
         }
 
         //NÚMERO MÁXIMO DE CARACTERES PARA O CNPJ

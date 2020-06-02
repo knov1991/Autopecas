@@ -105,5 +105,39 @@ namespace Autopecas
             string valorBusca = textBox_filtroBusca.Text.ToString();
             procurarItem(valorBusca);
         }
+
+        private void btn_editar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_buscaFornecedor.SelectedRows.Count != 0) 
+            { 
+                DataGridViewRow dr = dataGridView_buscaFornecedor.SelectedRows[0];
+                //Envia os Dados para FornecedorCadastrar
+                instanciaFornecedores.idFornecedor = Convert.ToInt32(dr.Cells[0].Value.ToString());
+                instanciaFornecedores.txtNome.Text = dr.Cells[1].Value.ToString();
+                instanciaFornecedores.txtRSocial.Text = dr.Cells[2].Value.ToString();
+                instanciaFornecedores.txtCnpj.Text = dr.Cells[3].Value.ToString();
+                instanciaFornecedores.txtIe.Text = dr.Cells[4].Value.ToString();
+                instanciaFornecedores.txtCep.Text = dr.Cells[5].Value.ToString();
+                instanciaFornecedores.txtEstado.Text = dr.Cells[6].Value.ToString();
+                instanciaFornecedores.txtCidade.Text = dr.Cells[7].Value.ToString();
+                instanciaFornecedores.txtRua.Text = dr.Cells[8].Value.ToString();
+                instanciaFornecedores.txtNumero.Text = dr.Cells[9].Value.ToString();
+                instanciaFornecedores.txtBairro.Text = dr.Cells[10].Value.ToString();
+                instanciaFornecedores.txtEmail.Text = dr.Cells[11].Value.ToString();
+                instanciaFornecedores.txtCelular.Text = dr.Cells[12].Value.ToString();
+                instanciaFornecedores.txtTelefone.Text = dr.Cells[13].Value.ToString();
+                //Atualiza os Campos e Botões
+                instanciaFornecedores.HabilitaCampos();
+                instanciaFornecedores.txtNome.Focus();
+                instanciaFornecedores.btnSalvar.Enabled = false;
+                instanciaFornecedores.btnInserir.Enabled = false;
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+        }
     }
 }

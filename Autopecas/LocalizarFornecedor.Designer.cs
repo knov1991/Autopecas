@@ -39,6 +39,8 @@
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.groupBox_filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscaFornecedor)).BeginInit();
             this.groupBox_listaProdutos.SuspendLayout();
@@ -87,7 +89,7 @@
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
             this.groupBox_filtro.Location = new System.Drawing.Point(47, 112);
             this.groupBox_filtro.Name = "groupBox_filtro";
-            this.groupBox_filtro.Size = new System.Drawing.Size(653, 90);
+            this.groupBox_filtro.Size = new System.Drawing.Size(750, 90);
             this.groupBox_filtro.TabIndex = 14;
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
@@ -128,14 +130,13 @@
             this.dataGridView_buscaFornecedor.AllowUserToDeleteRows = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeColumns = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeRows = false;
-            this.dataGridView_buscaFornecedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_buscaFornecedor.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_buscaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_buscaFornecedor.Location = new System.Drawing.Point(17, 28);
             this.dataGridView_buscaFornecedor.Name = "dataGridView_buscaFornecedor";
             this.dataGridView_buscaFornecedor.ReadOnly = true;
             this.dataGridView_buscaFornecedor.RowHeadersVisible = false;
-            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(617, 200);
+            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(715, 200);
             this.dataGridView_buscaFornecedor.TabIndex = 5;
             // 
             // groupBox_listaProdutos
@@ -143,7 +144,7 @@
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaFornecedor);
             this.groupBox_listaProdutos.Location = new System.Drawing.Point(47, 208);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
-            this.groupBox_listaProdutos.Size = new System.Drawing.Size(653, 248);
+            this.groupBox_listaProdutos.Size = new System.Drawing.Size(750, 248);
             this.groupBox_listaProdutos.TabIndex = 16;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Fornecedores";
@@ -151,7 +152,7 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(721, 7);
+            this.btnFechar.Location = new System.Drawing.Point(805, 8);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(23, 23);
@@ -167,14 +168,37 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(758, 37);
+            this.barraTitulo.Size = new System.Drawing.Size(838, 37);
             this.barraTitulo.TabIndex = 17;
+            // 
+            // btn_editar
+            // 
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Location = new System.Drawing.Point(678, 472);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(119, 23);
+            this.btn_editar.TabIndex = 18;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_voltar.Location = new System.Drawing.Point(553, 472);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(119, 23);
+            this.btn_voltar.TabIndex = 19;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
             // 
             // LocalizarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(758, 512);
+            this.ClientSize = new System.Drawing.Size(838, 512);
+            this.Controls.Add(this.btn_voltar);
+            this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.label_listaFornecedores);
             this.Controls.Add(this.groupBox_filtro);
             this.Controls.Add(this.groupBox_listaProdutos);
@@ -207,5 +231,7 @@
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }
