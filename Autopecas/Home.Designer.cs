@@ -35,6 +35,7 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.painelTempo = new System.Windows.Forms.Panel();
             this.painelData = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -57,6 +58,7 @@
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.painelTempo.SuspendLayout();
             this.painelData.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -72,21 +74,19 @@
             this.panelChildForm.Controls.Add(this.painelPrincipal);
             this.panelChildForm.Controls.Add(this.barraTitulo);
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelChildForm.Location = new System.Drawing.Point(333, 0);
-            this.panelChildForm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panelChildForm.Location = new System.Drawing.Point(250, 0);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(1032, 945);
+            this.panelChildForm.Size = new System.Drawing.Size(774, 768);
             this.panelChildForm.TabIndex = 4;
             // 
             // painelPrincipal
             // 
-            this.painelPrincipal.BackgroundImage = global::Autopecas.Properties.Resources.Autopecas;
+            this.painelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painelPrincipal.BackgroundImage")));
             this.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelPrincipal.Location = new System.Drawing.Point(0, 47);
-            this.painelPrincipal.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painelPrincipal.Location = new System.Drawing.Point(0, 26);
             this.painelPrincipal.Name = "painelPrincipal";
-            this.painelPrincipal.Size = new System.Drawing.Size(1032, 898);
+            this.painelPrincipal.Size = new System.Drawing.Size(774, 742);
             this.painelPrincipal.TabIndex = 1;
             // 
             // barraTitulo
@@ -94,19 +94,17 @@
             this.barraTitulo.Controls.Add(this.btnFechar);
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
-            this.barraTitulo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(1032, 47);
+            this.barraTitulo.Size = new System.Drawing.Size(774, 26);
             this.barraTitulo.TabIndex = 0;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(981, 9);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFechar.Location = new System.Drawing.Point(744, 4);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(32, 30);
+            this.btnFechar.Size = new System.Drawing.Size(18, 18);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
@@ -116,6 +114,7 @@
             // 
             this.painelLateral.AutoScroll = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.painelLateral.Controls.Add(this.pictureBox4);
             this.painelLateral.Controls.Add(this.painelTempo);
             this.painelLateral.Controls.Add(this.btnControleFinanceiro);
             this.painelLateral.Controls.Add(this.painelCadastros);
@@ -127,19 +126,29 @@
             this.painelLateral.Controls.Add(this.pictureBox1);
             this.painelLateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.painelLateral.Location = new System.Drawing.Point(0, 0);
-            this.painelLateral.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.painelLateral.Name = "painelLateral";
-            this.painelLateral.Size = new System.Drawing.Size(333, 945);
+            this.painelLateral.Size = new System.Drawing.Size(250, 768);
             this.painelLateral.TabIndex = 3;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(16, 27);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(219, 157);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 21;
+            this.pictureBox4.TabStop = false;
             // 
             // painelTempo
             // 
             this.painelTempo.Controls.Add(this.painelData);
             this.painelTempo.Controls.Add(this.painelHora);
-            this.painelTempo.Location = new System.Drawing.Point(0, 761);
-            this.painelTempo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painelTempo.Location = new System.Drawing.Point(2, 591);
             this.painelTempo.Name = "painelTempo";
-            this.painelTempo.Size = new System.Drawing.Size(333, 123);
+            this.painelTempo.Size = new System.Drawing.Size(248, 100);
             this.painelTempo.TabIndex = 0;
             // 
             // painelData
@@ -147,20 +156,19 @@
             this.painelData.Controls.Add(this.pictureBox3);
             this.painelData.Controls.Add(this.lbData);
             this.painelData.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelData.Location = new System.Drawing.Point(0, 62);
-            this.painelData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painelData.Location = new System.Drawing.Point(0, 50);
             this.painelData.Name = "painelData";
-            this.painelData.Size = new System.Drawing.Size(333, 62);
+            this.painelData.Size = new System.Drawing.Size(248, 50);
             this.painelData.TabIndex = 0;
             // 
             // pictureBox3
             // 
             this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox3.Image = global::Autopecas.Properties.Resources.icons8_calendário_64;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
             this.pictureBox3.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(51, 62);
+            this.pictureBox3.Size = new System.Drawing.Size(38, 50);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
@@ -170,10 +178,10 @@
             this.lbData.AutoSize = true;
             this.lbData.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbData.Location = new System.Drawing.Point(60, 25);
-            this.lbData.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbData.Location = new System.Drawing.Point(45, 20);
+            this.lbData.Margin = new System.Windows.Forms.Padding(3);
             this.lbData.Name = "lbData";
-            this.lbData.Size = new System.Drawing.Size(73, 32);
+            this.lbData.Size = new System.Drawing.Size(55, 24);
             this.lbData.TabIndex = 11;
             this.lbData.Text = "Data";
             // 
@@ -183,20 +191,19 @@
             this.painelHora.Controls.Add(this.lbHora);
             this.painelHora.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelHora.Location = new System.Drawing.Point(0, 0);
-            this.painelHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.painelHora.Name = "painelHora";
-            this.painelHora.Size = new System.Drawing.Size(333, 62);
+            this.painelHora.Size = new System.Drawing.Size(248, 50);
             this.painelHora.TabIndex = 0;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.pictureBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox2.Image = global::Autopecas.Properties.Resources.icons8_relógio_64;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(51, 62);
+            this.pictureBox2.Size = new System.Drawing.Size(38, 50);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
@@ -206,10 +213,10 @@
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbHora.Location = new System.Drawing.Point(60, 25);
-            this.lbHora.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.lbHora.Location = new System.Drawing.Point(45, 20);
+            this.lbHora.Margin = new System.Windows.Forms.Padding(3);
             this.lbHora.Name = "lbHora";
-            this.lbHora.Size = new System.Drawing.Size(73, 32);
+            this.lbHora.Size = new System.Drawing.Size(55, 24);
             this.lbHora.TabIndex = 0;
             this.lbHora.Text = "Hora";
             // 
@@ -221,14 +228,13 @@
             this.btnControleFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnControleFinanceiro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
-            this.btnControleFinanceiro.Image = global::Autopecas.Properties.Resources.Financeiro;
+            this.btnControleFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnControleFinanceiro.Image")));
             this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 609);
-            this.btnControleFinanceiro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 510);
             this.btnControleFinanceiro.Name = "btnControleFinanceiro";
-            this.btnControleFinanceiro.Size = new System.Drawing.Size(333, 62);
+            this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
             this.btnControleFinanceiro.TabIndex = 20;
-            this.btnControleFinanceiro.Text = "       Controle Financeiro";
+            this.btnControleFinanceiro.Text = "Financeiro";
             this.btnControleFinanceiro.UseVisualStyleBackColor = true;
             this.btnControleFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
             // 
@@ -238,10 +244,9 @@
             this.painelCadastros.Controls.Add(this.btnFornecedor);
             this.painelCadastros.Controls.Add(this.btnCliente);
             this.painelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.painelCadastros.Location = new System.Drawing.Point(0, 487);
-            this.painelCadastros.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.painelCadastros.Location = new System.Drawing.Point(0, 410);
             this.painelCadastros.Name = "painelCadastros";
-            this.painelCadastros.Size = new System.Drawing.Size(333, 122);
+            this.painelCadastros.Size = new System.Drawing.Size(250, 100);
             this.painelCadastros.TabIndex = 0;
             // 
             // btnFornecedor
@@ -252,12 +257,11 @@
             this.btnFornecedor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFornecedor.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFornecedor.ForeColor = System.Drawing.Color.White;
-            this.btnFornecedor.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.btnFornecedor.Image = ((System.Drawing.Image)(resources.GetObject("btnFornecedor.Image")));
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFornecedor.Location = new System.Drawing.Point(0, 62);
-            this.btnFornecedor.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFornecedor.Location = new System.Drawing.Point(0, 50);
             this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(329, 62);
+            this.btnFornecedor.Size = new System.Drawing.Size(246, 50);
             this.btnFornecedor.TabIndex = 7;
             this.btnFornecedor.Text = "Fornecedores";
             this.btnFornecedor.UseVisualStyleBackColor = true;
@@ -271,12 +275,11 @@
             this.btnCliente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCliente.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCliente.ForeColor = System.Drawing.Color.White;
-            this.btnCliente.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.btnCliente.Image = ((System.Drawing.Image)(resources.GetObject("btnCliente.Image")));
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
-            this.btnCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(329, 62);
+            this.btnCliente.Size = new System.Drawing.Size(246, 50);
             this.btnCliente.TabIndex = 6;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
@@ -290,12 +293,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = global::Autopecas.Properties.Resources.Fornecedor;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 425);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Location = new System.Drawing.Point(0, 360);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(333, 62);
+            this.button1.Size = new System.Drawing.Size(250, 50);
             this.button1.TabIndex = 4;
             this.button1.Text = "Cadastros";
             this.button1.UseVisualStyleBackColor = true;
@@ -309,12 +311,11 @@
             this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEstoque.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEstoque.ForeColor = System.Drawing.Color.White;
-            this.btnEstoque.Image = global::Autopecas.Properties.Resources.Estoque;
+            this.btnEstoque.Image = ((System.Drawing.Image)(resources.GetObject("btnEstoque.Image")));
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEstoque.Location = new System.Drawing.Point(0, 363);
-            this.btnEstoque.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEstoque.Location = new System.Drawing.Point(0, 310);
             this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(333, 62);
+            this.btnEstoque.Size = new System.Drawing.Size(250, 50);
             this.btnEstoque.TabIndex = 2;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
@@ -328,12 +329,11 @@
             this.btnCompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCompras.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCompras.ForeColor = System.Drawing.Color.White;
-            this.btnCompras.Image = global::Autopecas.Properties.Resources.Vendas;
+            this.btnCompras.Image = ((System.Drawing.Image)(resources.GetObject("btnCompras.Image")));
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCompras.Location = new System.Drawing.Point(0, 301);
-            this.btnCompras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCompras.Location = new System.Drawing.Point(0, 260);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(333, 62);
+            this.btnCompras.Size = new System.Drawing.Size(250, 50);
             this.btnCompras.TabIndex = 14;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
@@ -347,12 +347,11 @@
             this.btnVendas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVendas.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVendas.ForeColor = System.Drawing.Color.White;
-            this.btnVendas.Image = global::Autopecas.Properties.Resources.Vendas;
+            this.btnVendas.Image = ((System.Drawing.Image)(resources.GetObject("btnVendas.Image")));
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnVendas.Location = new System.Drawing.Point(0, 239);
-            this.btnVendas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnVendas.Location = new System.Drawing.Point(0, 210);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(333, 62);
+            this.btnVendas.Size = new System.Drawing.Size(250, 50);
             this.btnVendas.TabIndex = 13;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
@@ -366,12 +365,11 @@
             this.btnSair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSair.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSair.ForeColor = System.Drawing.Color.White;
-            this.btnSair.Image = global::Autopecas.Properties.Resources.Sair;
+            this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(0, 884);
-            this.btnSair.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSair.Location = new System.Drawing.Point(0, 718);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(333, 62);
+            this.btnSair.Size = new System.Drawing.Size(250, 50);
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -380,11 +378,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pictureBox1.Image = global::Autopecas.Properties.Resources.Autopecas;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(333, 239);
+            this.pictureBox1.Size = new System.Drawing.Size(250, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -397,15 +393,14 @@
             // 
             // Home
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1365, 945);
+            this.ClientSize = new System.Drawing.Size(1024, 768);
             this.Controls.Add(this.panelChildForm);
             this.Controls.Add(this.painelLateral);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.MinimumSize = new System.Drawing.Size(1365, 945);
+            this.MinimumSize = new System.Drawing.Size(1024, 768);
             this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Autopeças - ERP";
@@ -413,6 +408,7 @@
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.painelTempo.ResumeLayout(false);
             this.painelData.ResumeLayout(false);
             this.painelData.PerformLayout();
@@ -452,5 +448,6 @@
         private System.Windows.Forms.Panel painelCadastros;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel painelTempo;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

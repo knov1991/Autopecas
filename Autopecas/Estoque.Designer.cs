@@ -40,8 +40,8 @@
             this.textBox_filtroBusca = new System.Windows.Forms.TextBox();
             this.dataGridView_buscaProdutos = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
-            this.btnInserir = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastro = new System.Windows.Forms.Button();
+            this.btnGerenciar = new System.Windows.Forms.Button();
             this.groupBox_filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscaProdutos)).BeginInit();
             this.groupBox_listaProdutos.SuspendLayout();
@@ -184,41 +184,43 @@
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Produtos";
             // 
-            // btnInserir
+            // btnCadastro
             // 
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInserir.Image = global::Autopecas.Properties.Resources.Novo;
-            this.btnInserir.Location = new System.Drawing.Point(48, 480);
-            this.btnInserir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnInserir.Name = "btnInserir";
-            this.btnInserir.Size = new System.Drawing.Size(155, 44);
-            this.btnInserir.TabIndex = 16;
-            this.btnInserir.Text = "  Cadastrar Produtos";
-            this.btnInserir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnInserir.UseVisualStyleBackColor = true;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastro.Image = global::Autopecas.Properties.Resources.Novo;
+            this.btnCadastro.Location = new System.Drawing.Point(48, 480);
+            this.btnCadastro.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCadastro.Name = "btnCadastro";
+            this.btnCadastro.Size = new System.Drawing.Size(155, 44);
+            this.btnCadastro.TabIndex = 16;
+            this.btnCadastro.Text = "  Cadastrar Produtos";
+            this.btnCadastro.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCadastro.UseVisualStyleBackColor = true;
+            this.btnCadastro.Click += new System.EventHandler(this.btnCadastro_Click);
             // 
-            // button1
+            // btnGerenciar
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Image = global::Autopecas.Properties.Resources.Alterar;
-            this.button1.Location = new System.Drawing.Point(209, 480);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(155, 44);
-            this.button1.TabIndex = 17;
-            this.button1.Text = "  Gerenciar Produto Selecionado";
-            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciar.Image = global::Autopecas.Properties.Resources.Alterar;
+            this.btnGerenciar.Location = new System.Drawing.Point(209, 480);
+            this.btnGerenciar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGerenciar.Name = "btnGerenciar";
+            this.btnGerenciar.Size = new System.Drawing.Size(155, 44);
+            this.btnGerenciar.TabIndex = 17;
+            this.btnGerenciar.Text = "  Gerenciar Produto Selecionado";
+            this.btnGerenciar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGerenciar.UseVisualStyleBackColor = true;
+            this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
             // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnInserir);
+            this.Controls.Add(this.btnGerenciar);
+            this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.label_listaProdutos);
             this.Controls.Add(this.groupBox_filtro);
             this.Controls.Add(this.groupBox_listaProdutos);
@@ -249,7 +251,7 @@
         private System.Windows.Forms.DataGridView dataGridView_buscaProdutos;
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.GroupBox groupBox_filtro;
-        public System.Windows.Forms.Button btnInserir;
-        public System.Windows.Forms.Button button1;
+        public System.Windows.Forms.Button btnCadastro;
+        public System.Windows.Forms.Button btnGerenciar;
     }
 }

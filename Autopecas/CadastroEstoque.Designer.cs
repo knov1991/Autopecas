@@ -40,7 +40,6 @@
             this.PRODUTO = new System.Windows.Forms.Label();
             this.txt_CadastroFornecedor = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnGerenciarEstoque = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtvalorProduto = new System.Windows.Forms.TextBox();
             this.btn_listar = new System.Windows.Forms.Button();
@@ -164,7 +163,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Autopecas.Properties.Resources.Salvar;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(211, 277);
+            this.btnSalvar.Location = new System.Drawing.Point(50, 277);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(157, 44);
@@ -174,23 +173,6 @@
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
-            // 
-            // btnGerenciarEstoque
-            // 
-            this.btnGerenciarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnGerenciarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciarEstoque.Image = global::Autopecas.Properties.Resources.Localizar;
-            this.btnGerenciarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerenciarEstoque.Location = new System.Drawing.Point(50, 277);
-            this.btnGerenciarEstoque.Margin = new System.Windows.Forms.Padding(2);
-            this.btnGerenciarEstoque.Name = "btnGerenciarEstoque";
-            this.btnGerenciarEstoque.Size = new System.Drawing.Size(157, 44);
-            this.btnGerenciarEstoque.TabIndex = 67;
-            this.btnGerenciarEstoque.Text = "  Gerenciar Estoque";
-            this.btnGerenciarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGerenciarEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnGerenciarEstoque.UseVisualStyleBackColor = true;
-            this.btnGerenciarEstoque.Click += new System.EventHandler(this.btnGerenciarEstoque_Click);
             // 
             // label6
             // 
@@ -229,7 +211,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Autopecas.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(372, 277);
+            this.btnCancelar.Location = new System.Drawing.Point(211, 277);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(157, 44);
@@ -238,7 +220,7 @@
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
             // 
-            // Estoque
+            // CadastroEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -246,7 +228,6 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnGerenciarEstoque);
             this.Controls.Add(this.txt_CadastroFornecedor);
             this.Controls.Add(this.txtDataEntrada);
             this.Controls.Add(this.label5);
@@ -261,7 +242,7 @@
             this.Controls.Add(this.txtProduto);
             this.Controls.Add(this.PRODUTO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Estoque";
+            this.Name = "CadastroEstoque";
             this.Text = "Estoque";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -280,7 +261,6 @@
         private System.Windows.Forms.Label PRODUTO;
         private System.Windows.Forms.Label txt_CadastroFornecedor;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnGerenciarEstoque;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtvalorProduto;
         private System.Windows.Forms.Button btn_listar;

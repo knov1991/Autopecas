@@ -58,18 +58,11 @@ namespace Autopecas
             }
         }
 
-        private void btnGerenciarEstoque_Click(object sender, EventArgs e)
-        {
-            
-        }
-
         private void btn_listar_Click(object sender, EventArgs e)
         {
             ListaFornecedor Fornecedor = new ListaFornecedor(this);
             Fornecedor.Show();
         }
-
-
     }
     
 }

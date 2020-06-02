@@ -157,5 +157,15 @@ namespace Autopecas
             string valorBusca = textBox_filtroBusca.Text.ToString();
             procurarItem(valorBusca);
         }
+
+        private void btnCadastro_Click(object sender, EventArgs e)
+        {
+           //Botão para CadastroEstoque
+        }
+
+        private void btnGerenciar_Click(object sender, EventArgs e)
+        {
+            //Botão para GerenciarEstoque
+        }
     }
 }

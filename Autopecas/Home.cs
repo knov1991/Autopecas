@@ -25,6 +25,7 @@ namespace Autopecas
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void barraTitulo_MouseDown(object sender, MouseEventArgs e)
@@ -50,9 +51,8 @@ namespace Autopecas
             painelCadastros.Visible = false;
         }
 
-
         // ABRIR MODULO NA TELA PRINCIPAL
-        private void AbrirModal(object Modulo)
+        public void AbrirModal(object Modulo)
         {
             if (this.painelPrincipal.Controls.Count > 0)
                 this.painelPrincipal.Controls.RemoveAt(0);
