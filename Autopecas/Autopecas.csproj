@@ -80,11 +80,17 @@
     </Compile>
     <Compile Include="ControlesGerais.cs" />
     <Compile Include="DAO\Conectar.cs" />
-    <Compile Include="Estoque.cs">
+    <Compile Include="CadastroEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Estoque.Designer.cs">
-      <DependentUpon>Estoque.cs</DependentUpon>
+    <Compile Include="CadastroEstoque.Designer.cs">
+      <DependentUpon>CadastroEstoque.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GerenciarEstoqueBuscar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciarEstoqueBuscar.Designer.cs">
+      <DependentUpon>GerenciarEstoqueBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="ListaFornecedor.cs">
       <SubType>Form</SubType>
@@ -145,11 +151,14 @@
     <EmbeddedResource Include="ControleFinanceiro.resx">
       <DependentUpon>ControleFinanceiro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Estoque.resx">
-      <DependentUpon>Estoque.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroEstoque.resx">
+      <DependentUpon>CadastroEstoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FornecedorCadastrar.resx">
       <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GerenciarEstoqueBuscar.resx">
+      <DependentUpon>GerenciarEstoqueBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

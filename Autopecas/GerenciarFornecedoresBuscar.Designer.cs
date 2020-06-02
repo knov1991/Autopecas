@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class LocalizarFornecedor
+    partial class GerenciarFornecedoresBuscar
     {
         /// <summary>
         /// Required designer variable.

@@ -111,7 +111,7 @@ namespace Autopecas
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            LocalizarFornecedor Fornecedor = new LocalizarFornecedor(this);
+            GerenciarFornecedoresBuscar Fornecedor = new GerenciarFornecedoresBuscar(this);
             Fornecedor.Show();
         }
 
