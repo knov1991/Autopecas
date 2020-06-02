@@ -168,6 +168,7 @@
             this.txtRGIE.Name = "txtRGIE";
             this.txtRGIE.Size = new System.Drawing.Size(441, 22);
             this.txtRGIE.TabIndex = 10;
+            this.txtRGIE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRGIE_KeyPress);
             // 
             // lbRGIE
             // 
@@ -374,7 +375,7 @@
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(143, 54);
             this.btnSalvar.TabIndex = 39;
-            this.btnSalvar.Text = "  Salvar";
+            this.btnSalvar.Text = " Cadastrar";
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);

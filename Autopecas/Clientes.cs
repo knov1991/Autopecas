@@ -407,6 +407,53 @@ namespace Autopecas
             }
         }
 
+        //NÚMERO MÁXIMO DE CARACTERES PARA O RG/IE
+        private void txtRGIE_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(rbFisico.Checked == true)
+            {
+                if(char.IsNumber(e.KeyChar) == true)
+                {
+                    txtRGIE.MaxLength = 12;
+                    switch (txtRGIE.TextLength)
+                    {
+                        case 0:
+                            txtRGIE.Text = "";
+                            break;
+                        case 2:
+                            txtRGIE.Text = txtRGIE.Text + ".";
+                            txtRGIE.SelectionStart = 4;
+                            break;
+                        case 6:
+                            txtRGIE.Text = txtRGIE.Text + ".";
+                            txtRGIE.SelectionStart = 9;
+                            break;
+                        case 10:
+                            txtRGIE.Text = txtRGIE.Text + "-";
+                            txtRGIE.SelectionStart = 11;
+                            break;
+                    }
+                }
+            }
+            else if(rbJuridico.Checked == true)
+            {
+                if(char.IsNumber(e.KeyChar) == true)
+                {
+                    txtRGIE.MaxLength = 11;
+                    switch (txtRGIE.TextLength)
+                    {
+                    case 0:
+                        txtRGIE.Text = "";
+                        break;
+                    case 8:
+                        txtRGIE.Text = txtRGIE.Text + "-";
+                        txtRGIE.SelectionStart = 10;
+                        break;
+                    }
+                }
+            }
+        }
+
         //Número Máximo de Caracteres Para o CEP
         private void txtCep_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -661,6 +708,6 @@ namespace Autopecas
             {
                 throw;
             } 
-        } 
+        }
     }
 }

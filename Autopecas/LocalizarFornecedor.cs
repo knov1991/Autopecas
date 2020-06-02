@@ -137,7 +137,6 @@ namespace Autopecas
             {
                 MessageBox.Show("Selecione um fornecedor para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
         }
     }
 }

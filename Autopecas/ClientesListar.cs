@@ -15,9 +15,7 @@ namespace Autopecas
     {
         Clientes instanciaClientes;
         MySqlConnection conexao;
-        MySqlCommand comando;
         MySqlDataAdapter da;
-        MySqlDataReader dr;
         string strSQL;
 
         public ClientesListar(Clientes cliente)
