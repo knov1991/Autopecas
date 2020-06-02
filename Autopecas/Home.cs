@@ -74,7 +74,7 @@ namespace Autopecas
         }
         private void btnEstoque_Click(object sender, EventArgs e)
         {
-            AbrirModal(new CadastroEstoque());
+            AbrirModal(new Estoque());
         }
         private void btnControleFinanceiro_Click(object sender, EventArgs e)
         {

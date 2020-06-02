@@ -107,6 +107,12 @@
     <Compile Include="CadastroEstoque.Designer.cs">
       <DependentUpon>CadastroEstoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Estoque.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </Compile>
     <Compile Include="GerenciarEstoque.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +186,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroEstoque.resx">
       <DependentUpon>CadastroEstoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FornecedorCadastrar.resx">
       <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
