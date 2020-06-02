@@ -13,13 +13,13 @@ namespace Autopecas
 {
     public partial class ListaFornecedor : Form
     {
-        Estoque instanciaEstoque;
+        CadastroEstoque instanciaEstoque;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-        public ListaFornecedor(Estoque fornecedores)
+        public ListaFornecedor(CadastroEstoque fornecedores)
         {
             InitializeComponent();
             dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

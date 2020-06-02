@@ -16,5 +16,17 @@ namespace Autopecas
         {
             InitializeComponent();
         }
+
+        private void btnContasReceber_Click(object sender, EventArgs e)
+        {
+            ContasReceber Receber = new ContasReceber();
+            Receber.Show();
+        }
+
+        private void btnContasPagar_Click(object sender, EventArgs e)
+        {
+            ContasPagar Pagar = new ContasPagar();
+            Pagar.Show();
+        }
     }
 }

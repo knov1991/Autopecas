@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class Estoque
+    partial class CadastroEstoque
     {
         /// <summary>
         /// Required designer variable.
@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtConsultar = new System.Windows.Forms.Button();
             this.txtDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGrid = new System.Windows.Forms.DataGridView();
             this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtQuantidade = new System.Windows.Forms.TextBox();
@@ -40,31 +38,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtProduto = new System.Windows.Forms.TextBox();
             this.PRODUTO = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.txt_CadastroFornecedor = new System.Windows.Forms.Label();
             this.btnSalvar = new System.Windows.Forms.Button();
-            this.btnExcluir = new System.Windows.Forms.Button();
-            this.btnAlterar = new System.Windows.Forms.Button();
-            this.btnLocalizar = new System.Windows.Forms.Button();
+            this.btnGerenciarEstoque = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.txtvalorProduto = new System.Windows.Forms.TextBox();
             this.btn_listar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // txtConsultar
-            // 
-            this.txtConsultar.BackColor = System.Drawing.SystemColors.Control;
-            this.txtConsultar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.txtConsultar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtConsultar.Location = new System.Drawing.Point(581, 277);
-            this.txtConsultar.Name = "txtConsultar";
-            this.txtConsultar.Size = new System.Drawing.Size(140, 44);
-            this.txtConsultar.TabIndex = 68;
-            this.txtConsultar.Text = "Consultar";
-            this.txtConsultar.UseVisualStyleBackColor = false;
-            this.txtConsultar.Click += new System.EventHandler(this.txtConsultar_Click_1);
             // 
             // txtDataEntrada
             // 
@@ -73,7 +54,6 @@
             this.txtDataEntrada.Name = "txtDataEntrada";
             this.txtDataEntrada.Size = new System.Drawing.Size(266, 23);
             this.txtDataEntrada.TabIndex = 60;
-            this.txtDataEntrada.TextChanged += new System.EventHandler(this.txtDataEntrada_TextChanged);
             // 
             // label5
             // 
@@ -86,23 +66,6 @@
             this.label5.TabIndex = 67;
             this.label5.Text = "Data de Entrada";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label5.Click += new System.EventHandler(this.label5_Click);
-            // 
-            // dataGrid
-            // 
-            this.dataGrid.AllowUserToDeleteRows = false;
-            this.dataGrid.AllowUserToResizeColumns = false;
-            this.dataGrid.AllowUserToResizeRows = false;
-            this.dataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGrid.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(48, 340);
-            this.dataGrid.Name = "dataGrid";
-            this.dataGrid.RowHeadersVisible = false;
-            this.dataGrid.RowHeadersWidth = 51;
-            this.dataGrid.Size = new System.Drawing.Size(673, 226);
-            this.dataGrid.TabIndex = 66;
-            this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellContentClick);
             // 
             // txtFornecedor
             // 
@@ -112,7 +75,6 @@
             this.txtFornecedor.Name = "txtFornecedor";
             this.txtFornecedor.Size = new System.Drawing.Size(532, 23);
             this.txtFornecedor.TabIndex = 63;
-            this.txtFornecedor.TextChanged += new System.EventHandler(this.txtFornecedor_TextChanged);
             // 
             // label4
             // 
@@ -125,7 +87,6 @@
             this.label4.TabIndex = 64;
             this.label4.Text = "Fornecedor";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtQuantidade
             // 
@@ -134,7 +95,6 @@
             this.txtQuantidade.Name = "txtQuantidade";
             this.txtQuantidade.Size = new System.Drawing.Size(232, 23);
             this.txtQuantidade.TabIndex = 59;
-            this.txtQuantidade.TextChanged += new System.EventHandler(this.txtQuantidade_TextChanged);
             // 
             // label3
             // 
@@ -147,7 +107,6 @@
             this.label3.TabIndex = 62;
             this.label3.Text = "Quantidade";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtCategoria
             // 
@@ -156,7 +115,6 @@
             this.txtCategoria.Name = "txtCategoria";
             this.txtCategoria.Size = new System.Drawing.Size(232, 23);
             this.txtCategoria.TabIndex = 61;
-            this.txtCategoria.TextChanged += new System.EventHandler(this.txtCategoria_TextChanged);
             // 
             // label2
             // 
@@ -169,51 +127,26 @@
             this.label2.TabIndex = 60;
             this.label2.Text = "Categoria";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtProduto
             // 
-            this.txtProduto.Location = new System.Drawing.Point(215, 135);
+            this.txtProduto.Location = new System.Drawing.Point(51, 135);
             this.txtProduto.Multiline = true;
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(268, 23);
+            this.txtProduto.Size = new System.Drawing.Size(432, 23);
             this.txtProduto.TabIndex = 58;
-            this.txtProduto.TextChanged += new System.EventHandler(this.txtProduto_TextChanged);
             // 
             // PRODUTO
             // 
             this.PRODUTO.BackColor = System.Drawing.Color.Transparent;
             this.PRODUTO.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PRODUTO.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.PRODUTO.Location = new System.Drawing.Point(212, 118);
+            this.PRODUTO.Location = new System.Drawing.Point(48, 118);
             this.PRODUTO.Name = "PRODUTO";
             this.PRODUTO.Size = new System.Drawing.Size(47, 14);
             this.PRODUTO.TabIndex = 58;
             this.PRODUTO.Text = "Produto";
             this.PRODUTO.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.PRODUTO.Click += new System.EventHandler(this.PRODUTO_Click);
-            // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(51, 135);
-            this.txtId.Multiline = true;
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(159, 23);
-            this.txtId.TabIndex = 57;
-            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label1.Location = new System.Drawing.Point(45, 115);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 20);
-            this.label1.TabIndex = 56;
-            this.label1.Text = "Codigo";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // txt_CadastroFornecedor
             // 
@@ -221,71 +154,43 @@
             this.txt_CadastroFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CadastroFornecedor.Location = new System.Drawing.Point(41, 55);
             this.txt_CadastroFornecedor.Name = "txt_CadastroFornecedor";
-            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(144, 39);
+            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(158, 39);
             this.txt_CadastroFornecedor.TabIndex = 74;
-            this.txt_CadastroFornecedor.Text = "Estoque";
-            this.txt_CadastroFornecedor.Click += new System.EventHandler(this.txt_CadastroFornecedor_Click);
+            this.txt_CadastroFornecedor.Text = "Cadastro";
             // 
             // btnSalvar
             // 
             this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Autopecas.Properties.Resources.Salvar;
-            this.btnSalvar.Location = new System.Drawing.Point(50, 277);
+            this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnSalvar.Location = new System.Drawing.Point(211, 277);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
-            this.btnSalvar.Size = new System.Drawing.Size(130, 44);
+            this.btnSalvar.Size = new System.Drawing.Size(157, 44);
             this.btnSalvar.TabIndex = 64;
             this.btnSalvar.Text = "  Salvar";
+            this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSalvar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnSalvar.UseVisualStyleBackColor = true;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // btnExcluir
+            // btnGerenciarEstoque
             // 
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExcluir.Image = global::Autopecas.Properties.Resources.Excluir;
-            this.btnExcluir.Location = new System.Drawing.Point(316, 277);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
-            this.btnExcluir.Name = "btnExcluir";
-            this.btnExcluir.Size = new System.Drawing.Size(128, 44);
-            this.btnExcluir.TabIndex = 66;
-            this.btnExcluir.Text = "  Excluir";
-            this.btnExcluir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnExcluir.UseVisualStyleBackColor = true;
-            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click_1);
-            // 
-            // btnAlterar
-            // 
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAlterar.Image = global::Autopecas.Properties.Resources.Alterar;
-            this.btnAlterar.Location = new System.Drawing.Point(184, 277);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(128, 44);
-            this.btnAlterar.TabIndex = 65;
-            this.btnAlterar.Text = "  Alterar";
-            this.btnAlterar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAlterar.UseVisualStyleBackColor = true;
-            this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click_1);
-            // 
-            // btnLocalizar
-            // 
-            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLocalizar.Image = global::Autopecas.Properties.Resources.Localizar;
-            this.btnLocalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnLocalizar.Location = new System.Drawing.Point(448, 277);
-            this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2);
-            this.btnLocalizar.Name = "btnLocalizar";
-            this.btnLocalizar.Size = new System.Drawing.Size(128, 44);
-            this.btnLocalizar.TabIndex = 67;
-            this.btnLocalizar.Text = "  Exibir";
-            this.btnLocalizar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnLocalizar.UseVisualStyleBackColor = true;
-            this.btnLocalizar.Click += new System.EventHandler(this.btnLocalizar_Click);
+            this.btnGerenciarEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGerenciarEstoque.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGerenciarEstoque.Image = global::Autopecas.Properties.Resources.Localizar;
+            this.btnGerenciarEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerenciarEstoque.Location = new System.Drawing.Point(50, 277);
+            this.btnGerenciarEstoque.Margin = new System.Windows.Forms.Padding(2);
+            this.btnGerenciarEstoque.Name = "btnGerenciarEstoque";
+            this.btnGerenciarEstoque.Size = new System.Drawing.Size(157, 44);
+            this.btnGerenciarEstoque.TabIndex = 67;
+            this.btnGerenciarEstoque.Text = "  Gerenciar Estoque";
+            this.btnGerenciarEstoque.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnGerenciarEstoque.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnGerenciarEstoque.UseVisualStyleBackColor = true;
+            this.btnGerenciarEstoque.Click += new System.EventHandler(this.btnGerenciarEstoque_Click);
             // 
             // label6
             // 
@@ -298,7 +203,6 @@
             this.label6.TabIndex = 60;
             this.label6.Text = "Valor do Produto";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // txtvalorProduto
             // 
@@ -307,7 +211,6 @@
             this.txtvalorProduto.Name = "txtvalorProduto";
             this.txtvalorProduto.Size = new System.Drawing.Size(161, 23);
             this.txtvalorProduto.TabIndex = 62;
-            this.txtvalorProduto.TextChanged += new System.EventHandler(this.txtvalorProduto_TextChanged);
             // 
             // btn_listar
             // 
@@ -320,21 +223,33 @@
             this.btn_listar.UseVisualStyleBackColor = true;
             this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Image = global::Autopecas.Properties.Resources.Cancelar;
+            this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCancelar.Location = new System.Drawing.Point(372, 277);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(157, 44);
+            this.btnCancelar.TabIndex = 76;
+            this.btnCancelar.Text = "  Cancelar";
+            this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.btnExcluir);
-            this.Controls.Add(this.btnAlterar);
-            this.Controls.Add(this.btnLocalizar);
+            this.Controls.Add(this.btnGerenciarEstoque);
             this.Controls.Add(this.txt_CadastroFornecedor);
-            this.Controls.Add(this.txtConsultar);
             this.Controls.Add(this.txtDataEntrada);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGrid);
             this.Controls.Add(this.txtFornecedor);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txtQuantidade);
@@ -345,23 +260,17 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtProduto);
             this.Controls.Add(this.PRODUTO);
-            this.Controls.Add(this.txtId);
-            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Estoque";
             this.Text = "Estoque";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button txtConsultar;
         private System.Windows.Forms.TextBox txtDataEntrada;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGrid;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtQuantidade;
         private System.Windows.Forms.Label label3;
@@ -369,16 +278,13 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtProduto;
         private System.Windows.Forms.Label PRODUTO;
-        private System.Windows.Forms.TextBox txtId;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label txt_CadastroFornecedor;
         private System.Windows.Forms.Button btnSalvar;
-        private System.Windows.Forms.Button btnExcluir;
-        private System.Windows.Forms.Button btnAlterar;
-        private System.Windows.Forms.Button btnLocalizar;
+        private System.Windows.Forms.Button btnGerenciarEstoque;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox txtvalorProduto;
         private System.Windows.Forms.Button btn_listar;
         public System.Windows.Forms.TextBox txtFornecedor;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }

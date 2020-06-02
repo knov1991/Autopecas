@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class LocalizarFornecedor : Form
+    public partial class GerenciarFornecedoresBuscar : Form
     {
         FornecedorCadastrar instanciaFornecedores;
         MySqlConnection conexao;
@@ -19,7 +19,7 @@ namespace Autopecas
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-        public LocalizarFornecedor(FornecedorCadastrar fornecedor)
+        public GerenciarFornecedoresBuscar(FornecedorCadastrar fornecedor)
         {
             InitializeComponent();
             dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -49,6 +49,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_buscaFornecedor.DataSource = dt;
+                
             }
             catch (Exception ex)
             {
