@@ -17,6 +17,7 @@ namespace Autopecas
         MySqlConnection conexao;
         MySqlCommand comando;
         string strSQL;
+        public int idCliente;
         bool cnpjCheck = false;
         public Clientes()
         {
@@ -62,9 +63,20 @@ namespace Autopecas
             txtTelefone.Enabled = false;
         }
 
-        //Método Limpa Campos do Formulário de Fornecedor
+        //Habilita Botões do Formulário
+        public void HabilitaBotoes()
+        {
+            btnAlterar.Enabled = true;
+            btnLocalizar.Enabled = true;
+            btnSalvar.Enabled = true;
+            btnInserir.Enabled = true;
+            btnExcluir.Enabled = true;
+        }
+
+        //Método Limpa Campos do Formulário de Clientes
         public void LimpaCampos()
         {
+            idCliente = 0;
             txtNome.Clear();
             txtRSocial.Clear();
             txtCPFCNPJ.Clear();
@@ -92,14 +104,17 @@ namespace Autopecas
         {
             this.HabilitaCampos();
             this.txtNome.Focus();
+            this.btnInserir.Enabled = false;
+            this.btnLocalizar.Enabled = false;
+            this.btnAlterar.Enabled = false;
+            this.btnExcluir.Enabled = false;
         }
 
         //Método do Botão Localizar Para o Formulário de Listar Clientes
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            ClientesListar c = new ClientesListar();
+            ClientesListar c = new ClientesListar(this);
             c.ShowDialog();
-            c.Dispose();
         }
 
         //Botão Para Alterar Os Dados
@@ -114,7 +129,7 @@ namespace Autopecas
 
                 comando = new MySqlCommand(strSQL, conexao);
 
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idCliente);
                 comando.Parameters.AddWithValue("@NOME", txtNome.Text);
                 comando.Parameters.AddWithValue("@RSOCIAL", txtRSocial.Text);
                 comando.Parameters.AddWithValue("@TIPO", rbTipo.Text);
@@ -214,7 +229,7 @@ namespace Autopecas
                         finally
                         {
                             conexao.Close();
-                            MessageBox.Show("Cadastro feito com sucesso.");
+                            MessageBox.Show("Cadastrado com sucesso", "", MessageBoxButtons.OK);
                             this.LimpaCampos();
                             this.txtNome.Focus();
                             conexao = null;
@@ -224,7 +239,7 @@ namespace Autopecas
                 }
                 else
                 {
-                    MessageBox.Show("CNPJ Inválido", "Validador de CNPJ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("CNPJ Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
 
@@ -275,7 +290,7 @@ namespace Autopecas
                         finally
                         {
                             conexao.Close();
-                            MessageBox.Show("Cadastro feito com sucesso.");
+                            MessageBox.Show("Cadastrado com sucesso", "", MessageBoxButtons.OK);
                             this.LimpaCampos();
                             this.txtNome.Focus();
                             conexao = null;
@@ -285,7 +300,7 @@ namespace Autopecas
                 }
                 else
                 {
-                    MessageBox.Show("CPF Inválido", "Validador de CPF", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("CPF Inválido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             
@@ -302,7 +317,7 @@ namespace Autopecas
 
                 comando = new MySqlCommand(strSQL, conexao);
 
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idCliente);
 
                 conexao.Open();
                 comando.ExecuteNonQuery();
@@ -327,6 +342,7 @@ namespace Autopecas
         {
             this.LimpaCampos();
             this.DesabilitaCampos();
+            this.HabilitaBotoes();
         }
 
         //NÚMERO MÁXIMO DE CARACTERES PARA O CPF/CNPJ
@@ -644,8 +660,7 @@ namespace Autopecas
             catch (Exception)
             {
                 throw;
-            }
-            
+            } 
         } 
     }
 }
