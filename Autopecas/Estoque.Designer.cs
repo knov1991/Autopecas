@@ -186,7 +186,7 @@
             // 
             // btnCadastro
             // 
-            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCadastro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCadastro.Image = global::Autopecas.Properties.Resources.Novo;
             this.btnCadastro.Location = new System.Drawing.Point(48, 480);
@@ -201,7 +201,7 @@
             // 
             // btnGerenciar
             // 
-            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGerenciar.Image = global::Autopecas.Properties.Resources.Alterar;
             this.btnGerenciar.Location = new System.Drawing.Point(209, 480);

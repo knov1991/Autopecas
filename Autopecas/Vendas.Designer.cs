@@ -177,7 +177,7 @@
             this.dataGridView_Carrinho.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dataGridView_Carrinho.RowHeadersVisible = false;
             this.dataGridView_Carrinho.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
-            this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 268);
+            this.dataGridView_Carrinho.Size = new System.Drawing.Size(673, 219);
             this.dataGridView_Carrinho.TabIndex = 12;
             this.dataGridView_Carrinho.RowsRemoved += new System.Windows.Forms.DataGridViewRowsRemovedEventHandler(this.dataGridView_Carrinho_RowsRemoved);
             // 
@@ -224,7 +224,7 @@
             // textBox_subTotal
             // 
             this.textBox_subTotal.Enabled = false;
-            this.textBox_subTotal.Location = new System.Drawing.Point(443, 623);
+            this.textBox_subTotal.Location = new System.Drawing.Point(443, 547);
             this.textBox_subTotal.Multiline = true;
             this.textBox_subTotal.Name = "textBox_subTotal";
             this.textBox_subTotal.Size = new System.Drawing.Size(134, 23);
@@ -284,7 +284,7 @@
             // label_subtotal
             // 
             this.label_subtotal.AutoSize = true;
-            this.label_subtotal.Location = new System.Drawing.Point(440, 607);
+            this.label_subtotal.Location = new System.Drawing.Point(440, 531);
             this.label_subtotal.Name = "label_subtotal";
             this.label_subtotal.Size = new System.Drawing.Size(46, 13);
             this.label_subtotal.TabIndex = 7;
@@ -293,7 +293,7 @@
             // btn_finalizaVenda
             // 
             this.btn_finalizaVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_finalizaVenda.Location = new System.Drawing.Point(583, 623);
+            this.btn_finalizaVenda.Location = new System.Drawing.Point(583, 547);
             this.btn_finalizaVenda.Name = "btn_finalizaVenda";
             this.btn_finalizaVenda.Size = new System.Drawing.Size(138, 23);
             this.btn_finalizaVenda.TabIndex = 14;
@@ -313,7 +313,7 @@
             // btn_remove
             // 
             this.btn_remove.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_remove.Location = new System.Drawing.Point(583, 543);
+            this.btn_remove.Location = new System.Drawing.Point(583, 494);
             this.btn_remove.Name = "btn_remove";
             this.btn_remove.Size = new System.Drawing.Size(138, 23);
             this.btn_remove.TabIndex = 16;

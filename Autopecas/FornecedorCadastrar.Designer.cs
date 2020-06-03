@@ -66,7 +66,7 @@
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(48, 171);
-            this.txtNome.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNome.Margin = new System.Windows.Forms.Padding(2);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(667, 20);
             this.txtNome.TabIndex = 2;
@@ -84,7 +84,7 @@
             // txtRSocial
             // 
             this.txtRSocial.Location = new System.Drawing.Point(48, 218);
-            this.txtRSocial.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRSocial.Margin = new System.Windows.Forms.Padding(2);
             this.txtRSocial.Name = "txtRSocial";
             this.txtRSocial.Size = new System.Drawing.Size(667, 20);
             this.txtRSocial.TabIndex = 3;
@@ -102,7 +102,7 @@
             // txtCnpj
             // 
             this.txtCnpj.Location = new System.Drawing.Point(48, 261);
-            this.txtCnpj.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCnpj.Margin = new System.Windows.Forms.Padding(2);
             this.txtCnpj.MaxLength = 18;
             this.txtCnpj.Name = "txtCnpj";
             this.txtCnpj.Size = new System.Drawing.Size(329, 20);
@@ -122,7 +122,7 @@
             // txtIe
             // 
             this.txtIe.Location = new System.Drawing.Point(381, 261);
-            this.txtIe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtIe.Margin = new System.Windows.Forms.Padding(2);
             this.txtIe.MaxLength = 11;
             this.txtIe.Name = "txtIe";
             this.txtIe.Size = new System.Drawing.Size(331, 20);
@@ -142,7 +142,7 @@
             // txtCep
             // 
             this.txtCep.Location = new System.Drawing.Point(48, 308);
-            this.txtCep.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCep.Margin = new System.Windows.Forms.Padding(2);
             this.txtCep.MaxLength = 9;
             this.txtCep.Name = "txtCep";
             this.txtCep.Size = new System.Drawing.Size(159, 20);
@@ -163,7 +163,7 @@
             // txtEstado
             // 
             this.txtEstado.Location = new System.Drawing.Point(211, 308);
-            this.txtEstado.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEstado.Margin = new System.Windows.Forms.Padding(2);
             this.txtEstado.Name = "txtEstado";
             this.txtEstado.Size = new System.Drawing.Size(37, 20);
             this.txtEstado.TabIndex = 7;
@@ -181,7 +181,7 @@
             // txtCidade
             // 
             this.txtCidade.Location = new System.Drawing.Point(252, 308);
-            this.txtCidade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCidade.Margin = new System.Windows.Forms.Padding(2);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(175, 20);
             this.txtCidade.TabIndex = 8;
@@ -199,7 +199,7 @@
             // txtBairro
             // 
             this.txtBairro.Location = new System.Drawing.Point(431, 308);
-            this.txtBairro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtBairro.Margin = new System.Windows.Forms.Padding(2);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(284, 20);
             this.txtBairro.TabIndex = 9;
@@ -217,7 +217,7 @@
             // txtRua
             // 
             this.txtRua.Location = new System.Drawing.Point(47, 350);
-            this.txtRua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtRua.Margin = new System.Windows.Forms.Padding(2);
             this.txtRua.Name = "txtRua";
             this.txtRua.Size = new System.Drawing.Size(559, 20);
             this.txtRua.TabIndex = 10;
@@ -235,7 +235,7 @@
             // txtNumero
             // 
             this.txtNumero.Location = new System.Drawing.Point(610, 350);
-            this.txtNumero.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtNumero.Margin = new System.Windows.Forms.Padding(2);
             this.txtNumero.MaxLength = 5;
             this.txtNumero.Name = "txtNumero";
             this.txtNumero.Size = new System.Drawing.Size(104, 20);
@@ -254,7 +254,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(48, 393);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(667, 20);
             this.txtEmail.TabIndex = 12;
@@ -282,7 +282,7 @@
             // txtTelefone
             // 
             this.txtTelefone.Location = new System.Drawing.Point(381, 437);
-            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTelefone.Margin = new System.Windows.Forms.Padding(2);
             this.txtTelefone.MaxLength = 14;
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(334, 20);
@@ -301,12 +301,12 @@
             // 
             // btnLocalizar
             // 
-            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLocalizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLocalizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLocalizar.Image = global::Autopecas.Properties.Resources.Localizar;
             this.btnLocalizar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLocalizar.Location = new System.Drawing.Point(160, 480);
-            this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLocalizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLocalizar.Name = "btnLocalizar";
             this.btnLocalizar.Size = new System.Drawing.Size(106, 44);
             this.btnLocalizar.TabIndex = 16;
@@ -317,11 +317,11 @@
             // 
             // btnAlterar
             // 
-            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlterar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAlterar.Image = global::Autopecas.Properties.Resources.Alterar;
             this.btnAlterar.Location = new System.Drawing.Point(272, 480);
-            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAlterar.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlterar.Name = "btnAlterar";
             this.btnAlterar.Size = new System.Drawing.Size(106, 44);
             this.btnAlterar.TabIndex = 17;
@@ -332,11 +332,11 @@
             // 
             // btnExcluir
             // 
-            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnExcluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcluir.Image = global::Autopecas.Properties.Resources.Excluir;
             this.btnExcluir.Location = new System.Drawing.Point(498, 480);
-            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnExcluir.Margin = new System.Windows.Forms.Padding(2);
             this.btnExcluir.Name = "btnExcluir";
             this.btnExcluir.Size = new System.Drawing.Size(107, 44);
             this.btnExcluir.TabIndex = 19;
@@ -347,11 +347,11 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Autopecas.Properties.Resources.Salvar;
             this.btnSalvar.Location = new System.Drawing.Point(385, 480);
-            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(107, 44);
             this.btnSalvar.TabIndex = 18;
@@ -362,12 +362,12 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Autopecas.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCancelar.Location = new System.Drawing.Point(610, 480);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(106, 44);
             this.btnCancelar.TabIndex = 20;
@@ -378,11 +378,11 @@
             // 
             // btnInserir
             // 
-            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnInserir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnInserir.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInserir.Image = global::Autopecas.Properties.Resources.Novo;
             this.btnInserir.Location = new System.Drawing.Point(48, 480);
-            this.btnInserir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnInserir.Margin = new System.Windows.Forms.Padding(2);
             this.btnInserir.Name = "btnInserir";
             this.btnInserir.Size = new System.Drawing.Size(106, 44);
             this.btnInserir.TabIndex = 15;
@@ -404,7 +404,7 @@
             // txtCelular
             // 
             this.txtCelular.Location = new System.Drawing.Point(48, 437);
-            this.txtCelular.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtCelular.Margin = new System.Windows.Forms.Padding(2);
             this.txtCelular.MaxLength = 14;
             this.txtCelular.Name = "txtCelular";
             this.txtCelular.Size = new System.Drawing.Size(329, 20);

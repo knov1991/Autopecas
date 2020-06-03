@@ -84,9 +84,9 @@
             this.painelPrincipal.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("painelPrincipal.BackgroundImage")));
             this.painelPrincipal.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.painelPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.painelPrincipal.Location = new System.Drawing.Point(0, 26);
+            this.painelPrincipal.Location = new System.Drawing.Point(0, 32);
             this.painelPrincipal.Name = "painelPrincipal";
-            this.painelPrincipal.Size = new System.Drawing.Size(774, 742);
+            this.painelPrincipal.Size = new System.Drawing.Size(774, 736);
             this.painelPrincipal.TabIndex = 1;
             // 
             // barraTitulo
@@ -95,16 +95,16 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(774, 26);
+            this.barraTitulo.Size = new System.Drawing.Size(774, 32);
             this.barraTitulo.TabIndex = 0;
             this.barraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.barraTitulo_MouseDown);
             // 
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(744, 4);
+            this.btnFechar.Location = new System.Drawing.Point(740, 5);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(18, 18);
+            this.btnFechar.Size = new System.Drawing.Size(22, 21);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
