@@ -153,9 +153,9 @@
             this.txt_CadastroFornecedor.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_CadastroFornecedor.Location = new System.Drawing.Point(41, 55);
             this.txt_CadastroFornecedor.Name = "txt_CadastroFornecedor";
-            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(158, 39);
+            this.txt_CadastroFornecedor.Size = new System.Drawing.Size(315, 39);
             this.txt_CadastroFornecedor.TabIndex = 74;
-            this.txt_CadastroFornecedor.Text = "Cadastro";
+            this.txt_CadastroFornecedor.Text = "Estoque - Cadastro";
             // 
             // btnSalvar
             // 
@@ -224,7 +224,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(774, 718);
+            this.ClientSize = new System.Drawing.Size(774, 404);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
@@ -243,6 +243,7 @@
             this.Controls.Add(this.PRODUTO);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CadastroEstoque";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
             this.ResumeLayout(false);
             this.PerformLayout();

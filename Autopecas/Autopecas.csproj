@@ -310,7 +310,7 @@
     <None Include="Resources\Cadastro.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Minimizar.png" />
+    <None Include="Resources\Editar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,7 +13,6 @@ namespace Autopecas
 {
     public partial class Estoque : Form
     {
-        CadastroEstoque instanciaEstoque;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
@@ -160,12 +159,31 @@ namespace Autopecas
 
         private void btnCadastro_Click(object sender, EventArgs e)
         {
-           //Botão para CadastroEstoque
+            CadastroEstoque cadastro = new CadastroEstoque();
+            cadastro.Show();
         }
 
         private void btnGerenciar_Click(object sender, EventArgs e)
         {
-            //Botão para GerenciarEstoque
+            if (dataGridView_buscaProdutos.SelectedRows.Count != 0)
+            {
+                GerenciarEstoque Gerenciar = new GerenciarEstoque(this);
+                Gerenciar.Show();
+
+                DataGridViewRow dr = dataGridView_buscaProdutos.SelectedRows[0];
+                //Envia os Dados para FornecedorCadastrar
+                Gerenciar.idProduto = Convert.ToInt32(dr.Cells[0].Value.ToString());
+                Gerenciar.txtProduto.Text = dr.Cells[1].Value.ToString();
+                Gerenciar.txtvalorProduto.Text = dr.Cells[2].Value.ToString();
+                Gerenciar.txtDataEntrada.Text = dr.Cells[3].Value.ToString();
+                Gerenciar.txtCategoria.Text = dr.Cells[4].Value.ToString();
+                Gerenciar.txtQuantidade.Text = dr.Cells[5].Value.ToString();
+                Gerenciar.txtFornecedor.Text = dr.Cells[6].Value.ToString();
+            }   
+            else
+            {
+                MessageBox.Show("Selecione um produto para gerenciar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
