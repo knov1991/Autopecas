@@ -135,5 +135,10 @@ namespace Autopecas
                 MessageBox.Show("Selecione um cliente para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
