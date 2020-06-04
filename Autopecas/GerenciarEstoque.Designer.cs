@@ -50,8 +50,6 @@
             this.labelMotivo = new System.Windows.Forms.Label();
             this.comboBoxTIpo = new System.Windows.Forms.ComboBox();
             this.labelTipo = new System.Windows.Forms.Label();
-            this.comboBoxStatus = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo.SuspendLayout();
@@ -86,7 +84,7 @@
             // 
             this.btn_listar.Enabled = false;
             this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listar.Location = new System.Drawing.Point(418, 237);
+            this.btn_listar.Location = new System.Drawing.Point(588, 237);
             this.btn_listar.Name = "btn_listar";
             this.btn_listar.Size = new System.Drawing.Size(133, 23);
             this.btn_listar.TabIndex = 90;
@@ -106,6 +104,7 @@
             this.btnSalvar.TabIndex = 87;
             this.btnSalvar.Text = "  Salvar";
             this.btnSalvar.UseVisualStyleBackColor = true;
+            this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
             // txtDataEntrada
             // 
@@ -134,7 +133,7 @@
             this.txtFornecedor.Location = new System.Drawing.Point(51, 237);
             this.txtFornecedor.Multiline = true;
             this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(362, 23);
+            this.txtFornecedor.Size = new System.Drawing.Size(531, 23);
             this.txtFornecedor.TabIndex = 86;
             // 
             // label4
@@ -304,28 +303,6 @@
             this.labelTipo.TabIndex = 97;
             this.labelTipo.Text = "Tipo";
             // 
-            // comboBoxStatus
-            // 
-            this.comboBoxStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBoxStatus.Enabled = false;
-            this.comboBoxStatus.FormattingEnabled = true;
-            this.comboBoxStatus.Items.AddRange(new object[] {
-            "Ativo",
-            "Inativo"});
-            this.comboBoxStatus.Location = new System.Drawing.Point(557, 238);
-            this.comboBoxStatus.Name = "comboBoxStatus";
-            this.comboBoxStatus.Size = new System.Drawing.Size(164, 21);
-            this.comboBoxStatus.TabIndex = 98;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(554, 222);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(37, 13);
-            this.label1.TabIndex = 99;
-            this.label1.Text = "Status";
-            // 
             // barraTitulo
             // 
             this.barraTitulo.BackColor = System.Drawing.Color.White;
@@ -354,8 +331,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 432);
             this.Controls.Add(this.barraTitulo);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.comboBoxStatus);
             this.Controls.Add(this.labelTipo);
             this.Controls.Add(this.comboBoxTIpo);
             this.Controls.Add(this.labelMotivo);
@@ -413,8 +388,6 @@
         public System.Windows.Forms.Label labelMotivo;
         public System.Windows.Forms.ComboBox comboBoxTIpo;
         public System.Windows.Forms.Label labelTipo;
-        public System.Windows.Forms.ComboBox comboBoxStatus;
-        public System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
     }

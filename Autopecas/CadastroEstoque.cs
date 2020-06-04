@@ -26,6 +26,16 @@ namespace Autopecas
             InitializeComponent();
         }
 
+        private void limpaCampos()
+        {
+            txtProduto.Clear();
+            txtCategoria.Clear();
+            txtvalorProduto.Clear();
+            txtDataEntrada.Clear();
+            txtFornecedor.Clear();
+            txtQuantidade.Clear();
+        }
+
         private void btnSalvar_Click(object sender, EventArgs e)
         {
             try
@@ -57,12 +67,22 @@ namespace Autopecas
 
             }
         }
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpaCampos();
+        }
 
         private void btn_listar_Click(object sender, EventArgs e)
         {
             ListaFornecedor Fornecedor = new ListaFornecedor(this);
             Fornecedor.Show();
         }
+
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
     }
     
 }

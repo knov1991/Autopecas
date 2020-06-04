@@ -44,6 +44,12 @@
             this.txtvalorProduto = new System.Windows.Forms.TextBox();
             this.btn_listar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.PictureBox();
+            this.barraTitulo = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
+            this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
             // 
             // txtDataEntrada
@@ -219,12 +225,48 @@
             this.btnCancelar.Text = "  Cancelar";
             this.btnCancelar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Image = global::Autopecas.Properties.Resources.Fechar;
+            this.btnSair.Location = new System.Drawing.Point(743, 4);
+            this.btnSair.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(23, 23);
+            this.btnSair.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnSair.TabIndex = 3;
+            this.btnSair.TabStop = false;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
+            // 
+            // barraTitulo
+            // 
+            this.barraTitulo.BackColor = System.Drawing.Color.White;
+            this.barraTitulo.Controls.Add(this.btnSair);
+            this.barraTitulo.Controls.Add(this.btnFechar);
+            this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.barraTitulo.Name = "barraTitulo";
+            this.barraTitulo.Size = new System.Drawing.Size(774, 31);
+            this.barraTitulo.TabIndex = 119;
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
+            this.btnFechar.Location = new System.Drawing.Point(805, 7);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(23, 23);
+            this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnFechar.TabIndex = 2;
+            this.btnFechar.TabStop = false;
             // 
             // CadastroEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 404);
+            this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
@@ -245,6 +287,9 @@
             this.Name = "CadastroEstoque";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estoque";
+            ((System.ComponentModel.ISupportInitialize)(this.btnSair)).EndInit();
+            this.barraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -267,5 +312,8 @@
         private System.Windows.Forms.Button btn_listar;
         public System.Windows.Forms.TextBox txtFornecedor;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.PictureBox btnSair;
+        private System.Windows.Forms.Panel barraTitulo;
+        private System.Windows.Forms.PictureBox btnFechar;
     }
 }

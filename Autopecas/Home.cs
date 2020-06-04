@@ -112,5 +112,30 @@ namespace Autopecas
         {
             MostrarMenu(painelCadastros);
         }
+
+        //PERMITE MOVER FORMULÁRIO
+        private void Home_MouseMove(object sender, MouseEventArgs e)
+        {
+            if ((e.X <= 2 && e.Y <= 2) || (e.X + 2 >= this.Width && e.Y + 2 >= this.Height))
+            {
+                this.Cursor = Cursors.SizeNWSE;
+            }
+            else if ((e.X + 2 >= this.Width && e.Y <= 2) || (e.X <= 2 && e.Y + 2 >= this.Height))
+            {
+                this.Cursor = Cursors.SizeNESW;
+            }
+            else if (e.X <= 2 || e.X + 2 >= this.Width)
+            {
+                this.Cursor = Cursors.SizeWE;
+            }
+            else if (e.Y <= 2 || e.Y + 2 >= this.Height)
+            {
+                this.Cursor = Cursors.SizeNS;
+            }
+            else
+            {
+                this.Cursor = Cursors.Default;
+            }
+        }
     }
 }
