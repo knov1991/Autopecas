@@ -41,6 +41,7 @@
             this.rbNome = new System.Windows.Forms.RadioButton();
             this.gbListar = new System.Windows.Forms.GroupBox();
             this.btnEditar = new System.Windows.Forms.Button();
+            this.btnVoltar = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
@@ -198,11 +199,24 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // btnVoltar
+            // 
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.Location = new System.Drawing.Point(732, 581);
+            this.btnVoltar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(159, 28);
+            this.btnVoltar.TabIndex = 40;
+            this.btnVoltar.Text = "Voltar";
+            this.btnVoltar.UseVisualStyleBackColor = true;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
+            // 
             // ClientesListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1117, 630);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.gbListar);
             this.Controls.Add(this.gbFiltro);
@@ -239,5 +253,6 @@
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.GroupBox gbListar;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnVoltar;
     }
 }
