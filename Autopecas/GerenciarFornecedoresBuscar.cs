@@ -139,5 +139,50 @@ namespace Autopecas
                 MessageBox.Show("Selecione um fornecedor para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void dataGridView_buscaFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void radioButton_filtroDoc_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButton_filtroNome_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_filtro_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox_filtroBusca_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label_listaFornecedores_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox_listaProdutos_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void barraTitulo_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btn_voltar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

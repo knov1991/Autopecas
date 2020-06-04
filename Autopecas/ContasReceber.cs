@@ -119,30 +119,8 @@ namespace Autopecas
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            try
-            {
-                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM CONTASRECEBER";
-                da = new MySqlDataAdapter(strSQL, conexao);
-
-                DataTable dt = new DataTable();
-
-                da.Fill(dt);
-
-                dataGrid.DataSource = dt;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-                comando = null;
-
-
-            }
+            ContasReceberListar Receber = new ContasReceberListar(this);
+            Receber.Show();
         }
 
         private void txtConsultar_Click(object sender, EventArgs e)

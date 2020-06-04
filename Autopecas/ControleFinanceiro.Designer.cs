@@ -37,7 +37,7 @@
             // 
             this.txt_NovaVenda.AutoSize = true;
             this.txt_NovaVenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_NovaVenda.Location = new System.Drawing.Point(280, 53);
+            this.txt_NovaVenda.Location = new System.Drawing.Point(54, 49);
             this.txt_NovaVenda.Name = "txt_NovaVenda";
             this.txt_NovaVenda.Size = new System.Drawing.Size(179, 39);
             this.txt_NovaVenda.TabIndex = 2;
@@ -46,9 +46,10 @@
             // btnContasReceber
             // 
             this.btnContasReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContasReceber.Location = new System.Drawing.Point(61, 190);
+            this.btnContasReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContasReceber.Location = new System.Drawing.Point(61, 169);
             this.btnContasReceber.Name = "btnContasReceber";
-            this.btnContasReceber.Size = new System.Drawing.Size(234, 59);
+            this.btnContasReceber.Size = new System.Drawing.Size(234, 45);
             this.btnContasReceber.TabIndex = 11;
             this.btnContasReceber.Text = "Contas Receber";
             this.btnContasReceber.UseVisualStyleBackColor = true;
@@ -57,11 +58,12 @@
             // btnContasPagar
             // 
             this.btnContasPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContasPagar.Location = new System.Drawing.Point(455, 190);
+            this.btnContasPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContasPagar.Location = new System.Drawing.Point(455, 169);
             this.btnContasPagar.Name = "btnContasPagar";
-            this.btnContasPagar.Size = new System.Drawing.Size(234, 59);
+            this.btnContasPagar.Size = new System.Drawing.Size(234, 45);
             this.btnContasPagar.TabIndex = 12;
-            this.btnContasPagar.Text = "Constas Pagar";
+            this.btnContasPagar.Text = "Contas Pagar";
             this.btnContasPagar.UseVisualStyleBackColor = true;
             this.btnContasPagar.Click += new System.EventHandler(this.btnContasPagar_Click);
             // 
