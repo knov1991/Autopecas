@@ -34,6 +34,7 @@ namespace Autopecas
 
         }
 
+        //ADICIONA PRODUTOS
         private void btn_addProduto_Click(object sender, EventArgs e)
         {
             dataGridView_Carrinho.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
@@ -41,6 +42,7 @@ namespace Autopecas
             calculaSubTotal();
         }
 
+        //REMOVE PRODUTOS
         private void btn_remove_Click(object sender, EventArgs e)
         {
             // verificar se existe alguma linha selecionada
@@ -79,7 +81,6 @@ namespace Autopecas
         {
             if (textBox_CodigoProduto.Text.Length == 0 || textBox_NomeProduto.Text.Length == 0 || textBox_Quantidade.Text.Length == 0 || textBox_ValorProduto.Text.Length == 0)
             {
-
                 MessageBox.Show("Preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
