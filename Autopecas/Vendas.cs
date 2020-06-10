@@ -29,7 +29,7 @@ namespace Autopecas
 
         private void btn_listar_Click(object sender, EventArgs e)
         {
-            ListaProdutos ListarProdutos = new ListaProdutos(this);
+            VendasBuscar ListarProdutos = new VendasBuscar(this);
             ListarProdutos.Show();
 
         }

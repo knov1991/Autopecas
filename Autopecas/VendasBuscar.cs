@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class ListaProdutos : Form
+    public partial class VendasBuscar : Form
     {
         Vendas instanciaVendas;
         MySqlConnection conexao;
@@ -20,7 +20,7 @@ namespace Autopecas
         MySqlDataReader dr;
         string strSQL;
 
-        public ListaProdutos(Vendas vendas)
+        public VendasBuscar(Vendas vendas)
         {
             InitializeComponent();
             dataGridView_buscaProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

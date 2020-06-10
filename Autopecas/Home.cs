@@ -66,7 +66,7 @@ namespace Autopecas
 
         private void btnFornecedor_Click(object sender, EventArgs e)
         {
-            AbrirModal(new FornecedorCadastrar());
+            AbrirModal(new CadastroFornecedor());
         }
         private void btnVendas_Click(object sender, EventArgs e)
         {
@@ -78,7 +78,7 @@ namespace Autopecas
         }
         private void btnControleFinanceiro_Click(object sender, EventArgs e)
         {
-            AbrirModal(new ControleFinanceiro());
+            AbrirModal(new Financeiro());
         }
 
         // FECHAR SOFTWARE
@@ -93,7 +93,7 @@ namespace Autopecas
 
         private void btnCliente_Click(object sender, EventArgs e)
         {
-            AbrirModal(new Clientes());
+            AbrirModal(new CadastroClientes());
         }
 
         private void btnCompras_Click(object sender, EventArgs e)

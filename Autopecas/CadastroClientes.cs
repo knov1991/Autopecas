@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class Clientes : Form
+    public partial class CadastroClientes : Form
     {
         public string operacao;
         MySqlConnection conexao;
@@ -19,7 +19,7 @@ namespace Autopecas
         string strSQL;
         public int idCliente;
         bool cnpjCheck = false;
-        public Clientes()
+        public CadastroClientes()
         {
             InitializeComponent();
         }
@@ -113,7 +113,7 @@ namespace Autopecas
         //Método do Botão Localizar Para o Formulário de Listar Clientes
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            ClientesListar c = new ClientesListar(this);
+            CadastroClientesBuscar c = new CadastroClientesBuscar(this);
             c.ShowDialog();
         }
 

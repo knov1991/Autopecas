@@ -63,17 +63,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clientes.cs">
+    <Compile Include="CadastroClientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Clientes.Designer.cs">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <Compile Include="CadastroClientes.Designer.cs">
+      <DependentUpon>CadastroClientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="ClientesListar.cs">
+    <Compile Include="CadastroClientesBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ClientesListar.Designer.cs">
-      <DependentUpon>ClientesListar.cs</DependentUpon>
+    <Compile Include="CadastroClientesBuscar.Designer.cs">
+      <DependentUpon>CadastroClientesBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Compras.cs">
       <SubType>Form</SubType>
@@ -117,11 +117,11 @@
     <Compile Include="ContasReceberListar.Designer.cs">
       <DependentUpon>ContasReceberListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="ControleFinanceiro.cs">
+    <Compile Include="Financeiro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ControleFinanceiro.Designer.cs">
-      <DependentUpon>ControleFinanceiro.cs</DependentUpon>
+    <Compile Include="Financeiro.Designer.cs">
+      <DependentUpon>Financeiro.cs</DependentUpon>
     </Compile>
     <Compile Include="ControlesGerais.cs" />
     <Compile Include="DAO\Conectar.cs" />
@@ -149,23 +149,23 @@
     <Compile Include="GerenciarEstoqueRelatorio.Designer.cs">
       <DependentUpon>GerenciarEstoqueRelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaFornecedor.cs">
+    <Compile Include="CadastroFornecedorListar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaFornecedor.Designer.cs">
-      <DependentUpon>ListaFornecedor.cs</DependentUpon>
+    <Compile Include="CadastroFornecedorListar.Designer.cs">
+      <DependentUpon>CadastroFornecedorListar.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListaProdutos.cs">
+    <Compile Include="VendasBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListaProdutos.Designer.cs">
-      <DependentUpon>ListaProdutos.cs</DependentUpon>
+    <Compile Include="VendasBuscar.Designer.cs">
+      <DependentUpon>VendasBuscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="FornecedorCadastrar.cs">
+    <Compile Include="CadastroFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FornecedorCadastrar.Designer.cs">
-      <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
+    <Compile Include="CadastroFornecedor.Designer.cs">
+      <DependentUpon>CadastroFornecedor.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -173,11 +173,11 @@
     <Compile Include="Home.Designer.cs">
       <DependentUpon>Home.cs</DependentUpon>
     </Compile>
-    <Compile Include="GerenciarFornecedoresBuscar.cs">
+    <Compile Include="CadastroFornecedoresBuscar.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="GerenciarFornecedoresBuscar.Designer.cs">
-      <DependentUpon>GerenciarFornecedoresBuscar.cs</DependentUpon>
+    <Compile Include="CadastroFornecedoresBuscar.Designer.cs">
+      <DependentUpon>CadastroFornecedoresBuscar.cs</DependentUpon>
     </Compile>
     <Compile Include="Pagamento.cs">
       <SubType>Form</SubType>
@@ -198,11 +198,11 @@
     <Compile Include="Vendas.Designer.cs">
       <DependentUpon>Vendas.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Clientes.resx">
-      <DependentUpon>Clientes.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroClientes.resx">
+      <DependentUpon>CadastroClientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ClientesListar.resx">
-      <DependentUpon>ClientesListar.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroClientesBuscar.resx">
+      <DependentUpon>CadastroClientesBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Compras.resx">
       <DependentUpon>Compras.cs</DependentUpon>
@@ -225,14 +225,14 @@
     <EmbeddedResource Include="ContasReceberListar.resx">
       <DependentUpon>ContasReceberListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ControleFinanceiro.resx">
-      <DependentUpon>ControleFinanceiro.cs</DependentUpon>
+    <EmbeddedResource Include="Financeiro.resx">
+      <DependentUpon>Financeiro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroEstoque.resx">
       <DependentUpon>CadastroEstoque.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FornecedorCadastrar.resx">
-      <DependentUpon>FornecedorCadastrar.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroFornecedor.resx">
+      <DependentUpon>CadastroFornecedor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Estoque.resx">
       <DependentUpon>Estoque.cs</DependentUpon>
@@ -246,14 +246,14 @@
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaFornecedor.resx">
-      <DependentUpon>ListaFornecedor.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroFornecedorListar.resx">
+      <DependentUpon>CadastroFornecedorListar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListaProdutos.resx">
-      <DependentUpon>ListaProdutos.cs</DependentUpon>
+    <EmbeddedResource Include="VendasBuscar.resx">
+      <DependentUpon>VendasBuscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GerenciarFornecedoresBuscar.resx">
-      <DependentUpon>GerenciarFornecedoresBuscar.cs</DependentUpon>
+    <EmbeddedResource Include="CadastroFornecedoresBuscar.resx">
+      <DependentUpon>CadastroFornecedoresBuscar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pagamento.resx">
       <DependentUpon>Pagamento.cs</DependentUpon>

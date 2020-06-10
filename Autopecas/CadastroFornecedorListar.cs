@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class ListaFornecedor : Form
+    public partial class CadastroFornecedorListar : Form
     {
         CadastroEstoque instanciaEstoque;
         MySqlConnection conexao;
@@ -19,7 +19,7 @@ namespace Autopecas
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-        public ListaFornecedor(CadastroEstoque fornecedores)
+        public CadastroFornecedorListar(CadastroEstoque fornecedores)
         {
             InitializeComponent();
             dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

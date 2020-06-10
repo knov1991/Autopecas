@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class ListaFornecedor
+    partial class CadastroFornecedoresBuscar
     {
         /// <summary>
         /// Required designer variable.
@@ -36,10 +36,11 @@
             this.btn_buscar = new System.Windows.Forms.Button();
             this.textBox_filtroBusca = new System.Windows.Forms.TextBox();
             this.dataGridView_buscaFornecedor = new System.Windows.Forms.DataGridView();
-            this.btn_selecionar = new System.Windows.Forms.Button();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
+            this.btn_editar = new System.Windows.Forms.Button();
+            this.btn_voltar = new System.Windows.Forms.Button();
             this.groupBox_filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscaFornecedor)).BeginInit();
             this.groupBox_listaProdutos.SuspendLayout();
@@ -54,8 +55,9 @@
             this.label_listaFornecedores.Location = new System.Drawing.Point(41, 55);
             this.label_listaFornecedores.Name = "label_listaFornecedores";
             this.label_listaFornecedores.Size = new System.Drawing.Size(349, 39);
-            this.label_listaFornecedores.TabIndex = 8;
+            this.label_listaFornecedores.TabIndex = 13;
             this.label_listaFornecedores.Text = "Buscar Fornecedores";
+            this.label_listaFornecedores.Click += new System.EventHandler(this.label_listaFornecedores_Click);
             // 
             // radioButton_filtroDoc
             // 
@@ -66,6 +68,7 @@
             this.radioButton_filtroDoc.TabIndex = 3;
             this.radioButton_filtroDoc.Text = "CNPJ";
             this.radioButton_filtroDoc.UseVisualStyleBackColor = true;
+            this.radioButton_filtroDoc.CheckedChanged += new System.EventHandler(this.radioButton_filtroDoc_CheckedChanged);
             // 
             // radioButton_filtroNome
             // 
@@ -78,6 +81,7 @@
             this.radioButton_filtroNome.TabStop = true;
             this.radioButton_filtroNome.Text = "Nome";
             this.radioButton_filtroNome.UseVisualStyleBackColor = true;
+            this.radioButton_filtroNome.CheckedChanged += new System.EventHandler(this.radioButton_filtroNome_CheckedChanged);
             // 
             // groupBox_filtro
             // 
@@ -88,10 +92,11 @@
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
             this.groupBox_filtro.Location = new System.Drawing.Point(47, 112);
             this.groupBox_filtro.Name = "groupBox_filtro";
-            this.groupBox_filtro.Size = new System.Drawing.Size(745, 90);
-            this.groupBox_filtro.TabIndex = 9;
+            this.groupBox_filtro.Size = new System.Drawing.Size(667, 90);
+            this.groupBox_filtro.TabIndex = 14;
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
+            this.groupBox_filtro.Enter += new System.EventHandler(this.groupBox_filtro_Enter);
             // 
             // btn_listarTodos
             // 
@@ -122,6 +127,7 @@
             this.textBox_filtroBusca.Name = "textBox_filtroBusca";
             this.textBox_filtroBusca.Size = new System.Drawing.Size(273, 23);
             this.textBox_filtroBusca.TabIndex = 4;
+            this.textBox_filtroBusca.TextChanged += new System.EventHandler(this.textBox_filtroBusca_TextChanged);
             // 
             // dataGridView_buscaFornecedor
             // 
@@ -129,44 +135,35 @@
             this.dataGridView_buscaFornecedor.AllowUserToDeleteRows = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeColumns = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeRows = false;
-            this.dataGridView_buscaFornecedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_buscaFornecedor.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_buscaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_buscaFornecedor.Location = new System.Drawing.Point(17, 28);
             this.dataGridView_buscaFornecedor.Name = "dataGridView_buscaFornecedor";
             this.dataGridView_buscaFornecedor.ReadOnly = true;
             this.dataGridView_buscaFornecedor.RowHeadersVisible = false;
-            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(710, 200);
+            this.dataGridView_buscaFornecedor.RowHeadersWidth = 51;
+            this.dataGridView_buscaFornecedor.Size = new System.Drawing.Size(631, 200);
             this.dataGridView_buscaFornecedor.TabIndex = 5;
-            // 
-            // btn_selecionar
-            // 
-            this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_selecionar.Location = new System.Drawing.Point(660, 472);
-            this.btn_selecionar.Name = "btn_selecionar";
-            this.btn_selecionar.Size = new System.Drawing.Size(138, 23);
-            this.btn_selecionar.TabIndex = 10;
-            this.btn_selecionar.Text = "Selecionar";
-            this.btn_selecionar.UseVisualStyleBackColor = true;
-            this.btn_selecionar.Click += new System.EventHandler(this.btn_selecionar_Click);
+            this.dataGridView_buscaFornecedor.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_buscaFornecedor_CellContentClick);
             // 
             // groupBox_listaProdutos
             // 
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaFornecedor);
             this.groupBox_listaProdutos.Location = new System.Drawing.Point(47, 208);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
-            this.groupBox_listaProdutos.Size = new System.Drawing.Size(746, 248);
-            this.groupBox_listaProdutos.TabIndex = 11;
+            this.groupBox_listaProdutos.Size = new System.Drawing.Size(667, 248);
+            this.groupBox_listaProdutos.TabIndex = 16;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Lista de Fornecedores";
+            this.groupBox_listaProdutos.Enter += new System.EventHandler(this.groupBox_listaProdutos_Enter);
             // 
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(805, 7);
+            this.btnFechar.Location = new System.Drawing.Point(722, 6);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
-            this.btnFechar.Size = new System.Drawing.Size(23, 23);
+            this.btnFechar.Size = new System.Drawing.Size(19, 19);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
@@ -179,24 +176,47 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(838, 37);
-            this.barraTitulo.TabIndex = 12;
+            this.barraTitulo.Size = new System.Drawing.Size(754, 32);
+            this.barraTitulo.TabIndex = 17;
+            this.barraTitulo.Paint += new System.Windows.Forms.PaintEventHandler(this.barraTitulo_Paint);
             // 
-            // ListaFornecedor
+            // btn_editar
+            // 
+            this.btn_editar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_editar.Location = new System.Drawing.Point(595, 472);
+            this.btn_editar.Name = "btn_editar";
+            this.btn_editar.Size = new System.Drawing.Size(119, 23);
+            this.btn_editar.TabIndex = 18;
+            this.btn_editar.Text = "Editar";
+            this.btn_editar.UseVisualStyleBackColor = true;
+            this.btn_editar.Click += new System.EventHandler(this.btn_editar_Click);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_voltar.Location = new System.Drawing.Point(470, 472);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(119, 23);
+            this.btn_voltar.TabIndex = 19;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            // 
+            // GerenciarFornecedoresBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(838, 512);
-            this.ControlBox = false;
+            this.ClientSize = new System.Drawing.Size(754, 512);
+            this.Controls.Add(this.btn_voltar);
+            this.Controls.Add(this.btn_editar);
             this.Controls.Add(this.label_listaFornecedores);
             this.Controls.Add(this.groupBox_filtro);
-            this.Controls.Add(this.btn_selecionar);
             this.Controls.Add(this.groupBox_listaProdutos);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListaFornecedor";
+            this.Name = "GerenciarFornecedoresBuscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ListaFornecedor";
+            this.Text = "LocalizarFornecedor";
             this.groupBox_filtro.ResumeLayout(false);
             this.groupBox_filtro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscaFornecedor)).EndInit();
@@ -218,9 +238,10 @@
         private System.Windows.Forms.Button btn_buscar;
         private System.Windows.Forms.TextBox textBox_filtroBusca;
         private System.Windows.Forms.DataGridView dataGridView_buscaFornecedor;
-        private System.Windows.Forms.Button btn_selecionar;
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
+        private System.Windows.Forms.Button btn_editar;
+        private System.Windows.Forms.Button btn_voltar;
     }
 }

@@ -11,7 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class FornecedorCadastrar : Form
+    public partial class CadastroFornecedor : Form
     {
         public string operacao;
         MySqlConnection conexao;
@@ -19,7 +19,7 @@ namespace Autopecas
         string strSQL;
         public int idFornecedor;
         bool cnpjCheck;
-        public FornecedorCadastrar()
+        public CadastroFornecedor()
         {
             InitializeComponent();
         }
@@ -111,7 +111,7 @@ namespace Autopecas
         //Método do Botão Localizar Para o Formulário de Listar Fornecedores
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
-            GerenciarFornecedoresBuscar Fornecedor = new GerenciarFornecedoresBuscar(this);
+            CadastroFornecedoresBuscar Fornecedor = new CadastroFornecedoresBuscar(this);
             Fornecedor.Show();
         }
 

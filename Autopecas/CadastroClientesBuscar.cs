@@ -11,14 +11,14 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class ClientesListar : Form
+    public partial class CadastroClientesBuscar : Form
     {
-        Clientes instanciaClientes;
+        CadastroClientes instanciaClientes;
         MySqlConnection conexao;
         MySqlDataAdapter da;
         string strSQL;
 
-        public ClientesListar(Clientes cliente)
+        public CadastroClientesBuscar(CadastroClientes cliente)
         {
             InitializeComponent();
             dgvDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

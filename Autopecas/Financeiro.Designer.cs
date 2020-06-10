@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class ControleFinanceiro
+    partial class Financeiro
     {
         /// <summary>
         /// Required designer variable.

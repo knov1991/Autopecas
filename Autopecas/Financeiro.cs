@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Autopecas
 {
-    public partial class ControleFinanceiro : Form
+    public partial class Financeiro : Form
     {
-        public ControleFinanceiro()
+        public Financeiro()
         {
             InitializeComponent();
         }

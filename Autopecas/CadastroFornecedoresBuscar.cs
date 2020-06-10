@@ -11,15 +11,15 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class GerenciarFornecedoresBuscar : Form
+    public partial class CadastroFornecedoresBuscar : Form
     {
-        FornecedorCadastrar instanciaFornecedores;
+        CadastroFornecedor instanciaFornecedores;
         MySqlConnection conexao;
         MySqlCommand comando;
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-        public GerenciarFornecedoresBuscar(FornecedorCadastrar fornecedor)
+        public CadastroFornecedoresBuscar(CadastroFornecedor fornecedor)
         {
             InitializeComponent();
             dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

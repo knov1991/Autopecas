@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class Clientes
+    partial class CadastroClientes
     {
         /// <summary>
         /// Required designer variable.

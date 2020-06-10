@@ -1,6 +1,6 @@
 ﻿namespace Autopecas
 {
-    partial class FornecedorCadastrar
+    partial class CadastroFornecedor
     {
         /// <summary>
         /// Required designer variable.

@@ -37,7 +37,7 @@ namespace Autopecas
 
         private void btn_listar_Click(object sender, EventArgs e)
         {
-            ListaFornecedor Fornecedor = new ListaFornecedor(this);
+            CadastroFornecedorListar Fornecedor = new CadastroFornecedorListar(this);
             Fornecedor.Show();
         }
 
