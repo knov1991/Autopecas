@@ -192,6 +192,7 @@
             // 
             // txtFornecedor
             // 
+            this.txtFornecedor.Enabled = false;
             this.txtFornecedor.Location = new System.Drawing.Point(44, 145);
             this.txtFornecedor.Multiline = true;
             this.txtFornecedor.Name = "txtFornecedor";

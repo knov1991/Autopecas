@@ -30,16 +30,16 @@
         {
             this.label_listaFornecedores = new System.Windows.Forms.Label();
             this.btn_listarTodos = new System.Windows.Forms.Button();
-            this.dataGridView_contasReceber = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnEditar = new System.Windows.Forms.Button();
             this.btnVoltar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasReceber)).BeginInit();
+            this.dataGridView_contasReceber = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasReceber)).BeginInit();
             this.SuspendLayout();
             // 
             // label_listaFornecedores
@@ -62,22 +62,6 @@
             this.btn_listarTodos.Text = "Listar todos";
             this.btn_listarTodos.UseVisualStyleBackColor = true;
             this.btn_listarTodos.Click += new System.EventHandler(this.btn_listarTodos_Click);
-            // 
-            // dataGridView_contasReceber
-            // 
-            this.dataGridView_contasReceber.AllowUserToAddRows = false;
-            this.dataGridView_contasReceber.AllowUserToDeleteRows = false;
-            this.dataGridView_contasReceber.AllowUserToResizeColumns = false;
-            this.dataGridView_contasReceber.AllowUserToResizeRows = false;
-            this.dataGridView_contasReceber.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_contasReceber.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_contasReceber.Location = new System.Drawing.Point(17, 23);
-            this.dataGridView_contasReceber.Name = "dataGridView_contasReceber";
-            this.dataGridView_contasReceber.ReadOnly = true;
-            this.dataGridView_contasReceber.RowHeadersVisible = false;
-            this.dataGridView_contasReceber.RowHeadersWidth = 51;
-            this.dataGridView_contasReceber.Size = new System.Drawing.Size(633, 196);
-            this.dataGridView_contasReceber.TabIndex = 5;
             // 
             // groupBox_listaProdutos
             // 
@@ -134,6 +118,22 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // dataGridView_contasReceber
+            // 
+            this.dataGridView_contasReceber.AllowUserToAddRows = false;
+            this.dataGridView_contasReceber.AllowUserToDeleteRows = false;
+            this.dataGridView_contasReceber.AllowUserToResizeColumns = false;
+            this.dataGridView_contasReceber.AllowUserToResizeRows = false;
+            this.dataGridView_contasReceber.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_contasReceber.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_contasReceber.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_contasReceber.Location = new System.Drawing.Point(20, 29);
+            this.dataGridView_contasReceber.Name = "dataGridView_contasReceber";
+            this.dataGridView_contasReceber.ReadOnly = true;
+            this.dataGridView_contasReceber.RowHeadersVisible = false;
+            this.dataGridView_contasReceber.Size = new System.Drawing.Size(630, 190);
+            this.dataGridView_contasReceber.TabIndex = 19;
+            // 
             // ContasReceberListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,10 +148,10 @@
             this.Name = "ContasReceberListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContasReceberListar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasReceber)).EndInit();
             this.groupBox_listaProdutos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.barraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasReceber)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -161,11 +161,11 @@
 
         private System.Windows.Forms.Label label_listaFornecedores;
         private System.Windows.Forms.Button btn_listarTodos;
-        private System.Windows.Forms.DataGridView dataGridView_contasReceber;
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.DataGridView dataGridView_contasReceber;
     }
 }

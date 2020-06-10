@@ -30,16 +30,16 @@
         {
             this.btn_listarTodos = new System.Windows.Forms.Button();
             this.label_listaFornecedores = new System.Windows.Forms.Label();
-            this.dataGridView_contasPagar = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasPagar)).BeginInit();
+            this.dataGridView_contasPagar = new System.Windows.Forms.DataGridView();
             this.groupBox_listaProdutos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.barraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasPagar)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_listarTodos
@@ -63,27 +63,10 @@
             this.label_listaFornecedores.TabIndex = 25;
             this.label_listaFornecedores.Text = "Buscar Contas à Pagar";
             // 
-            // dataGridView_contasPagar
-            // 
-            this.dataGridView_contasPagar.AllowUserToAddRows = false;
-            this.dataGridView_contasPagar.AllowUserToDeleteRows = false;
-            this.dataGridView_contasPagar.AllowUserToResizeColumns = false;
-            this.dataGridView_contasPagar.AllowUserToResizeRows = false;
-            this.dataGridView_contasPagar.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_contasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_contasPagar.Location = new System.Drawing.Point(22, 31);
-            this.dataGridView_contasPagar.Name = "dataGridView_contasPagar";
-            this.dataGridView_contasPagar.ReadOnly = true;
-            this.dataGridView_contasPagar.RowHeadersVisible = false;
-            this.dataGridView_contasPagar.RowHeadersWidth = 51;
-            this.dataGridView_contasPagar.Size = new System.Drawing.Size(626, 199);
-            this.dataGridView_contasPagar.TabIndex = 5;
-            this.dataGridView_contasPagar.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView_buscaFornecedor_CellContentClick);
-            // 
             // groupBox_listaProdutos
             // 
-            this.groupBox_listaProdutos.Controls.Add(this.btn_listarTodos);
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_contasPagar);
+            this.groupBox_listaProdutos.Controls.Add(this.btn_listarTodos);
             this.groupBox_listaProdutos.Location = new System.Drawing.Point(45, 124);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
             this.groupBox_listaProdutos.Size = new System.Drawing.Size(667, 271);
@@ -95,7 +78,7 @@
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
             this.btnFechar.Location = new System.Drawing.Point(722, 6);
-            this.btnFechar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(19, 19);
             this.btnFechar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -135,6 +118,22 @@
             this.btnEditar.UseVisualStyleBackColor = true;
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
+            // dataGridView_contasPagar
+            // 
+            this.dataGridView_contasPagar.AllowUserToAddRows = false;
+            this.dataGridView_contasPagar.AllowUserToDeleteRows = false;
+            this.dataGridView_contasPagar.AllowUserToResizeColumns = false;
+            this.dataGridView_contasPagar.AllowUserToResizeRows = false;
+            this.dataGridView_contasPagar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView_contasPagar.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_contasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_contasPagar.Location = new System.Drawing.Point(21, 30);
+            this.dataGridView_contasPagar.Name = "dataGridView_contasPagar";
+            this.dataGridView_contasPagar.ReadOnly = true;
+            this.dataGridView_contasPagar.RowHeadersVisible = false;
+            this.dataGridView_contasPagar.Size = new System.Drawing.Size(627, 200);
+            this.dataGridView_contasPagar.TabIndex = 25;
+            // 
             // ContasPagarListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -149,10 +148,10 @@
             this.Name = "ContasPagarListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContasPagarListar";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasPagar)).EndInit();
             this.groupBox_listaProdutos.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.barraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_contasPagar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,11 +161,11 @@
 
         private System.Windows.Forms.Button btn_listarTodos;
         private System.Windows.Forms.Label label_listaFornecedores;
-        private System.Windows.Forms.DataGridView dataGridView_contasPagar;
         private System.Windows.Forms.GroupBox groupBox_listaProdutos;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.DataGridView dataGridView_contasPagar;
     }
 }

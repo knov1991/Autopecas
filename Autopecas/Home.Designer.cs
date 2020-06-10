@@ -178,7 +178,7 @@
             this.lbData.AutoSize = true;
             this.lbData.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbData.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbData.Location = new System.Drawing.Point(45, 20);
+            this.lbData.Location = new System.Drawing.Point(50, 15);
             this.lbData.Margin = new System.Windows.Forms.Padding(3);
             this.lbData.Name = "lbData";
             this.lbData.Size = new System.Drawing.Size(55, 24);
@@ -213,7 +213,7 @@
             this.lbHora.AutoSize = true;
             this.lbHora.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbHora.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.lbHora.Location = new System.Drawing.Point(45, 20);
+            this.lbHora.Location = new System.Drawing.Point(49, 15);
             this.lbHora.Margin = new System.Windows.Forms.Padding(3);
             this.lbHora.Name = "lbHora";
             this.lbHora.Size = new System.Drawing.Size(55, 24);
