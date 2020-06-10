@@ -22,7 +22,7 @@ namespace Autopecas
         {
             InitializeComponent();
             dataGridView_buscaProdutos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            carregaGrid();
+            btnGerenciar.Enabled = false;
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
@@ -33,6 +33,7 @@ namespace Autopecas
         private void btn_listarTodos_Click(object sender, EventArgs e)
         {
             carregaGrid();
+            btnGerenciar.Enabled = true;
         }
 
         private void carregaGrid()
@@ -131,6 +132,7 @@ namespace Autopecas
 
                 dataGridView_buscaProdutos.DataSource = dt;
                 atualizaTituloGrid();
+                btnGerenciar.Enabled = true;
             }
 
             else
@@ -185,5 +187,12 @@ namespace Autopecas
                 MessageBox.Show("Selecione um produto para gerenciar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnRelatorio_Click(object sender, EventArgs e)
+        {
+            GerenciarEstoqueRelatorio relatorio = new GerenciarEstoqueRelatorio();
+            relatorio.Show();
+        }
+
     }
 }

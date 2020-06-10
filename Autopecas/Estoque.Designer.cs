@@ -42,6 +42,7 @@
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
             this.btnCadastro = new System.Windows.Forms.Button();
             this.btnGerenciar = new System.Windows.Forms.Button();
+            this.btnRelatorio = new System.Windows.Forms.Button();
             this.groupBox_filtro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_buscaProdutos)).BeginInit();
             this.groupBox_listaProdutos.SuspendLayout();
@@ -203,7 +204,7 @@
             // 
             this.btnGerenciar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGerenciar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGerenciar.Image = global::Autopecas.Properties.Resources.Alterar;
+            this.btnGerenciar.Image = global::Autopecas.Properties.Resources.Editar;
             this.btnGerenciar.Location = new System.Drawing.Point(209, 480);
             this.btnGerenciar.Margin = new System.Windows.Forms.Padding(2);
             this.btnGerenciar.Name = "btnGerenciar";
@@ -214,11 +215,27 @@
             this.btnGerenciar.UseVisualStyleBackColor = true;
             this.btnGerenciar.Click += new System.EventHandler(this.btnGerenciar_Click);
             // 
+            // btnRelatorio
+            // 
+            this.btnRelatorio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRelatorio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRelatorio.Image = global::Autopecas.Properties.Resources.relatorio;
+            this.btnRelatorio.Location = new System.Drawing.Point(368, 480);
+            this.btnRelatorio.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRelatorio.Name = "btnRelatorio";
+            this.btnRelatorio.Size = new System.Drawing.Size(155, 44);
+            this.btnRelatorio.TabIndex = 18;
+            this.btnRelatorio.Text = "  Relatório de Estoque";
+            this.btnRelatorio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnRelatorio.UseVisualStyleBackColor = true;
+            this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
+            // 
             // Estoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.btnRelatorio);
             this.Controls.Add(this.btnGerenciar);
             this.Controls.Add(this.btnCadastro);
             this.Controls.Add(this.label_listaProdutos);
@@ -253,5 +270,6 @@
         private System.Windows.Forms.GroupBox groupBox_filtro;
         public System.Windows.Forms.Button btnCadastro;
         public System.Windows.Forms.Button btnGerenciar;
+        public System.Windows.Forms.Button btnRelatorio;
     }
 }

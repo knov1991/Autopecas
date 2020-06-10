@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtDataEntrada = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtFornecedor = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -47,18 +46,11 @@
             this.btnSair = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.txtDataEntrada = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.btnSair)).BeginInit();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtDataEntrada
-            // 
-            this.txtDataEntrada.Location = new System.Drawing.Point(51, 188);
-            this.txtDataEntrada.Multiline = true;
-            this.txtDataEntrada.Name = "txtDataEntrada";
-            this.txtDataEntrada.Size = new System.Drawing.Size(266, 23);
-            this.txtDataEntrada.TabIndex = 60;
             // 
             // label5
             // 
@@ -78,7 +70,7 @@
             this.txtFornecedor.Location = new System.Drawing.Point(50, 235);
             this.txtFornecedor.Multiline = true;
             this.txtFornecedor.Name = "txtFornecedor";
-            this.txtFornecedor.Size = new System.Drawing.Size(532, 23);
+            this.txtFornecedor.Size = new System.Drawing.Size(532, 22);
             this.txtFornecedor.TabIndex = 63;
             // 
             // label4
@@ -98,7 +90,7 @@
             this.txtQuantidade.Location = new System.Drawing.Point(489, 135);
             this.txtQuantidade.Multiline = true;
             this.txtQuantidade.Name = "txtQuantidade";
-            this.txtQuantidade.Size = new System.Drawing.Size(232, 23);
+            this.txtQuantidade.Size = new System.Drawing.Size(232, 21);
             this.txtQuantidade.TabIndex = 59;
             // 
             // label3
@@ -115,10 +107,10 @@
             // 
             // txtCategoria
             // 
-            this.txtCategoria.Location = new System.Drawing.Point(322, 188);
+            this.txtCategoria.Location = new System.Drawing.Point(323, 188);
             this.txtCategoria.Multiline = true;
             this.txtCategoria.Name = "txtCategoria";
-            this.txtCategoria.Size = new System.Drawing.Size(232, 23);
+            this.txtCategoria.Size = new System.Drawing.Size(232, 20);
             this.txtCategoria.TabIndex = 61;
             // 
             // label2
@@ -138,7 +130,7 @@
             this.txtProduto.Location = new System.Drawing.Point(51, 135);
             this.txtProduto.Multiline = true;
             this.txtProduto.Name = "txtProduto";
-            this.txtProduto.Size = new System.Drawing.Size(432, 23);
+            this.txtProduto.Size = new System.Drawing.Size(432, 21);
             this.txtProduto.TabIndex = 58;
             // 
             // PRODUTO
@@ -169,7 +161,7 @@
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalvar.Image = global::Autopecas.Properties.Resources.Salvar;
             this.btnSalvar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalvar.Location = new System.Drawing.Point(50, 277);
+            this.btnSalvar.Location = new System.Drawing.Point(50, 272);
             this.btnSalvar.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(157, 44);
@@ -194,10 +186,10 @@
             // 
             // txtvalorProduto
             // 
-            this.txtvalorProduto.Location = new System.Drawing.Point(560, 188);
+            this.txtvalorProduto.Location = new System.Drawing.Point(559, 188);
             this.txtvalorProduto.Multiline = true;
             this.txtvalorProduto.Name = "txtvalorProduto";
-            this.txtvalorProduto.Size = new System.Drawing.Size(161, 23);
+            this.txtvalorProduto.Size = new System.Drawing.Size(161, 20);
             this.txtvalorProduto.TabIndex = 62;
             // 
             // btn_listar
@@ -205,7 +197,7 @@
             this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_listar.Location = new System.Drawing.Point(588, 235);
             this.btn_listar.Name = "btn_listar";
-            this.btn_listar.Size = new System.Drawing.Size(133, 23);
+            this.btn_listar.Size = new System.Drawing.Size(133, 22);
             this.btn_listar.TabIndex = 75;
             this.btn_listar.Text = "Listar";
             this.btn_listar.UseVisualStyleBackColor = true;
@@ -217,7 +209,7 @@
             this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::Autopecas.Properties.Resources.Cancelar;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(211, 277);
+            this.btnCancelar.Location = new System.Drawing.Point(215, 272);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(157, 44);
@@ -261,17 +253,26 @@
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
             // 
+            // txtDataEntrada
+            // 
+            this.txtDataEntrada.Location = new System.Drawing.Point(51, 188);
+            this.txtDataEntrada.Mask = "00/00/0000";
+            this.txtDataEntrada.Name = "txtDataEntrada";
+            this.txtDataEntrada.Size = new System.Drawing.Size(268, 20);
+            this.txtDataEntrada.TabIndex = 102;
+            this.txtDataEntrada.ValidatingType = typeof(System.DateTime);
+            // 
             // CadastroEstoque
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 404);
+            this.Controls.Add(this.txtDataEntrada);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txt_CadastroFornecedor);
-            this.Controls.Add(this.txtDataEntrada);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtFornecedor);
             this.Controls.Add(this.label4);
@@ -296,7 +297,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtDataEntrada;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txtQuantidade;
@@ -315,5 +315,6 @@
         private System.Windows.Forms.PictureBox btnSair;
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
+        public System.Windows.Forms.MaskedTextBox txtDataEntrada;
     }
 }

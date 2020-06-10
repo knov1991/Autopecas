@@ -93,16 +93,6 @@ namespace Autopecas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Avancar {
-            get {
-                object obj = ResourceManager.GetObject("Avancar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Cadastro {
             get {
                 object obj = ResourceManager.GetObject("Cadastro", resourceCulture);
@@ -183,39 +173,9 @@ namespace Autopecas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap icons8_calendário_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-calendário-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap icons8_relógio_64 {
-            get {
-                object obj = ResourceManager.GetObject("icons8-relógio-64", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Localizar {
             get {
                 object obj = ResourceManager.GetObject("Localizar", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Minimizar {
-            get {
-                object obj = ResourceManager.GetObject("Minimizar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -233,39 +193,9 @@ namespace Autopecas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Primeiro {
+        internal static System.Drawing.Bitmap relatorio {
             get {
-                object obj = ResourceManager.GetObject("Primeiro", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relogio {
-            get {
-                object obj = ResourceManager.GetObject("relogio", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap relogio1 {
-            get {
-                object obj = ResourceManager.GetObject("relogio1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Requisicao {
-            get {
-                object obj = ResourceManager.GetObject("Requisicao", resourceCulture);
+                object obj = ResourceManager.GetObject("relatorio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -293,29 +223,9 @@ namespace Autopecas.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Ultimo {
-            get {
-                object obj = ResourceManager.GetObject("Ultimo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap Vendas {
             get {
                 object obj = ResourceManager.GetObject("Vendas", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Voltar {
-            get {
-                object obj = ResourceManager.GetObject("Voltar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

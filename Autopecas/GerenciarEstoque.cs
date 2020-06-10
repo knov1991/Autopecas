@@ -31,12 +31,16 @@ namespace Autopecas
             Close();
         }
 
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
         public void habilitaItens()
         {
             txtProduto.Enabled = true;
             txtDataEntrada.Enabled = true;
             txtCategoria.Enabled = true;
-            txtFornecedor.Enabled = true;
             btn_listar.Enabled = true;
             txtvalorProduto.Enabled = true;
             txtQuantidade.Enabled = true;
@@ -205,5 +209,6 @@ namespace Autopecas
 
             }
         }
+
     }
 }

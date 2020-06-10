@@ -125,6 +125,12 @@
     <Compile Include="Estoque.Designer.cs">
       <DependentUpon>Estoque.cs</DependentUpon>
     </Compile>
+    <Compile Include="GerenciarEstoqueRelatorio.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GerenciarEstoqueRelatorio.Designer.cs">
+      <DependentUpon>GerenciarEstoqueRelatorio.cs</DependentUpon>
+    </Compile>
     <Compile Include="ListaFornecedor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -204,6 +210,9 @@
     <EmbeddedResource Include="GerenciarEstoque.resx">
       <DependentUpon>GerenciarEstoque.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GerenciarEstoqueRelatorio.resx">
+      <DependentUpon>GerenciarEstoqueRelatorio.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
@@ -244,9 +253,6 @@
     <None Include="Resources\Autopecas.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Avancar.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Estoque.png" />
   </ItemGroup>
   <ItemGroup>
@@ -259,22 +265,10 @@
     <None Include="Resources\Fornecedor.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Primeiro.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Requisicao.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Sair.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Ultimo.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Vendas.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\Voltar.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Autopecas.ico" />
@@ -298,10 +292,10 @@
     <None Include="Resources\Cancelar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-calendário-64.png" />
+    <None Include="Resources\Calendario-Home.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\icons8-relógio-64.png" />
+    <None Include="Resources\Relogio-Home.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
@@ -320,6 +314,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Editar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\relatorio.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
