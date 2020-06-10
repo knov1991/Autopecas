@@ -166,7 +166,7 @@
             // btnVoltar
             // 
             this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVoltar.Location = new System.Drawing.Point(475, 474);
+            this.btnVoltar.Location = new System.Drawing.Point(479, 459);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(119, 23);
             this.btnVoltar.TabIndex = 46;
@@ -176,7 +176,7 @@
             // btnEditar
             // 
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Location = new System.Drawing.Point(604, 474);
+            this.btnEditar.Location = new System.Drawing.Point(604, 459);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(119, 23);
             this.btnEditar.TabIndex = 42;
@@ -199,7 +199,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(771, 512);
+            this.ClientSize = new System.Drawing.Size(771, 504);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.txt_CadastroCliente);
             this.Controls.Add(this.gbFiltro);

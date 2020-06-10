@@ -19,21 +19,17 @@ namespace Autopecas
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-
+        public int idContaPagar;
         public ContasPagar()
         {
             InitializeComponent();
         }
-
-       
 
         private void btnLocalizar_Click(object sender, EventArgs e)
         {
             ContasPagarListar Pagar = new ContasPagarListar(this);
             Pagar.Show();
         }
-
-        
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -82,9 +78,9 @@ namespace Autopecas
             try
             {
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "UPDATE CONTASPAGAR SET FORNECEDOR = @FORNECEDOR, DATAOPERACAO = @DATAOPERACAO, DATAVENCIMENTO = @QDATAVENCIMENTO, NATUREZA = @NATUREZA WHERE ID = @ID ";
+                strSQL = "UPDATE CONTASPAGAR SET FORNECEDOR = @FORNECEDOR, DATAOPERACAO = @DATAOPERACAO, DATAVENCIMENTO = @DATAVENCIMENTO, NATUREZA = @NATUREZA WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idContaPagar);
                 comando.Parameters.AddWithValue("@FORNECEDOR", txtFornecedor.Text);
                 comando.Parameters.AddWithValue("@DATAOPERACAO", txtDataOperacao.Text);
                 comando.Parameters.AddWithValue("@DATAVENCIMENTO", txtDataVencimento.Text);
@@ -116,49 +112,11 @@ namespace Autopecas
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
                 strSQL = "DELETE FROM CONTASPAGAR WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idContaPagar);
 
                 conexao.Open();
 
                 comando.ExecuteNonQuery();
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-                comando = null;
-
-            }
-        }
-
-        private void txtConsultar_Click_1(object sender, EventArgs e)
-        {
-            try
-            {
-                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM CONTASPAGAR WHERE ID = @ID ";
-                comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
-
-                conexao.Open();
-
-                dr = comando.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    txtFornecedor.Text = Convert.ToString(dr["fornecedor"]);
-                    txtDataOperacao.Text = Convert.ToString(dr["DataOperacao"]);
-                    txtDataVencimento.Text = Convert.ToString(dr["DataVencimento"]);
-                    txtNatureza.Text = Convert.ToString(dr["natureza"]);
-                    txtValor.Text = Convert.ToString(dr["valor"]);
-
-
-                }
 
             }
             catch (Exception ex)

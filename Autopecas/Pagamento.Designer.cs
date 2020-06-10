@@ -39,11 +39,9 @@
             this.label_formaPagamento = new System.Windows.Forms.Label();
             this.comboBox_parcelas = new System.Windows.Forms.ComboBox();
             this.label_parcelado = new System.Windows.Forms.Label();
-            this.label_vencimentoBoleto = new System.Windows.Forms.Label();
             this.btn_concluirVenda = new System.Windows.Forms.Button();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.barraTitulo = new System.Windows.Forms.Panel();
-            this.dateTimePicke_Pagamentos = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.barraTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -161,15 +159,6 @@
             this.label_parcelado.TabIndex = 21;
             this.label_parcelado.Text = "Parcelado";
             // 
-            // label_vencimentoBoleto
-            // 
-            this.label_vencimentoBoleto.AutoSize = true;
-            this.label_vencimentoBoleto.Location = new System.Drawing.Point(294, 207);
-            this.label_vencimentoBoleto.Name = "label_vencimentoBoleto";
-            this.label_vencimentoBoleto.Size = new System.Drawing.Size(143, 13);
-            this.label_vencimentoBoleto.TabIndex = 22;
-            this.label_vencimentoBoleto.Text = "Data de Vencimento (Boleto)";
-            // 
             // btn_concluirVenda
             // 
             this.btn_concluirVenda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -202,23 +191,12 @@
             this.barraTitulo.Size = new System.Drawing.Size(563, 37);
             this.barraTitulo.TabIndex = 8;
             // 
-            // dateTimePicke_Pagamentos
-            // 
-            this.dateTimePicke_Pagamentos.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicke_Pagamentos.Location = new System.Drawing.Point(297, 224);
-            this.dateTimePicke_Pagamentos.Name = "dateTimePicke_Pagamentos";
-            this.dateTimePicke_Pagamentos.Size = new System.Drawing.Size(163, 20);
-            this.dateTimePicke_Pagamentos.TabIndex = 24;
-            this.dateTimePicke_Pagamentos.Value = new System.DateTime(2020, 5, 8, 14, 28, 0, 0);
-            // 
             // Pagamento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(563, 317);
-            this.Controls.Add(this.dateTimePicke_Pagamentos);
             this.Controls.Add(this.btn_concluirVenda);
-            this.Controls.Add(this.label_vencimentoBoleto);
             this.Controls.Add(this.label_parcelado);
             this.Controls.Add(this.comboBox_parcelas);
             this.Controls.Add(this.label_formaPagamento);
@@ -255,10 +233,8 @@
         private System.Windows.Forms.Label label_formaPagamento;
         private System.Windows.Forms.ComboBox comboBox_parcelas;
         private System.Windows.Forms.Label label_parcelado;
-        private System.Windows.Forms.Label label_vencimentoBoleto;
         private System.Windows.Forms.Button btn_concluirVenda;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Panel barraTitulo;
-        private System.Windows.Forms.DateTimePicker dateTimePicke_Pagamentos;
     }
 }

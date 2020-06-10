@@ -19,7 +19,7 @@ namespace Autopecas
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
-
+        public int idContasReceber;
         public ContasReceber()
         {
             InitializeComponent();
@@ -61,13 +61,16 @@ namespace Autopecas
         {
             try
             {
+                DateTime dtOperacao = DateTime.Parse(txtDataOperacao.Text);
+                DateTime dtVencimento = DateTime.Parse(txtDataVencimento.Text);
+
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "UPDATE CONTASRECEBER SET CLIENTE = @CLIENTE, DATAOPERACAO = @DATAOPERACAO, DATAVENCIMENTO = @QDATAVENCIMENTO, NATUREZA = @NATUREZA WHERE ID = @ID ";
+                strSQL = "UPDATE CONTASRECEBER SET CLIENTE = @CLIENTE, DATAOPERACAO = @DATAOPERACAO, DATAVENCIMENTO = @DATAVENCIMENTO, NATUREZA = @NATUREZA WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idContasReceber);
                 comando.Parameters.AddWithValue("@CLIENTE", txtCliente.Text);
-                comando.Parameters.AddWithValue("@DATAOPERACAO", txtDataOperacao.Text);
-                comando.Parameters.AddWithValue("@DATAVENCIMENTO", txtDataVencimento.Text);
+                comando.Parameters.AddWithValue("@DATAOPERACAO", dtOperacao);
+                comando.Parameters.AddWithValue("@DATAVENCIMENTO", dtVencimento);
                 comando.Parameters.AddWithValue("@NATUREZA", txtNatureza.Text);
 
 
@@ -96,7 +99,7 @@ namespace Autopecas
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
                 strSQL = "DELETE FROM CONTASRECEBER WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
+                comando.Parameters.AddWithValue("@ID", idContasReceber);
 
                 conexao.Open();
 
@@ -123,43 +126,6 @@ namespace Autopecas
             Receber.Show();
         }
 
-        private void txtConsultar_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM CONTASRECEBER WHERE ID = @ID ";
-                comando = new MySqlCommand(strSQL, conexao);
-                comando.Parameters.AddWithValue("@ID", txtId.Text);
-
-                conexao.Open();
-
-                dr = comando.ExecuteReader();
-
-                while (dr.Read())
-                {
-                    txtCliente.Text = Convert.ToString(dr["cliente"]);
-                    txtDataOperacao.Text = Convert.ToString(dr["DataOperacao"]);
-                    txtDataVencimento.Text = Convert.ToString(dr["DataVencimento"]);
-                    txtNatureza.Text = Convert.ToString(dr["natureza"]);
-                    txtValor.Text = Convert.ToString(dr["valor"]);
-                   
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-            finally
-            {
-                conexao.Close();
-                conexao = null;
-                comando = null;
-
-            }
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -175,6 +141,12 @@ namespace Autopecas
         {
             ContasReceberBuscaClientes BuscarClientes = new ContasReceberBuscaClientes(this);
             BuscarClientes.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            CadastroClientes Clientes = new CadastroClientes();
+            Clientes.Show();
         }
     }
 }

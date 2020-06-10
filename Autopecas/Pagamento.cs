@@ -69,26 +69,22 @@ namespace Autopecas
         {
           if(comboBox_formaPagamento.SelectedIndex == 0 || comboBox_formaPagamento.SelectedIndex == 2)
             {
-                label_vencimentoBoleto.Visible = false;
                 label_parcelado.Visible = false;
-                dateTimePicke_Pagamentos.Visible = false;
                 comboBox_parcelas.Visible= false;
             }
 
             if (comboBox_formaPagamento.SelectedIndex == 1)
             {
-                label_vencimentoBoleto.Visible = false;
                 label_parcelado.Visible = true;
-                dateTimePicke_Pagamentos.Visible = false;
                 comboBox_parcelas.Visible = true;
             }
 
             if (comboBox_formaPagamento.SelectedIndex == 3)
             {
-                label_vencimentoBoleto.Visible = true;
                 label_parcelado.Visible = true;
-                dateTimePicke_Pagamentos.Visible = true;
                 comboBox_parcelas.Visible = true;
+                ContasReceber Receber = new ContasReceber();
+                Receber.Show();
             }
 
         }

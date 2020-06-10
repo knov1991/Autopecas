@@ -19,48 +19,15 @@ namespace Autopecas
         MySqlDataAdapter da;
         MySqlDataReader dr;
         string strSQL;
+        public int idContasReceber;
 
         public ContasReceberListar(ContasReceber receber)
         {
             InitializeComponent();
-            dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_contasReceber.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             instanciaReceber = receber;
         }
 
-        private void label_listaFornecedores_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_filtro_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox_listaProdutos_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_voltar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_editar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void barraTitulo_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dataGridView_buscaFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
         private void btn_listarTodos_Click(object sender, EventArgs e)
         {
@@ -79,7 +46,7 @@ namespace Autopecas
 
                 da.Fill(dt);
 
-                dataGridView_buscaFornecedor.DataSource = dt;
+                dataGridView_contasReceber.DataSource = dt;
 
             }
             catch (Exception ex)
@@ -95,14 +62,35 @@ namespace Autopecas
             }
         }
 
-        private void btn_buscar_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_contasReceber.SelectedRows.Count != 0)
+            {
+                DataGridViewRow dr = dataGridView_contasReceber.SelectedRows[0];
+                //Envia os Dados para Contas a Receber
+                
+                instanciaReceber.idContasReceber = Convert.ToInt32(dr.Cells[0].Value.ToString());
+                instanciaReceber.txtCliente.Text = dr.Cells[1].Value.ToString();
+                instanciaReceber.txtDataOperacao.Text = dr.Cells[2].Value.ToString();
+                instanciaReceber.txtDataVencimento.Text = dr.Cells[3].Value.ToString();
+                instanciaReceber.txtNatureza.Text = dr.Cells[4].Value.ToString();
+                instanciaReceber.txtValor.Text = dr.Cells[4].Value.ToString();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

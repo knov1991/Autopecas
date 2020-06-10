@@ -23,7 +23,7 @@ namespace Autopecas
         public ContasPagarListar(ContasPagar pagar)
         {
             InitializeComponent();
-            dataGridView_buscaFornecedor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridView_contasPagar.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             instanciaPagar = pagar;
         }
 
@@ -90,7 +90,7 @@ namespace Autopecas
 
                 da.Fill(dt);
 
-                dataGridView_buscaFornecedor.DataSource = dt;
+                dataGridView_contasPagar.DataSource = dt;
 
             }
             catch (Exception ex)
@@ -109,6 +109,32 @@ namespace Autopecas
         private void btnFechar_Click_1(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            if (dataGridView_contasPagar.SelectedRows.Count != 0)
+            {
+                DataGridViewRow dr = dataGridView_contasPagar.SelectedRows[0];
+                //Envia os Dados para Contas a Receber
+
+                instanciaPagar.idContaPagar = Convert.ToInt32(dr.Cells[0].Value.ToString());
+                instanciaPagar.txtFornecedor.Text = dr.Cells[1].Value.ToString();
+                instanciaPagar.txtDataOperacao.Text = dr.Cells[2].Value.ToString();
+                instanciaPagar.txtDataVencimento.Text = dr.Cells[3].Value.ToString();
+                instanciaPagar.txtNatureza.Text = dr.Cells[4].Value.ToString();
+                instanciaPagar.txtValor.Text = dr.Cells[4].Value.ToString();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Selecione um fornecedor para editar.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }
