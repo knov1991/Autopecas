@@ -117,9 +117,10 @@ namespace Autopecas
                 int i = 0;
                 for (i = 0; i < instanciaVendas.dataGridView_Carrinho.Rows.Count; i++)
                 {
+                    DateTime date = DateTime.Now;
 
                     conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                    strSQL = "INSERT INTO vendas (nomeProduto, quantidade, valorProduto, valorTotal, formaPagamento, parcelado) VALUES (@nomeProduto, @quantidade, @valorProduto, @valorTotal, @formaPagamento, @parcelado);";
+                    strSQL = "INSERT INTO vendas (nomeProduto, quantidade, valorProduto, valorTotal, formaPagamento, parcelado, dataVenda) VALUES (@nomeProduto, @quantidade, @valorProduto, @valorTotal, @formaPagamento, @parcelado, @dataVenda);";
                     comando = new MySqlCommand(strSQL, conexao);
                     comando.Parameters.AddWithValue("@nomeProduto", instanciaVendas.dataGridView_Carrinho.Rows[i].Cells["nome"].Value);
                     comando.Parameters.AddWithValue("@quantidade", instanciaVendas.dataGridView_Carrinho.Rows[i].Cells["quantidade"].Value);
@@ -127,6 +128,7 @@ namespace Autopecas
                     comando.Parameters.AddWithValue("@valorTotal", Convert.ToDecimal(instanciaVendas.dataGridView_Carrinho.Rows[i].Cells["valorTotal"].Value));
                     comando.Parameters.AddWithValue("@formaPagamento", comboBox_formaPagamento.Text);
                     comando.Parameters.AddWithValue("@parcelado", comboBox_parcelas.Text);
+                    comando.Parameters.AddWithValue("@dataVenda", date);
                     //cmdDataBase.Parameters.Clear();
                     conexao.Open();
                     comando.ExecuteNonQuery();
