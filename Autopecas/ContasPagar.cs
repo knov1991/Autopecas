@@ -178,6 +178,12 @@ namespace Autopecas
         {
             Close();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ContasPagarBuscarFornecedor BuscarFornecedor = new ContasPagarBuscarFornecedor(this);
+            BuscarFornecedor.Show();
+        }
     }
 }
 
