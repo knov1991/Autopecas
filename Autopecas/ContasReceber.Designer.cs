@@ -191,11 +191,9 @@
             this.txtCliente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtCliente.Multiline = true;
             this.txtCliente.Name = "txtCliente";
-<<<<<<< HEAD
             this.txtCliente.Size = new System.Drawing.Size(569, 23);
-=======
+
             this.txtCliente.Size = new System.Drawing.Size(900, 27);
->>>>>>> 320fae0722250e07841f024a2c4588694338f41c
             this.txtCliente.TabIndex = 101;
             // 
             // label3
@@ -329,12 +327,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(774, 718);
             this.Controls.Add(this.button1);
-=======
             this.ClientSize = new System.Drawing.Size(1032, 884);
->>>>>>> 320fae0722250e07841f024a2c4588694338f41c
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.txtNatureza);
             this.Controls.Add(this.label4);

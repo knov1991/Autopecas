@@ -63,16 +63,19 @@ namespace Autopecas
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            //filtroBusca();
-
+            filtroBusca();
+    
         }
 
         private void filtroBusca()
         {
             try
             {
+                DateTime MinhaData = DateTime.Parse(filtroData.Text);
+
+
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM RELATORIOESTOQUE WHERE DATAMOV STR_TO_DATE('" + filtroData.Value.ToString() + "','%Y/%m/%D')";
+                strSQL = "SELECT * FROM RELATORIOESTOQUE WHERE DATAMOV='"+ MinhaData.ToString("yyyy-MM-dd") + "'";
                 da = new MySqlDataAdapter(strSQL, conexao);
 
                 DataTable dt = new DataTable();
