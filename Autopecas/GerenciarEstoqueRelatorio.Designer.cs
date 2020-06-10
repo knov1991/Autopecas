@@ -31,18 +31,18 @@
             this.btn_voltar = new System.Windows.Forms.Button();
             this.label_listaFornecedores = new System.Windows.Forms.Label();
             this.groupBox_filtro = new System.Windows.Forms.GroupBox();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.filtroData = new System.Windows.Forms.DateTimePicker();
             this.btnListarTodos = new System.Windows.Forms.Button();
             this.groupBox_listaProdutos = new System.Windows.Forms.GroupBox();
+            this.dataGridView_relatorios = new System.Windows.Forms.DataGridView();
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
-            this.filtroData = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscar = new System.Windows.Forms.Button();
-            this.dataGridView_relatorios = new System.Windows.Forms.DataGridView();
             this.groupBox_filtro.SuspendLayout();
             this.groupBox_listaProdutos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorios)).BeginInit();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorios)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_voltar
@@ -77,6 +77,27 @@
             this.groupBox_filtro.TabStop = false;
             this.groupBox_filtro.Text = "Filtro";
             // 
+            // btnBuscar
+            // 
+            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscar.Location = new System.Drawing.Point(139, 22);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(98, 23);
+            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.Text = "Buscar";
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            // 
+            // filtroData
+            // 
+            this.filtroData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.filtroData.Location = new System.Drawing.Point(17, 24);
+            this.filtroData.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.filtroData.Name = "filtroData";
+            this.filtroData.Size = new System.Drawing.Size(116, 20);
+            this.filtroData.TabIndex = 9;
+            this.filtroData.Value = new System.DateTime(2020, 6, 10, 0, 0, 0, 0);
+            // 
             // btnListarTodos
             // 
             this.btnListarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -97,6 +118,22 @@
             this.groupBox_listaProdutos.TabIndex = 22;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Relatórios";
+            // 
+            // dataGridView_relatorios
+            // 
+            this.dataGridView_relatorios.AllowUserToAddRows = false;
+            this.dataGridView_relatorios.AllowUserToDeleteRows = false;
+            this.dataGridView_relatorios.AllowUserToResizeColumns = false;
+            this.dataGridView_relatorios.AllowUserToResizeRows = false;
+            this.dataGridView_relatorios.BackgroundColor = System.Drawing.Color.White;
+            this.dataGridView_relatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView_relatorios.Location = new System.Drawing.Point(17, 28);
+            this.dataGridView_relatorios.Name = "dataGridView_relatorios";
+            this.dataGridView_relatorios.ReadOnly = true;
+            this.dataGridView_relatorios.RowHeadersVisible = false;
+            this.dataGridView_relatorios.RowHeadersWidth = 51;
+            this.dataGridView_relatorios.Size = new System.Drawing.Size(631, 200);
+            this.dataGridView_relatorios.TabIndex = 5;
             // 
             // barraTitulo
             // 
@@ -120,43 +157,6 @@
             this.btnFechar.TabStop = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // filtroData
-            // 
-            this.filtroData.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.filtroData.Location = new System.Drawing.Point(17, 24);
-            this.filtroData.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
-            this.filtroData.Name = "filtroData";
-            this.filtroData.Size = new System.Drawing.Size(116, 20);
-            this.filtroData.TabIndex = 9;
-            this.filtroData.Value = new System.DateTime(2020, 6, 9, 19, 15, 0, 0);
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Location = new System.Drawing.Point(139, 22);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(98, 23);
-            this.btnBuscar.TabIndex = 10;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // dataGridView_relatorios
-            // 
-            this.dataGridView_relatorios.AllowUserToAddRows = false;
-            this.dataGridView_relatorios.AllowUserToDeleteRows = false;
-            this.dataGridView_relatorios.AllowUserToResizeColumns = false;
-            this.dataGridView_relatorios.AllowUserToResizeRows = false;
-            this.dataGridView_relatorios.BackgroundColor = System.Drawing.Color.White;
-            this.dataGridView_relatorios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_relatorios.Location = new System.Drawing.Point(17, 28);
-            this.dataGridView_relatorios.Name = "dataGridView_relatorios";
-            this.dataGridView_relatorios.ReadOnly = true;
-            this.dataGridView_relatorios.RowHeadersVisible = false;
-            this.dataGridView_relatorios.RowHeadersWidth = 51;
-            this.dataGridView_relatorios.Size = new System.Drawing.Size(631, 200);
-            this.dataGridView_relatorios.TabIndex = 5;
-            // 
             // GerenciarEstoqueRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -173,9 +173,9 @@
             this.Text = "GerenciarEstoqueRelatorio";
             this.groupBox_filtro.ResumeLayout(false);
             this.groupBox_listaProdutos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorios)).EndInit();
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView_relatorios)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -276,7 +276,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.pictureBox1.Location = new System.Drawing.Point(749, 2);
+            this.pictureBox1.Location = new System.Drawing.Point(744, 5);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(23, 23);

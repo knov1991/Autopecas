@@ -50,6 +50,8 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_buscaProdutos.DataSource = dt;
+
+                atualizaTituloGrid();
             }
             catch (Exception ex)
             {
@@ -62,6 +64,17 @@ namespace Autopecas
                 comando = null;
 
             }
+        }
+
+        private void atualizaTituloGrid()
+        {
+            dataGridView_buscaProdutos.Columns[0].HeaderText = "Código";
+            dataGridView_buscaProdutos.Columns[1].HeaderText = "Nome";
+            dataGridView_buscaProdutos.Columns[2].HeaderText = "Valor";
+            dataGridView_buscaProdutos.Columns[3].HeaderText = "Data de Entrada";
+            dataGridView_buscaProdutos.Columns[4].HeaderText = "Categoria";
+            dataGridView_buscaProdutos.Columns[5].HeaderText = "Quantidade";
+            dataGridView_buscaProdutos.Columns[6].HeaderText = "Fornecedor";
         }
 
         private void btn_selecionar_Click(object sender, EventArgs e)
