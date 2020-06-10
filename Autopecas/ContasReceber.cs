@@ -171,7 +171,11 @@ namespace Autopecas
             Close();
         }
 
-        
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            ContasReceberBuscaClientes BuscarClientes = new ContasReceberBuscaClientes(this);
+            BuscarClientes.Show();
+        }
     }
 }
 

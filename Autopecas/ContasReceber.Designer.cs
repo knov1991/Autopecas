@@ -49,6 +49,7 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnFechar = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
@@ -183,7 +184,7 @@
             this.txtCliente.Location = new System.Drawing.Point(48, 210);
             this.txtCliente.Multiline = true;
             this.txtCliente.Name = "txtCliente";
-            this.txtCliente.Size = new System.Drawing.Size(676, 23);
+            this.txtCliente.Size = new System.Drawing.Size(569, 23);
             this.txtCliente.TabIndex = 101;
             // 
             // label3
@@ -295,11 +296,22 @@
             this.btnFechar.TabIndex = 2;
             this.btnFechar.TabStop = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(624, 209);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 23);
+            this.button1.TabIndex = 119;
+            this.button1.Text = "Listar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
+            // 
             // ContasReceber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.barraTitulo);
             this.Controls.Add(this.txtNatureza);
             this.Controls.Add(this.label4);
@@ -321,6 +333,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ContasReceber";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ContasReceber";
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -342,7 +355,6 @@
         private System.Windows.Forms.Button txtConsultar;
         private System.Windows.Forms.TextBox txtDataOperacao;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox txtCliente;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtDataVencimento;
         private System.Windows.Forms.Label label6;
@@ -353,5 +365,7 @@
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button button1;
+        public System.Windows.Forms.TextBox txtCliente;
     }
 }
