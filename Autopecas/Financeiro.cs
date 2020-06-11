@@ -21,8 +21,15 @@ namespace Autopecas
         public Financeiro()
         {
             InitializeComponent();
+            atualizaDados();
             carregaGrid();
             totalMov();
+
+        }
+        private void atualizaDados()
+        {
+            DateTime date = DateTime.Now;
+            labelData.Text = date.ToString("dd-MM-yyyy");
         }
 
         private void btnContasReceber_Click(object sender, EventArgs e)

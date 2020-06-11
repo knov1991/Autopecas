@@ -36,8 +36,12 @@
             this.dataGridView_totalVendas = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.labelData = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_totalVendas)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_NovaVenda
@@ -54,7 +58,7 @@
             // 
             this.btnContasReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContasReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContasReceber.Location = new System.Drawing.Point(59, 419);
+            this.btnContasReceber.Location = new System.Drawing.Point(59, 434);
             this.btnContasReceber.Name = "btnContasReceber";
             this.btnContasReceber.Size = new System.Drawing.Size(196, 45);
             this.btnContasReceber.TabIndex = 11;
@@ -66,7 +70,7 @@
             // 
             this.btnContasPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnContasPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContasPagar.Location = new System.Drawing.Point(261, 419);
+            this.btnContasPagar.Location = new System.Drawing.Point(261, 434);
             this.btnContasPagar.Name = "btnContasPagar";
             this.btnContasPagar.Size = new System.Drawing.Size(196, 45);
             this.btnContasPagar.TabIndex = 12;
@@ -90,9 +94,9 @@
             this.TotalDiario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalDiario.Location = new System.Drawing.Point(54, 1);
             this.TotalDiario.Name = "TotalDiario";
-            this.TotalDiario.Size = new System.Drawing.Size(62, 25);
+            this.TotalDiario.Size = new System.Drawing.Size(87, 25);
             this.TotalDiario.TabIndex = 16;
-            this.TotalDiario.Text = "Valor";
+            this.TotalDiario.Text = "R$ 0,00";
             // 
             // dataGridView_totalVendas
             // 
@@ -103,7 +107,7 @@
             this.dataGridView_totalVendas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_totalVendas.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_totalVendas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_totalVendas.Location = new System.Drawing.Point(60, 154);
+            this.dataGridView_totalVendas.Location = new System.Drawing.Point(60, 169);
             this.dataGridView_totalVendas.Name = "dataGridView_totalVendas";
             this.dataGridView_totalVendas.ReadOnly = true;
             this.dataGridView_totalVendas.RowHeadersVisible = false;
@@ -125,16 +129,47 @@
             this.panel1.AutoSize = true;
             this.panel1.Controls.Add(this.TotalDiario);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(61, 360);
+            this.panel1.Location = new System.Drawing.Point(61, 375);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(119, 26);
+            this.panel1.Size = new System.Drawing.Size(144, 26);
             this.panel1.TabIndex = 20;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(-4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 20);
+            this.label3.TabIndex = 22;
+            this.label3.Text = "Exibindo Caixa de";
+            // 
+            // labelData
+            // 
+            this.labelData.AutoSize = true;
+            this.labelData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelData.Location = new System.Drawing.Point(126, 0);
+            this.labelData.Name = "labelData";
+            this.labelData.Size = new System.Drawing.Size(44, 20);
+            this.labelData.TabIndex = 23;
+            this.labelData.Text = "Data";
+            // 
+            // panel2
+            // 
+            this.panel2.AutoSize = true;
+            this.panel2.Controls.Add(this.label3);
+            this.panel2.Controls.Add(this.labelData);
+            this.panel2.Location = new System.Drawing.Point(61, 142);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(173, 21);
+            this.panel2.TabIndex = 24;
             // 
             // Financeiro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView_totalVendas);
             this.Controls.Add(this.label2);
@@ -147,6 +182,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_totalVendas)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +199,8 @@
         private System.Windows.Forms.DataGridView dataGridView_totalVendas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label labelData;
+        private System.Windows.Forms.Panel panel2;
     }
 }

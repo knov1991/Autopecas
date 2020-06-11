@@ -21,13 +21,18 @@ namespace Autopecas
         public GerenciarEstoqueRelatorio()
         {
             InitializeComponent();
+            atualizaDatePicker();
         }
 
         private void btnFechar_Click(object sender, EventArgs e)
         {
             Close();
         }
-
+        private void atualizaDatePicker()
+        {
+            DateTime date = DateTime.Now;
+            filtroData.Value = date;
+        }
         private void carregaGrid()
         {
             try
