@@ -72,6 +72,7 @@
             this.textBox_desconto.Name = "textBox_desconto";
             this.textBox_desconto.Size = new System.Drawing.Size(134, 21);
             this.textBox_desconto.TabIndex = 11;
+            this.textBox_desconto.Visible = false;
             this.textBox_desconto.TextChanged += new System.EventHandler(this.textBox_desconto_TextChanged);
             // 
             // textBox_total
@@ -115,6 +116,7 @@
             this.label_desconto.Size = new System.Drawing.Size(53, 13);
             this.label_desconto.TabIndex = 15;
             this.label_desconto.Text = "Desconto";
+            this.label_desconto.Visible = false;
             // 
             // label_total
             // 
