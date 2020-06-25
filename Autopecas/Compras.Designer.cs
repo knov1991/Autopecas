@@ -49,6 +49,7 @@
             this.textBox_CodigoProduto = new System.Windows.Forms.TextBox();
             this.label_Carrinho = new System.Windows.Forms.Label();
             this.txt_NovaCompra = new System.Windows.Forms.Label();
+            this.btn_listar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView_Carrinho)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,7 @@
             this.btn_remove.TabIndex = 33;
             this.btn_remove.Text = "Remover Item";
             this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click_1);
             // 
             // textBox_Quantidade
             // 
@@ -79,6 +81,7 @@
             this.btn_finalizaVenda.TabIndex = 31;
             this.btn_finalizaVenda.Text = "Finalizar Compra";
             this.btn_finalizaVenda.UseVisualStyleBackColor = true;
+            this.btn_finalizaVenda.Click += new System.EventHandler(this.btn_finalizaVenda_Click);
             // 
             // dataGridView_Carrinho
             // 
@@ -247,11 +250,23 @@
             this.txt_NovaCompra.TabIndex = 17;
             this.txt_NovaCompra.Text = "Compra";
             // 
+            // btn_listar
+            // 
+            this.btn_listar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_listar.Location = new System.Drawing.Point(166, 120);
+            this.btn_listar.Name = "btn_listar";
+            this.btn_listar.Size = new System.Drawing.Size(81, 23);
+            this.btn_listar.TabIndex = 36;
+            this.btn_listar.Text = "Listar";
+            this.btn_listar.UseVisualStyleBackColor = true;
+            this.btn_listar.Click += new System.EventHandler(this.btn_listar_Click);
+            // 
             // Compras
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(774, 718);
+            this.Controls.Add(this.btn_listar);
             this.Controls.Add(this.btn_remove);
             this.Controls.Add(this.textBox_Quantidade);
             this.Controls.Add(this.btn_finalizaVenda);
@@ -300,5 +315,6 @@
         public System.Windows.Forms.TextBox textBox_CodigoProduto;
         private System.Windows.Forms.Label label_Carrinho;
         private System.Windows.Forms.Label txt_NovaCompra;
+        private System.Windows.Forms.Button btn_listar;
     }
 }
