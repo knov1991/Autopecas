@@ -45,12 +45,15 @@ namespace Autopecas
         {
             try
             {
+                DateTime dtOperacao = DateTime.Parse(txtDataOperacao.Text);
+                DateTime dtVencimento = DateTime.Parse(txtDataVencimento.Text);
+
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
                 strSQL = "INSERT INTO CONTASPAGAR (FORNECEDOR, DATAOPERACAO, DATAVENCIMENTO, NATUREZA, VALOR) VALUES(@FORNECEDOR, @DATAOPERACAO, @DATAVENCIMENTO, @NATUREZA, @VALOR)";
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@FORNECEDOR", txtFornecedor.Text);
-                comando.Parameters.AddWithValue("@DATAOPERACAO", txtDataOperacao.Text);
-                comando.Parameters.AddWithValue("@DATAVENCIMENTO", txtDataVencimento.Text);
+                comando.Parameters.AddWithValue("@DATAOPERACAO", dtOperacao);
+                comando.Parameters.AddWithValue("@DATAVENCIMENTO", dtVencimento);
                 comando.Parameters.AddWithValue("@NATUREZA", txtNatureza.Text);
                 comando.Parameters.AddWithValue("@VALOR", txtValor.Text);
 
@@ -77,13 +80,16 @@ namespace Autopecas
         {
             try
             {
+                DateTime dtOperacao = DateTime.Parse(txtDataOperacao.Text);
+                DateTime dtVencimento = DateTime.Parse(txtDataVencimento.Text);
+
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
                 strSQL = "UPDATE CONTASPAGAR SET FORNECEDOR = @FORNECEDOR, DATAOPERACAO = @DATAOPERACAO, DATAVENCIMENTO = @DATAVENCIMENTO, NATUREZA = @NATUREZA WHERE ID = @ID ";
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@ID", idContaPagar);
                 comando.Parameters.AddWithValue("@FORNECEDOR", txtFornecedor.Text);
-                comando.Parameters.AddWithValue("@DATAOPERACAO", txtDataOperacao.Text);
-                comando.Parameters.AddWithValue("@DATAVENCIMENTO", txtDataVencimento.Text);
+                comando.Parameters.AddWithValue("@DATAOPERACAO", dtOperacao);
+                comando.Parameters.AddWithValue("@DATAVENCIMENTO", dtVencimento);
                 comando.Parameters.AddWithValue("@NATUREZA", txtNatureza.Text);
 
 

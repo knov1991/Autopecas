@@ -29,12 +29,15 @@ namespace Autopecas
         {
             try
             {
+                DateTime dtOperacao = DateTime.Parse(txtDataOperacao.Text);
+                DateTime dtVencimento = DateTime.Parse(txtDataVencimento.Text);
+
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
                 strSQL = "INSERT INTO CONTASRECEBER (CLIENTE, DATAOPERACAO, DATAVENCIMENTO, NATUREZA, VALOR) VALUES(@CLIENTE, @DATAOPERACAO, @DATAVENCIMENTO, @NATUREZA, @VALOR)";
                 comando = new MySqlCommand(strSQL, conexao);
                 comando.Parameters.AddWithValue("@CLIENTE", txtCliente.Text);
-                comando.Parameters.AddWithValue("@DATAOPERACAO", txtDataOperacao.Text);
-                comando.Parameters.AddWithValue("@DATAVENCIMENTO", txtDataVencimento.Text);
+                comando.Parameters.AddWithValue("@DATAOPERACAO", dtOperacao);
+                comando.Parameters.AddWithValue("@DATAVENCIMENTO", dtVencimento);
                 comando.Parameters.AddWithValue("@NATUREZA", txtNatureza.Text);
                 comando.Parameters.AddWithValue("@VALOR", txtValor.Text);
 

@@ -69,6 +69,7 @@ namespace Autopecas
 
                 dataGridView_totalVendas.DataSource = dt;
                 atualizaTituloGrid();
+                totalMov();
 
             }
             catch (Exception ex)
@@ -145,10 +146,16 @@ namespace Autopecas
 
         }
 
+        private void atualizaValores()
+        {
+            TotalDiario.Text = "R$ 0,00";
+            totalMov();
+        }
+
         private void dataInicio_ValueChanged(object sender, EventArgs e)
         {
             filtroBusca();
-            totalMov();
+            atualizaValores();
             labelDataInicio.Text = filtroDataInicio.Text;
             filtroDataFinal.Value = filtroDataInicio.Value;
         }
@@ -156,7 +163,7 @@ namespace Autopecas
         private void dataFinal_ValueChanged(object sender, EventArgs e)
         {
             filtroBusca();
-            totalMov();
+            atualizaValores();
             labelDataFinal.Text = filtroDataFinal.Text;
         }
     }

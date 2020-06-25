@@ -33,6 +33,18 @@ namespace Autopecas
             DateTime date = DateTime.Now;
             filtroData.Value = date;
         }
+
+        private void atualizaTituloGrid()
+        {
+            dataGridView_relatorios.Columns["id"].Visible = false;
+            dataGridView_relatorios.Columns[1].HeaderText = "Produto";
+            dataGridView_relatorios.Columns[2].HeaderText = "Fornecedor";
+            dataGridView_relatorios.Columns[3].HeaderText = "Motivo";
+            dataGridView_relatorios.Columns[4].HeaderText = "Tipo";
+            dataGridView_relatorios.Columns[5].HeaderText = "Quantidade";
+            dataGridView_relatorios.Columns[6].HeaderText = "Data do Movimento";
+        }
+
         private void carregaGrid()
         {
             try
@@ -46,7 +58,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_relatorios.DataSource = dt;
-                //atualizaTituloGrid();
+                atualizaTituloGrid();
 
             }
             catch (Exception ex)
@@ -88,7 +100,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_relatorios.DataSource = dt;
-                //atualizaTituloGrid();
+                atualizaTituloGrid();
 
             }
             catch (Exception ex)

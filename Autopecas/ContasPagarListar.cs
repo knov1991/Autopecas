@@ -57,11 +57,6 @@ namespace Autopecas
 
         }
 
-        private void dataGridView_buscaFornecedor_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
 
         private void btn_buscar_Click(object sender, EventArgs e)
         {

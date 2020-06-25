@@ -36,6 +36,26 @@ namespace Autopecas
             carregaGrid();
         }
 
+        private void atualizaTituloGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "ID";
+            dgvDados.Columns[1].HeaderText = "Nome";
+            dgvDados.Columns[2].HeaderText = "Razão Social";
+            dgvDados.Columns[3].HeaderText = "Tipo";
+            dgvDados.Columns[4].HeaderText = "CPF/CNPJ";
+            dgvDados.Columns[5].HeaderText = "RG/IE";
+            dgvDados.Columns[6].HeaderText = "CEP";
+            dgvDados.Columns[7].HeaderText = "Estado";
+            dgvDados.Columns[8].HeaderText = "Cidade";
+            dgvDados.Columns[9].HeaderText = "Rua";
+            dgvDados.Columns[10].HeaderText = "Número";
+            dgvDados.Columns[11].HeaderText = "Bairro";
+            dgvDados.Columns[12].HeaderText = "E-mail";
+            dgvDados.Columns[13].HeaderText = "Celular";
+            dgvDados.Columns[14].HeaderText = "Telefone";
+        }
+
+
         private void carregaGrid()
         {
             try
@@ -49,6 +69,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dgvDados.DataSource = dt;
+                atualizaTituloGrid();
             }
             catch (Exception ex)
             {
@@ -90,6 +111,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dgvDados.DataSource = dt;
+                atualizaTituloGrid();
             }
             else
             {
