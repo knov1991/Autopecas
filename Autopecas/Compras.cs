@@ -211,5 +211,30 @@ namespace Autopecas
         {
 
         }
+
+        private void btn_listar_Click(object sender, EventArgs e)
+        {
+            ComprasBuscar ListarProdutos = new ComprasBuscar(this);
+            ListarProdutos.Show();
+        }
+
+        private void btn_remove_Click_1(object sender, EventArgs e)
+        {
+            // verificar se existe alguma linha selecionada
+            if (dataGridView_Carrinho.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("Nenhum item selecionado", "Atenção");
+                return;
+            }
+            else
+            {
+                dataGridView_Carrinho.Rows.RemoveAt(dataGridView_Carrinho.CurrentRow.Index);
+            }
+        }
+
+        private void btn_finalizaVenda_Click(object sender, EventArgs e)
+        {
+            finalizarValidacao();
+        }
     }
 }
