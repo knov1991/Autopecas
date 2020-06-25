@@ -45,7 +45,7 @@
             // btn_listarTodos
             // 
             this.btn_listarTodos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_listarTodos.Location = new System.Drawing.Point(519, 236);
+            this.btn_listarTodos.Location = new System.Drawing.Point(519, 224);
             this.btn_listarTodos.Name = "btn_listarTodos";
             this.btn_listarTodos.Size = new System.Drawing.Size(129, 23);
             this.btn_listarTodos.TabIndex = 24;
@@ -69,7 +69,7 @@
             this.groupBox_listaProdutos.Controls.Add(this.btn_listarTodos);
             this.groupBox_listaProdutos.Location = new System.Drawing.Point(45, 124);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
-            this.groupBox_listaProdutos.Size = new System.Drawing.Size(667, 271);
+            this.groupBox_listaProdutos.Size = new System.Drawing.Size(667, 265);
             this.groupBox_listaProdutos.TabIndex = 26;
             this.groupBox_listaProdutos.TabStop = false;
             this.groupBox_listaProdutos.Text = "Listar Contas ";
@@ -124,14 +124,14 @@
             this.dataGridView_contasPagar.AllowUserToDeleteRows = false;
             this.dataGridView_contasPagar.AllowUserToResizeColumns = false;
             this.dataGridView_contasPagar.AllowUserToResizeRows = false;
+            this.dataGridView_contasPagar.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_contasPagar.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_contasPagar.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView_contasPagar.Location = new System.Drawing.Point(17, 30);
+            this.dataGridView_contasPagar.Location = new System.Drawing.Point(18, 28);
             this.dataGridView_contasPagar.Name = "dataGridView_contasPagar";
             this.dataGridView_contasPagar.ReadOnly = true;
             this.dataGridView_contasPagar.RowHeadersVisible = false;
-            this.dataGridView_contasPagar.RowHeadersWidth = 51;
-            this.dataGridView_contasPagar.Size = new System.Drawing.Size(631, 200);
+            this.dataGridView_contasPagar.Size = new System.Drawing.Size(630, 190);
             this.dataGridView_contasPagar.TabIndex = 25;
             // 
             // ContasPagarListar

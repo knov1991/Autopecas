@@ -71,12 +71,14 @@ namespace Autopecas
         private void atualizaTituloGrid()
         {
             dataGridView_buscaCompras.Columns[0].HeaderText = "Código";
-            dataGridView_buscaCompras.Columns[1].HeaderText = "Nome";
-            dataGridView_buscaCompras.Columns[2].HeaderText = "Valor";
-            dataGridView_buscaCompras.Columns[3].HeaderText = "Data de Entrada";
-            dataGridView_buscaCompras.Columns[4].HeaderText = "Categoria";
-            dataGridView_buscaCompras.Columns[5].HeaderText = "Quantidade";
-            dataGridView_buscaCompras.Columns[6].HeaderText = "Fornecedor";
+            dataGridView_buscaCompras.Columns[1].HeaderText = "Produto";
+            dataGridView_buscaCompras.Columns[2].HeaderText = "Quantidade";
+            dataGridView_buscaCompras.Columns[3].HeaderText = "Valor Produto";
+            dataGridView_buscaCompras.Columns[4].HeaderText = "Valor Total";
+            dataGridView_buscaCompras.Columns[5].HeaderText = "Forma Pagamento";
+            dataGridView_buscaCompras.Columns[6].HeaderText = "Parcelado";
+            dataGridView_buscaCompras.Columns[7].HeaderText = "Data da Compra";
+
         }
 
         private void btn_selecionar_Click(object sender, EventArgs e)

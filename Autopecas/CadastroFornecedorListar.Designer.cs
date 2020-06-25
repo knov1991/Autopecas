@@ -129,7 +129,6 @@
             this.dataGridView_buscaFornecedor.AllowUserToDeleteRows = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeColumns = false;
             this.dataGridView_buscaFornecedor.AllowUserToResizeRows = false;
-            this.dataGridView_buscaFornecedor.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView_buscaFornecedor.BackgroundColor = System.Drawing.Color.White;
             this.dataGridView_buscaFornecedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView_buscaFornecedor.Location = new System.Drawing.Point(17, 28);
@@ -182,7 +181,7 @@
             this.barraTitulo.Size = new System.Drawing.Size(838, 37);
             this.barraTitulo.TabIndex = 12;
             // 
-            // ListaFornecedor
+            // CadastroFornecedorListar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -194,7 +193,7 @@
             this.Controls.Add(this.groupBox_listaProdutos);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ListaFornecedor";
+            this.Name = "CadastroFornecedorListar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListaFornecedor";
             this.groupBox_filtro.ResumeLayout(false);

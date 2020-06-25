@@ -36,6 +36,24 @@ namespace Autopecas
             carregaGrid();
         }
 
+        private void atualizaTituloGrid()
+        {
+            dataGridView_buscaFornecedor.Columns[0].HeaderText = "ID";
+            dataGridView_buscaFornecedor.Columns[1].HeaderText = "Nome";
+            dataGridView_buscaFornecedor.Columns[2].HeaderText = "Razão Social";
+            dataGridView_buscaFornecedor.Columns[3].HeaderText = "CNPJ";
+            dataGridView_buscaFornecedor.Columns[4].HeaderText = "IE";
+            dataGridView_buscaFornecedor.Columns[5].HeaderText = "CEP";
+            dataGridView_buscaFornecedor.Columns[6].HeaderText = "Estado";
+            dataGridView_buscaFornecedor.Columns[7].HeaderText = "Cidade";
+            dataGridView_buscaFornecedor.Columns[8].HeaderText = "Rua";
+            dataGridView_buscaFornecedor.Columns[9].HeaderText = "Número";
+            dataGridView_buscaFornecedor.Columns[10].HeaderText = "Bairro";
+            dataGridView_buscaFornecedor.Columns[11].HeaderText = "E-mail";
+            dataGridView_buscaFornecedor.Columns[12].HeaderText = "Celular";
+            dataGridView_buscaFornecedor.Columns[13].HeaderText = "Telefone";
+        }
+
         private void carregaGrid()
         {
             try
@@ -49,6 +67,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_buscaFornecedor.DataSource = dt;
+                atualizaTituloGrid();
             }
             catch (Exception ex)
             {

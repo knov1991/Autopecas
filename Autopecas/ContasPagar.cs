@@ -41,7 +41,16 @@ namespace Autopecas
             Close();
         }
 
-        private void btnSalvar_Click_1(object sender, EventArgs e)
+        private void limpaCampos()
+        {
+            txtDataOperacao.Text = string.Empty;
+            txtDataVencimento.Text = string.Empty;
+            txtFornecedor.Text = string.Empty;
+            txtNatureza.Text = string.Empty;
+            txtValor.Text = string.Empty;
+        }
+
+        public void salvarDados()
         {
             try
             {
@@ -76,7 +85,7 @@ namespace Autopecas
             }
         }
 
-        private void btnAlterar_Click_1(object sender, EventArgs e)
+        private void alterarDados()
         {
             try
             {
@@ -111,7 +120,7 @@ namespace Autopecas
             }
         }
 
-        private void btnExcluir_Click_1(object sender, EventArgs e)
+        private void excluirDados()
         {
             try
             {
@@ -136,6 +145,43 @@ namespace Autopecas
                 comando = null;
 
             }
+        }
+
+        private void btnSalvar_Click_1(object sender, EventArgs e)
+        {
+            if (txtFornecedor.TextLength == 0 || txtDataOperacao.TextLength == 0 || txtDataVencimento.TextLength == 0 || txtNatureza.TextLength == 0 || txtValor.TextLength == 0)
+            {
+                MessageBox.Show("Preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                salvarDados();
+                MessageBox.Show("Dados salvos com sucesso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpaCampos();
+            }
+        }
+
+        private void btnAlterar_Click_1(object sender, EventArgs e)
+        {
+            if (txtFornecedor.TextLength == 0 || txtDataOperacao.TextLength == 0 || txtDataVencimento.TextLength == 0 || txtNatureza.TextLength == 0 || txtValor.TextLength == 0)
+            {
+                MessageBox.Show("Preencha todos os campos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            else
+            {
+                alterarDados();
+                MessageBox.Show("Dados alterados com sucesso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                limpaCampos();
+            }
+        }
+
+        private void btnExcluir_Click_1(object sender, EventArgs e)
+        {
+            excluirDados();
+            limpaCampos();
+            MessageBox.Show("Dados excluidos com sucesso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)

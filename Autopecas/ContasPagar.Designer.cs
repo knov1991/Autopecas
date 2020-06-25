@@ -318,9 +318,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSalvar;
@@ -339,5 +336,7 @@
         public System.Windows.Forms.MaskedTextBox txtDataOperacao;
         public System.Windows.Forms.TextBox txtNatureza;
         public System.Windows.Forms.TextBox txtValor;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel barraTitulo;
     }
 }

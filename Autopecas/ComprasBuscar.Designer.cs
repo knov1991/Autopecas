@@ -54,7 +54,7 @@
             // 
             this.label_listaProdutos.AutoSize = true;
             this.label_listaProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label_listaProdutos.Location = new System.Drawing.Point(24, 40);
+            this.label_listaProdutos.Location = new System.Drawing.Point(37, 60);
             this.label_listaProdutos.Name = "label_listaProdutos";
             this.label_listaProdutos.Size = new System.Drawing.Size(277, 39);
             this.label_listaProdutos.TabIndex = 18;
@@ -92,7 +92,7 @@
             this.groupBox_filtro.Controls.Add(this.btn_buscar);
             this.groupBox_filtro.Controls.Add(this.textBox_filtroBusca);
             this.groupBox_filtro.Controls.Add(this.radioButton_filtroNome);
-            this.groupBox_filtro.Location = new System.Drawing.Point(31, 97);
+            this.groupBox_filtro.Location = new System.Drawing.Point(44, 117);
             this.groupBox_filtro.Name = "groupBox_filtro";
             this.groupBox_filtro.Size = new System.Drawing.Size(746, 90);
             this.groupBox_filtro.TabIndex = 19;
@@ -180,7 +180,7 @@
             // btn_selecionar
             // 
             this.btn_selecionar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_selecionar.Location = new System.Drawing.Point(639, 457);
+            this.btn_selecionar.Location = new System.Drawing.Point(651, 467);
             this.btn_selecionar.Name = "btn_selecionar";
             this.btn_selecionar.Size = new System.Drawing.Size(138, 23);
             this.btn_selecionar.TabIndex = 20;
@@ -191,7 +191,7 @@
             // groupBox_listaProdutos
             // 
             this.groupBox_listaProdutos.Controls.Add(this.dataGridView_buscaCompras);
-            this.groupBox_listaProdutos.Location = new System.Drawing.Point(31, 193);
+            this.groupBox_listaProdutos.Location = new System.Drawing.Point(44, 213);
             this.groupBox_listaProdutos.Name = "groupBox_listaProdutos";
             this.groupBox_listaProdutos.Size = new System.Drawing.Size(745, 248);
             this.groupBox_listaProdutos.TabIndex = 21;
@@ -201,7 +201,7 @@
             // btnFechar
             // 
             this.btnFechar.Image = global::Autopecas.Properties.Resources.Fechar;
-            this.btnFechar.Location = new System.Drawing.Point(793, 2);
+            this.btnFechar.Location = new System.Drawing.Point(804, 7);
             this.btnFechar.Margin = new System.Windows.Forms.Padding(2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(23, 23);
@@ -217,14 +217,14 @@
             this.barraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.barraTitulo.Location = new System.Drawing.Point(0, 0);
             this.barraTitulo.Name = "barraTitulo";
-            this.barraTitulo.Size = new System.Drawing.Size(818, 37);
+            this.barraTitulo.Size = new System.Drawing.Size(837, 37);
             this.barraTitulo.TabIndex = 22;
             // 
             // ComprasBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(818, 512);
+            this.ClientSize = new System.Drawing.Size(837, 512);
             this.Controls.Add(this.label_listaProdutos);
             this.Controls.Add(this.groupBox_filtro);
             this.Controls.Add(this.btn_selecionar);
@@ -232,6 +232,7 @@
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ComprasBuscar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ComprasBuscar";
             this.groupBox_filtro.ResumeLayout(false);
             this.groupBox_filtro.PerformLayout();

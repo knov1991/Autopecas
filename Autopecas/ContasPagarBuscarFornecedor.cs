@@ -23,6 +23,25 @@ namespace Autopecas
             dgvDados.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             instanciaContasPagar = buscar;
         }
+
+        private void atualizaTituloGrid()
+        {
+            dgvDados.Columns[0].HeaderText = "ID";
+            dgvDados.Columns[1].HeaderText = "Nome";
+            dgvDados.Columns[2].HeaderText = "Razão Social";
+            dgvDados.Columns[3].HeaderText = "CNPJ";
+            dgvDados.Columns[4].HeaderText = "IE";
+            dgvDados.Columns[5].HeaderText = "CEP";
+            dgvDados.Columns[6].HeaderText = "Estado";
+            dgvDados.Columns[7].HeaderText = "Cidade";
+            dgvDados.Columns[8].HeaderText = "Rua";
+            dgvDados.Columns[9].HeaderText = "Número";
+            dgvDados.Columns[10].HeaderText = "Bairro";
+            dgvDados.Columns[11].HeaderText = "E-mail";
+            dgvDados.Columns[12].HeaderText = "Celular";
+            dgvDados.Columns[13].HeaderText = "Telefone";
+        }
+
         public void procurarFornecedor(string valorBusca)
         {
             conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
@@ -52,6 +71,8 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dgvDados.DataSource = dt;
+
+                atualizaTituloGrid();
             }
             else
             {

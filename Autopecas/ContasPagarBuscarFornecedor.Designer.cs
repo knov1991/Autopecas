@@ -31,7 +31,6 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.txt_CadastroCliente = new System.Windows.Forms.Label();
-            this.dgvDados = new System.Windows.Forms.DataGridView();
             this.gbFiltro = new System.Windows.Forms.GroupBox();
             this.txtBusca = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
@@ -41,11 +40,12 @@
             this.btnVoltar = new System.Windows.Forms.Button();
             this.btnEditar = new System.Windows.Forms.Button();
             this.gbListar = new System.Windows.Forms.GroupBox();
+            this.dgvDados = new System.Windows.Forms.DataGridView();
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.gbFiltro.SuspendLayout();
             this.gbListar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).BeginInit();
             this.SuspendLayout();
             // 
             // barraTitulo
@@ -79,19 +79,6 @@
             this.txt_CadastroCliente.Size = new System.Drawing.Size(395, 39);
             this.txt_CadastroCliente.TabIndex = 49;
             this.txt_CadastroCliente.Text = "Pesquisar Fornecedores";
-            // 
-            // dgvDados
-            // 
-            this.dgvDados.BackgroundColor = System.Drawing.Color.White;
-            this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDados.GridColor = System.Drawing.Color.White;
-            this.dgvDados.Location = new System.Drawing.Point(17, 31);
-            this.dgvDados.Margin = new System.Windows.Forms.Padding(2);
-            this.dgvDados.Name = "dgvDados";
-            this.dgvDados.RowHeadersWidth = 51;
-            this.dgvDados.RowTemplate.Height = 24;
-            this.dgvDados.Size = new System.Drawing.Size(651, 200);
-            this.dgvDados.TabIndex = 37;
             // 
             // gbFiltro
             // 
@@ -196,6 +183,21 @@
             this.gbListar.TabStop = false;
             this.gbListar.Text = "Lista de Clientes";
             // 
+            // dgvDados
+            // 
+            this.dgvDados.AllowUserToAddRows = false;
+            this.dgvDados.AllowUserToDeleteRows = false;
+            this.dgvDados.AllowUserToResizeColumns = false;
+            this.dgvDados.AllowUserToResizeRows = false;
+            this.dgvDados.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDados.Location = new System.Drawing.Point(17, 24);
+            this.dgvDados.Name = "dgvDados";
+            this.dgvDados.ReadOnly = true;
+            this.dgvDados.RowHeadersVisible = false;
+            this.dgvDados.Size = new System.Drawing.Size(646, 205);
+            this.dgvDados.TabIndex = 20;
+            // 
             // ContasPagarBuscarFornecedor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,10 +215,10 @@
             this.Text = "ContasPagarBuscarFornecedor";
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.gbFiltro.ResumeLayout(false);
             this.gbFiltro.PerformLayout();
             this.gbListar.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDados)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,7 +229,6 @@
         private System.Windows.Forms.Panel barraTitulo;
         private System.Windows.Forms.PictureBox btnFechar;
         private System.Windows.Forms.Label txt_CadastroCliente;
-        private System.Windows.Forms.DataGridView dgvDados;
         private System.Windows.Forms.GroupBox gbFiltro;
         private System.Windows.Forms.TextBox txtBusca;
         private System.Windows.Forms.Button btnBuscar;
@@ -237,5 +238,6 @@
         private System.Windows.Forms.Button btnVoltar;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.GroupBox gbListar;
+        private System.Windows.Forms.DataGridView dgvDados;
     }
 }

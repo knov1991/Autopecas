@@ -28,6 +28,16 @@ namespace Autopecas
             instanciaReceber = receber;
         }
 
+        private void atualizaTituloGrid()
+        {
+            dataGridView_contasReceber.Columns[0].HeaderText = "Id";
+            dataGridView_contasReceber.Columns[1].HeaderText = "Cliente";
+            dataGridView_contasReceber.Columns[2].HeaderText = "Data da Operação";
+            dataGridView_contasReceber.Columns[3].HeaderText = "Data do Vencimento";
+            dataGridView_contasReceber.Columns[4].HeaderText = "Valor";
+            dataGridView_contasReceber.Columns[5].HeaderText = "Natureza";
+
+        }
 
         private void btn_listarTodos_Click(object sender, EventArgs e)
         {
@@ -47,6 +57,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_contasReceber.DataSource = dt;
+                atualizaTituloGrid();
 
             }
             catch (Exception ex)

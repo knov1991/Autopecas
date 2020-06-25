@@ -73,6 +73,17 @@ namespace Autopecas
             carregaGrid();
         }
 
+        private void atualizaTituloGrid()
+        {
+            dataGridView_contasPagar.Columns[0].HeaderText = "Id";
+            dataGridView_contasPagar.Columns[1].HeaderText = "Fornecedor";
+            dataGridView_contasPagar.Columns[2].HeaderText = "Data da Operação";
+            dataGridView_contasPagar.Columns[3].HeaderText = "Data do Vencimento";
+            dataGridView_contasPagar.Columns[4].HeaderText = "Valor";
+            dataGridView_contasPagar.Columns[5].HeaderText = "Natureza";
+
+        }
+
         private void carregaGrid()
         {
             try
@@ -86,7 +97,7 @@ namespace Autopecas
                 da.Fill(dt);
 
                 dataGridView_contasPagar.DataSource = dt;
-
+                atualizaTituloGrid();
             }
             catch (Exception ex)
             {

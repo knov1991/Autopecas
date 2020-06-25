@@ -202,7 +202,7 @@
             this.btn_voltar.UseVisualStyleBackColor = true;
             this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
             // 
-            // GerenciarFornecedoresBuscar
+            // CadastroFornecedoresBuscar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -214,7 +214,7 @@
             this.Controls.Add(this.groupBox_listaProdutos);
             this.Controls.Add(this.barraTitulo);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "GerenciarFornecedoresBuscar";
+            this.Name = "CadastroFornecedoresBuscar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LocalizarFornecedor";
             this.groupBox_filtro.ResumeLayout(false);
