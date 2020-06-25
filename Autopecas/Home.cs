@@ -49,6 +49,7 @@ namespace Autopecas
         private void EsconderMenu()
         {
             painelCadastros.Visible = false;
+            painelFinanceiro.Visible = false;
         }
 
         // ABRIR MODULO NA TELA PRINCIPAL
@@ -78,7 +79,7 @@ namespace Autopecas
         }
         private void btnControleFinanceiro_Click(object sender, EventArgs e)
         {
-            AbrirModal(new Financeiro());
+            MostrarMenu(painelFinanceiro);
         }
 
         // FECHAR SOFTWARE
@@ -136,6 +137,23 @@ namespace Autopecas
             {
                 this.Cursor = Cursors.Default;
             }
+        }
+
+        private void btnFluxoCaixa_Click(object sender, EventArgs e)
+        {
+            AbrirModal(new Financeiro());
+        }
+
+        private void btnContasPagar_Click(object sender, EventArgs e)
+        {
+            ContasPagar Pagar = new ContasPagar();
+            Pagar.Show();
+        }
+
+        private void btnContasReceber_Click(object sender, EventArgs e)
+        {
+            ContasReceber Receber = new ContasReceber();
+            Receber.Show();
         }
     }
 }

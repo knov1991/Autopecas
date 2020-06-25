@@ -35,6 +35,10 @@
             this.barraTitulo = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.PictureBox();
             this.painelLateral = new System.Windows.Forms.Panel();
+            this.painelFinanceiro = new System.Windows.Forms.Panel();
+            this.btnContasReceber = new System.Windows.Forms.Button();
+            this.btnContasPagar = new System.Windows.Forms.Button();
+            this.btnFluxoCaixa = new System.Windows.Forms.Button();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.painelTempo = new System.Windows.Forms.Panel();
             this.painelData = new System.Windows.Forms.Panel();
@@ -43,11 +47,11 @@
             this.painelHora = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lbHora = new System.Windows.Forms.Label();
-            this.btnControleFinanceiro = new System.Windows.Forms.Button();
+            this.btnFinanceiro = new System.Windows.Forms.Button();
             this.painelCadastros = new System.Windows.Forms.Panel();
             this.btnFornecedor = new System.Windows.Forms.Button();
             this.btnCliente = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnCadastros = new System.Windows.Forms.Button();
             this.btnEstoque = new System.Windows.Forms.Button();
             this.btnCompras = new System.Windows.Forms.Button();
             this.btnVendas = new System.Windows.Forms.Button();
@@ -58,6 +62,7 @@
             this.barraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).BeginInit();
             this.painelLateral.SuspendLayout();
+            this.painelFinanceiro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.painelTempo.SuspendLayout();
             this.painelData.SuspendLayout();
@@ -114,11 +119,12 @@
             // 
             this.painelLateral.AutoScroll = true;
             this.painelLateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.painelLateral.Controls.Add(this.painelFinanceiro);
             this.painelLateral.Controls.Add(this.pictureBox4);
             this.painelLateral.Controls.Add(this.painelTempo);
-            this.painelLateral.Controls.Add(this.btnControleFinanceiro);
+            this.painelLateral.Controls.Add(this.btnFinanceiro);
             this.painelLateral.Controls.Add(this.painelCadastros);
-            this.painelLateral.Controls.Add(this.button1);
+            this.painelLateral.Controls.Add(this.btnCadastros);
             this.painelLateral.Controls.Add(this.btnEstoque);
             this.painelLateral.Controls.Add(this.btnCompras);
             this.painelLateral.Controls.Add(this.btnVendas);
@@ -129,6 +135,75 @@
             this.painelLateral.Name = "painelLateral";
             this.painelLateral.Size = new System.Drawing.Size(250, 768);
             this.painelLateral.TabIndex = 3;
+            // 
+            // painelFinanceiro
+            // 
+            this.painelFinanceiro.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.painelFinanceiro.Controls.Add(this.btnContasReceber);
+            this.painelFinanceiro.Controls.Add(this.btnContasPagar);
+            this.painelFinanceiro.Controls.Add(this.btnFluxoCaixa);
+            this.painelFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.painelFinanceiro.Location = new System.Drawing.Point(0, 560);
+            this.painelFinanceiro.Name = "painelFinanceiro";
+            this.painelFinanceiro.Size = new System.Drawing.Size(234, 150);
+            this.painelFinanceiro.TabIndex = 0;
+            // 
+            // btnContasReceber
+            // 
+            this.btnContasReceber.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnContasReceber.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContasReceber.FlatAppearance.BorderSize = 0;
+            this.btnContasReceber.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnContasReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContasReceber.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContasReceber.ForeColor = System.Drawing.Color.White;
+            this.btnContasReceber.Image = global::Autopecas.Properties.Resources.Financeiro;
+            this.btnContasReceber.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContasReceber.Location = new System.Drawing.Point(0, 100);
+            this.btnContasReceber.Name = "btnContasReceber";
+            this.btnContasReceber.Size = new System.Drawing.Size(230, 50);
+            this.btnContasReceber.TabIndex = 10;
+            this.btnContasReceber.Text = " Contas Receber";
+            this.btnContasReceber.UseVisualStyleBackColor = false;
+            this.btnContasReceber.Click += new System.EventHandler(this.btnContasReceber_Click);
+            // 
+            // btnContasPagar
+            // 
+            this.btnContasPagar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnContasPagar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnContasPagar.FlatAppearance.BorderSize = 0;
+            this.btnContasPagar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnContasPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnContasPagar.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContasPagar.ForeColor = System.Drawing.Color.White;
+            this.btnContasPagar.Image = global::Autopecas.Properties.Resources.Financeiro;
+            this.btnContasPagar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnContasPagar.Location = new System.Drawing.Point(0, 50);
+            this.btnContasPagar.Name = "btnContasPagar";
+            this.btnContasPagar.Size = new System.Drawing.Size(230, 50);
+            this.btnContasPagar.TabIndex = 9;
+            this.btnContasPagar.Text = "Contas Pagar";
+            this.btnContasPagar.UseVisualStyleBackColor = false;
+            this.btnContasPagar.Click += new System.EventHandler(this.btnContasPagar_Click);
+            // 
+            // btnFluxoCaixa
+            // 
+            this.btnFluxoCaixa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.btnFluxoCaixa.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFluxoCaixa.FlatAppearance.BorderSize = 0;
+            this.btnFluxoCaixa.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnFluxoCaixa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFluxoCaixa.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFluxoCaixa.ForeColor = System.Drawing.Color.White;
+            this.btnFluxoCaixa.Image = global::Autopecas.Properties.Resources.Financeiro;
+            this.btnFluxoCaixa.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFluxoCaixa.Location = new System.Drawing.Point(0, 0);
+            this.btnFluxoCaixa.Name = "btnFluxoCaixa";
+            this.btnFluxoCaixa.Size = new System.Drawing.Size(230, 50);
+            this.btnFluxoCaixa.TabIndex = 8;
+            this.btnFluxoCaixa.Text = "Fluxo de Caixa";
+            this.btnFluxoCaixa.UseVisualStyleBackColor = false;
+            this.btnFluxoCaixa.Click += new System.EventHandler(this.btnFluxoCaixa_Click);
             // 
             // pictureBox4
             // 
@@ -146,9 +221,10 @@
             // 
             this.painelTempo.Controls.Add(this.painelData);
             this.painelTempo.Controls.Add(this.painelHora);
-            this.painelTempo.Location = new System.Drawing.Point(2, 591);
+            this.painelTempo.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.painelTempo.Location = new System.Drawing.Point(0, 710);
             this.painelTempo.Name = "painelTempo";
-            this.painelTempo.Size = new System.Drawing.Size(248, 100);
+            this.painelTempo.Size = new System.Drawing.Size(234, 100);
             this.painelTempo.TabIndex = 0;
             // 
             // painelData
@@ -158,7 +234,7 @@
             this.painelData.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelData.Location = new System.Drawing.Point(0, 50);
             this.painelData.Name = "painelData";
-            this.painelData.Size = new System.Drawing.Size(248, 50);
+            this.painelData.Size = new System.Drawing.Size(234, 50);
             this.painelData.TabIndex = 0;
             // 
             // pictureBox3
@@ -192,7 +268,7 @@
             this.painelHora.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelHora.Location = new System.Drawing.Point(0, 0);
             this.painelHora.Name = "painelHora";
-            this.painelHora.Size = new System.Drawing.Size(248, 50);
+            this.painelHora.Size = new System.Drawing.Size(234, 50);
             this.painelHora.TabIndex = 0;
             // 
             // pictureBox2
@@ -220,23 +296,23 @@
             this.lbHora.TabIndex = 0;
             this.lbHora.Text = "Hora";
             // 
-            // btnControleFinanceiro
+            // btnFinanceiro
             // 
-            this.btnControleFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnControleFinanceiro.FlatAppearance.BorderSize = 0;
-            this.btnControleFinanceiro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.btnControleFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnControleFinanceiro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnControleFinanceiro.ForeColor = System.Drawing.Color.White;
-            this.btnControleFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnControleFinanceiro.Image")));
-            this.btnControleFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnControleFinanceiro.Location = new System.Drawing.Point(0, 510);
-            this.btnControleFinanceiro.Name = "btnControleFinanceiro";
-            this.btnControleFinanceiro.Size = new System.Drawing.Size(250, 50);
-            this.btnControleFinanceiro.TabIndex = 20;
-            this.btnControleFinanceiro.Text = "Financeiro";
-            this.btnControleFinanceiro.UseVisualStyleBackColor = true;
-            this.btnControleFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
+            this.btnFinanceiro.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnFinanceiro.FlatAppearance.BorderSize = 0;
+            this.btnFinanceiro.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnFinanceiro.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFinanceiro.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFinanceiro.ForeColor = System.Drawing.Color.White;
+            this.btnFinanceiro.Image = ((System.Drawing.Image)(resources.GetObject("btnFinanceiro.Image")));
+            this.btnFinanceiro.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnFinanceiro.Location = new System.Drawing.Point(0, 510);
+            this.btnFinanceiro.Name = "btnFinanceiro";
+            this.btnFinanceiro.Size = new System.Drawing.Size(234, 50);
+            this.btnFinanceiro.TabIndex = 20;
+            this.btnFinanceiro.Text = "Financeiro";
+            this.btnFinanceiro.UseVisualStyleBackColor = true;
+            this.btnFinanceiro.Click += new System.EventHandler(this.btnControleFinanceiro_Click);
             // 
             // painelCadastros
             // 
@@ -246,7 +322,7 @@
             this.painelCadastros.Dock = System.Windows.Forms.DockStyle.Top;
             this.painelCadastros.Location = new System.Drawing.Point(0, 410);
             this.painelCadastros.Name = "painelCadastros";
-            this.painelCadastros.Size = new System.Drawing.Size(250, 100);
+            this.painelCadastros.Size = new System.Drawing.Size(234, 100);
             this.painelCadastros.TabIndex = 0;
             // 
             // btnFornecedor
@@ -261,7 +337,7 @@
             this.btnFornecedor.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnFornecedor.Location = new System.Drawing.Point(0, 50);
             this.btnFornecedor.Name = "btnFornecedor";
-            this.btnFornecedor.Size = new System.Drawing.Size(246, 50);
+            this.btnFornecedor.Size = new System.Drawing.Size(230, 50);
             this.btnFornecedor.TabIndex = 7;
             this.btnFornecedor.Text = "Fornecedores";
             this.btnFornecedor.UseVisualStyleBackColor = true;
@@ -279,29 +355,29 @@
             this.btnCliente.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCliente.Location = new System.Drawing.Point(0, 0);
             this.btnCliente.Name = "btnCliente";
-            this.btnCliente.Size = new System.Drawing.Size(246, 50);
+            this.btnCliente.Size = new System.Drawing.Size(230, 50);
             this.btnCliente.TabIndex = 6;
             this.btnCliente.Text = "Clientes";
             this.btnCliente.UseVisualStyleBackColor = true;
             this.btnCliente.Click += new System.EventHandler(this.btnCliente_Click);
             // 
-            // button1
+            // btnCadastros
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(0, 360);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(250, 50);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Cadastros";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnCadastros.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnCadastros.FlatAppearance.BorderSize = 0;
+            this.btnCadastros.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(45)))), ((int)(((byte)(48)))));
+            this.btnCadastros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCadastros.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCadastros.ForeColor = System.Drawing.Color.White;
+            this.btnCadastros.Image = ((System.Drawing.Image)(resources.GetObject("btnCadastros.Image")));
+            this.btnCadastros.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnCadastros.Location = new System.Drawing.Point(0, 360);
+            this.btnCadastros.Name = "btnCadastros";
+            this.btnCadastros.Size = new System.Drawing.Size(234, 50);
+            this.btnCadastros.TabIndex = 4;
+            this.btnCadastros.Text = "Cadastros";
+            this.btnCadastros.UseVisualStyleBackColor = true;
+            this.btnCadastros.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnEstoque
             // 
@@ -315,7 +391,7 @@
             this.btnEstoque.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnEstoque.Location = new System.Drawing.Point(0, 310);
             this.btnEstoque.Name = "btnEstoque";
-            this.btnEstoque.Size = new System.Drawing.Size(250, 50);
+            this.btnEstoque.Size = new System.Drawing.Size(234, 50);
             this.btnEstoque.TabIndex = 2;
             this.btnEstoque.Text = "Estoque";
             this.btnEstoque.UseVisualStyleBackColor = true;
@@ -333,7 +409,7 @@
             this.btnCompras.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnCompras.Location = new System.Drawing.Point(0, 260);
             this.btnCompras.Name = "btnCompras";
-            this.btnCompras.Size = new System.Drawing.Size(250, 50);
+            this.btnCompras.Size = new System.Drawing.Size(234, 50);
             this.btnCompras.TabIndex = 14;
             this.btnCompras.Text = "Compras";
             this.btnCompras.UseVisualStyleBackColor = true;
@@ -351,7 +427,7 @@
             this.btnVendas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnVendas.Location = new System.Drawing.Point(0, 210);
             this.btnVendas.Name = "btnVendas";
-            this.btnVendas.Size = new System.Drawing.Size(250, 50);
+            this.btnVendas.Size = new System.Drawing.Size(234, 50);
             this.btnVendas.TabIndex = 13;
             this.btnVendas.Text = "Vendas";
             this.btnVendas.UseVisualStyleBackColor = true;
@@ -367,9 +443,9 @@
             this.btnSair.ForeColor = System.Drawing.Color.White;
             this.btnSair.Image = ((System.Drawing.Image)(resources.GetObject("btnSair.Image")));
             this.btnSair.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSair.Location = new System.Drawing.Point(0, 718);
+            this.btnSair.Location = new System.Drawing.Point(0, 810);
             this.btnSair.Name = "btnSair";
-            this.btnSair.Size = new System.Drawing.Size(250, 50);
+            this.btnSair.Size = new System.Drawing.Size(234, 50);
             this.btnSair.TabIndex = 1;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
@@ -380,7 +456,7 @@
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.pictureBox1.Location = new System.Drawing.Point(0, 0);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(250, 210);
+            this.pictureBox1.Size = new System.Drawing.Size(234, 210);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -409,6 +485,7 @@
             this.barraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnFechar)).EndInit();
             this.painelLateral.ResumeLayout(false);
+            this.painelFinanceiro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.painelTempo.ResumeLayout(false);
             this.painelData.ResumeLayout(false);
@@ -435,7 +512,7 @@
         private System.Windows.Forms.Button btnEstoque;
         private System.Windows.Forms.Button btnVendas;
         private System.Windows.Forms.Button btnFornecedor;
-        private System.Windows.Forms.Button btnControleFinanceiro;
+        private System.Windows.Forms.Button btnFinanceiro;
         public static System.Windows.Forms.Label labelConectar;
         private System.Windows.Forms.Button btnCliente;
         private System.Windows.Forms.Button btnCompras;
@@ -447,8 +524,12 @@
         private System.Windows.Forms.Panel painelHora;
         private System.Windows.Forms.Panel painelData;
         private System.Windows.Forms.Panel painelCadastros;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnCadastros;
         private System.Windows.Forms.Panel painelTempo;
         private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Panel painelFinanceiro;
+        private System.Windows.Forms.Button btnContasPagar;
+        private System.Windows.Forms.Button btnFluxoCaixa;
+        private System.Windows.Forms.Button btnContasReceber;
     }
 }

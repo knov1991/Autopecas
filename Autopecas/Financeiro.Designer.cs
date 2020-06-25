@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.txt_NovaVenda = new System.Windows.Forms.Label();
-            this.btnContasReceber = new System.Windows.Forms.Button();
-            this.btnContasPagar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.TotalDiario = new System.Windows.Forms.Label();
             this.dataGridView_totalVendas = new System.Windows.Forms.DataGridView();
@@ -53,30 +51,6 @@
             this.txt_NovaVenda.Size = new System.Drawing.Size(179, 39);
             this.txt_NovaVenda.TabIndex = 2;
             this.txt_NovaVenda.Text = "Financeiro";
-            // 
-            // btnContasReceber
-            // 
-            this.btnContasReceber.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContasReceber.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContasReceber.Location = new System.Drawing.Point(59, 434);
-            this.btnContasReceber.Name = "btnContasReceber";
-            this.btnContasReceber.Size = new System.Drawing.Size(196, 45);
-            this.btnContasReceber.TabIndex = 11;
-            this.btnContasReceber.Text = "Contas Receber";
-            this.btnContasReceber.UseVisualStyleBackColor = true;
-            this.btnContasReceber.Click += new System.EventHandler(this.btnContasReceber_Click);
-            // 
-            // btnContasPagar
-            // 
-            this.btnContasPagar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContasPagar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContasPagar.Location = new System.Drawing.Point(261, 434);
-            this.btnContasPagar.Name = "btnContasPagar";
-            this.btnContasPagar.Size = new System.Drawing.Size(196, 45);
-            this.btnContasPagar.TabIndex = 12;
-            this.btnContasPagar.Text = "Contas Pagar";
-            this.btnContasPagar.UseVisualStyleBackColor = true;
-            this.btnContasPagar.Click += new System.EventHandler(this.btnContasPagar_Click);
             // 
             // label2
             // 
@@ -173,8 +147,6 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.dataGridView_totalVendas);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.btnContasPagar);
-            this.Controls.Add(this.btnContasReceber);
             this.Controls.Add(this.txt_NovaVenda);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Financeiro";
@@ -192,8 +164,6 @@
         #endregion
 
         private System.Windows.Forms.Label txt_NovaVenda;
-        private System.Windows.Forms.Button btnContasReceber;
-        private System.Windows.Forms.Button btnContasPagar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label TotalDiario;
         private System.Windows.Forms.DataGridView dataGridView_totalVendas;
