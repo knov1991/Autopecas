@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -21,15 +22,23 @@ namespace Autopecas
         public Financeiro()
         {
             InitializeComponent();
+        }
+
+        private void Financeiro_Load(object sender, EventArgs e)
+        {
             atualizaDados();
             carregaGrid();
             totalMov();
-
         }
+
         private void atualizaDados()
         {
-            DateTime date = DateTime.Now;
-            labelData.Text = date.ToString("dd-MM-yyyy");
+            DateTime data = DateTime.Now;
+            labelDataInicio.Text = data.ToString("dd-MM-yyyy");
+            filtroDataInicio.Value = data;
+            labelDataFinal.Text = data.ToString("dd-MM-yyyy");
+            filtroDataFinal.Value = data;
+
         }
 
         private void btnContasReceber_Click(object sender, EventArgs e)
@@ -48,10 +57,42 @@ namespace Autopecas
         {
             try
             {
-                DateTime date = DateTime.Now;
+                DateTime data = DateTime.Now;
 
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM VENDAS WHERE DATAVENDA='" + date.ToString("yyyy-MM-dd") + "'";
+                strSQL = "SELECT * FROM VENDAS WHERE DATAVENDA= '" + data.ToString("yyyy-MM-dd") + "'";
+                da = new MySqlDataAdapter(strSQL, conexao);
+
+                DataTable dt = new DataTable();
+
+                da.Fill(dt);
+
+                dataGridView_totalVendas.DataSource = dt;
+                atualizaTituloGrid();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            finally
+            {
+                conexao.Close();
+                conexao = null;
+                comando = null;
+
+            }
+        }
+
+        private void filtroBusca()
+        {
+            try
+            {
+                DateTime DataInicio = DateTime.Parse(filtroDataInicio.Text);
+                DateTime DataFinal = DateTime.Parse(filtroDataFinal.Text);
+
+                conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
+                strSQL = "SELECT * FROM VENDAS WHERE DATAVENDA BETWEEN '" + DataInicio.ToString("yyyy-MM-dd") + "' AND '" + DataFinal.ToString("yyyy-MM-dd") + "'";
                 da = new MySqlDataAdapter(strSQL, conexao);
 
                 DataTable dt = new DataTable();
@@ -102,6 +143,21 @@ namespace Autopecas
             dataGridView_totalVendas.Columns["parcelado"].Visible = false;
             dataGridView_totalVendas.Columns[7].HeaderText = "Data da Venda";
 
+        }
+
+        private void dataInicio_ValueChanged(object sender, EventArgs e)
+        {
+            filtroBusca();
+            totalMov();
+            labelDataInicio.Text = filtroDataInicio.Text;
+            filtroDataFinal.Value = filtroDataInicio.Value;
+        }
+
+        private void dataFinal_ValueChanged(object sender, EventArgs e)
+        {
+            filtroBusca();
+            totalMov();
+            labelDataFinal.Text = filtroDataFinal.Text;
         }
     }
 }
