@@ -43,7 +43,7 @@ namespace Autopecas
             try
             {
                 conexao = new MySqlConnection("SERVER=localhost; DATABASE=piii; UID=root; PWD=root");
-                strSQL = "SELECT * FROM COMPRAS WHERE quantidade > 0";
+                strSQL = "SELECT * FROM ESTOQUE WHERE quantidade > 0";
                 da = new MySqlDataAdapter(strSQL, conexao);
 
                 DataTable dt = new DataTable();
@@ -71,13 +71,12 @@ namespace Autopecas
         private void atualizaTituloGrid()
         {
             dataGridView_buscaCompras.Columns[0].HeaderText = "Código";
-            dataGridView_buscaCompras.Columns[1].HeaderText = "Produto";
-            dataGridView_buscaCompras.Columns[2].HeaderText = "Quantidade";
-            dataGridView_buscaCompras.Columns[3].HeaderText = "Valor Produto";
-            dataGridView_buscaCompras.Columns[4].HeaderText = "Valor Total";
-            dataGridView_buscaCompras.Columns[5].HeaderText = "Forma Pagamento";
-            dataGridView_buscaCompras.Columns[6].HeaderText = "Parcelado";
-            dataGridView_buscaCompras.Columns[7].HeaderText = "Data da Compra";
+            dataGridView_buscaCompras.Columns[1].HeaderText = "Nome";
+            dataGridView_buscaCompras.Columns[2].HeaderText = "Valor";
+            dataGridView_buscaCompras.Columns[3].HeaderText = "Data de Entrada";
+            dataGridView_buscaCompras.Columns[4].HeaderText = "Categoria";
+            dataGridView_buscaCompras.Columns[5].HeaderText = "Quantidade";
+            dataGridView_buscaCompras.Columns[6].HeaderText = "Fornecedor";
 
         }
 
@@ -101,15 +100,15 @@ namespace Autopecas
                 {
                     if (radioButton_filtroNome.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE produto like '%" + valorBusca + "%'";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%'";
                     }
                     if (radioButton_filtroFornecedor.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE fornecedor like '%" + valorBusca + "%'";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%'";
                     }
                     if (radioButton_Categoria.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE categoria like '%" + valorBusca + "%'";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%'";
                     }
                 }
 
@@ -117,15 +116,15 @@ namespace Autopecas
                 {
                     if (radioButton_filtroNome.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE produto like '%" + valorBusca + "%' AND quantidade > 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%' AND quantidade > 0";
                     }
                     if (radioButton_filtroFornecedor.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE fornecedor like '%" + valorBusca + "%' AND quantidade > 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%' AND quantidade > 0";
                     }
                     if (radioButton_Categoria.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE categoria like '%" + valorBusca + "%' AND quantidade > 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%' AND quantidade > 0";
                     }
                 }
 
@@ -133,15 +132,15 @@ namespace Autopecas
                 {
                     if (radioButton_filtroNome.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE produto like '%" + valorBusca + "%' AND quantidade = 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE produto like '%" + valorBusca + "%' AND quantidade = 0";
                     }
                     if (radioButton_filtroFornecedor.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE fornecedor like '%" + valorBusca + "%' AND quantidade = 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE fornecedor like '%" + valorBusca + "%' AND quantidade = 0";
                     }
                     if (radioButton_Categoria.Checked)
                     {
-                        strSQL = "SELECT * FROM COMPRAS WHERE categoria like '%" + valorBusca + "%' AND quantidade = 0";
+                        strSQL = "SELECT * FROM ESTOQUE WHERE categoria like '%" + valorBusca + "%' AND quantidade = 0";
                     }
 
                 }

@@ -87,6 +87,12 @@
     <Compile Include="ComprasBuscar.Designer.cs">
       <DependentUpon>ComprasBuscar.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComprasPagamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ComprasPagamento.Designer.cs">
+      <DependentUpon>ComprasPagamento.cs</DependentUpon>
+    </Compile>
     <Compile Include="ContasPagar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,11 +191,11 @@
     <Compile Include="CadastroFornecedoresBuscar.Designer.cs">
       <DependentUpon>CadastroFornecedoresBuscar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pagamento.cs">
+    <Compile Include="VendasPagamento.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pagamento.Designer.cs">
-      <DependentUpon>Pagamento.cs</DependentUpon>
+    <Compile Include="VendasPagamento.Designer.cs">
+      <DependentUpon>VendasPagamento.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ComprasBuscar.resx">
       <DependentUpon>ComprasBuscar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComprasPagamento.resx">
+      <DependentUpon>ComprasPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ContasPagar.resx">
       <DependentUpon>ContasPagar.cs</DependentUpon>
@@ -264,8 +273,8 @@
     <EmbeddedResource Include="CadastroFornecedoresBuscar.resx">
       <DependentUpon>CadastroFornecedoresBuscar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pagamento.resx">
-      <DependentUpon>Pagamento.cs</DependentUpon>
+    <EmbeddedResource Include="VendasPagamento.resx">
+      <DependentUpon>VendasPagamento.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

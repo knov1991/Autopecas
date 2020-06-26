@@ -12,7 +12,7 @@ using MySql.Data.MySqlClient;
 
 namespace Autopecas
 {
-    public partial class Pagamento : Form
+    public partial class VendasPagamento : Form
     {
         MySqlConnection conexao;
         MySqlCommand comando;
@@ -20,7 +20,7 @@ namespace Autopecas
         MySqlDataReader dr;
         string strSQL;
         Vendas instanciaVendas;
-        public Pagamento(Vendas vendas)
+        public VendasPagamento(Vendas vendas)
         {
             InitializeComponent();
             instanciaVendas = vendas;
@@ -42,27 +42,6 @@ namespace Autopecas
             textBox_total.Text = textBox_subTotal.Text;
             comboBox_formaPagamento.SelectedIndex = 0;
             comboBox_parcelas.SelectedIndex = 0;
-        }
-
-        private void textBox_desconto_TextChanged(object sender, EventArgs e)
-        {
-            calculaValores();
-        }
-
-        private void calculaValores()
-        {
-
-            textBox_subTotal.Text = textBox_subTotal.Text.Replace("R$", "").Trim();
-            textBox_total.Text = textBox_total.Text.Replace("R$", "").Trim();
-
-            decimal total = Convert.ToDecimal(textBox_subTotal.Text);
-            decimal desconto = Convert.ToDecimal(textBox_desconto.Text);
-            decimal Pedido;
-            Pedido = total - desconto;
-
-   
-            textBox_total.Text = Pedido.ToString("C2");
-
         }
 
         private void comboBox_formaPagamento_SelectedIndexChanged(object sender, EventArgs e)
@@ -150,17 +129,17 @@ namespace Autopecas
         private void btn_concluirVenda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Você deseja confirmar essa venda?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if(DialogResult == DialogResult.No)
-            {
-                MessageBox.Show("Venda cancelada.", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            }
-            else
+            if(DialogResult == DialogResult.Yes)
             {
                 concluirVenda();
                 atualizaEstoque();
                 limpaCampos();
                 Close();
                 MessageBox.Show("Venda concluída com sucesso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Venda cancelada.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

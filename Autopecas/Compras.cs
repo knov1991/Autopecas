@@ -94,8 +94,8 @@ namespace Autopecas
             }
             else
             {
-                //Pagamento Pagamento = new Pagamento(this);
-                //Pagamento.Show();
+                ComprasPagamento Pagamento = new ComprasPagamento(this);
+                Pagamento.Show();
             }
         }
 

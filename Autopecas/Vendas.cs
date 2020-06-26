@@ -100,7 +100,7 @@ namespace Autopecas
             }
             else
             {
-                Pagamento Pagamento = new Pagamento(this);
+                VendasPagamento Pagamento = new VendasPagamento(this);
                 Pagamento.Show();
             }
         }
