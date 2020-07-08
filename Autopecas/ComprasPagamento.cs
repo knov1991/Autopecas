@@ -128,18 +128,18 @@ namespace Autopecas
         private void btn_concluirVenda_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Você deseja confirmar essa venda?", "Atenção", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
-            if (DialogResult == DialogResult.Yes)
+            if (DialogResult == DialogResult.No)
+            {
+                MessageBox.Show("Compra cancelada.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            else
             {
                 concluirVenda();
                 atualizaEstoque();
                 limpaCampos();
                 Close();
                 MessageBox.Show("Compra concluída com sucesso.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Compra cancelada.", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
             }
         }
     }
